@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tesla FSD i Norge — status</title>
+  <meta name="description" content="Daglig oppdatert status for godkjenning av Tesla FSD Supervised i Norge. Offisiell linje fra Statens vegvesen, TCMV og EØS.">
+  <meta name="theme-color" content="#0b1020">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07090f;
+      --panel: #11151f;
+      --panel-2: #171c28;
+      --line: rgba(255,255,255,.08);
+      --text: #eef2f8;
+      --muted: #9aa6b8;
+      --red: #e82127;
+      --amber: #f5b942;
+      --green: #3dd68c;
+      --blue: #7aa2ff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--text); font-family: "IBM Plex Sans", system-ui, sans-serif; }
+    body { min-height: 100vh; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 32px 20px 64px; }
+    header { margin-bottom: 28px; }
+    .kicker { letter-spacing: .14em; text-transform: uppercase; font-size: 12px; color: var(--muted); font-weight: 600; }
+    h1 { font-family: "IBM Plex Serif", Georgia, serif; font-size: clamp(32px, 6vw, 52px); line-height: 1.08; margin: 10px 0 12px; font-weight: 500; }
+    .lede { color: var(--muted); font-size: 17px; line-height: 1.55; max-width: 42em; }
+    .status {
+      margin: 28px 0 24px;
+      padding: 22px 22px 20px;
+      background:
+        radial-gradient(1200px 180px at 10% -20%, rgba(232,33,39,.18), transparent),
+        var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(232,33,39,.12); color: #ff8b8e;
+      border: 1px solid rgba(232,33,39,.35);
+      padding: 6px 11px; border-radius: 999px;
+      font-size: 13px; font-weight: 600; letter-spacing: .02em;
+    }
+    .badge i {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--red);
+      box-shadow: 0 0 0 4px rgba(232,33,39,.18);
+    }
+    .status h2 { font-size: 26px; margin: 12px 0 8px; font-weight: 650; }
+    .status p { color: var(--muted); line-height: 1.5; }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 14px; color: var(--muted); font-size: 13px; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 18px 0 28px; }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px 16px 14px;
+    }
+    .card .lbl { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
+    .card .val { font-size: 22px; margin-top: 6px; font-weight: 650; }
+    .card .sub { color: var(--muted); font-size: 13px; margin-top: 4px; line-height: 1.4; }
+    section { margin: 34px 0; }
+    h3 { font-size: 20px; margin-bottom: 12px; font-weight: 650; }
+    p, li { line-height: 1.6; }
+    .prose p { color: #c9d3e2; margin-bottom: 12px; }
+    .timeline { list-style: none; border-left: 1px solid var(--line); margin-left: 8px; }
+    .timeline li { padding: 0 0 18px 18px; position: relative; }
+    .timeline li::before {
+      content: ""; position: absolute; left: -5px; top: 7px; width: 9px; height: 9px;
+      border-radius: 50%; background: var(--blue);
+    }
+    .timeline .when { color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: .04em; }
+    .timeline .what { margin-top: 2px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+    th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+    .ok { color: var(--green); font-weight: 600; }
+    .no { color: #ff8b8e; font-weight: 600; }
+    .wait { color: var(--amber); font-weight: 600; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; line-height: 1.55; }
+    .note {
+      background: var(--panel-2); border: 1px solid var(--line); border-radius: 14px;
+      padding: 14px 16px; color: var(--muted); font-size: 14px;
+    }
+    .sources { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .sources a {
+      background: var(--panel); border: 1px solid var(--line); border-radius: 999px;
+      padding: 6px 12px; font-size: 13px; color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="kicker">Norge · EØS · Statens vegvesen</div>
+      <h1>Tesla FSD Supervised i Norge</h1>
+      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Oppdateres daglig.</p>
+    </header>
+
+    <div class="status">
+      <span class="badge"><i></i> Ikke kundegodkjent</span>
+      <h2>Vanlige eiere kan ikke slå på FSD i Norge</h2>
+      <p>Statens vegvesen har ikke godkjent Tesla FSD Supervised for ordinary kundekjøring. Det som finnes, er begrenset testing med Tesla-trente sikkerhetsførere. FSD er et nivå 2-førerstøttesystem: føreren er alltid ansvarlig.</p>
+      <div class="meta">
+        <span>Sist sjekket: 29. august 2026</span>
+        <span>SVV-side sist oppdatert: 3. juli 2026</span>
+        <span>Neste TCMV: 6. oktober 2026</span>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="lbl">Norge</div>
+        <div class="val">Testing, ikke eier-FSD</div>
+        <div class="sub">Ca. tre Tesla-biler med sikkerhetsførere. Ingen OTA til vanlige kunder.</div>
+      </div>
+      <div class="card">
+        <div class="lbl">Neste prosessmilepæl</div>
+        <div class="val">6. okt 2026</div>
+        <div class="sub">TCMV kan stemme over nederlandsk Article 39-unntak. Ikke en norsk lanseringsdato.</div>
+      </div>
+      <div class="card">
+        <div class="lbl">EU-kunder i dag</div>
+        <div class="val">5 land · ~8,9 %</div>
+        <div class="sub">Nederland, Litauen, Estland, Danmark, Belgia. For lite for EU-bredt ja.</div>
+      </div>
+      <div class="card">
+        <div class="lbl">EU-programvare</div>
+        <div class="val">v14.2.2-grenen</div>
+        <div class="sub">Nye FSD-bygg krever ny innsending. USA ligger foran på punktutgivelser.</div>
+      </div>
+    </div>
+
+    <section>
+      <h3>Hva som må skje før Norge</h3>
+      <div class="prose">
+        <p>To porter må åpnes: først et rettslig grunnlag, deretter Tesla-utrulling. Norge har ingen stemme i TCMV. Hovedregelen er at Norge følger et EU-vedtak gjennom EØS-avtalen, men Statens vegvesen kan motsette seg innføring hvis de mener det har vesentlig negativ effekt på trafikksikkerhet eller miljø.</p>
+        <p>SVV er kritisk til unntakene i den nederlandske godkjenningen: aktivering utenfor motorvei, avvik fra fartsgrense og høyere sideveis akselerasjon i kurver. De har også stanset kundedemonstrasjoner fordi Teslas materiell ble vurdert som villedende — det sa ikke tydelig at dette er et førerstøttesystem, ikke selvkjøring.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3>Tidslinje</h3>
+      <ul class="timeline">
+        <li>
+          <div class="when">10. april 2026</div>
+          <div class="what">RDW i Nederland gir provisorisk typegodkjenning (Article 39 + UN R171).</div>
+        </li>
+        <li>
+          <div class="when">5. mai 2026</div>
+          <div class="what">RDW presenterer saken for TCMV. Norge deltar uten stemmerett.</div>
+        </li>
+        <li>
+          <div class="when">20. mai – 10. juni 2026</div>
+          <div class="what">Litauen, Estland, Danmark og Belgia anerkjenner den nederlandske godkjenningen for kunder.</div>
+        </li>
+        <li>
+          <div class="when">30. juni 2026</div>
+          <div class="what">TCMV: fortsatt diskusjon, ingen avstemning. SVV oppdaterer infosiden 3. juli.</div>
+        </li>
+        <li>
+          <div class="when">22. juli 2026</div>
+          <div class="what">Frankrike sier nei til unilateral godkjenning «slik systemet står».</div>
+        </li>
+        <li>
+          <div class="when">26. august 2026</div>
+          <div class="what">Tesla Europe: 100 millioner km FSD Supervised i de fem godkjente landene (selskapets egen teller).</div>
+        </li>
+        <li>
+          <div class="when">6. oktober 2026</div>
+          <div class="what">Neste realistiske TCMV-vindu for avstemning. Utfallet er åpent.</div>
+        </li>
+        <li>
+          <div class="when">Sent januar 2027</div>
+          <div class="what">UN R171 Series 02 ventes i kraft. Parallel langsiktig vei, ikke det samme som oktober-votumet.</div>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Landstatus</h3>
+      <table>
+        <thead>
+          <tr><th>Land</th><th>Status</th><th>Merknad</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Nederland</td><td class="ok">Kunde</td><td>RDW 10.04.2026</td></tr>
+          <tr><td>Litauen</td><td class="ok">Kunde</td><td>Anerkjennelse 20.05.2026</td></tr>
+          <tr><td>Estland</td><td class="ok">Kunde</td><td>Anerkjennelse 29.05.2026</td></tr>
+          <tr><td>Danmark</td><td class="ok">Kunde</td><td>09.06.2026</td></tr>
+          <tr><td>Belgia</td><td class="ok">Kunde</td><td>10.06.2026</td></tr>
+          <tr><td>Norge</td><td class="no">Ikke kunde</td><td>Begrenset testing. Venter EU/EØS eller eget vedtak.</td></tr>
+          <tr><td>Tyskland, Frankrike, Italia, Spania</td><td class="wait">Ikke snarvei</td><td>Store land som blokkerer TCMV-flertall på befolkning.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h3>Kort forklart</h3>
+      <div class="prose">
+        <p><strong>FSD Supervised</strong> er DCAS under UN R171 — avansert førerstøtte. Bilen kan styre, bremse og skifte fil, men du må se og kunne ta over med en gang. Det er ikke robotaxi og ikke førerløs autonomi.</p>
+        <p>Teslas egne sikkerhetstall (blant annet «5,2×») er telemetri fra selskapet. RDW har ikke adoptert multiplikatoren som offisielt funn. Reuters og flere nordiske tilsyn har etterlyst mer åpne, uavhengige data.</p>
+      </div>
+      <p class="note">Denne siden er uoffisiell. Den erstatter ikke vegvesen.no, RDW eller Tesla. Ingen juridisk rådgivning, og ingen lovnad om dato.</p>
+    </section>
+
+    <section>
+      <h3>Kilder</h3>
+      <div class="sources">
+        <a href="https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/" target="_blank" rel="noopener">Statens vegvesen</a>
+        <a href="https://www.rdw.nl/" target="_blank" rel="noopener">RDW</a>
+        <a href="https://unece.org/" target="_blank" rel="noopener">UNECE / UN R171</a>
+        <a href="https://fsd-eu-tracker.de/" target="_blank" rel="noopener">FSD EU-tracker</a>
+        <a href="https://fsd.patrickjanson.no/" target="_blank" rel="noopener">fsd.patrickjanson.no</a>
+      </div>
+    </section>
+
+    <footer>
+      Uoffisiell statusside drevet fra GitHub-repoet tesla-fsd-norge. Innholdet sjekkes mot offentlige kilder hver dag. Snapshot 29. august 2026.
+    </footer>
+  </div>
+</body>
+</html>
