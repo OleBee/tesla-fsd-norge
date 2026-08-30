@@ -50,9 +50,80 @@
       width: 8px; height: 8px; border-radius: 50%; background: var(--red);
       box-shadow: 0 0 0 4px rgba(232,33,39,.18);
     }
+    .badge.soft {
+      background: rgba(122,162,255,.12); color: var(--blue);
+      border-color: rgba(122,162,255,.35);
+    }
+    .badge.soft i { background: var(--blue); box-shadow: 0 0 0 4px rgba(122,162,255,.18); }
+    .badge.warn {
+      background: rgba(245,185,66,.12); color: var(--amber);
+      border-color: rgba(245,185,66,.35);
+    }
+    .badge.warn i { background: var(--amber); box-shadow: 0 0 0 4px rgba(245,185,66,.18); }
     .status h2 { font-size: 26px; margin: 12px 0 8px; font-weight: 650; }
     .status p { color: var(--muted); line-height: 1.5; }
     .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 14px; color: var(--muted); font-size: 13px; }
+    .clock {
+      margin: 0 0 24px;
+      padding: 22px 20px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+    .clock-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .clock h2 { font-size: 26px; margin: 12px 0 4px; font-weight: 650; }
+    .clock .when { color: var(--muted); font-size: 15px; }
+    .units {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin: 18px 0 14px;
+    }
+    .unit {
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 6px 12px;
+      text-align: center;
+    }
+    .unit .n {
+      font-variant-numeric: tabular-nums;
+      font-size: clamp(28px, 8vw, 52px);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+    .unit .u {
+      display: block;
+      margin-top: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .clock .why { color: var(--muted); font-size: 14px; line-height: 1.5; }
+    .clocks {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 0 0 28px;
+    }
+    @media (max-width: 720px) { .clocks { grid-template-columns: 1fr; } }
+    .mini .units { margin: 12px 0 8px; gap: 6px; }
+    .mini .unit { padding: 10px 4px 8px; border-radius: 12px; }
+    .mini .unit .n { font-size: clamp(22px, 6vw, 32px); }
+    .mini .unit .u { font-size: 10px; margin-top: 6px; }
+    .mini h3 { font-size: 16px; font-weight: 650; margin: 8px 0 2px; }
+    .mini .when { color: var(--muted); font-size: 13px; }
+    .mini .sub { color: var(--muted); font-size: 13px; margin-top: 6px; line-height: 1.4; }
+    .awaiting {
+      font-variant-numeric: tabular-nums;
+      font-size: 28px;
+      font-weight: 700;
+      margin: 14px 0 8px;
+      color: var(--muted);
+    }
     .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 18px 0 28px; }
     @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
     .card {
@@ -71,6 +142,7 @@
       content: ""; position: absolute; left: -5px; top: 7px; width: 9px; height: 9px;
       border-radius: 50%; background: var(--blue);
     }
+    .timeline li.next::before { background: var(--amber); }
     .timeline .when { color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: .04em; }
     .timeline .what { margin-top: 2px; }
     table { width: 100%; border-collapse: collapse; font-size: 14px; }
@@ -111,6 +183,24 @@
         <span>Neste TCMV: 6. oktober 2026</span>
       </div>
     </div>
+
+    <div class="clock" id="hero-clock">
+      <div class="clock-head">
+        <span class="kicker">Neste milepæl</span>
+        <span class="badge soft" id="hero-certainty"><i></i> Forventet</span>
+      </div>
+      <h2 id="hero-title">TCMV-avstemning</h2>
+      <p class="when" id="hero-date">6. oktober 2026</p>
+      <div class="units" id="hero-units" aria-live="polite">
+        <div class="unit"><span class="n" data-part="days">––</span><span class="u">dager</span></div>
+        <div class="unit"><span class="n" data-part="hours">––</span><span class="u">timer</span></div>
+        <div class="unit"><span class="n" data-part="mins">––</span><span class="u">min</span></div>
+        <div class="unit"><span class="n" data-part="secs">––</span><span class="u">sek</span></div>
+      </div>
+      <p class="why" id="hero-why">TCMV kan stemme over nederlandsk Article 39-unntak for FSD Supervised. Ikke en norsk lanseringsdato — men den neste realistiske EU-porten.</p>
+    </div>
+
+    <div class="clocks" id="all-clocks"></div>
 
     <div class="grid">
       <div class="card">
@@ -170,7 +260,7 @@
           <div class="when">26. august 2026</div>
           <div class="what">Tesla Europe: 100 millioner km FSD Supervised i de fem godkjente landene (selskapets egen teller).</div>
         </li>
-        <li>
+        <li class="next">
           <div class="when">6. oktober 2026</div>
           <div class="what">Neste realistiske TCMV-vindu for avstemning. Utfallet er åpent.</div>
         </li>
@@ -223,5 +313,125 @@
       Uoffisiell statusside drevet fra GitHub-repoet tesla-fsd-norge. Innholdet sjekkes mot offentlige kilder hver dag. Snapshot 30. august 2026.
     </footer>
   </div>
+  <script>
+    (function () {
+      var milestones = [
+        {
+          id: "tcmv",
+          title: "TCMV-avstemning",
+          dateLabel: "6. oktober 2026",
+          iso: "2026-10-06T09:00:00+02:00",
+          certainty: "Forventet",
+          why: "TCMV kan stemme over nederlandsk Article 39-unntak for FSD Supervised. Ikke en norsk lanseringsdato — men den neste realistiske EU-porten."
+        },
+        {
+          id: "r171",
+          title: "UN R171 Series 02",
+          dateLabel: "Sent januar 2027",
+          iso: "2027-01-20T00:00:00+01:00",
+          certainty: "Veiledende",
+          why: "Langsiktig regelverksvei. Parallel med oktober-votumet, ikke det samme som norsk ibruktaking."
+        },
+        {
+          id: "norge",
+          title: "Norsk vurdering",
+          dateLabel: "Etter EU-vedtak",
+          iso: null,
+          certainty: "Ikke satt",
+          why: "Vegvesenet tar stilling når EU-vedtaket foreligger. Kan følge EØS, eller stanse ved sikkerhetsrisiko."
+        }
+      ];
+
+      function pad(n) { return String(n).padStart(2, "0"); }
+
+      function remaining(iso, now) {
+        if (!iso) return null;
+        var ms = new Date(iso).getTime() - now.getTime();
+        if (ms <= 0) return { done: true, days: 0, hours: 0, mins: 0, secs: 0 };
+        var s = Math.floor(ms / 1000);
+        return {
+          done: false,
+          days: Math.floor(s / 86400),
+          hours: Math.floor((s % 86400) / 3600),
+          mins: Math.floor((s % 3600) / 60),
+          secs: s % 60
+        };
+      }
+
+      function unitsMarkup(r) {
+        if (!r) return '<p class="awaiting">Avventer</p>';
+        if (r.done) return '<p class="awaiting">Passert</p>';
+        return (
+          '<div class="units">' +
+            '<div class="unit"><span class="n" data-part="days">' + String(r.days).padStart(2, "0") + '</span><span class="u">dager</span></div>' +
+            '<div class="unit"><span class="n" data-part="hours">' + pad(r.hours) + '</span><span class="u">timer</span></div>' +
+            '<div class="unit"><span class="n" data-part="mins">' + pad(r.mins) + '</span><span class="u">min</span></div>' +
+            '<div class="unit"><span class="n" data-part="secs">' + pad(r.secs) + '</span><span class="u">sek</span></div>' +
+          "</div>"
+        );
+      }
+
+      function fillUnits(root, r) {
+        if (!root) return;
+        var box = root.querySelector(".units") || root;
+        if (!r || r.done) return;
+        var days = box.querySelector('[data-part="days"]');
+        if (!days) return;
+        days.textContent = String(r.days).padStart(2, "0");
+        box.querySelector('[data-part="hours"]').textContent = pad(r.hours);
+        box.querySelector('[data-part="mins"]').textContent = pad(r.mins);
+        box.querySelector('[data-part="secs"]').textContent = pad(r.secs);
+      }
+
+      function nextDated(now) {
+        var dated = milestones.filter(function (m) { return m.iso; })
+          .map(function (m) { return { m: m, t: new Date(m.iso).getTime() }; })
+          .filter(function (x) { return x.t > now.getTime(); })
+          .sort(function (a, b) { return a.t - b.t; });
+        return dated.length ? dated[0].m : milestones[0];
+      }
+
+      var built = false;
+      function build(now) {
+        var hero = nextDated(now);
+        document.getElementById("hero-title").textContent = hero.title;
+        document.getElementById("hero-date").textContent = hero.dateLabel;
+        document.getElementById("hero-why").textContent = hero.why;
+        var cert = document.getElementById("hero-certainty");
+        cert.innerHTML = "<i></i> " + hero.certainty;
+        cert.className = "badge " + (hero.certainty === "Forventet" ? "soft" : "warn");
+        var heroUnits = document.getElementById("hero-units");
+        var r = remaining(hero.iso, now);
+        heroUnits.outerHTML = unitsMarkup(r).replace('class="units"', 'class="units" id="hero-units" aria-live="polite"').replace('class="awaiting"', 'class="awaiting" id="hero-units"');
+        document.getElementById("all-clocks").innerHTML = milestones.map(function (m) {
+          var rr = remaining(m.iso, now);
+          var badgeClass = m.certainty === "Forventet" ? "soft" : (m.certainty === "Ikke satt" ? "" : "warn");
+          return (
+            '<article class="card mini" data-id="' + m.id + '">' +
+              '<span class="badge ' + badgeClass + '"><i></i> ' + m.certainty + "</span>" +
+              "<h3>" + m.title + "</h3>" +
+              '<p class="when">' + m.dateLabel + "</p>" +
+              unitsMarkup(rr) +
+              '<p class="sub">' + m.why + "</p>" +
+            "</article>"
+          );
+        }).join("");
+        built = true;
+      }
+
+      function tick() {
+        var now = new Date();
+        if (!built) build(now);
+        var hero = nextDated(now);
+        fillUnits(document.getElementById("hero-units"), remaining(hero.iso, now));
+        milestones.forEach(function (m) {
+          fillUnits(document.querySelector('[data-id="' + m.id + '"]'), remaining(m.iso, now));
+        });
+      }
+
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
 </body>
 </html>
