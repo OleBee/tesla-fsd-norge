@@ -2,15 +2,8 @@
 
 Uoffisiell, én-sides statusside om godkjenning av Tesla FSD Supervised i Norge.
 
-## Publiser siden (GitHub Pages)
+**Live nå:** [https://olebee.github.io/tesla-fsd-norge/](https://olebee.github.io/tesla-fsd-norge/)
 
-1. Åpne https://github.com/OleBee/tesla-fsd-norge/settings/pages
-2. Under **Build and deployment** velg **Deploy from a branch**
-3. Branch: `main` / folder: `/ (root)`
-4. Lagre
-
-Etter et par minutter ligger siden på:
-
-https://olebee.github.io/tesla-fsd-norge/
+GitHub Pages er på og siste deploy (branch `main` / rot) gikk gjennom. Rotadressen `https://olebee.github.io/` er tom med vilje — siden ligger på `/tesla-fsd-norge/`.
 
 En Grok-automatisering oppdaterer `index.html` daglig mot Statens vegvesen, TCMV/RDW og Tesla Europe.
