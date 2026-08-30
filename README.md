@@ -6,6 +6,8 @@ Uoffisiell, én-sides statusside om godkjenning av Tesla FSD Supervised i Norge.
 
 GitHub Pages er på. Siden ligger på `/tesla-fsd-norge/`.
 
+Strukturert snapshot ligger i [`data/status.json`](data/status.json) (EU-land, TCMV-vurdering, norsk månedssjanse). Den daglige Grok-jobben **FSD-status til GitHub** oppdaterer både `index.html` og den filen.
+
 ## Kilderegel
 
 Offisiell status bygger på:
