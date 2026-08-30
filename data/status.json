@@ -24,7 +24,8 @@
   },
   "norge_denne_maneden": {
     "prosent": 1,
-    "kommentar": "Ingen SVV-kundegodkjenning og ingen TCMV-ja i august. Neste port er oktobermøtet, ikke denne måneden."
+    "etikett": "Sjanse for FSD til norske eiere i august",
+    "kommentar": "Uoffisielt skjønnstall, ikke et tall fra Vegvesenet. Ingen SVV-vedtak og ingen TCMV-avstemning i august. Neste mulige port er oktobermøtet."
   },
   "series_02": {
     "forventet": "2027-01",
