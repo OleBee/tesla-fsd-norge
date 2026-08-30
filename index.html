@@ -41,7 +41,7 @@
     .unit .n { font-variant-numeric:tabular-nums; font-size:clamp(28px,8vw,52px); font-weight:700; line-height:1; }
     .unit .u { display:block; margin-top:8px; font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
     .clock .why { color:var(--muted); font-size:14px; line-height:1.5; }
-    .clocks { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:0 0 28px; }
+    .clocks { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin:0 0 28px; }
     .mini .units { margin:12px 0 8px; gap:6px; }
     .mini .unit { padding:10px 4px 8px; border-radius:12px; }
     .mini .unit .n { font-size:clamp(22px,6vw,32px); }
@@ -246,7 +246,7 @@
         var heroUnits = document.getElementById("hero-units");
         var r = remaining(hero.iso, now);
         heroUnits.outerHTML = unitsMarkup(r).replace('class="units"', 'class="units" id="hero-units" aria-live="polite"').replace('class="awaiting"', 'class="awaiting" id="hero-units"');
-        document.getElementById("all-clocks").innerHTML = milestones.map(function (m) {
+        document.getElementById("all-clocks").innerHTML = milestones.filter(function (m) { return m.id !== hero.id; }).map(function (m) {
           var rr = remaining(m.iso, now);
           var badgeClass = (m.certainty === "Forventet") ? "soft" : (m.certainty === "Ikke satt" ? "" : "warn");
           return '<article class="card mini" data-id="' + m.id + '">' +
