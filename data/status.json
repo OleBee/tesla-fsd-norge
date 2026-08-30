@@ -1,0 +1,34 @@
+{
+  "sist_sjekket": "2026-08-30",
+  "sist_sjekket_nb": "30. august 2026",
+  "svv_sist_oppdatert_nb": "3. juli 2026",
+  "norge_kundegodkjent": false,
+  "norge_status": "Ikke kundegodkjent. Begrenset testing med Tesla-trente sikkerhetsførere.",
+  "eu_land": [
+    {"land": "Nederland", "dato": "2026-04-10", "sti": "RDW artikkel 39"},
+    {"land": "Litauen", "dato": "2026-05-20", "sti": "anerkjennelse"},
+    {"land": "Estland", "dato": "2026-05-29", "sti": "anerkjennelse"},
+    {"land": "Danmark", "dato": "2026-06-09", "sti": "anerkjennelse"},
+    {"land": "Belgia", "dato": "2026-06-10", "sti": "anerkjennelse"}
+  ],
+  "eu_andel_befolkning_prosent": 8.9,
+  "programvaregren": "v14.2.2",
+  "tcmv": {
+    "siste_mote": "2026-06-30",
+    "siste_utfall": "diskusjon uten avstemning",
+    "neste_dato": "2026-10-06",
+    "neste_sikkerhet": "rykte",
+    "dager_til": 37,
+    "sannsynlig_utfall": "utsatt",
+    "kommentar": "6. okt er rykte/SVV-oktober. Store land blokkerer 15+65 %. Sannsynlig utsatt eller nei uten DE/FR/IT."
+  },
+  "norge_denne_maneden": {
+    "prosent": 1,
+    "kommentar": "Ingen SVV-kundegodkjenning og ingen TCMV-ja i august. Neste port er oktobermøtet, ikke denne måneden."
+  },
+  "series_02": {
+    "forventet": "2027-01",
+    "merknad": "UN R171 Series 02 ventes i kraft sent i januar 2027. Parallell vei, ikke norsk go-live."
+  },
+  "materiell_endring": false
+}
