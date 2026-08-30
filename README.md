@@ -8,7 +8,7 @@ GitHub Pages er på. Siden ligger på `/tesla-fsd-norge/`.
 
 ## Kilderegel
 
-Oppdateringer skal bare bygge på offisielle og troverdige kilder:
+Offisiell status bygger på:
 
 - Statens vegvesen
 - RDW
@@ -19,4 +19,4 @@ Oppdateringer skal bare bygge på offisielle og troverdige kilder:
 - ETSC når det gjelder uavhengig trafikksikkerhetsvurdering
 - Tesla Europe / offisiell brukermanual
 
-Uoffisielle trackere, forum og sosiale medier brukes ikke som kilde til status, datoer eller landslister. Hvis en konkret dato ikke står hos myndighetene, skrives den ikke som fastsatt.
+Rykter fra troverdige kontoer på X kan tas med, men må merkes som rykte og oppgis bare med X som kilde. De får ikke erstatte offisiell status. Trackere og forum brukes ikke.
