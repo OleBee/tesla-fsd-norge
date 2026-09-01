@@ -17,6 +17,8 @@ GitHub Pages er på. Siden ligger på `/tesla-fsd-norge/`.
 - **FSD-status til GitHub** — daglig. Research, ev. oppdatering av FSD-skillen, språkvask av synlig bokmål, deretter `index.html` og `data/status.json`. Oppdaterer også sin egen grunnlinje når fakta flytter seg.
 - **SVV FSD-side endring** — hver time på hverdager 08–16. Skriver til repoet bare ved materiell endring eller nede side. Ingen e-post.
 
+Ved hver skriving til `index.html` skal ingressen øverst ha både frasen «Oppdateres daglig» og et tidsstempel: «Sist oppdatert D. måned ÅÅÅÅ kl. TT.MM» i tidssonen Europe/Oslo. Samme tidspunkt skal ligge i `data/status.json` som `sist_oppdatert_iso` og `sist_oppdatert_nb`.
+
 Synlig prosa på siden skal være vasket bokmål før publisering.
 
 ## Kilderegel
