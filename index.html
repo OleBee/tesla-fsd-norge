@@ -67,14 +67,16 @@
     .badge.warn i { background:var(--amber); }
     .status h2, .clock h2 { font-size:28px; line-height:1.2; margin:14px 0 10px; font-weight:500; letter-spacing:-.02em; }
     .status p { color:var(--body); line-height:1.5; max-width:40em; }
-    .meter { margin-top:24px; padding:36px 32px 28px; background:var(--dark); color:var(--on-dark); border-radius:var(--r); }
+    .meter { margin-top:24px; padding:36px 32px 28px; background:var(--dark); color:var(--on-dark); border-radius:12px; }
     .meter-readout { text-align:center; }
     .meter-readout .n { font-variant-numeric:tabular-nums; font-size:clamp(56px,8vw,80px); font-weight:500; line-height:.95; letter-spacing:-.03em; color:#fff; }
-    .meter-readout .n .pct { font-size:.42em; font-weight:500; margin-left:2px; }
-    .meter-caption { margin:12px 0 0; color:#b0b3b8; font-size:14px; font-weight:400; }
-    .meter-track { height:4px; margin:32px 0 12px; border-radius:0; background:#3a3d44; overflow:hidden; }
-    .meter-fill { height:100%; width:0; background:#3e6ae1; transition:width .7s cubic-bezier(.4,0,.2,1); }
-    .meter-ends { display:flex; justify-content:space-between; color:#8e8e8e; font-size:12px; font-weight:500; }
+    .meter-readout .n .pct { font-size:.42em; font-weight:500; margin-left:2px; color:#fff; }
+    .meter-caption { margin:14px 0 0; color:#f4f4f4; font-size:16px; font-weight:500; line-height:1.4; }
+    .meter-bar { position:relative; margin:36px 0 14px; padding:8px 0; }
+    .meter-track { height:10px; border-radius:999px; background:#4a4d55; overflow:hidden; }
+    .meter-fill { height:100%; width:0; border-radius:999px; background:linear-gradient(90deg,#e82127 0%,#f05a2a 22%,#f5b942 50%,#9fd84a 78%,#3dd68c 100%); transition:width .7s cubic-bezier(.4,0,.2,1); }
+    .meter-knob { position:absolute; top:50%; width:18px; height:18px; margin-left:-9px; border-radius:50%; background:#fff; border:3px solid #3e6ae1; box-shadow:0 0 0 3px rgba(23,26,32,.55); transform:translateY(-50%); transition:left .7s cubic-bezier(.4,0,.2,1); pointer-events:none; }
+    .meter-ends { display:flex; justify-content:space-between; color:#e8e8e8; font-size:13px; font-weight:500; }
     .clock { margin:0 0 16px; padding:28px 0 8px; border-top:1px solid var(--line-soft); }
     .clock-head { display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
     .clock .when { color:var(--body); font-size:16px; font-weight:500; }
@@ -138,7 +140,7 @@
     <header>
       <div class="kicker">Norge · EØS · Statens vegvesen</div>
       <h1>Tesla FSD Supervised i Norge</h1>
-      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-02T21:45:00+02:00">2. september 2026 kl. 21.45</time>.</p>
+      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-02T21:53:00+02:00">2. september 2026 kl. 21.53</time>.</p>
     </header>
     <div class="layout">
       <div class="main">
@@ -154,8 +156,11 @@
               <div class="n"><span id="sjanse-tall">1</span><span class="pct">%</span></div>
               <p class="meter-caption" id="sjanse-meter-caption">Uoffisiell sjanse for kundegodkjenning denne måneden</p>
             </div>
-            <div class="meter-track">
-              <div class="meter-fill" id="sjanse-fyll"></div>
+            <div class="meter-bar">
+              <div class="meter-track">
+                <div class="meter-fill" id="sjanse-fyll"></div>
+              </div>
+              <div class="meter-knob" id="sjanse-knapp" aria-hidden="true"></div>
             </div>
             <div class="meter-ends"><span>0 %</span><span>50 %</span><span>100 %</span></div>
           </div>
@@ -285,9 +290,11 @@
       var pct = Math.max(0, Math.min(100, Number(card.getAttribute("data-prosent")) || 0));
       var tall = document.getElementById("sjanse-tall");
       var fill = document.getElementById("sjanse-fyll");
+      var knob = document.getElementById("sjanse-knapp");
       if (tall) tall.textContent = String(Math.round(pct));
       requestAnimationFrame(function () {
-        if (fill) fill.style.width = pct + "%";
+        if (fill) fill.style.width = Math.max(pct, pct > 0 ? 2 : 0) + "%";
+        if (knob) knob.style.left = pct + "%";
       });
     })();
   </script>
