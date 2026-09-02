@@ -31,7 +31,6 @@
     .badge.warn i { background:var(--amber); box-shadow:0 0 0 4px rgba(245,185,66,.18); }
     .status h2 { font-size:26px; margin:12px 0 8px; font-weight:650; }
     .status p { color:var(--muted); line-height:1.5; }
-    .meta { display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:14px; color:var(--muted); font-size:13px; }
     .clock { margin:0 0 24px; padding:22px 20px 20px; background:var(--panel); border:1px solid var(--line); border-radius:18px; }
     .clock-head { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
     .clock h2 { font-size:26px; margin:12px 0 4px; font-weight:650; }
@@ -50,7 +49,7 @@
     .mini .when { color:var(--muted); font-size:13px; }
     .mini .sub { color:var(--muted); font-size:13px; margin-top:6px; line-height:1.4; }
     .awaiting { font-variant-numeric:tabular-nums; font-size:28px; font-weight:700; margin:14px 0 8px; color:var(--muted); }
-    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin:18px 0 28px; }
+    .grid { display:grid; grid-template-columns:1fr; gap:12px; margin:18px 0 28px; }
     .card { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:16px 16px 14px; }
     .card .lbl { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; font-weight:600; }
     .card .val { font-size:22px; margin:6px 0 0; font-weight:650; }
@@ -75,12 +74,11 @@
     a { color:var(--blue); text-decoration:none; }
     a:hover { text-decoration:underline; }
     footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; line-height:1.55; }
-    .note { background:var(--panel-2); border:1px solid var(--line); border-radius:14px; padding:14px 16px; color:var(--muted); font-size:14px; }
+    .note { background:var(--panel-2); border:1px solid var(--line); border-radius:14px; padding:14px 16px; color:var(--muted); font-size:14px; margin-top:14px; }
     .sources { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
     .sources a { background:var(--panel); border:1px solid var(--line); border-radius:999px; padding:6px 12px; font-size:13px; color:var(--text); }
     @media (max-width:980px) { .layout { grid-template-columns:1fr; } .rail { position:static; } }
     @media (max-width:720px) { .clocks { grid-template-columns:1fr; } }
-    @media (max-width:640px) { .grid { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -88,7 +86,7 @@
     <header>
       <div class="kicker">Norge · EØS · Statens vegvesen</div>
       <h1>Tesla FSD Supervised i Norge</h1>
-      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-02T09:12:00+02:00">2. september 2026 kl. 09.12</time>.</p>
+      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-02T19:08:00+02:00">2. september 2026 kl. 19.08</time>.</p>
     </header>
     <div class="layout">
       <div class="main">
@@ -110,70 +108,28 @@
             <div class="unit"><span class="n" data-part="mins">––</span><span class="u">min</span></div>
             <div class="unit"><span class="n" data-part="secs">––</span><span class="u">sek</span></div>
           </div>
-          <p class="why" id="hero-why">Rykte på X: avstemning 6. oktober 2026. Offisiell SVV-linje er bare «oktober», og dagen står ikke i komitologiregisteret ennå. Dette er ikke en norsk lanseringsdato.</p>
+          <p class="why" id="hero-why">Rykte på X: TCMV kan stemme 6. oktober. Offisiell SVV-linje er bare oktober. Agendaen er ikke publisert. Dette er ikke en norsk lanseringsdato.</p>
         </div>
         <div class="clocks" id="all-clocks"></div>
         <div class="grid">
           <div class="card"><div class="lbl">Sjanse for FSD til norske eiere i september</div><div class="val">Ca. 1 %</div><div class="sub">Uoffisielt skjønnstall, ikke et tall fra Vegvesenet. Ingen SVV-vedtak og ingen TCMV-avstemning i september. Neste mulige port er oktobermøtet.</div></div>
-          <div class="card"><div class="lbl">EU-avstemning</div><div class="val">Utsatt</div><div class="sub">Rykte: TCMV 6. oktober 2026. Offisiell SVV-linje er bare «oktober». Store land blokkerer 15+65 %.</div></div>
-          <div class="card"><div class="lbl">EU-kunder i dag</div><div class="val">5 land · ~8,9 %</div><div class="sub">Nederland, Litauen, Estland, Danmark, Belgia. For lite til et ja i hele EU.</div></div>
-          <div class="card"><div class="lbl">EU-programvare</div><div class="val">v14.2.2-grenen</div><div class="sub">Nye FSD-bygg krever ny innsending. USA ligger foran på nyere FSD-bygg.</div></div>
         </div>
         <section>
-          <h3>Hva må skje før FSD kan brukes i Norge?</h3>
-          <div class="prose">
-            <p>To porter må åpnes: først et rettslig grunnlag, deretter Tesla-utrulling. Norge har ingen stemme i TCMV. Hovedregelen er at Norge følger et EU-vedtak gjennom EØS-avtalen, men Statens vegvesen kan motsette seg innføring hvis de mener det har vesentlig negativ effekt på trafikksikkerhet eller miljø.</p>
-            <p>SVV er kritisk til unntakene i den nederlandske godkjenningen: aktivering utenfor motorvei, avvik fra fartsgrensen og høyere sideveis akselerasjon i svinger. De har også stanset kundedemonstrasjoner fordi Teslas materiell ble vurdert som villedende — det sa ikke tydelig at dette er et førerstøttesystem, ikke selvkjøring.</p>
-          </div>
-        </section>
-        <section>
-          <h3>Landstatus</h3>
+          <h3>Land som påvirkes av avstemningen</h3>
+          <p class="lede" style="margin-bottom:12px;font-size:15px;">Et TCMV-vedtak gjelder EU-landene. Norge har ingen stemme, men følger som hovedregel gjennom EØS — med mindre Statens vegvesen stanser innføring av sikkerhetsgrunner.</p>
           <table>
             <thead><tr><th>Land</th><th>Kundegodkjenning</th><th>Merknad</th></tr></thead>
             <tbody>
-              <tr><td>Nederland</td><td class="ok">Kundegodkjent</td><td>RDW 10.04.2026</td></tr>
+              <tr><td>Nederland</td><td class="ok">Kundegodkjent</td><td>RDW 10.04.2026. Opprinnelig artikkel 39-godkjenning.</td></tr>
               <tr><td>Litauen</td><td class="ok">Kundegodkjent</td><td>Anerkjennelse 20.05.2026</td></tr>
               <tr><td>Estland</td><td class="ok">Kundegodkjent</td><td>Anerkjennelse 29.05.2026</td></tr>
               <tr><td>Danmark</td><td class="ok">Kundegodkjent</td><td>09.06.2026</td></tr>
               <tr><td>Belgia</td><td class="ok">Kundegodkjent</td><td>10.06.2026</td></tr>
-              <tr><td>Norge</td><td class="no">Ikke kundegodkjent</td><td>Begrenset testing. Venter på EU/EØS eller eget vedtak.</td></tr>
-              <tr><td>Tyskland, Frankrike, Italia, Spania</td><td class="wait">Ingen snarvei</td><td>Store land som blokkerer befolkningskravet for TCMV-flertall.</td></tr>
+              <tr><td>Norge</td><td class="no">Ikke kundegodkjent</td><td>EØS. Begrenset testing. Venter på EU-vedtak eller eget vedtak.</td></tr>
+              <tr><td>Tyskland, Frankrike, Italia, Spania</td><td class="wait">Ingen snarvei</td><td>Store land som blokkerer befolkningskravet for TCMV-flertall (15 stater og 65 %).</td></tr>
             </tbody>
           </table>
-        </section>
-        <section>
-          <h3>Kort forklart</h3>
-          <div class="prose">
-            <p><strong>FSD Supervised</strong> er DCAS under UN R171 — avansert førerstøtte. Bilen kan styre, bremse og skifte fil, men du må se og kunne ta over med en gang. Det er ikke robotaxi og ikke førerløs autonomi.</p>
-            <p>Teslas egne sikkerhetstall (blant annet «5,2 ganger») er telemetri fra selskapet. RDW har ikke lagt multiplikatoren til grunn som offisielt funn. Reuters og flere nordiske tilsyn har etterlyst mer åpne, uavhengige data.</p>
-          </div>
           <p class="note">Denne siden er uoffisiell. Den erstatter ikke vegvesen.no, RDW eller Tesla. Ingen juridisk rådgivning og ingen datoer som løfte.</p>
-        </section>
-        <section>
-          <h3>Rykter på X</h3>
-          <div class="prose">
-            <p>Disse punktene er <strong>ikke</strong> bekreftet av Statens vegvesen, RDW eller komitologiregisteret. Kilden er X.</p>
-            <p><strong>6. oktober 2026.</strong> Flere etablerte Tesla-kontoer på X skriver at TCMV da skal stemme over EU-godkjenning av FSD Supervised. Datoen er gjentatt gjennom juli og august 2026, men agendaen er ikke offentlig ennå. Hvis møtet bare blir diskusjon, kan saken gli til et senere møte.</p>
-          </div>
-          <div class="sources">
-            <a href="https://x.com/TeslaNewswire/status/2079299547705102771" target="_blank" rel="noopener">X · Tesla Newswire</a>
-            <a href="https://x.com/RonnyGolisch/status/2079216899846524970" target="_blank" rel="noopener">X · Ronny Golisch</a>
-            <a href="https://x.com/bitstheen/status/2091856999797363030" target="_blank" rel="noopener">X · 24. aug</a>
-          </div>
-        </section>
-        <section>
-          <h3>Kilder</h3>
-          <p class="note">Offisiell status bygger på myndigheter, EU-register, UNECE og Tesla. Rykter merkes som rykter og oppgis bare med X som kilde. Trackere og forum brukes ikke som primærkilde.</p>
-          <div class="sources">
-            <a href="https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/" target="_blank" rel="noopener">Statens vegvesen</a>
-            <a href="https://www.rdw.nl/en/news/2026/explanation-of-the-type-approval-of-fsd-supervised" target="_blank" rel="noopener">RDW (typegodkjenning)</a>
-            <a href="https://www.fstyr.dk/nyheter/2026/jun/teslas-foererassistentsystem-fsd-supervised-er-foreloebigt-godkendt-i-danmark" target="_blank" rel="noopener">Færdselsstyrelsen</a>
-            <a href="https://ec.europa.eu/transparency/comitology-register/screen/committees/C35300" target="_blank" rel="noopener">TCMV / komitologiregisteret</a>
-            <a href="https://eur-lex.europa.eu/eli/reg/2018/858/oj" target="_blank" rel="noopener">EU 2018/858</a>
-            <a href="https://unece.org/transport/documents/2024/12/standards/addendum-170-un-regulation-no-171" target="_blank" rel="noopener">UN R171</a>
-            <a href="https://etsc.eu/" target="_blank" rel="noopener">ETSC</a>
-            <a href="https://www.tesla.com/ownersmanual/modely/en_nl/GUID-59736DF1-31FA-4F67-8A3F-6111778939D9.html" target="_blank" rel="noopener">Tesla brukermanual</a>
-          </div>
         </section>
       </div>
       <aside class="rail" aria-label="Tidslinje">
