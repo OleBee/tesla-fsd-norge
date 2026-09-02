@@ -74,11 +74,15 @@
     .chart-head .hint { color:var(--muted); font-size:12px; }
     .chart { width:100%; height:auto; display:block; overflow:visible; }
     .chart-grid { stroke:rgba(255,255,255,.06); stroke-width:1; }
+    .chart-today-line { stroke:rgba(122,162,255,.45); stroke-width:1.2; stroke-dasharray:3 4; }
     .chart-axis { fill:var(--muted); font-size:10px; font-family:"IBM Plex Sans", system-ui, sans-serif; }
+    .chart-month { fill:#c9d3e2; font-size:11px; font-weight:600; font-family:"IBM Plex Sans", system-ui, sans-serif; }
+    .chart-pt { fill:var(--muted); font-size:10px; font-family:"IBM Plex Sans", system-ui, sans-serif; }
+    .chart-today { fill:#eef2f8; font-size:11px; font-weight:700; font-family:"IBM Plex Sans", system-ui, sans-serif; }
     .chart-area { fill:url(#sjanse-area); }
     .chart-line { fill:none; stroke:url(#sjanse-line); stroke-width:2.4; stroke-linejoin:round; stroke-linecap:round; }
     .chart-dot { fill:#0b1020; stroke:#7aa2ff; stroke-width:2; }
-    .chart-dot.last { fill:#7aa2ff; }
+    .chart-dot.last { fill:#7aa2ff; stroke:#eef2f8; }
     section { margin:34px 0; }
     h3 { font-size:20px; margin-bottom:12px; font-weight:650; }
     p, li { line-height:1.6; }
@@ -107,7 +111,7 @@
     <header>
       <div class="kicker">Norge · EØS · Statens vegvesen</div>
       <h1>Tesla FSD Supervised i Norge</h1>
-      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-02T19:32:00+02:00">2. september 2026 kl. 19.32</time>.</p>
+      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-02T19:41:00+02:00">2. september 2026 kl. 19.41</time>.</p>
     </header>
     <div class="layout">
       <div class="main">
@@ -159,9 +163,9 @@
           <div class="chart-block">
             <div class="chart-head">
               <div class="lbl">Sjanse over tid</div>
-              <div class="hint">Uoffisielt skjønnstall. Tidlige punkt er tilbakeregnet fra kjente porter.</div>
+              <div class="hint">Hvert punkt har dag og måned. Siste punkt er i dag. Tidlige tall er tilbakeregnet.</div>
             </div>
-            <svg class="chart" id="sjanse-graf" viewBox="0 0 640 168" role="img" aria-label="Uoffisiell sjanse for FSD i Norge over tid"></svg>
+            <svg class="chart" id="sjanse-graf" viewBox="0 0 640 210" role="img" aria-label="Uoffisiell sjanse for FSD i Norge over tid"></svg>
             <script type="application/json" id="sjanse-historikk">[{"dato":"2026-04-10","prosent":1,"merknad":"RDW-godkjenning i Nederland"},{"dato":"2026-05-20","prosent":4,"merknad":"Første EU-anerkjennelser"},{"dato":"2026-06-10","prosent":12,"merknad":"Fem land, håp om juni-avstemning"},{"dato":"2026-06-30","prosent":3,"merknad":"TCMV uten votum"},{"dato":"2026-07-22","prosent":2,"merknad":"Frankrike sier nei"},{"dato":"2026-08-26","prosent":2,"merknad":"Ingen september-port"},{"dato":"2026-09-02","prosent":1,"merknad":"Ingen TCMV i september"}]</script>
           </div>
         </div>
@@ -276,8 +280,7 @@
       function tick() {
         var now = new Date();
         if (!built) build(now);
-        var hero = nextDated(now);
-        fillUnits(document.getElementById("hero-units"), remaining(hero.iso, now));
+        fillUnits(document.getElementById("hero-units"), remaining(nextDated(now).iso, now));
         milestones.forEach(function (m) {
           fillUnits(document.querySelector('[data-id="' + m.id + '"]'), remaining(m.iso, now));
         });
@@ -294,16 +297,12 @@
         for (var i = 0; i <= 10; i++) {
           var a = Math.PI - (i / 10) * Math.PI;
           var inner = i % 5 === 0 ? 92 : 98;
-          var x1 = 140 + Math.cos(a) * inner;
-          var y1 = 148 - Math.sin(a) * inner;
-          var x2 = 140 + Math.cos(a) * 108;
-          var y2 = 148 - Math.sin(a) * 108;
           var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
           line.setAttribute("class", "gauge-tick");
-          line.setAttribute("x1", x1.toFixed(1));
-          line.setAttribute("y1", y1.toFixed(1));
-          line.setAttribute("x2", x2.toFixed(1));
-          line.setAttribute("y2", y2.toFixed(1));
+          line.setAttribute("x1", (140 + Math.cos(a) * inner).toFixed(1));
+          line.setAttribute("y1", (148 - Math.sin(a) * inner).toFixed(1));
+          line.setAttribute("x2", (140 + Math.cos(a) * 108).toFixed(1));
+          line.setAttribute("y2", (148 - Math.sin(a) * 108).toFixed(1));
           if (i % 5 !== 0) line.setAttribute("stroke-width", "1.2");
           ticks.appendChild(line);
         }
@@ -314,8 +313,7 @@
         var i = 0;
         while (i < stops.length - 1 && p > stops[i + 1].t) i++;
         var a = stops[i], b = stops[Math.min(i + 1, stops.length - 1)];
-        var span = b.t - a.t || 1;
-        var t = (p - a.t) / span;
+        var t = (p - a.t) / (b.t - a.t || 1);
         return "rgb(" + mix(a.c[0], b.c[0], t) + "," + mix(a.c[1], b.c[1], t) + "," + mix(a.c[2], b.c[2], t) + ")";
       }
       function paint(p) {
@@ -344,7 +342,10 @@
       var rows = [];
       try { rows = JSON.parse(node.textContent || "[]"); } catch (e) { return; }
       if (!rows.length) return;
-      var w = 640, h = 168, l = 40, r = 16, t = 16, b = 28;
+      var months = ["jan","feb","mar","apr","mai","jun","jul","aug","sep","okt","nov","des"];
+      function parseDay(iso) { var p = iso.split("-"); return { y: Number(p[0]), m: Number(p[1]), d: Number(p[2]) }; }
+      function labelDay(iso) { var p = parseDay(iso); return p.d + ". " + months[p.m - 1]; }
+      var w = 640, h = 210, l = 40, r = 48, t = 28, b = 46;
       var iw = w - l - r, ih = h - t - b;
       var maxP = 0;
       rows.forEach(function (row) { if (row.prosent > maxP) maxP = row.prosent; });
@@ -366,24 +367,41 @@
       svg.appendChild(defs);
       [0, yMax / 2, yMax].forEach(function (v) {
         var y = yOf(v);
-        svg.appendChild(el("line", { class: "chart-grid", x1: String(l), y1: String(y), x2: String(w - r), y2: String(y) }));
-        var lab = el("text", { class: "chart-axis", x: "0", y: String(y + 3) });
+        svg.appendChild(el("line", { class: "chart-grid", x1: l, y1: y, x2: w - r, y2: y }));
+        var lab = el("text", { class: "chart-axis", x: 2, y: y + 3 });
         lab.textContent = String(Math.round(v)) + " %";
         svg.appendChild(lab);
       });
-      var pts = rows.map(function (row) { return { x: xOf(row.dato), y: yOf(row.prosent) }; });
+      var first = parseDay(rows[0].dato);
+      var lastD = parseDay(rows[rows.length - 1].dato);
+      var cursor = new Date(first.y, first.m - 1, 1);
+      var endMonth = new Date(lastD.y, lastD.m - 1, 1);
+      while (cursor <= endMonth) {
+        var key = cursor.getFullYear() + "-" + String(cursor.getMonth() + 1).padStart(2, "0") + "-01";
+        var x = Math.max(l, Math.min(w - r, xOf(key)));
+        var mlab = el("text", { class: "chart-month", x: x, y: h - 8, "text-anchor": cursor.getMonth() + 1 === first.m ? "start" : "middle" });
+        mlab.textContent = months[cursor.getMonth()] + ". " + String(cursor.getFullYear()).slice(2);
+        svg.appendChild(mlab);
+        cursor.setMonth(cursor.getMonth() + 1);
+      }
+      var pts = rows.map(function (row) { return { x: xOf(row.dato), y: yOf(row.prosent), d: row.dato }; });
+      var lastPt = pts[pts.length - 1];
+      svg.appendChild(el("line", { class: "chart-today-line", x1: lastPt.x, y1: t, x2: lastPt.x, y2: t + ih }));
       var d = pts.map(function (p, i) { return (i ? "L" : "M") + p.x.toFixed(1) + " " + p.y.toFixed(1); }).join(" ");
-      var area = d + " L" + pts[pts.length - 1].x.toFixed(1) + " " + (t + ih) + " L" + pts[0].x.toFixed(1) + " " + (t + ih) + " Z";
-      svg.appendChild(el("path", { class: "chart-area", d: area }));
+      svg.appendChild(el("path", { class: "chart-area", d: d + " L" + lastPt.x.toFixed(1) + " " + (t + ih) + " L" + pts[0].x.toFixed(1) + " " + (t + ih) + " Z" }));
       svg.appendChild(el("path", { class: "chart-line", d: d }));
-      function shortDate(iso) { var p = iso.split("-"); return String(Number(p[2])) + "." + String(Number(p[1])); }
-      [rows[0], rows[rows.length - 1]].forEach(function (row, idx) {
-        var lab = el("text", { class: "chart-axis", x: String(idx ? w - r : l), y: String(h - 8), "text-anchor": idx ? "end" : "start" });
-        lab.textContent = shortDate(row.dato);
-        svg.appendChild(lab);
-      });
       pts.forEach(function (p, i) {
-        svg.appendChild(el("circle", { class: "chart-dot" + (i === pts.length - 1 ? " last" : ""), cx: p.x.toFixed(1), cy: p.y.toFixed(1), r: i === pts.length - 1 ? "4.2" : "3.2" }));
+        var isLast = i === pts.length - 1;
+        svg.appendChild(el("circle", { class: "chart-dot" + (isLast ? " last" : ""), cx: p.x.toFixed(1), cy: p.y.toFixed(1), r: isLast ? 5 : 3.2 }));
+        if (isLast) {
+          var today = el("text", { class: "chart-today", x: p.x - 6, y: p.y - 14, "text-anchor": "end" });
+          today.textContent = "I dag · " + labelDay(p.d);
+          svg.appendChild(today);
+        } else {
+          var lab = el("text", { class: "chart-pt", x: p.x, y: p.y > t + 22 ? p.y - 10 : p.y + 16, "text-anchor": "middle" });
+          lab.textContent = labelDay(p.d);
+          svg.appendChild(lab);
+        }
       });
     })();
   </script>
