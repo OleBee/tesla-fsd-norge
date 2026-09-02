@@ -44,7 +44,7 @@
     .unit .n { font-variant-numeric:tabular-nums; font-size:clamp(28px,8vw,52px); font-weight:700; line-height:1; }
     .unit .u { display:block; margin-top:8px; font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
     .clock .why { color:var(--muted); font-size:14px; line-height:1.5; }
-    .clocks { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin:0 0 28px; }
+    .clocks { display:grid; grid-template-columns:1fr; gap:12px; margin:0 0 28px; }
     .mini .units { margin:12px 0 8px; gap:6px; }
     .mini .unit { padding:10px 4px 8px; border-radius:12px; }
     .mini .unit .n { font-size:clamp(22px,6vw,32px); }
@@ -58,8 +58,8 @@
     .gauge { position:relative; width:min(100%, 280px); }
     .gauge svg { width:100%; height:auto; display:block; overflow:visible; }
     .gauge-readout { position:absolute; left:50%; bottom:18%; transform:translateX(-50%); text-align:center; pointer-events:none; }
-    .gauge-readout .n { font-variant-numeric:tabular-nums; font-size:clamp(32px,7vw,46px); font-weight:700; line-height:1; letter-spacing:-0.03em; }
-    .gauge-readout .u { display:block; margin-top:2px; font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+    .gauge-readout .n { font-variant-numeric:tabular-nums; font-size:clamp(36px,8vw,52px); font-weight:700; line-height:1; letter-spacing:-0.03em; }
+    .gauge-readout .u { display:block; margin-top:2px; font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
     .gauge-ends { display:flex; justify-content:space-between; width:min(100%, 280px); margin:0 auto; color:var(--muted); font-size:11px; font-weight:600; letter-spacing:.08em; }
     .gauge-track { fill:none; stroke:#2a3140; stroke-width:16; stroke-linecap:round; }
     .gauge-rainbow { fill:none; stroke:url(#sjanse-grad); stroke-width:16; stroke-linecap:round; opacity:.28; }
@@ -68,6 +68,17 @@
     .gauge-hub { fill:#0d1118; stroke:#3a4354; stroke-width:2; }
     .gauge-hub-core { fill:currentColor; }
     .gauge-needle { transform-box:view-box; transform-origin:140px 148px; transition:transform .9s cubic-bezier(.22,1,.36,1), color .6s ease; }
+    .chart-block { margin-top:18px; padding-top:16px; border-top:1px solid var(--line); }
+    .chart-head { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:8px 12px; margin-bottom:8px; }
+    .chart-head .lbl { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; font-weight:600; }
+    .chart-head .hint { color:var(--muted); font-size:12px; }
+    .chart { width:100%; height:auto; display:block; overflow:visible; }
+    .chart-grid { stroke:rgba(255,255,255,.06); stroke-width:1; }
+    .chart-axis { fill:var(--muted); font-size:10px; font-family:"IBM Plex Sans", system-ui, sans-serif; }
+    .chart-area { fill:url(#sjanse-area); }
+    .chart-line { fill:none; stroke:url(#sjanse-line); stroke-width:2.4; stroke-linejoin:round; stroke-linecap:round; }
+    .chart-dot { fill:#0b1020; stroke:#7aa2ff; stroke-width:2; }
+    .chart-dot.last { fill:#7aa2ff; }
     section { margin:34px 0; }
     h3 { font-size:20px; margin-bottom:12px; font-weight:650; }
     p, li { line-height:1.6; }
@@ -89,7 +100,6 @@
     footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; line-height:1.55; }
     .note { background:var(--panel-2); border:1px solid var(--line); border-radius:14px; padding:14px 16px; color:var(--muted); font-size:14px; margin-top:14px; }
     @media (max-width:980px) { .layout { grid-template-columns:1fr; } .rail { position:static; } .status-split { grid-template-columns:1fr; } }
-    @media (max-width:720px) { .clocks { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -97,7 +107,7 @@
     <header>
       <div class="kicker">Norge · EØS · Statens vegvesen</div>
       <h1>Tesla FSD Supervised i Norge</h1>
-      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-02T19:23:00+02:00">2. september 2026 kl. 19.23</time>.</p>
+      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-02T19:32:00+02:00">2. september 2026 kl. 19.32</time>.</p>
     </header>
     <div class="layout">
       <div class="main">
@@ -145,6 +155,14 @@
               </div>
               <div class="gauge-ends"><span>0 %</span><span>100 %</span></div>
             </div>
+          </div>
+          <div class="chart-block">
+            <div class="chart-head">
+              <div class="lbl">Sjanse over tid</div>
+              <div class="hint">Uoffisielt skjønnstall. Tidlige punkt er tilbakeregnet fra kjente porter.</div>
+            </div>
+            <svg class="chart" id="sjanse-graf" viewBox="0 0 640 168" role="img" aria-label="Uoffisiell sjanse for FSD i Norge over tid"></svg>
+            <script type="application/json" id="sjanse-historikk">[{"dato":"2026-04-10","prosent":1,"merknad":"RDW-godkjenning i Nederland"},{"dato":"2026-05-20","prosent":4,"merknad":"Første EU-anerkjennelser"},{"dato":"2026-06-10","prosent":12,"merknad":"Fem land, håp om juni-avstemning"},{"dato":"2026-06-30","prosent":3,"merknad":"TCMV uten votum"},{"dato":"2026-07-22","prosent":2,"merknad":"Frankrike sier nei"},{"dato":"2026-08-26","prosent":2,"merknad":"Ingen september-port"},{"dato":"2026-09-02","prosent":1,"merknad":"Ingen TCMV i september"}]</script>
           </div>
         </div>
         <div class="clock" id="hero-clock">
@@ -202,8 +220,7 @@
     (function () {
       var milestones = [
         { id: "tcmv", title: "TCMV-avstemning", dateLabel: "6. oktober 2026", iso: "2026-10-06T09:00:00+02:00", certainty: "Rykte på X", why: "Rykte på X: TCMV kan stemme 6. oktober. Offisiell SVV-linje er bare oktober. Agendaen er ikke publisert. Dette er ikke en norsk lanseringsdato." },
-        { id: "r171", title: "UN R171 Series 02", dateLabel: "Sent i januar 2027", iso: "2027-01-20T00:00:00+01:00", certainty: "Veiledende", why: "Langsiktig regelverksvei. Parallell med oktober-avstemningen, ikke det samme som at systemet tas i bruk i Norge." },
-        { id: "norge", title: "Norsk vurdering", dateLabel: "Etter EU-vedtak", iso: null, certainty: "Ikke satt", why: "Vegvesenet tar stilling når EU-vedtaket foreligger. Kan følge EØS, eller stanse ved sikkerhetsrisiko." }
+        { id: "r171", title: "UN R171 Series 02", dateLabel: "Sent i januar 2027", iso: "2027-01-20T00:00:00+01:00", certainty: "Veiledende", why: "Langsiktig regelverksvei. Parallell med oktober-avstemningen, ikke det samme som at systemet tas i bruk i Norge." }
       ];
       function pad(n) { return String(n).padStart(2, "0"); }
       function remaining(iso, now) {
@@ -293,13 +310,7 @@
       }
       function mix(a, b, t) { return Math.round(a + (b - a) * t); }
       function needleColor(p) {
-        var stops = [
-          { t: 0, c: [232, 33, 39] },
-          { t: 22, c: [240, 90, 42] },
-          { t: 50, c: [245, 185, 66] },
-          { t: 78, c: [159, 216, 74] },
-          { t: 100, c: [61, 214, 140] }
-        ];
+        var stops = [{ t: 0, c: [232, 33, 39] }, { t: 22, c: [240, 90, 42] }, { t: 50, c: [245, 185, 66] }, { t: 78, c: [159, 216, 74] }, { t: 100, c: [61, 214, 140] }];
         var i = 0;
         while (i < stops.length - 1 && p > stops[i + 1].t) i++;
         var a = stops[i], b = stops[Math.min(i + 1, stops.length - 1)];
@@ -313,26 +324,67 @@
         var tall = document.getElementById("sjanse-tall");
         var color = needleColor(p);
         if (bue) bue.setAttribute("stroke-dasharray", p + " 100");
-        if (viser) {
-          viser.style.color = color;
-          viser.style.transform = "rotate(" + (-90 + p * 1.8) + "deg)";
-        }
-        if (tall) {
-          tall.textContent = String(Math.round(p));
-          tall.style.color = color;
-        }
+        if (viser) { viser.style.color = color; viser.style.transform = "rotate(" + (-90 + p * 1.8) + "deg)"; }
+        if (tall) { tall.textContent = String(Math.round(p)); tall.style.color = color; }
       }
       paint(0);
       var start = null;
       function step(ts) {
         if (!start) start = ts;
         var t = Math.min(1, (ts - start) / 900);
-        var eased = 1 - Math.pow(1 - t, 3);
-        paint(pct * eased);
-        if (t < 1) requestAnimationFrame(step);
-        else paint(pct);
+        paint(pct * (1 - Math.pow(1 - t, 3)));
+        if (t < 1) requestAnimationFrame(step); else paint(pct);
       }
       requestAnimationFrame(step);
+    })();
+    (function () {
+      var node = document.getElementById("sjanse-historikk");
+      var svg = document.getElementById("sjanse-graf");
+      if (!node || !svg) return;
+      var rows = [];
+      try { rows = JSON.parse(node.textContent || "[]"); } catch (e) { return; }
+      if (!rows.length) return;
+      var w = 640, h = 168, l = 40, r = 16, t = 16, b = 28;
+      var iw = w - l - r, ih = h - t - b;
+      var maxP = 0;
+      rows.forEach(function (row) { if (row.prosent > maxP) maxP = row.prosent; });
+      var yMax = Math.max(12, Math.ceil((maxP * 1.35) / 4) * 4);
+      var t0 = new Date(rows[0].dato + "T00:00:00").getTime();
+      var t1 = new Date(rows[rows.length - 1].dato + "T00:00:00").getTime();
+      if (t1 === t0) t1 = t0 + 86400000;
+      function xOf(d) { return l + ((new Date(d + "T00:00:00").getTime() - t0) / (t1 - t0)) * iw; }
+      function yOf(p) { return t + ih - (p / yMax) * ih; }
+      var ns = "http://www.w3.org/2000/svg";
+      function el(name, attrs) {
+        var n = document.createElementNS(ns, name);
+        Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+        return n;
+      }
+      svg.innerHTML = "";
+      var defs = el("defs", {});
+      defs.innerHTML = '<linearGradient id="sjanse-area" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7aa2ff" stop-opacity=".28"/><stop offset="100%" stop-color="#7aa2ff" stop-opacity="0"/></linearGradient><linearGradient id="sjanse-line" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#e82127"/><stop offset="45%" stop-color="#f5b942"/><stop offset="100%" stop-color="#7aa2ff"/></linearGradient>';
+      svg.appendChild(defs);
+      [0, yMax / 2, yMax].forEach(function (v) {
+        var y = yOf(v);
+        svg.appendChild(el("line", { class: "chart-grid", x1: String(l), y1: String(y), x2: String(w - r), y2: String(y) }));
+        var lab = el("text", { class: "chart-axis", x: "0", y: String(y + 3) });
+        lab.textContent = String(Math.round(v)) + " %";
+        svg.appendChild(lab);
+      });
+      var pts = rows.map(function (row) { return { x: xOf(row.dato), y: yOf(row.prosent) }; });
+      var d = pts.map(function (p, i) { return (i ? "L" : "M") + p.x.toFixed(1) + " " + p.y.toFixed(1); }).join(" ");
+      var area = d + " L" + pts[pts.length - 1].x.toFixed(1) + " " + (t + ih) + " L" + pts[0].x.toFixed(1) + " " + (t + ih) + " Z";
+      svg.appendChild(el("path", { class: "chart-area", d: area }));
+      svg.appendChild(el("path", { class: "chart-line", d: d }));
+      function shortDate(iso) { var p = iso.split("-"); return String(Number(p[2])) + "." + String(Number(p[1])); }
+      [rows[0], rows[rows.length - 1]].forEach(function (row, idx) {
+        var lab = el("text", { class: "chart-axis", x: String(idx ? w - r : l), y: String(h - 8), "text-anchor": idx ? "end" : "start" });
+        lab.textContent = shortDate(row.dato);
+        svg.appendChild(lab);
+      });
+      pts.forEach(function (p, i) {
+        svg.appendChild(el("circle", { class: "chart-dot" + (i === pts.length - 1 ? " last" : ""), cx: p.x.toFixed(1), cy: p.y.toFixed(1), r: i === pts.length - 1 ? "4.2" : "3.2" }));
+      });
     })();
   </script>
 </body>
