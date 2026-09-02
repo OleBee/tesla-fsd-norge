@@ -5,89 +5,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tesla FSD i Norge — status</title>
   <meta name="description" content="Daglig oppdatert status for godkjenning av Tesla FSD Supervised i Norge. Offisiell linje fra Statens vegvesen, TCMV og EØS.">
-  <meta name="theme-color" content="#0b1020">
+  <meta name="theme-color" content="#171A20">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    :root { --bg:#07090f; --panel:#11151f; --panel-2:#171c28; --line:rgba(255,255,255,.08); --text:#eef2f8; --muted:#9aa6b8; --red:#e82127; --amber:#f5b942; --green:#3dd68c; --blue:#7aa2ff; }
+    :root {
+      --canvas:#ffffff;
+      --surface:#f4f4f4;
+      --ink:#171a20;
+      --body:#393c41;
+      --muted:#5c5e62;
+      --meta:#8e8e8e;
+      --line:#d0d1d2;
+      --line-soft:#eeeeee;
+      --blue:#3e6ae1;
+      --blue-hover:#3457c4;
+      --on-dark:#ffffff;
+      --dark:#171a20;
+      --dark-2:#22252b;
+      --red:#b91c1c;
+      --amber:#b45309;
+      --green:#15803d;
+      --r:4px;
+    }
     * { box-sizing:border-box; margin:0; padding:0; }
-    html, body { background:var(--bg); color:var(--text); font-family:"IBM Plex Sans", system-ui, sans-serif; }
+    html, body { background:var(--canvas); color:var(--ink); font-family:Inter, "Universal Sans Text", -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight:400; }
     body { min-height:100vh; }
-    .wrap { max-width:1180px; margin:0 auto; padding:32px 20px 48px; }
-    header { margin-bottom:28px; }
-    .kicker { letter-spacing:.14em; text-transform:uppercase; font-size:12px; color:var(--muted); font-weight:600; }
-    h1 { font-family:"IBM Plex Serif", Georgia, serif; font-size:clamp(32px,6vw,52px); line-height:1.08; margin:10px 0 12px; font-weight:500; }
-    .lede { color:var(--muted); font-size:17px; line-height:1.55; max-width:42em; }
-    .layout { display:grid; grid-template-columns:minmax(0,1fr) 340px; gap:22px; align-items:start; }
-    .rail { position:sticky; top:16px; background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:18px 16px 10px; }
-    .rail h3 { margin-bottom:16px; }
-    .status { margin:0 0 24px; padding:22px 22px 20px; background:radial-gradient(1200px 180px at 10% -20%, rgba(232,33,39,.18), transparent), var(--panel); border:1px solid var(--line); border-radius:18px; }
-    .status-copy .lbl { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; font-weight:600; margin-top:16px; }
-    .status-copy .sub { color:var(--muted); font-size:13px; margin-top:8px; line-height:1.45; }
-    .badge { display:inline-flex; align-items:center; gap:8px; background:rgba(232,33,39,.12); color:#ff8b8e; border:1px solid rgba(232,33,39,.35); padding:6px 11px; border-radius:999px; font-size:13px; font-weight:600; }
-    .badge i { width:8px; height:8px; border-radius:50%; background:var(--red); box-shadow:0 0 0 4px rgba(232,33,39,.18); }
-    .badge.soft { background:rgba(122,162,255,.12); color:var(--blue); border-color:rgba(122,162,255,.35); }
-    .badge.soft i { background:var(--blue); box-shadow:0 0 0 4px rgba(122,162,255,.18); }
-    .badge.warn { background:rgba(245,185,66,.12); color:var(--amber); border-color:rgba(245,185,66,.35); }
-    .badge.warn i { background:var(--amber); box-shadow:0 0 0 4px rgba(245,185,66,.18); }
-    .status h2 { font-size:26px; margin:12px 0 8px; font-weight:650; }
-    .status p { color:var(--muted); line-height:1.5; }
-    .meter { margin-top:18px; padding:28px 28px 22px; background:#0c1220; border:1px solid rgba(255,255,255,.06); border-radius:22px; }
+    .nav {
+      position:sticky; top:0; z-index:20;
+      display:flex; align-items:center; justify-content:space-between;
+      height:56px; padding:0 28px;
+      background:rgba(255,255,255,.72);
+      backdrop-filter:saturate(180%) blur(20px);
+      -webkit-backdrop-filter:saturate(180%) blur(20px);
+      border-bottom:1px solid var(--line-soft);
+    }
+    .wordmark { font-weight:500; font-size:18px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink); text-decoration:none; }
+    .nav-links { display:flex; gap:22px; }
+    .nav-links a { color:var(--ink); text-decoration:none; font-size:14px; font-weight:500; }
+    .nav-links a:hover { color:var(--muted); }
+    .wrap { max-width:1120px; margin:0 auto; padding:56px 24px 80px; }
+    header { margin-bottom:40px; max-width:40em; }
+    .kicker { font-size:14px; font-weight:500; color:var(--muted); letter-spacing:.02em; }
+    h1 { font-size:clamp(36px,5.4vw,48px); line-height:1.12; font-weight:500; letter-spacing:-.02em; margin:10px 0 16px; }
+    .lede { color:var(--body); font-size:16px; line-height:1.5; }
+    .layout { display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:48px; align-items:start; }
+    .status { margin:0 0 28px; }
+    .status-copy .lbl { font-size:14px; color:var(--muted); font-weight:500; margin-top:20px; }
+    .status-copy .sub, .sub { color:var(--muted); font-size:14px; margin-top:12px; line-height:1.5; }
+    .badge {
+      display:inline-flex; align-items:center; gap:8px;
+      background:transparent; color:var(--ink);
+      border:3px solid var(--ink); padding:6px 14px;
+      border-radius:var(--r); font-size:12px; font-weight:500;
+    }
+    .badge i { width:6px; height:6px; border-radius:50%; background:var(--red); }
+    .badge.soft { border-color:var(--blue); color:var(--blue); }
+    .badge.soft i { background:var(--blue); }
+    .badge.warn { border-color:var(--ink); color:var(--ink); }
+    .badge.warn i { background:var(--amber); }
+    .status h2, .clock h2 { font-size:28px; line-height:1.2; margin:14px 0 10px; font-weight:500; letter-spacing:-.02em; }
+    .status p { color:var(--body); line-height:1.5; max-width:40em; }
+    .meter { margin-top:24px; padding:36px 32px 28px; background:var(--dark); color:var(--on-dark); border-radius:var(--r); }
     .meter-readout { text-align:center; }
-    .meter-readout .n { font-variant-numeric:tabular-nums; font-size:clamp(56px,9vw,84px); font-weight:700; line-height:1; letter-spacing:-0.04em; color:#f4f7fb; }
-    .meter-readout .n .pct { font-size:.46em; font-weight:650; letter-spacing:-0.02em; margin-left:2px; }
-    .meter-caption { margin:10px 0 0; color:#8b97ab; font-size:15px; font-weight:500; }
-    .meter-track { position:relative; height:10px; margin:28px 0 10px; border-radius:999px; background:#1b2333; overflow:hidden; }
-    .meter-fill { height:100%; width:0; border-radius:999px; background:linear-gradient(90deg,#e82127 0%,#f05a2a 18%,#f5b942 50%,#9fd84a 78%,#3dd68c 100%); transform-origin:left center; transition:width .9s cubic-bezier(.22,1,.36,1); }
-    .meter-ends { display:flex; justify-content:space-between; color:#7d889c; font-size:12px; font-weight:600; letter-spacing:.02em; }
-    .clock { margin:0 0 24px; padding:22px 20px 20px; background:var(--panel); border:1px solid var(--line); border-radius:18px; }
-    .clock-head { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
-    .clock h2 { font-size:26px; margin:12px 0 4px; font-weight:650; }
-    .clock .when { color:var(--muted); font-size:15px; }
-    .units { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:18px 0 14px; }
-    .unit { background:var(--panel-2); border:1px solid var(--line); border-radius:14px; padding:14px 6px 12px; text-align:center; }
-    .unit .n { font-variant-numeric:tabular-nums; font-size:clamp(28px,8vw,52px); font-weight:700; line-height:1; }
-    .unit .u { display:block; margin-top:8px; font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+    .meter-readout .n { font-variant-numeric:tabular-nums; font-size:clamp(56px,8vw,80px); font-weight:500; line-height:.95; letter-spacing:-.03em; color:#fff; }
+    .meter-readout .n .pct { font-size:.42em; font-weight:500; margin-left:2px; }
+    .meter-caption { margin:12px 0 0; color:#b0b3b8; font-size:14px; font-weight:400; }
+    .meter-track { height:4px; margin:32px 0 12px; border-radius:0; background:#3a3d44; overflow:hidden; }
+    .meter-fill { height:100%; width:0; background:#3e6ae1; transition:width .7s cubic-bezier(.4,0,.2,1); }
+    .meter-ends { display:flex; justify-content:space-between; color:#8e8e8e; font-size:12px; font-weight:500; }
+    .clock { margin:0 0 16px; padding:28px 0 8px; border-top:1px solid var(--line-soft); }
+    .clock-head { display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
+    .clock .when { color:var(--body); font-size:16px; font-weight:500; }
+    .units { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:20px 0 16px; }
+    .unit { background:var(--surface); border-radius:var(--r); padding:16px 6px 14px; text-align:center; }
+    .unit .n { font-variant-numeric:tabular-nums; font-size:clamp(26px,6vw,40px); font-weight:500; line-height:1; color:var(--ink); }
+    .unit .u { display:block; margin-top:8px; font-size:12px; font-weight:500; color:var(--muted); }
     .clock .why { color:var(--muted); font-size:14px; line-height:1.5; }
-    .clocks { display:grid; grid-template-columns:1fr; gap:12px; margin:0 0 28px; }
-    .mini .units { margin:12px 0 8px; gap:6px; }
-    .mini .unit { padding:10px 4px 8px; border-radius:12px; }
-    .mini .unit .n { font-size:clamp(22px,6vw,32px); }
-    .mini .unit .u { font-size:10px; margin-top:6px; }
-    .mini h3 { font-size:16px; font-weight:650; margin:8px 0 2px; }
-    .mini .when { color:var(--muted); font-size:13px; }
-    .mini .sub { color:var(--muted); font-size:13px; margin-top:6px; line-height:1.4; }
-    .awaiting { font-variant-numeric:tabular-nums; font-size:28px; font-weight:700; margin:14px 0 8px; color:var(--muted); }
-    .card { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:16px 16px 14px; }
-    section { margin:34px 0 0; }
-    h3 { font-size:20px; margin-bottom:12px; font-weight:650; }
-    p, li { line-height:1.6; }
-    .timeline { list-style:none; border-left:1px solid var(--line); margin-left:8px; }
-    .timeline li { padding:0 0 16px 16px; position:relative; }
-    .timeline li:last-child { padding-bottom:4px; }
-    .timeline li::before { content:""; position:absolute; left:-5px; top:7px; width:9px; height:9px; border-radius:50%; background:var(--blue); }
-    .timeline li.next::before { background:var(--amber); }
-    .timeline .when { color:var(--muted); font-size:12px; font-weight:600; }
-    .timeline .what { margin-top:2px; font-size:13.5px; color:#c9d3e2; }
+    .clocks { display:grid; grid-template-columns:1fr; gap:0; margin:0 0 12px; }
+    .mini { padding:24px 0; border-top:1px solid var(--line-soft); }
+    .mini .units { margin:14px 0 10px; }
+    .mini .unit { padding:12px 4px; }
+    .mini .unit .n { font-size:clamp(20px,5vw,28px); }
+    .mini h3 { font-size:20px; font-weight:500; margin:10px 0 4px; }
+    .mini .when { color:var(--body); font-size:14px; font-weight:500; }
+    .mini .sub { color:var(--muted); font-size:14px; margin-top:8px; line-height:1.45; }
+    .awaiting { font-variant-numeric:tabular-nums; font-size:24px; font-weight:500; margin:14px 0 8px; color:var(--muted); }
+    .card { background:transparent; }
+    section { margin:36px 0 0; padding-top:28px; border-top:1px solid var(--line-soft); }
+    h3 { font-size:20px; margin-bottom:12px; font-weight:500; }
+    p, li { line-height:1.5; }
+    .rail { position:sticky; top:72px; padding:4px 0 0; }
+    .rail h3 { margin-bottom:16px; }
+    .timeline { list-style:none; border-left:1px solid var(--line); margin-left:7px; }
+    .timeline li { padding:0 0 18px 16px; position:relative; }
+    .timeline li:last-child { padding-bottom:0; }
+    .timeline li::before { content:""; position:absolute; left:-4px; top:7px; width:7px; height:7px; border-radius:50%; background:var(--ink); }
+    .timeline li.next::before { background:var(--blue); }
+    .timeline .when { color:var(--muted); font-size:12px; font-weight:500; }
+    .timeline .what { margin-top:3px; font-size:14px; color:var(--body); }
     table { width:100%; border-collapse:collapse; font-size:14px; }
-    th, td { text-align:left; padding:10px 8px; border-bottom:1px solid var(--line); }
-    th { color:var(--muted); font-weight:600; font-size:12px; text-transform:uppercase; letter-spacing:.06em; }
-    .ok { color:var(--green); font-weight:600; }
-    .no { color:#ff8b8e; font-weight:600; }
-    .wait { color:var(--amber); font-weight:600; }
+    th, td { text-align:left; padding:14px 8px; border-bottom:1px solid var(--line-soft); }
+    th { color:var(--muted); font-weight:500; font-size:12px; }
+    td { color:var(--body); }
+    td:first-child { color:var(--ink); font-weight:500; }
+    .ok { color:var(--green); font-weight:500; }
+    .no { color:var(--red); font-weight:500; }
+    .wait { color:var(--amber); font-weight:500; }
     a { color:var(--blue); text-decoration:none; }
     a:hover { text-decoration:underline; }
-    .note { background:var(--panel-2); border:1px solid var(--line); border-radius:14px; padding:14px 16px; color:var(--muted); font-size:14px; margin-top:14px; }
-    @media (max-width:980px) { .layout { grid-template-columns:1fr; } .rail { position:static; } .meter { padding:22px 18px 18px; } }
+    .note { color:var(--muted); font-size:13px; margin-top:20px; line-height:1.5; }
+    @media (max-width:980px) {
+      .layout { grid-template-columns:1fr; gap:32px; }
+      .rail { position:static; }
+      .nav { padding:0 16px; }
+      .wrap { padding:36px 16px 64px; }
+      .meter { padding:28px 20px 22px; }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <nav class="nav" aria-label="Hovedmeny">
+    <a class="wordmark" href="#top">FSD Norge</a>
+    <div class="nav-links">
+      <a href="#sjanse-kort">Status</a>
+      <a href="#hero-clock">Milepæl</a>
+      <a href="#tidslinje">Tidslinje</a>
+    </div>
+  </nav>
+  <div class="wrap" id="top">
     <header>
       <div class="kicker">Norge · EØS · Statens vegvesen</div>
       <h1>Tesla FSD Supervised i Norge</h1>
-      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-02T21:39:00+02:00">2. september 2026 kl. 21.39</time>.</p>
+      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-02T21:45:00+02:00">2. september 2026 kl. 21.45</time>.</p>
     </header>
     <div class="layout">
       <div class="main">
@@ -128,7 +179,7 @@
         <div class="clocks" id="all-clocks"></div>
         <section>
           <h3>Land som påvirkes av avstemningen</h3>
-          <p class="lede" style="margin-bottom:12px;font-size:15px;">Et TCMV-vedtak gjelder EU-landene. Norge har ingen stemme, men følger som hovedregel gjennom EØS — med mindre Statens vegvesen av sikkerhetshensyn stanser innføringen.</p>
+          <p class="lede" style="margin-bottom:16px;">Et TCMV-vedtak gjelder EU-landene. Norge har ingen stemme, men følger som hovedregel gjennom EØS — med mindre Statens vegvesen av sikkerhetshensyn stanser innføringen.</p>
           <table>
             <thead><tr><th>Land</th><th>Kundegodkjenning</th><th>Merknad</th></tr></thead>
             <tbody>
@@ -144,7 +195,7 @@
           <p class="note">Denne siden er uoffisiell. Den erstatter ikke vegvesen.no, RDW eller Tesla. Ingen juridisk rådgivning og ingen datoer som løfte.</p>
         </section>
       </div>
-      <aside class="rail" aria-label="Tidslinje">
+      <aside class="rail" id="tidslinje" aria-label="Tidslinje">
         <div class="kicker">Historikk</div>
         <h3>Tidslinje</h3>
         <ul class="timeline">
