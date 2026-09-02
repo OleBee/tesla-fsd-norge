@@ -54,6 +54,22 @@
     .card .lbl { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; font-weight:600; }
     .card .val { font-size:22px; margin:6px 0 0; font-weight:650; }
     .card .sub { color:var(--muted); font-size:13px; margin-top:4px; line-height:1.4; }
+    .chance { padding:20px 20px 18px; }
+    .gauge-wrap { display:grid; place-items:center; margin:8px 0 2px; }
+    .gauge { position:relative; width:min(100%, 340px); }
+    .gauge svg { width:100%; height:auto; display:block; overflow:visible; }
+    .gauge-readout { position:absolute; left:50%; bottom:18%; transform:translateX(-50%); text-align:center; pointer-events:none; }
+    .gauge-readout .n { font-variant-numeric:tabular-nums; font-size:clamp(36px,8vw,52px); font-weight:700; line-height:1; letter-spacing:-0.03em; }
+    .gauge-readout .u { display:block; margin-top:2px; font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+    .gauge-ends { display:flex; justify-content:space-between; width:min(100%, 340px); margin:0 auto 10px; color:var(--muted); font-size:11px; font-weight:600; letter-spacing:.08em; }
+    .gauge-track { fill:none; stroke:#2a3140; stroke-width:16; stroke-linecap:round; }
+    .gauge-rainbow { fill:none; stroke:url(#sjanse-grad); stroke-width:16; stroke-linecap:round; opacity:.28; }
+    .gauge-value { fill:none; stroke:url(#sjanse-grad); stroke-width:16; stroke-linecap:round; filter:url(#sjanse-glow); }
+    .gauge-tick { stroke:rgba(255,255,255,.22); stroke-width:2; stroke-linecap:round; }
+    .gauge-hub { fill:#0d1118; stroke:#3a4354; stroke-width:2; }
+    .gauge-hub-core { fill:currentColor; }
+    .gauge-needle { transform-box:view-box; transform-origin:140px 148px; transition:transform .9s cubic-bezier(.22,1,.36,1), color .6s ease; }
+    .chance .sub { margin-top:10px; max-width:42em; }
     section { margin:34px 0; }
     h3 { font-size:20px; margin-bottom:12px; font-weight:650; }
     p, li { line-height:1.6; }
@@ -86,7 +102,7 @@
     <header>
       <div class="kicker">Norge · EØS · Statens vegvesen</div>
       <h1>Tesla FSD Supervised i Norge</h1>
-      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-02T19:08:00+02:00">2. september 2026 kl. 19.08</time>.</p>
+      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-02T19:18:00+02:00">2. september 2026 kl. 19.18</time>.</p>
     </header>
     <div class="layout">
       <div class="main">
@@ -112,7 +128,43 @@
         </div>
         <div class="clocks" id="all-clocks"></div>
         <div class="grid">
-          <div class="card"><div class="lbl">Sjanse for FSD til norske eiere i september</div><div class="val">Ca. 1 %</div><div class="sub">Uoffisielt skjønnstall, ikke et tall fra Vegvesenet. Ingen SVV-vedtak og ingen TCMV-avstemning i september. Neste mulige port er oktobermøtet.</div></div>
+          <article class="card chance" id="sjanse-kort" data-prosent="1">
+            <div class="lbl" id="sjanse-etikett">Sjanse for FSD til norske eiere i september</div>
+            <div class="gauge-wrap">
+              <div class="gauge" role="img" aria-labelledby="sjanse-etikett sjanse-tall">
+                <svg viewBox="0 0 280 168" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="sjanse-grad" x1="32" y1="148" x2="248" y2="148" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#e82127"/>
+                      <stop offset="22%" stop-color="#f05a2a"/>
+                      <stop offset="50%" stop-color="#f5b942"/>
+                      <stop offset="78%" stop-color="#9fd84a"/>
+                      <stop offset="100%" stop-color="#3dd68c"/>
+                    </linearGradient>
+                    <filter id="sjanse-glow" x="-20%" y="-20%" width="140%" height="140%">
+                      <feGaussianBlur stdDeviation="2.4" result="b"/>
+                      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                    </filter>
+                  </defs>
+                  <path class="gauge-track" d="M32 148 A108 108 0 0 1 248 148"/>
+                  <path class="gauge-rainbow" d="M32 148 A108 108 0 0 1 248 148"/>
+                  <path id="sjanse-bue" class="gauge-value" d="M32 148 A108 108 0 0 1 248 148" pathLength="100" stroke-dasharray="0 100" stroke-dashoffset="0"/>
+                  <g id="sjanse-ticks"></g>
+                  <g id="sjanse-viser" class="gauge-needle" style="color:#e82127; transform:rotate(-90deg);">
+                    <path d="M138.2 148 L140 46 L141.8 148 Z" fill="currentColor"/>
+                    <circle class="gauge-hub" cx="140" cy="148" r="11"/>
+                    <circle class="gauge-hub-core" cx="140" cy="148" r="4.5"/>
+                  </g>
+                </svg>
+                <div class="gauge-readout">
+                  <span class="n" id="sjanse-tall">1</span>
+                  <span class="u">prosent</span>
+                </div>
+              </div>
+            </div>
+            <div class="gauge-ends"><span>0 %</span><span>100 %</span></div>
+            <p class="sub" id="sjanse-kommentar">Uoffisielt skjønnstall, ikke et tall fra Vegvesenet. Ingen SVV-vedtak og ingen TCMV-avstemning i september. Neste mulige port er oktobermøtet.</p>
+          </article>
         </div>
         <section>
           <h3>Land som påvirkes av avstemningen</h3>
@@ -218,6 +270,74 @@
       }
       tick();
       setInterval(tick, 1000);
+    })();
+    (function () {
+      var card = document.getElementById("sjanse-kort");
+      if (!card) return;
+      var pct = Math.max(0, Math.min(100, Number(card.getAttribute("data-prosent")) || 0));
+      var ticks = document.getElementById("sjanse-ticks");
+      if (ticks && !ticks.childElementCount) {
+        for (var i = 0; i <= 10; i++) {
+          var a = Math.PI - (i / 10) * Math.PI;
+          var inner = i % 5 === 0 ? 92 : 98;
+          var x1 = 140 + Math.cos(a) * inner;
+          var y1 = 148 - Math.sin(a) * inner;
+          var x2 = 140 + Math.cos(a) * 108;
+          var y2 = 148 - Math.sin(a) * 108;
+          var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+          line.setAttribute("class", "gauge-tick");
+          line.setAttribute("x1", x1.toFixed(1));
+          line.setAttribute("y1", y1.toFixed(1));
+          line.setAttribute("x2", x2.toFixed(1));
+          line.setAttribute("y2", y2.toFixed(1));
+          if (i % 5 !== 0) line.setAttribute("stroke-width", "1.2");
+          ticks.appendChild(line);
+        }
+      }
+      function mix(a, b, t) {
+        return Math.round(a + (b - a) * t);
+      }
+      function needleColor(p) {
+        var stops = [
+          { t: 0, c: [232, 33, 39] },
+          { t: 22, c: [240, 90, 42] },
+          { t: 50, c: [245, 185, 66] },
+          { t: 78, c: [159, 216, 74] },
+          { t: 100, c: [61, 214, 140] }
+        ];
+        var i = 0;
+        while (i < stops.length - 1 && p > stops[i + 1].t) i++;
+        var a = stops[i], b = stops[Math.min(i + 1, stops.length - 1)];
+        var span = b.t - a.t || 1;
+        var t = (p - a.t) / span;
+        return "rgb(" + mix(a.c[0], b.c[0], t) + "," + mix(a.c[1], b.c[1], t) + "," + mix(a.c[2], b.c[2], t) + ")";
+      }
+      function paint(p) {
+        var bue = document.getElementById("sjanse-bue");
+        var viser = document.getElementById("sjanse-viser");
+        var tall = document.getElementById("sjanse-tall");
+        var color = needleColor(p);
+        if (bue) bue.setAttribute("stroke-dasharray", p + " 100");
+        if (viser) {
+          viser.style.color = color;
+          viser.style.transform = "rotate(" + (-90 + p * 1.8) + "deg)";
+        }
+        if (tall) {
+          tall.textContent = String(Math.round(p));
+          tall.style.color = color;
+        }
+      }
+      paint(0);
+      var start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        var t = Math.min(1, (ts - start) / 900);
+        var eased = 1 - Math.pow(1 - t, 3);
+        paint(pct * eased);
+        if (t < 1) requestAnimationFrame(step);
+        else paint(pct);
+      }
+      requestAnimationFrame(step);
     })();
   </script>
 </body>
