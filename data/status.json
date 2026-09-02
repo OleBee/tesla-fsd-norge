@@ -1,8 +1,8 @@
 {
   "sist_sjekket": "2026-09-02",
   "sist_sjekket_nb": "2. september 2026",
-  "sist_oppdatert_iso": "2026-09-02T19:23:00+02:00",
-  "sist_oppdatert_nb": "2. september 2026 kl. 19.23",
+  "sist_oppdatert_iso": "2026-09-02T19:32:00+02:00",
+  "sist_oppdatert_nb": "2. september 2026 kl. 19.32",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Ikke kundegodkjent. Begrenset testing med Tesla-trente sikkerhetsførere.",
@@ -29,6 +29,15 @@
     "etikett": "Sjanse for FSD til norske eiere i september",
     "kommentar": "Uoffisielt skjønnstall, ikke et tall fra Vegvesenet. Ingen SVV-vedtak og ingen TCMV-avstemning i september. Neste mulige port er oktobermøtet."
   },
+  "sjanse_historikk": [
+    { "dato": "2026-04-10", "prosent": 1, "merknad": "RDW-godkjenning i Nederland" },
+    { "dato": "2026-05-20", "prosent": 4, "merknad": "Første EU-anerkjennelser" },
+    { "dato": "2026-06-10", "prosent": 12, "merknad": "Fem land, håp om juni-avstemning" },
+    { "dato": "2026-06-30", "prosent": 3, "merknad": "TCMV uten votum" },
+    { "dato": "2026-07-22", "prosent": 2, "merknad": "Frankrike sier nei" },
+    { "dato": "2026-08-26", "prosent": 2, "merknad": "Ingen september-port" },
+    { "dato": "2026-09-02", "prosent": 1, "merknad": "Ingen TCMV i september" }
+  ],
   "series_02": {
     "forventet": "2027-01",
     "merknad": "UN R171 Series 02 ventes i kraft sent i januar 2027. Parallell vei, ikke norsk go-live."
