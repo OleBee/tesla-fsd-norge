@@ -1,8 +1,8 @@
 {
-  "sist_sjekket": "2026-08-30",
-  "sist_sjekket_nb": "30. august 2026",
-  "sist_oppdatert_iso": "2026-09-01T06:06:00+02:00",
-  "sist_oppdatert_nb": "1. september 2026 kl. 06.06",
+  "sist_sjekket": "2026-09-02",
+  "sist_sjekket_nb": "2. september 2026",
+  "sist_oppdatert_iso": "2026-09-02T09:12:00+02:00",
+  "sist_oppdatert_nb": "2. september 2026 kl. 09.12",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Ikke kundegodkjent. Begrenset testing med Tesla-trente sikkerhetsførere.",
@@ -40,14 +40,14 @@
     "siste_utfall": "diskusjon uten avstemning",
     "neste_dato": "2026-10-06",
     "neste_sikkerhet": "rykte",
-    "dager_til": 37,
+    "dager_til": 34,
     "sannsynlig_utfall": "utsatt",
     "kommentar": "6. okt er rykte. SVV sier bare oktober. Store land blokkerer 15+65 %. Sannsynlig utsatt eller nei uten DE/FR/IT."
   },
   "norge_denne_maneden": {
     "prosent": 1,
-    "etikett": "Sjanse for FSD til norske eiere i august",
-    "kommentar": "Uoffisielt skjønnstall, ikke et tall fra Vegvesenet. Ingen SVV-vedtak og ingen TCMV-avstemning i august. Neste mulige port er oktobermøtet."
+    "etikett": "Sjanse for FSD til norske eiere i september",
+    "kommentar": "Uoffisielt skjønnstall, ikke et tall fra Vegvesenet. Ingen SVV-vedtak og ingen TCMV-avstemning i september. Neste mulige port er oktobermøtet."
   },
   "series_02": {
     "forventet": "2027-01",
