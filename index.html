@@ -14,7 +14,7 @@
     * { box-sizing:border-box; margin:0; padding:0; }
     html, body { background:var(--bg); color:var(--text); font-family:"IBM Plex Sans", system-ui, sans-serif; }
     body { min-height:100vh; }
-    .wrap { max-width:1180px; margin:0 auto; padding:32px 20px 64px; }
+    .wrap { max-width:1180px; margin:0 auto; padding:32px 20px 48px; }
     header { margin-bottom:28px; }
     .kicker { letter-spacing:.14em; text-transform:uppercase; font-size:12px; color:var(--muted); font-weight:600; }
     h1 { font-family:"IBM Plex Serif", Georgia, serif; font-size:clamp(32px,6vw,52px); line-height:1.08; margin:10px 0 12px; font-weight:500; }
@@ -83,7 +83,7 @@
     .chart-line { fill:none; stroke:url(#sjanse-line); stroke-width:2.4; stroke-linejoin:round; stroke-linecap:round; }
     .chart-dot { fill:#0b1020; stroke:#7aa2ff; stroke-width:2; }
     .chart-dot.last { fill:#7aa2ff; stroke:#eef2f8; }
-    section { margin:34px 0; }
+    section { margin:34px 0 0; }
     h3 { font-size:20px; margin-bottom:12px; font-weight:650; }
     p, li { line-height:1.6; }
     .timeline { list-style:none; border-left:1px solid var(--line); margin-left:8px; }
@@ -101,7 +101,6 @@
     .wait { color:var(--amber); font-weight:600; }
     a { color:var(--blue); text-decoration:none; }
     a:hover { text-decoration:underline; }
-    footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; line-height:1.55; }
     .note { background:var(--panel-2); border:1px solid var(--line); border-radius:14px; padding:14px 16px; color:var(--muted); font-size:14px; margin-top:14px; }
     @media (max-width:980px) { .layout { grid-template-columns:1fr; } .rail { position:static; } .status-split { grid-template-columns:1fr; } }
   </style>
@@ -218,7 +217,6 @@
         </ul>
       </aside>
     </div>
-    <footer>Uoffisiell statusside drevet fra GitHub-repositoriet tesla-fsd-norge. Innholdet sjekkes mot offentlige kilder hver dag.</footer>
   </div>
   <script>
     (function () {
