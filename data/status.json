@@ -1,37 +1,17 @@
 {
   "sist_sjekket": "2026-09-02",
   "sist_sjekket_nb": "2. september 2026",
-  "sist_oppdatert_iso": "2026-09-02T19:18:00+02:00",
-  "sist_oppdatert_nb": "2. september 2026 kl. 19.18",
+  "sist_oppdatert_iso": "2026-09-02T19:23:00+02:00",
+  "sist_oppdatert_nb": "2. september 2026 kl. 19.23",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Ikke kundegodkjent. Begrenset testing med Tesla-trente sikkerhetsførere.",
   "eu_land": [
-    {
-      "land": "Nederland",
-      "dato": "2026-04-10",
-      "sti": "RDW artikkel 39"
-    },
-    {
-      "land": "Litauen",
-      "dato": "2026-05-20",
-      "sti": "anerkjennelse"
-    },
-    {
-      "land": "Estland",
-      "dato": "2026-05-29",
-      "sti": "anerkjennelse"
-    },
-    {
-      "land": "Danmark",
-      "dato": "2026-06-09",
-      "sti": "anerkjennelse"
-    },
-    {
-      "land": "Belgia",
-      "dato": "2026-06-10",
-      "sti": "anerkjennelse"
-    }
+    { "land": "Nederland", "dato": "2026-04-10", "sti": "RDW artikkel 39" },
+    { "land": "Litauen", "dato": "2026-05-20", "sti": "anerkjennelse" },
+    { "land": "Estland", "dato": "2026-05-29", "sti": "anerkjennelse" },
+    { "land": "Danmark", "dato": "2026-06-09", "sti": "anerkjennelse" },
+    { "land": "Belgia", "dato": "2026-06-10", "sti": "anerkjennelse" }
   ],
   "eu_andel_befolkning_prosent": 8.9,
   "programvaregren": "v14.2.2",
