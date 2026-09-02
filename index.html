@@ -5,29 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tesla FSD i Norge — status</title>
   <meta name="description" content="Daglig oppdatert status for godkjenning av Tesla FSD Supervised i Norge. Offisiell linje fra Statens vegvesen, TCMV og EØS.">
-  <meta name="theme-color" content="#171A20">
+  <meta name="theme-color" content="#070b14">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --canvas:#ffffff;
-      --surface:#f4f4f4;
-      --ink:#171a20;
-      --body:#393c41;
-      --muted:#5c5e62;
-      --meta:#8e8e8e;
-      --line:#d0d1d2;
-      --line-soft:#eeeeee;
-      --blue:#3e6ae1;
-      --blue-hover:#3457c4;
-      --on-dark:#ffffff;
-      --dark:#171a20;
-      --dark-2:#22252b;
-      --red:#b91c1c;
-      --amber:#b45309;
-      --green:#15803d;
-      --r:4px;
+      --canvas:#070b14;
+      --panel:#0e1624;
+      --panel-2:#121b2c;
+      --ink:#ffffff;
+      --body:#9aa3b5;
+      --muted:#8b95a8;
+      --meta:#7d8798;
+      --line:rgba(255,255,255,.08);
+      --line-soft:rgba(255,255,255,.06);
+      --blue:#5b8cff;
+      --red:#ff6b6b;
+      --amber:#ffc14d;
+      --green:#3dd68c;
+      --r:24px;
     }
     * { box-sizing:border-box; margin:0; padding:0; }
     html, body { background:var(--canvas); color:var(--ink); font-family:Inter, "Universal Sans Text", -apple-system, "Helvetica Neue", Arial, sans-serif; font-weight:400; }
@@ -36,42 +33,48 @@
       position:sticky; top:0; z-index:20;
       display:flex; align-items:center; justify-content:space-between;
       height:56px; padding:0 28px;
-      background:rgba(255,255,255,.72);
-      backdrop-filter:saturate(180%) blur(20px);
-      -webkit-backdrop-filter:saturate(180%) blur(20px);
+      background:rgba(7,11,20,.72);
+      backdrop-filter:saturate(160%) blur(18px);
+      -webkit-backdrop-filter:saturate(160%) blur(18px);
       border-bottom:1px solid var(--line-soft);
     }
-    .wordmark { font-weight:500; font-size:18px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink); text-decoration:none; }
+    .wordmark { font-weight:500; font-size:18px; letter-spacing:.18em; text-transform:uppercase; color:#fff; text-decoration:none; }
     .nav-links { display:flex; gap:22px; }
-    .nav-links a { color:var(--ink); text-decoration:none; font-size:14px; font-weight:500; }
-    .nav-links a:hover { color:var(--muted); }
-    .wrap { max-width:1120px; margin:0 auto; padding:56px 24px 80px; }
-    header { margin-bottom:40px; max-width:40em; }
-    .kicker { font-size:14px; font-weight:500; color:var(--muted); letter-spacing:.02em; }
-    h1 { font-size:clamp(36px,5.4vw,48px); line-height:1.12; font-weight:500; letter-spacing:-.02em; margin:10px 0 16px; }
+    .nav-links a { color:#c5cddb; text-decoration:none; font-size:14px; font-weight:500; }
+    .nav-links a:hover { color:#fff; }
+    .wrap { max-width:1120px; margin:0 auto; padding:48px 24px 80px; }
+    header { margin-bottom:28px; max-width:40em; }
+    .kicker { font-size:13px; font-weight:500; color:var(--muted); letter-spacing:.04em; }
+    h1 { font-size:clamp(36px,5.4vw,48px); line-height:1.12; font-weight:500; letter-spacing:-.03em; margin:10px 0 16px; color:#fff; }
     .lede { color:var(--body); font-size:16px; line-height:1.5; }
-    .layout { display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:48px; align-items:start; }
-    .status { margin:0 0 28px; }
-    .status-copy .lbl { font-size:14px; color:var(--muted); font-weight:500; margin-top:20px; }
+    .layout { display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:20px; align-items:start; }
+    .panel {
+      background:var(--panel);
+      border-radius:var(--r);
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);
+      padding:28px 28px 24px;
+    }
+    .status { margin:0 0 20px; }
+    .status-copy .lbl { font-size:14px; color:var(--muted); font-weight:400; margin-top:20px; }
     .status-copy .sub, .sub { color:var(--muted); font-size:14px; margin-top:12px; line-height:1.5; }
     .badge {
       display:inline-flex; align-items:center; gap:8px;
-      background:transparent; color:var(--ink);
-      border:3px solid var(--ink); padding:6px 14px;
-      border-radius:var(--r); font-size:12px; font-weight:500;
+      background:transparent; color:#fff;
+      border:1px solid rgba(255,255,255,.22); padding:6px 12px;
+      border-radius:999px; font-size:12px; font-weight:500;
     }
     .badge i { width:6px; height:6px; border-radius:50%; background:var(--red); }
-    .badge.soft { border-color:var(--blue); color:var(--blue); }
+    .badge.soft { border-color:rgba(91,140,255,.45); color:#9bb6ff; }
     .badge.soft i { background:var(--blue); }
-    .badge.warn { border-color:var(--ink); color:var(--ink); }
+    .badge.warn { border-color:rgba(255,193,77,.4); color:#ffd27a; }
     .badge.warn i { background:var(--amber); }
-    .status h2, .clock h2 { font-size:28px; line-height:1.2; margin:14px 0 10px; font-weight:500; letter-spacing:-.02em; }
+    .status h2, .clock h2 { font-size:28px; line-height:1.2; margin:14px 0 10px; font-weight:500; letter-spacing:-.03em; color:#fff; }
     .status p { color:var(--body); line-height:1.5; max-width:40em; }
     .meter {
-      margin-top:24px; padding:40px 36px 28px;
-      background:#0e1624; color:#fff;
-      border-radius:24px;
-      box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);
+      margin-top:22px; padding:36px 8px 8px;
+      background:transparent; color:#fff;
+      border-radius:0; box-shadow:none;
+      border-top:1px solid var(--line-soft);
     }
     .meter-readout { text-align:center; }
     .meter-readout .n {
@@ -89,53 +92,54 @@
       transition:width .8s cubic-bezier(.22,1,.36,1);
     }
     .meter-ends { display:flex; justify-content:space-between; color:#7d8798; font-size:13px; font-weight:400; }
-    .clock { margin:0 0 16px; padding:28px 0 8px; border-top:1px solid var(--line-soft); }
+    .clock { margin:0 0 20px; }
     .clock-head { display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
-    .clock .when { color:var(--body); font-size:16px; font-weight:500; }
+    .clock .when { color:#fff; font-size:16px; font-weight:500; }
     .units { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:20px 0 16px; }
-    .unit { background:var(--surface); border-radius:var(--r); padding:16px 6px 14px; text-align:center; }
-    .unit .n { font-variant-numeric:tabular-nums; font-size:clamp(26px,6vw,40px); font-weight:500; line-height:1; color:var(--ink); }
+    .unit { background:var(--panel-2); border-radius:16px; padding:16px 6px 14px; text-align:center; box-shadow:inset 0 0 0 1px rgba(255,255,255,.04); }
+    .unit .n { font-variant-numeric:tabular-nums; font-size:clamp(26px,6vw,40px); font-weight:500; line-height:1; color:#fff; }
     .unit .u { display:block; margin-top:8px; font-size:12px; font-weight:500; color:var(--muted); }
     .clock .why { color:var(--muted); font-size:14px; line-height:1.5; }
-    .clocks { display:grid; grid-template-columns:1fr; gap:0; margin:0 0 12px; }
-    .mini { padding:24px 0; border-top:1px solid var(--line-soft); }
+    .clocks { display:grid; grid-template-columns:1fr; gap:20px; margin:0 0 20px; }
+    .mini { }
     .mini .units { margin:14px 0 10px; }
     .mini .unit { padding:12px 4px; }
     .mini .unit .n { font-size:clamp(20px,5vw,28px); }
-    .mini h3 { font-size:20px; font-weight:500; margin:10px 0 4px; }
-    .mini .when { color:var(--body); font-size:14px; font-weight:500; }
+    .mini h3 { font-size:20px; font-weight:500; margin:10px 0 4px; color:#fff; }
+    .mini .when { color:#fff; font-size:14px; font-weight:500; }
     .mini .sub { color:var(--muted); font-size:14px; margin-top:8px; line-height:1.45; }
     .awaiting { font-variant-numeric:tabular-nums; font-size:24px; font-weight:500; margin:14px 0 8px; color:var(--muted); }
-    .card { background:transparent; }
-    section { margin:36px 0 0; padding-top:28px; border-top:1px solid var(--line-soft); }
-    h3 { font-size:20px; margin-bottom:12px; font-weight:500; }
+    .card.mini { background:var(--panel); border-radius:var(--r); box-shadow:inset 0 0 0 1px rgba(255,255,255,.04); padding:24px; }
+    section { margin:0; }
+    h3 { font-size:20px; margin-bottom:12px; font-weight:500; color:#fff; }
     p, li { line-height:1.5; }
-    .rail { position:sticky; top:72px; padding:4px 0 0; }
+    .rail { position:sticky; top:72px; }
     .rail h3 { margin-bottom:16px; }
     .timeline { list-style:none; border-left:1px solid var(--line); margin-left:7px; }
     .timeline li { padding:0 0 18px 16px; position:relative; }
     .timeline li:last-child { padding-bottom:0; }
-    .timeline li::before { content:""; position:absolute; left:-4px; top:7px; width:7px; height:7px; border-radius:50%; background:var(--ink); }
-    .timeline li.next::before { background:var(--blue); }
+    .timeline li::before { content:""; position:absolute; left:-4px; top:7px; width:7px; height:7px; border-radius:50%; background:#5b8cff; }
+    .timeline li.next::before { background:var(--amber); }
     .timeline .when { color:var(--muted); font-size:12px; font-weight:500; }
-    .timeline .what { margin-top:3px; font-size:14px; color:var(--body); }
+    .timeline .what { margin-top:3px; font-size:14px; color:#c5cddb; }
     table { width:100%; border-collapse:collapse; font-size:14px; }
     th, td { text-align:left; padding:14px 8px; border-bottom:1px solid var(--line-soft); }
     th { color:var(--muted); font-weight:500; font-size:12px; }
     td { color:var(--body); }
-    td:first-child { color:var(--ink); font-weight:500; }
+    td:first-child { color:#fff; font-weight:500; }
     .ok { color:var(--green); font-weight:500; }
     .no { color:var(--red); font-weight:500; }
     .wait { color:var(--amber); font-weight:500; }
     a { color:var(--blue); text-decoration:none; }
     a:hover { text-decoration:underline; }
-    .note { color:var(--muted); font-size:13px; margin-top:20px; line-height:1.5; }
+    .note { color:var(--muted); font-size:13px; margin-top:20px; line-height:1.5; background:transparent; border:0; padding:0; }
     @media (max-width:980px) {
-      .layout { grid-template-columns:1fr; gap:32px; }
+      .layout { grid-template-columns:1fr; gap:16px; }
       .rail { position:static; }
       .nav { padding:0 16px; }
-      .wrap { padding:36px 16px 64px; }
-      .meter { padding:28px 20px 22px; }
+      .wrap { padding:28px 16px 64px; }
+      .panel { padding:22px 18px 20px; }
+      .meter { padding:28px 0 4px; }
     }
   </style>
 </head>
@@ -152,11 +156,11 @@
     <header>
       <div class="kicker">Norge · EØS · Statens vegvesen</div>
       <h1>Tesla FSD Supervised i Norge</h1>
-      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-02T22:10:00+02:00">2. september 2026 kl. 22.10</time>.</p>
+      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-02T22:14:00+02:00">2. september 2026 kl. 22.14</time>.</p>
     </header>
     <div class="layout">
       <div class="main">
-        <div class="status" id="sjanse-kort" data-prosent="1">
+        <div class="status panel" id="sjanse-kort" data-prosent="1">
           <div class="status-copy">
             <span class="badge"><i></i> Ikke kundegodkjent</span>
             <h2>FSD er ikke godkjent for vanlige eiere i Norge</h2>
@@ -177,7 +181,7 @@
           </div>
           <p class="sub" id="sjanse-kommentar">Uoffisielt skjønnstall, ikke et tall fra Vegvesenet. Ingen SVV-vedtak og ingen TCMV-avstemning i september. Neste mulige port er oktobermøtet.</p>
         </div>
-        <div class="clock" id="hero-clock">
+        <div class="clock panel" id="hero-clock">
           <div class="clock-head">
             <span class="kicker">Neste milepæl</span>
             <span class="badge warn" id="hero-certainty"><i></i> Rykte på X</span>
@@ -193,7 +197,7 @@
           <p class="why" id="hero-why">Rykte på X: TCMV kan stemme 6. oktober. Offisiell SVV-linje er bare oktober. Agendaen er ikke publisert. Dette er ikke en norsk lanseringsdato.</p>
         </div>
         <div class="clocks" id="all-clocks"></div>
-        <section>
+        <section class="panel">
           <h3>Land som påvirkes av avstemningen</h3>
           <p class="lede" style="margin-bottom:16px;">Et TCMV-vedtak gjelder EU-landene. Norge har ingen stemme, men følger som hovedregel gjennom EØS — med mindre Statens vegvesen av sikkerhetshensyn stanser innføringen.</p>
           <table>
@@ -211,7 +215,7 @@
           <p class="note">Denne siden er uoffisiell. Den erstatter ikke vegvesen.no, RDW eller Tesla. Ingen juridisk rådgivning og ingen datoer som løfte.</p>
         </section>
       </div>
-      <aside class="rail" id="tidslinje" aria-label="Tidslinje">
+      <aside class="rail panel" id="tidslinje" aria-label="Tidslinje">
         <div class="kicker">Historikk</div>
         <h3>Tidslinje</h3>
         <ul class="timeline">
