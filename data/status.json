@@ -1,8 +1,8 @@
 {
   "sist_sjekket": "2026-09-02",
   "sist_sjekket_nb": "2. september 2026",
-  "sist_oppdatert_iso": "2026-09-02T19:32:00+02:00",
-  "sist_oppdatert_nb": "2. september 2026 kl. 19.32",
+  "sist_oppdatert_iso": "2026-09-02T21:39:00+02:00",
+  "sist_oppdatert_nb": "2. september 2026 kl. 21.39",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Ikke kundegodkjent. Begrenset testing med Tesla-trente sikkerhetsførere.",
@@ -42,6 +42,6 @@
     "forventet": "2027-01",
     "merknad": "UN R171 Series 02 ventes i kraft sent i januar 2027. Parallell vei, ikke norsk go-live."
   },
-  "side_layout": "slim-2026-09-02",
+  "side_layout": "slim-meter-2026-09-02",
   "materiell_endring": true
 }
