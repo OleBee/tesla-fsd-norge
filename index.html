@@ -134,7 +134,7 @@
     <header>
       <div class="kicker">Norge · EØS · Statens vegvesen</div>
       <h1>Tesla FSD Supervised i Norge</h1>
-      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-03T14:20:00+02:00">3. september 2026 kl. 14.20</time>.</p>
+      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-03T19:16:00+02:00">3. september 2026 kl. 19.16</time>.</p>
     </header>
     <div class="layout">
       <div class="main">
@@ -159,6 +159,27 @@
           </div>
           <p class="sub" id="sjanse-kommentar">Uoffisielt skjønnstall, ikke et tall fra Vegvesenet. Ingen SVV-vedtak og ingen TCMV-avstemning i september. Neste mulige port er oktobermøtet.</p>
         </div>
+        <div class="status panel" id="tcmv-sjanse-kort" data-prosent="25">
+          <div class="status-copy">
+            <span class="badge warn"><i></i> Mulig avstemning</span>
+            <h2>TCMV kan stemme i oktober</h2>
+            <p>Neste realistiske EU-port er TCMV-møtet. Et ja krever minst 15 av 27 stater og 65 prosent av befolkningen. Fem godkjente land dekker 8,9 prosent. Dette er ikke en norsk lanseringsdato.</p>
+            <div class="lbl" id="tcmv-sjanse-etikett">Sjanse for at TCMV godkjenner i oktober</div>
+          </div>
+          <div class="meter" role="img" aria-labelledby="tcmv-sjanse-etikett tcmv-sjanse-tall tcmv-sjanse-meter-caption">
+            <div class="meter-readout">
+              <div class="n"><span id="tcmv-sjanse-tall">25</span><span class="pct">%</span></div>
+              <p class="meter-caption" id="tcmv-sjanse-meter-caption">Uoffisiell sjanse for EU-ja i oktober</p>
+            </div>
+            <div class="meter-bar">
+              <div class="meter-track">
+                <div class="meter-fill" id="tcmv-sjanse-fyll"></div>
+              </div>
+            </div>
+            <div class="meter-ends"><span>0%</span><span>50%</span><span>100%</span></div>
+          </div>
+          <p class="sub" id="tcmv-sjanse-kommentar">Uoffisielt skjønnstall, ikke et tall fra Kommisjonen. 6. oktober er rykte. Agendaen er ikke publisert. Store land blokkerer fortsatt 15+65 %.</p>
+        </div>
         <div class="clock panel" id="hero-clock">
           <div class="clock-head">
             <span class="kicker">Neste milepæl</span>
@@ -173,7 +194,6 @@
             <div class="unit"><span class="n" data-part="secs">––</span><span class="u">sek</span></div>
           </div>
           <p class="why" id="hero-why">Rykte på X og Tesla Europe: TCMV kan stemme 6. oktober. Offisiell SVV-linje er bare oktober. Agendaen er ikke publisert. Dette er ikke en norsk lanseringsdato.</p>
-          <p class="sub" id="tcmv-sjanse">Uoffisiell sjanse for at TCMV godkjenner i oktober: <strong>Ca. 25 %</strong>. Skjønnstall, ikke et tall fra Kommisjonen. Fem land dekker 8,9 % av befolkningen. Store land blokkerer fortsatt kravet om 15 stater og 65 %.</p>
         </div>
         <div class="clocks" id="all-clocks"></div>
         <section class="panel">
@@ -214,7 +234,7 @@
   <script>
     (function () {
       var milestones = [
-        { id: "tcmv", title: "TCMV-avstemning", dateLabel: "6. oktober 2026", iso: "2026-10-06T09:00:00+02:00", certainty: "Rykte på X", why: "Rykte på X og Tesla Europe: TCMV kan stemme 6. oktober. Offisiell SVV-linje er bare oktober. Agendaen er ikke publisert. Uoffisiell sjanse for ja: ca. 25 %. Dette er ikke en norsk lanseringsdato." },
+        { id: "tcmv", title: "TCMV-avstemning", dateLabel: "6. oktober 2026", iso: "2026-10-06T09:00:00+02:00", certainty: "Rykte på X", why: "Rykte på X og Tesla Europe: TCMV kan stemme 6. oktober. Offisiell SVV-linje er bare oktober. Agendaen er ikke publisert. Dette er ikke en norsk lanseringsdato." },
         { id: "r171", title: "UN R171 Series 02", dateLabel: "Sent i januar 2027", iso: "2027-01-20T00:00:00+01:00", certainty: "Veiledende", why: "Langsiktig regelverksvei. Parallell med oktober-avstemningen, ikke det samme som at systemet tas i bruk i Norge." }
       ];
       function pad(n) { return String(n).padStart(2, "0"); }
@@ -280,14 +300,14 @@
       setInterval(tick, 1000);
     })();
     (function () {
-      var card = document.getElementById("sjanse-kort");
-      if (!card) return;
-      var pct = Math.max(0, Math.min(100, Number(card.getAttribute("data-prosent")) || 0));
-      var tall = document.getElementById("sjanse-tall");
-      var fill = document.getElementById("sjanse-fyll");
-      if (tall) tall.textContent = String(Math.round(pct));
-      requestAnimationFrame(function () {
-        if (fill) fill.style.width = pct + "%";
+      document.querySelectorAll("[data-prosent]").forEach(function (card) {
+        var pct = Math.max(0, Math.min(100, Number(card.getAttribute("data-prosent")) || 0));
+        var tall = card.querySelector(".meter-readout .n span:first-child");
+        var fill = card.querySelector(".meter-fill");
+        if (tall) tall.textContent = String(Math.round(pct));
+        requestAnimationFrame(function () {
+          if (fill) fill.style.width = pct + "%";
+        });
       });
     })();
   </script>
