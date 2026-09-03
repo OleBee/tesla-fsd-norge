@@ -88,7 +88,6 @@
     .unit .u { display:block; margin-top:8px; font-size:12px; font-weight:500; color:var(--muted); }
     .clock .why { color:var(--muted); font-size:14px; line-height:1.5; }
     .clocks { display:grid; grid-template-columns:1fr; gap:20px; margin:0 0 20px; }
-    .mini { }
     .mini .units { margin:14px 0 10px; }
     .mini .unit { padding:12px 4px; }
     .mini .unit .n { font-size:clamp(20px,5vw,28px); }
@@ -120,6 +119,11 @@
     a { color:var(--blue); text-decoration:none; }
     a:hover { text-decoration:underline; }
     .note { color:var(--muted); font-size:13px; margin-top:20px; line-height:1.5; background:transparent; border:0; padding:0; }
+    .tcmv-combo .clock-head { margin-bottom: 2px; }
+    .tcmv-combo .when { color:#fff; font-size:16px; font-weight:500; margin-top:10px; }
+    .tcmv-combo .units { margin:18px 0 4px; }
+    .tcmv-combo .meter { margin-top:10px; padding-top:28px; }
+    .tcmv-combo .lbl { font-size:14px; color:var(--muted); font-weight:400; margin-top:8px; }
     @media (max-width:980px) {
       .layout { grid-template-columns:1fr; gap:16px; }
       .rail { position:static; }
@@ -134,7 +138,7 @@
     <header>
       <div class="kicker">Norge · EØS · Statens vegvesen</div>
       <h1>Tesla FSD Supervised i Norge</h1>
-      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-03T19:16:00+02:00">3. september 2026 kl. 19.16</time>.</p>
+      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-03T19:28:00+02:00">3. september 2026 kl. 19.28</time>.</p>
     </header>
     <div class="layout">
       <div class="main">
@@ -159,13 +163,23 @@
           </div>
           <p class="sub" id="sjanse-kommentar">Uoffisielt skjønnstall, ikke et tall fra Vegvesenet. Ingen SVV-vedtak og ingen TCMV-avstemning i september. Neste mulige port er oktobermøtet.</p>
         </div>
-        <div class="status panel" id="tcmv-sjanse-kort" data-prosent="25">
+        <div class="status panel tcmv-combo" id="tcmv-sjanse-kort" data-prosent="25">
           <div class="status-copy">
-            <span class="badge warn"><i></i> Mulig avstemning</span>
-            <h2>TCMV kan stemme i oktober</h2>
+            <div class="clock-head">
+              <span class="badge warn"><i></i> Mulig avstemning</span>
+              <span class="badge warn" id="hero-certainty"><i></i> Rykte på X</span>
+            </div>
+            <h2 id="hero-title">TCMV kan stemme i oktober</h2>
             <p>Neste realistiske EU-port er TCMV-møtet. Et ja krever minst 15 av 27 stater og 65 prosent av befolkningen. Fem godkjente land dekker 8,9 prosent. Dette er ikke en norsk lanseringsdato.</p>
-            <div class="lbl" id="tcmv-sjanse-etikett">Sjanse for at TCMV godkjenner i oktober</div>
+            <p class="when" id="hero-date">6. oktober 2026</p>
           </div>
+          <div class="units" id="hero-units" aria-live="polite">
+            <div class="unit"><span class="n" data-part="days">––</span><span class="u">dager</span></div>
+            <div class="unit"><span class="n" data-part="hours">––</span><span class="u">timer</span></div>
+            <div class="unit"><span class="n" data-part="mins">––</span><span class="u">min</span></div>
+            <div class="unit"><span class="n" data-part="secs">––</span><span class="u">sek</span></div>
+          </div>
+          <div class="lbl" id="tcmv-sjanse-etikett">Sjanse for at TCMV godkjenner i oktober</div>
           <div class="meter" role="img" aria-labelledby="tcmv-sjanse-etikett tcmv-sjanse-tall tcmv-sjanse-meter-caption">
             <div class="meter-readout">
               <div class="n"><span id="tcmv-sjanse-tall">25</span><span class="pct">%</span></div>
@@ -178,22 +192,8 @@
             </div>
             <div class="meter-ends"><span>0%</span><span>50%</span><span>100%</span></div>
           </div>
-          <p class="sub" id="tcmv-sjanse-kommentar">Uoffisielt skjønnstall, ikke et tall fra Kommisjonen. 6. oktober er rykte. Agendaen er ikke publisert. Store land blokkerer fortsatt 15+65 %.</p>
-        </div>
-        <div class="clock panel" id="hero-clock">
-          <div class="clock-head">
-            <span class="kicker">Neste milepæl</span>
-            <span class="badge warn" id="hero-certainty"><i></i> Rykte på X</span>
-          </div>
-          <h2 id="hero-title">TCMV-avstemning</h2>
-          <p class="when" id="hero-date">6. oktober 2026</p>
-          <div class="units" id="hero-units" aria-live="polite">
-            <div class="unit"><span class="n" data-part="days">––</span><span class="u">dager</span></div>
-            <div class="unit"><span class="n" data-part="hours">––</span><span class="u">timer</span></div>
-            <div class="unit"><span class="n" data-part="mins">––</span><span class="u">min</span></div>
-            <div class="unit"><span class="n" data-part="secs">––</span><span class="u">sek</span></div>
-          </div>
-          <p class="why" id="hero-why">Rykte på X og Tesla Europe: TCMV kan stemme 6. oktober. Offisiell SVV-linje er bare oktober. Agendaen er ikke publisert. Dette er ikke en norsk lanseringsdato.</p>
+          <p class="sub" id="tcmv-sjanse-kommentar">Uoffisielt skjønnstall, ikke et tall fra Kommisjonen. 6. oktober er rykte på X og fra Tesla Europe. Offisiell SVV-linje er bare oktober. Agendaen er ikke publisert. Store land blokkerer fortsatt 15+65 %. Dette er ikke en norsk lanseringsdato.</p>
+          <p class="why" id="hero-why" hidden>Rykte på X og Tesla Europe: TCMV kan stemme 6. oktober. Offisiell SVV-linje er bare oktober. Agendaen er ikke publisert. Dette er ikke en norsk lanseringsdato.</p>
         </div>
         <div class="clocks" id="all-clocks"></div>
         <section class="panel">
@@ -234,7 +234,7 @@
   <script>
     (function () {
       var milestones = [
-        { id: "tcmv", title: "TCMV-avstemning", dateLabel: "6. oktober 2026", iso: "2026-10-06T09:00:00+02:00", certainty: "Rykte på X", why: "Rykte på X og Tesla Europe: TCMV kan stemme 6. oktober. Offisiell SVV-linje er bare oktober. Agendaen er ikke publisert. Dette er ikke en norsk lanseringsdato." },
+        { id: "tcmv", title: "TCMV kan stemme i oktober", dateLabel: "6. oktober 2026", iso: "2026-10-06T09:00:00+02:00", certainty: "Rykte på X", why: "Uoffisielt skjønnstall, ikke et tall fra Kommisjonen. 6. oktober er rykte på X og fra Tesla Europe. Offisiell SVV-linje er bare oktober. Agendaen er ikke publisert. Store land blokkerer fortsatt 15+65 %. Dette er ikke en norsk lanseringsdato." },
         { id: "r171", title: "UN R171 Series 02", dateLabel: "Sent i januar 2027", iso: "2027-01-20T00:00:00+01:00", certainty: "Veiledende", why: "Langsiktig regelverksvei. Parallell med oktober-avstemningen, ikke det samme som at systemet tas i bruk i Norge." }
       ];
       function pad(n) { return String(n).padStart(2, "0"); }
@@ -272,6 +272,8 @@
         document.getElementById("hero-title").textContent = hero.title;
         document.getElementById("hero-date").textContent = hero.dateLabel;
         document.getElementById("hero-why").textContent = hero.why;
+        var tcmvKom = document.getElementById("tcmv-sjanse-kommentar");
+        if (tcmvKom) tcmvKom.textContent = hero.why;
         var cert = document.getElementById("hero-certainty");
         cert.innerHTML = "<i></i> " + hero.certainty;
         cert.className = "badge " + (hero.certainty === "Forventet" ? "soft" : "warn");
