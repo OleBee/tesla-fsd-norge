@@ -1,8 +1,8 @@
 {
-  "sist_sjekket": "2026-09-03",
-  "sist_sjekket_nb": "3. september 2026",
-  "sist_oppdatert_iso": "2026-09-03T19:28:00+02:00",
-  "sist_oppdatert_nb": "3. september 2026 kl. 19.28",
+  "sist_sjekket": "2026-09-04",
+  "sist_sjekket_nb": "4. september 2026",
+  "sist_oppdatert_iso": "2026-09-04T08:31:00+02:00",
+  "sist_oppdatert_nb": "4. september 2026 kl. 08.31",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Ikke kundegodkjent. Begrenset testing med Tesla-trente sikkerhetsførere.",
@@ -39,7 +39,8 @@
     { "dato": "2026-07-22", "prosent": 2, "merknad": "Frankrike sier nei" },
     { "dato": "2026-08-26", "prosent": 2, "merknad": "Ingen september-port" },
     { "dato": "2026-09-02", "prosent": 1, "merknad": "Ingen TCMV i september" },
-    { "dato": "2026-09-03", "prosent": 1, "merknad": "September uten port; TCMV-oktober satt til 25 %" }
+    { "dato": "2026-09-03", "prosent": 1, "merknad": "September uten port; TCMV-oktober satt til 25 %" },
+    { "dato": "2026-09-04", "prosent": 1, "merknad": "Ingen materiell endring" }
   ],
   "series_02": {
     "forventet": "2027-01",
