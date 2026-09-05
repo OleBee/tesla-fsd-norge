@@ -138,7 +138,7 @@
     <header>
       <div class="kicker">Norge · EØS · Statens vegvesen</div>
       <h1>Tesla FSD Supervised i Norge</h1>
-      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-04T08:31:00+02:00">4. september 2026 kl. 08.31</time>.</p>
+      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-05T08:31:00+02:00">5. september 2026 kl. 08.31</time>.</p>
     </header>
     <div class="layout">
       <div class="main">
@@ -280,37 +280,31 @@
         var heroUnits = document.getElementById("hero-units");
         var r = remaining(hero.iso, now);
         heroUnits.outerHTML = unitsMarkup(r).replace('class="units"', 'class="units" id="hero-units" aria-live="polite"').replace('class="awaiting"', 'class="awaiting" id="hero-units"');
-        document.getElementById("all-clocks").innerHTML = milestones.filter(function (m) { return m.id !== hero.id; }).map(function (m) {
-          var rr = remaining(m.iso, now);
-          var badgeClass = (m.certainty === "Forventet") ? "soft" : (m.certainty === "Ikke satt" ? "" : "warn");
-          return '<article class="card mini" data-id="' + m.id + '">' +
-            '<span class="badge ' + badgeClass + '"><i></i> ' + m.certainty + '</span>' +
-            '<h3>' + m.title + '</h3><p class="when">' + m.dateLabel + '</p>' +
-            unitsMarkup(rr) + '<p class="sub">' + m.why + '</p></article>';
-        }).join("");
+        document.getElementById("all-clocks").innerHTML = '';
+        var r171 = milestones[1];
+        var r2 = remaining(r171.iso, now);
+        var mini = document.createElement('div');
+        mini.className = 'card mini';
+        mini.innerHTML = '<div class="clock-head"><span class="badge soft"><i></i> ' + r171.certainty + '</span></div><h3>' + r171.title + '</h3><p class="when">' + r171.dateLabel + '</p>' + unitsMarkup(r2) + '<p class="sub">' + r171.why + '</p>';
+        document.getElementById("all-clocks").appendChild(mini);
+        // meters
+        document.querySelectorAll('[data-prosent]').forEach(function(el) {
+          var p = parseFloat(el.getAttribute('data-prosent')) || 0;
+          var fill = el.querySelector('.meter-fill');
+          if (fill) fill.style.width = Math.min(100, Math.max(0, p)) + '%';
+        });
         built = true;
       }
       function tick() {
         var now = new Date();
         if (!built) build(now);
-        fillUnits(document.getElementById("hero-units"), remaining(nextDated(now).iso, now));
-        milestones.forEach(function (m) {
-          fillUnits(document.querySelector('[data-id="' + m.id + '"]'), remaining(m.iso, now));
-        });
+        var hero = nextDated(now);
+        fillUnits(document.getElementById('hero-units'), remaining(hero.iso, now));
+        var mini = document.querySelector('#all-clocks .card.mini');
+        if (mini) fillUnits(mini, remaining(milestones[1].iso, now));
       }
       tick();
       setInterval(tick, 1000);
-    })();
-    (function () {
-      document.querySelectorAll("[data-prosent]").forEach(function (card) {
-        var pct = Math.max(0, Math.min(100, Number(card.getAttribute("data-prosent")) || 0));
-        var tall = card.querySelector(".meter-readout .n span:first-child");
-        var fill = card.querySelector(".meter-fill");
-        if (tall) tall.textContent = String(Math.round(pct));
-        requestAnimationFrame(function () {
-          if (fill) fill.style.width = pct + "%";
-        });
-      });
     })();
   </script>
 </body>
