@@ -4,11 +4,14 @@ Uoffisiell, én-sides statusside om godkjenning av Tesla FSD Supervised i Norge.
 
 **Publisert her:** [https://olebee.github.io/tesla-fsd-norge/](https://olebee.github.io/tesla-fsd-norge/)
 
+**TCMV-stemme per land (engelsk):** [https://olebee.github.io/tesla-fsd-norge/tcmv.html](https://olebee.github.io/tesla-fsd-norge/tcmv.html)
+
 GitHub Pages er på. Siden ligger på `/tesla-fsd-norge/`.
 
 ## Filer
 
-- [`index.html`](index.html) — den offentlige siden
+- [`index.html`](index.html) — den offentlige Norgesiden
+- [`tcmv.html`](tcmv.html) — engelsk oversikt over estimert TCMV-stemme per land
 - [`data/status.json`](data/status.json) — strukturert snapshot (EU-land, TCMV, norsk månedssjanse, tidsserie)
 - [`data/svv-siste.json`](data/svv-siste.json) — siste sjekk av Statens vegvesens FSD-side (eies av SVV-jobben)
 
@@ -29,12 +32,12 @@ Måler og graf styres av `data-prosent` på `#sjanse-kort` og JSON i `#sjanse-hi
 
 ## Automatiseringer
 
-- **FSD-status til GitHub** — daglig kl. 08.30 Europe/Oslo. Research, ev. oppdatering av FSD-skillen, språkvask, deretter `index.html` og `data/status.json`. Oppdaterer også sin egen grunnlinje når fakta flytter seg. Skal respektere slim-layouten over.
+- **FSD-status til GitHub** — daglig kl. 08.30 Europe/Oslo. Research, ev. oppdatering av FSD-skillen, språkvask, deretter `index.html` og `data/status.json`. Oppdaterer også sin egen grunnlinje når fakta flytter seg. Skal respektere slim-layouten over. Rører ikke `tcmv.html` med mindre estimatene der er oppdatert bevisst.
 - **SVV FSD-side endring** — hver time på hverdager 08–16. Skriver til repoet bare ved materiell endring eller nede side. Ingen e-post. Skal ikke gjeninnføre slettede avsnitt. Rører `data/svv-siste.json`.
 
 Ved hver skriving til `index.html` skal ingressen ha tidsstempel: «Sist oppdatert D. måned ÅÅÅÅ kl. TT.MM» i tidssonen Europe/Oslo. Samme tidspunkt skal ligge i `data/status.json` som `sist_oppdatert_iso` og `sist_oppdatert_nb`. Skriv aldri «Oppdateres daglig».
 
-Synlig prosa på siden skal være vasket bokmål før publisering.
+Synlig prosa på Norgesiden skal være vasket bokmål før publisering. `tcmv.html` er engelsk.
 
 ## Kilderegel
 
