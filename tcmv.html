@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estimated TCMV vote by country</title>
+  <meta name="description" content="Unofficial daily estimate of how EU member states may vote in TCMV on Tesla FSD Supervised. Qualified majority needs 15 of 27 states and 65 percent of the EU population.">
+  <meta name="theme-color" content="#070b14">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --canvas:#070b14;
+      --panel:#0e1624;
+      --panel-2:#121b2c;
+      --ink:#fff;
+      --body:#9aa3b5;
+      --muted:#8b95a8;
+      --line:rgba(255,255,255,.08);
+      --line-soft:rgba(255,255,255,.06);
+      --green:#3dd68c;
+      --red:#ff6b6b;
+      --amber:#ffc14d;
+      --blue:#5b8cff;
+      --r:24px;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html, body { background:var(--canvas); color:var(--ink); font-family:Inter, system-ui, sans-serif; }
+    body { min-height:100vh; }
+    .wrap { max-width:800px; margin:0 auto; padding:40px 20px 80px; }
+    .kicker { font-size:13px; color:var(--muted); letter-spacing:.04em; font-weight:500; }
+    h1 { font-size:clamp(30px,5.2vw,44px); font-weight:500; letter-spacing:-.03em; margin:10px 0 12px; line-height:1.12; }
+    .lede { color:var(--body); font-size:15px; line-height:1.55; max-width:42em; }
+    .lede time { color:#fff; }
+    a { color:var(--blue); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .clock {
+      background:var(--panel);
+      border-radius:var(--r);
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);
+      padding:24px 24px 22px;
+      margin:24px 0 18px;
+    }
+    .clock-head { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+    .badge {
+      display:inline-flex; align-items:center; gap:8px;
+      border:1px solid rgba(255,193,77,.4); color:#ffd27a;
+      padding:6px 12px; border-radius:999px; font-size:12px; font-weight:500;
+    }
+    .badge i { width:6px; height:6px; border-radius:50%; background:var(--amber); }
+    .clock h2 { font-size:26px; font-weight:500; letter-spacing:-.03em; margin:14px 0 6px; }
+    .when { color:#fff; font-size:16px; font-weight:500; }
+    .units { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:18px 0 12px; }
+    .unit {
+      background:var(--panel-2); border-radius:16px; padding:16px 6px 14px;
+      text-align:center; box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);
+    }
+    .unit .n { font-variant-numeric:tabular-nums; font-size:clamp(26px,6vw,40px); font-weight:500; line-height:1; }
+    .unit .u { display:block; margin-top:8px; font-size:12px; font-weight:500; color:var(--muted); }
+    .clock .why { color:var(--muted); font-size:14px; line-height:1.5; }
+    .panel {
+      background:var(--panel);
+      border-radius:var(--r);
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);
+      padding:22px 8px 8px;
+      margin-bottom:16px;
+    }
+    .panel h3 { font-size:18px; font-weight:500; padding:0 16px 12px; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th, td { padding:11px 16px; border-bottom:1px solid var(--line-soft); }
+    th { color:var(--muted); font-weight:500; font-size:12px; letter-spacing:.04em; text-align:left; }
+    td:first-child { color:#fff; font-weight:500; text-align:left; }
+    th:nth-child(2), td:nth-child(2) {
+      text-align:center;
+      font-variant-numeric:tabular-nums;
+      color:var(--body);
+    }
+    th:nth-child(3), td:nth-child(3) { text-align:right; }
+    tr:last-child td { border-bottom:0; }
+    .yes { color:var(--green); font-weight:600; }
+    .no { color:var(--red); font-weight:600; }
+    .uncertain { color:var(--amber); font-weight:600; }
+    .totals { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:18px; }
+    .card {
+      background:var(--panel);
+      border-radius:var(--r);
+      padding:22px 16px 18px;
+      text-align:center;
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);
+    }
+    .card .lbl { color:var(--muted); font-size:13px; margin-bottom:10px; }
+    .card .n { font-size:clamp(36px,7vw,48px); font-weight:500; letter-spacing:-.03em; line-height:1; }
+    .card .need { color:var(--muted); font-size:13px; margin-top:10px; }
+    .fail { color:var(--red); }
+    .note { color:var(--muted); font-size:13px; line-height:1.55; }
+    @media (max-width:560px) {
+      .wrap { padding:24px 14px 56px; }
+      .clock { padding:18px 16px; }
+      .totals { grid-template-columns:1fr; }
+      th, td { padding:11px 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="kicker">EU · TCMV · Article 39 · <a href="./">Norway status</a></div>
+    <h1>Estimated TCMV vote by country</h1>
+    <p class="lede">Unofficial daily overview of how the 27 member states may vote. An EU-wide yes needs at least 15 of 27 states and 65% of the EU population. Norway has no vote. Last updated <time datetime="2026-09-05T22:52:00+02:00">5 September 2026, 22:52</time>.</p>
+
+    <section class="clock" aria-label="Countdown to possible TCMV vote">
+      <div class="clock-head">
+        <span class="badge"><i></i> Possible vote</span>
+        <span class="badge"><i></i> Rumour on X</span>
+      </div>
+      <h2>TCMV may vote on 6 October</h2>
+      <p class="when">Tuesday 6 October 2026 · 09:00 CEST</p>
+      <div class="units" id="units" aria-live="polite">
+        <div class="unit"><span class="n" data-part="days">––</span><span class="u">days</span></div>
+        <div class="unit"><span class="n" data-part="hours">––</span><span class="u">hours</span></div>
+        <div class="unit"><span class="n" data-part="mins">––</span><span class="u">min</span></div>
+        <div class="unit"><span class="n" data-part="secs">––</span><span class="u">sec</span></div>
+      </div>
+      <p class="why">6 October is a rumour on X and from Tesla Europe. The official NPRA line is only “October”. The agenda is not yet in the comitology register.</p>
+    </section>
+
+    <section class="panel">
+      <h3>Estimated vote</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Population share</th>
+            <th>Estimated vote</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Netherlands</td><td>4.0%</td><td class="yes">Yes</td></tr>
+          <tr><td>Belgium</td><td>2.6%</td><td class="yes">Yes</td></tr>
+          <tr><td>Denmark</td><td>1.3%</td><td class="yes">Yes</td></tr>
+          <tr><td>Lithuania</td><td>0.6%</td><td class="yes">Yes</td></tr>
+          <tr><td>Estonia</td><td>0.3%</td><td class="yes">Yes</td></tr>
+          <tr><td>Germany</td><td>18.6%</td><td class="uncertain">Uncertain</td></tr>
+          <tr><td>France</td><td>15.2%</td><td class="uncertain">Uncertain</td></tr>
+          <tr><td>Italy</td><td>13.1%</td><td class="uncertain">Uncertain</td></tr>
+          <tr><td>Spain</td><td>10.9%</td><td class="uncertain">Uncertain</td></tr>
+          <tr><td>Sweden</td><td>2.4%</td><td class="uncertain">Uncertain</td></tr>
+          <tr><td>Finland</td><td>1.3%</td><td class="uncertain">Uncertain</td></tr>
+          <tr><td>Ireland</td><td>1.2%</td><td class="uncertain">Uncertain</td></tr>
+          <tr><td>Greece</td><td>2.3%</td><td class="uncertain">Uncertain</td></tr>
+          <tr><td>Poland</td><td>8.1%</td><td class="no">No</td></tr>
+          <tr><td>Romania</td><td>4.2%</td><td class="no">No</td></tr>
+          <tr><td>Czechia</td><td>2.4%</td><td class="no">No</td></tr>
+          <tr><td>Portugal</td><td>2.4%</td><td class="no">No</td></tr>
+          <tr><td>Hungary</td><td>2.1%</td><td class="no">No</td></tr>
+          <tr><td>Austria</td><td>2.0%</td><td class="no">No</td></tr>
+          <tr><td>Bulgaria</td><td>1.4%</td><td class="no">No</td></tr>
+          <tr><td>Croatia</td><td>0.9%</td><td class="no">No</td></tr>
+          <tr><td>Slovakia</td><td>1.2%</td><td class="no">No</td></tr>
+          <tr><td>Latvia</td><td>0.4%</td><td class="no">No</td></tr>
+          <tr><td>Slovenia</td><td>0.5%</td><td class="no">No</td></tr>
+          <tr><td>Luxembourg</td><td>0.2%</td><td class="no">No</td></tr>
+          <tr><td>Cyprus</td><td>0.2%</td><td class="no">No</td></tr>
+          <tr><td>Malta</td><td>0.1%</td><td class="no">No</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="totals">
+      <div class="card">
+        <div class="lbl">Countries estimated Yes</div>
+        <div class="n fail">5 / 27</div>
+        <div class="need">Needs 15 · below threshold</div>
+      </div>
+      <div class="card">
+        <div class="lbl">Population they represent</div>
+        <div class="n fail">8.8%</div>
+        <div class="need">Needs 65% · below threshold</div>
+      </div>
+    </div>
+
+    <p class="note">Red = below threshold. Green when both thresholds are met at the same time. Only countries marked Yes count toward the population share. Uncertain counts as neither yes nor no. Population shares are Eurostat 1 January 2025 (EU-27 = 100%). Votes are estimates based on national approvals and public statements — not a TCMV protocol. This does not replace the Commission, RDW or Tesla.</p>
+  </div>
+  <script>
+    (function () {
+      var target = new Date("2026-10-06T09:00:00+02:00");
+      function pad(n) { return String(n).padStart(2, "0"); }
+      function tick() {
+        var ms = target.getTime() - Date.now();
+        var days = 0, hours = 0, mins = 0, secs = 0;
+        if (ms > 0) {
+          var s = Math.floor(ms / 1000);
+          days = Math.floor(s / 86400);
+          hours = Math.floor((s % 86400) / 3600);
+          mins = Math.floor((s % 3600) / 60);
+          secs = s % 60;
+        }
+        document.querySelector('[data-part="days"]').textContent = pad(days);
+        document.querySelector('[data-part="hours"]').textContent = pad(hours);
+        document.querySelector('[data-part="mins"]').textContent = pad(mins);
+        document.querySelector('[data-part="secs"]').textContent = pad(secs);
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
+</body>
+</html>
