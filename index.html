@@ -138,7 +138,7 @@
     <header>
       <div class="kicker">Norge · EØS · Statens vegvesen</div>
       <h1>Tesla FSD Supervised i Norge</h1>
-      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-05T08:31:00+02:00">5. september 2026 kl. 08.31</time>.</p>
+      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-06T07:35:00+02:00">6. september 2026 kl. 07.35</time>.</p>
     </header>
     <div class="layout">
       <div class="main">
@@ -170,7 +170,7 @@
               <span class="badge warn" id="hero-certainty"><i></i> Rykte på X</span>
             </div>
             <h2 id="hero-title">TCMV kan stemme i oktober</h2>
-            <p>Neste realistiske EU-port er TCMV-møtet. Et ja krever minst 15 av 27 stater og 65 prosent av befolkningen. Fem godkjente land dekker 8,9 prosent. Dette er ikke en norsk lanseringsdato.</p>
+            <p>Neste realistiske EU-port er TCMV-møtet. Et ja krever minst 15 av 27 stater og 65 prosent av befolkningen. Fem godkjente land dekker 8,9 prosent.</p>
             <p class="when" id="hero-date">6. oktober 2026</p>
           </div>
           <div class="units" id="hero-units" aria-live="polite">
@@ -192,8 +192,8 @@
             </div>
             <div class="meter-ends"><span>0%</span><span>50%</span><span>100%</span></div>
           </div>
-          <p class="sub" id="tcmv-sjanse-kommentar">Uoffisielt skjønnstall, ikke et tall fra Kommisjonen. 6. oktober er rykte på X og fra Tesla Europe. Offisiell SVV-linje er bare oktober. Agendaen er ikke publisert. Store land blokkerer fortsatt 15+65 %. Dette er ikke en norsk lanseringsdato.</p>
-          <p class="why" id="hero-why" hidden>Rykte på X og Tesla Europe: TCMV kan stemme 6. oktober. Offisiell SVV-linje er bare oktober. Agendaen er ikke publisert. Dette er ikke en norsk lanseringsdato.</p>
+          <p class="sub" id="tcmv-sjanse-kommentar">Uoffisielt skjønnstall, ikke et tall fra Kommisjonen. 6. oktober er rykte på X og fra Tesla Europe. Agendaen er ikke publisert. Store land blokkerer fortsatt 15+65 %.</p>
+          <p class="why" id="hero-why" hidden>Rykte på X og Tesla Europe: TCMV kan stemme 6. oktober. Agendaen er ikke publisert.</p>
         </div>
         <div class="clocks" id="all-clocks"></div>
         <section class="panel">
@@ -225,7 +225,7 @@
           <li><div class="when">22. juli 2026</div><div class="what">Frankrike sier nei til ensidig nasjonal godkjenning «slik systemet står».</div></li>
           <li><div class="when">26. august 2026</div><div class="what">Tesla Europe: 100 millioner km FSD Supervised i de fem godkjente landene (selskapets egen teller).</div></li>
           <li><div class="when">1.–2. september 2026</div><div class="what">Tesla Europe peker på mulig avstemning 6. oktober og åpner sikkerhetsdashbord. Frankrike åpner for veitester etter juli-nei. Ikke TCMV-ja.</div></li>
-          <li class="next"><div class="when">6. oktober 2026 · rykte på X</div><div class="what">Mulig TCMV-avstemning. Uoffisiell sjanse for ja: ca. 25 %. SVV sier bare oktober. Agendaen er ikke i komitologiregisteret ennå.</div></li>
+          <li class="next"><div class="when">6. oktober 2026 · rykte på X</div><div class="what">Mulig TCMV-avstemning. Uoffisiell sjanse for ja: ca. 25 %. Agendaen er ikke i komitologiregisteret ennå.</div></li>
           <li><div class="when">Sent i januar 2027</div><div class="what">UN R171 Series 02 ventes i kraft. Parallell, langsiktig vei — ikke det samme som oktober-avstemningen.</div></li>
         </ul>
       </aside>
@@ -234,7 +234,7 @@
   <script>
     (function () {
       var milestones = [
-        { id: "tcmv", title: "TCMV kan stemme i oktober", dateLabel: "6. oktober 2026", iso: "2026-10-06T09:00:00+02:00", certainty: "Rykte på X", why: "Uoffisielt skjønnstall, ikke et tall fra Kommisjonen. 6. oktober er rykte på X og fra Tesla Europe. Offisiell SVV-linje er bare oktober. Agendaen er ikke publisert. Store land blokkerer fortsatt 15+65 %. Dette er ikke en norsk lanseringsdato." },
+        { id: "tcmv", title: "TCMV kan stemme i oktober", dateLabel: "6. oktober 2026", iso: "2026-10-06T09:00:00+02:00", certainty: "Rykte på X", why: "Uoffisielt skjønnstall, ikke et tall fra Kommisjonen. 6. oktober er rykte på X og fra Tesla Europe. Agendaen er ikke publisert. Store land blokkerer fortsatt 15+65 %." },
         { id: "r171", title: "UN R171 Series 02", dateLabel: "Sent i januar 2027", iso: "2027-01-20T00:00:00+01:00", certainty: "Veiledende", why: "Langsiktig regelverksvei. Parallell med oktober-avstemningen, ikke det samme som at systemet tas i bruk i Norge." }
       ];
       function pad(n) { return String(n).padStart(2, "0"); }
@@ -287,7 +287,6 @@
         mini.className = 'card mini';
         mini.innerHTML = '<div class="clock-head"><span class="badge soft"><i></i> ' + r171.certainty + '</span></div><h3>' + r171.title + '</h3><p class="when">' + r171.dateLabel + '</p>' + unitsMarkup(r2) + '<p class="sub">' + r171.why + '</p>';
         document.getElementById("all-clocks").appendChild(mini);
-        // meters
         document.querySelectorAll('[data-prosent]').forEach(function(el) {
           var p = parseFloat(el.getAttribute('data-prosent')) || 0;
           var fill = el.querySelector('.meter-fill');
