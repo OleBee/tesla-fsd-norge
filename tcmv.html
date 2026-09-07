@@ -61,9 +61,9 @@
     th { color:var(--muted); font-weight:500; font-size:12px; letter-spacing:.04em; text-align:left; }
     th.sortable { cursor:pointer; user-select:none; white-space:nowrap; }
     th.sortable:hover { color:#fff; }
-    th.sortable::after { content:" \2195"; opacity:.35; font-size:11px; }
     th.sortable[aria-sort="ascending"]::after { content:" \2191"; opacity:.9; color:#fff; }
     th.sortable[aria-sort="descending"]::after { content:" \2193"; opacity:.9; color:#fff; }
+    th.sortable::after { content:" \2195"; opacity:.35; font-size:11px; }
     td:first-child { color:#fff; font-weight:500; text-align:left; }
     th:nth-child(2), td:nth-child(2) { text-align:center; font-variant-numeric:tabular-nums; color:var(--body); }
     th:nth-child(3), td:nth-child(3) { text-align:left; }
@@ -92,7 +92,7 @@
   <div class="wrap">
     <div class="kicker">EU · TCMV · Article 39</div>
     <h1>Estimated TCMV vote by country</h1>
-    <p class="lede">Unofficial daily estimate of how the 27 member states may vote on EU-wide recognition of the Dutch Article 39 file. An EU-wide yes needs at least 15 of 27 states and 65% of the EU population. Last updated <time datetime="2026-09-07T20:25:00+02:00">7 September 2026, 20:25</time>.</p>
+    <p class="lede">Unofficial daily estimate of how the 27 member states may vote on EU-wide recognition of the Dutch Article 39 file. An EU-wide yes needs at least 15 of 27 states and 65% of the EU population. Last updated <time datetime="2026-09-07T20:35:00+02:00">7 September 2026, 20:35</time>.</p>
 
     <section class="clock" id="tcmv-sjanse-kort" data-prosent="25" aria-label="Countdown to possible TCMV vote">
       <div class="clock-head">
@@ -138,6 +138,7 @@
           <tr><td>Denmark</td><td>1.3%</td><td class="yes">Yes</td><td>Færdselsstyrelsen 9 Jun 2026 after own file review.</td></tr>
           <tr><td>Lithuania</td><td>0.6%</td><td class="yes">Yes</td><td>Recognised the Dutch file 20 May 2026. OTA live.</td></tr>
           <tr><td>Estonia</td><td>0.3%</td><td class="yes">Yes</td><td>Recognised the Dutch file 29 May 2026.</td></tr>
+          <tr><td>Slovenia</td><td>0.5%</td><td class="yes">Yes</td><td>National approval 7 Sep 2026 (Tesla Europe). Rollout soon.</td></tr>
           <tr><td>Germany</td><td>18.6%</td><td class="uncertain">Uncertain</td><td>KBA/BMV assessing. No national shortcut. Largest population weight.</td></tr>
           <tr><td>France</td><td>15.2%</td><td class="uncertain">Uncertain</td><td>National no 22 Jul; road tests + EU-path talks early Sep.</td></tr>
           <tr><td>Italy</td><td>13.1%</td><td class="uncertain">Uncertain</td><td>In review. Large-state blocker for the 65% threshold.</td></tr>
@@ -156,7 +157,6 @@
           <tr><td>Croatia</td><td>0.9%</td><td class="no">No</td><td>No public process.</td></tr>
           <tr><td>Slovakia</td><td>1.2%</td><td class="no">No</td><td>No public process.</td></tr>
           <tr><td>Latvia</td><td>0.4%</td><td class="no">No</td><td>Unlike EE/LT, no recognition of the Dutch file.</td></tr>
-          <tr><td>Slovenia</td><td>0.5%</td><td class="no">No</td><td>No public process.</td></tr>
           <tr><td>Luxembourg</td><td>0.2%</td><td class="no">No</td><td>No public process.</td></tr>
           <tr><td>Cyprus</td><td>0.2%</td><td class="no">No</td><td>No public process.</td></tr>
           <tr><td>Malta</td><td>0.1%</td><td class="no">No</td><td>No public process.</td></tr>
@@ -167,12 +167,12 @@
     <div class="totals">
       <div class="card">
         <div class="lbl">Countries estimated Yes</div>
-        <div class="n fail">5 / 27</div>
+        <div class="n fail">6 / 27</div>
         <div class="need">Needs 15 · below threshold</div>
       </div>
       <div class="card">
         <div class="lbl">Population they represent</div>
-        <div class="n fail">8.8%</div>
+        <div class="n fail">9.3%</div>
         <div class="need">Needs 65% · below threshold</div>
       </div>
     </div>
