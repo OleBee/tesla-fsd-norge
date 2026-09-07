@@ -60,6 +60,8 @@
     table { width:100%; border-collapse:collapse; font-size:14px; }
     th, td { padding:11px 16px; border-bottom:1px solid var(--line-soft); vertical-align:top; }
     th { color:var(--muted); font-weight:500; font-size:12px; letter-spacing:.04em; text-align:left; }
+    .th-short { display:none; }
+    .th-full { display:inline; }
     th.sortable { cursor:pointer; user-select:none; white-space:nowrap; }
     th.sortable:hover { color:#fff; }
     th.sortable[aria-sort="ascending"]::after { content:" \2191"; opacity:.9; color:#fff; }
@@ -89,16 +91,20 @@
       .panel { padding:18px 12px 8px; }
       .panel h3 { padding:0 4px 10px; }
       .table-scroll { overflow:visible; }
+      .th-short { display:inline; }
+      .th-full { display:none; }
+      th.sortable { white-space:normal; letter-spacing:0; }
       thead tr {
         display:grid;
-        grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr) minmax(0,.8fr);
-        column-gap:8px;
+        grid-template-columns:minmax(0,1fr) 4.4rem 5.8rem;
+        column-gap:10px;
       }
       th { padding:8px 4px 10px; }
+      th:nth-child(2), th:nth-child(3) { text-align:right; }
       th:nth-child(4) { display:none; }
       tbody tr {
         display:grid;
-        grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr) minmax(0,.8fr);
+        grid-template-columns:minmax(0,1fr) 4.4rem 5.8rem;
         grid-template-areas:
           "c p v"
           "m m m";
@@ -128,7 +134,7 @@
   <div class="wrap">
     <div class="kicker">EU · TCMV · Article 39</div>
     <h1>Estimated TCMV vote by country</h1>
-    <p class="lede">Unofficial daily estimate of how the 27 member states may vote on EU-wide recognition of the Dutch Article 39 file. An EU-wide yes needs at least 15 of 27 states and 65% of the EU population. Last updated <time datetime="2026-09-07T22:20:00+02:00">7 September 2026, 22:20</time>.</p>
+    <p class="lede">Unofficial daily estimate of how the 27 member states may vote on EU-wide recognition of the Dutch Article 39 file. An EU-wide yes needs at least 15 of 27 states and 65% of the EU population. Last updated <time datetime="2026-09-07T22:28:00+02:00">7 September 2026, 22:28</time>.</p>
 
     <section class="clock" id="tcmv-sjanse-kort" data-prosent="25" aria-label="Countdown to possible TCMV vote">
       <div class="clock-head">
@@ -165,9 +171,9 @@
       <table>
         <thead><tr>
           <th class="sortable" data-sort="text" scope="col" aria-sort="none">Country</th>
-          <th class="sortable" data-sort="num" scope="col" aria-sort="none">Population share</th>
-          <th class="sortable" data-sort="vote" scope="col" aria-sort="none">Estimated vote</th>
-          <th class="sortable" data-sort="text" scope="col" aria-sort="none">Comment</th>
+          <th class="sortable" data-sort="num" scope="col" aria-sort="none"><span class="th-full">Population share</span><span class="th-short">Share</span></th>
+          <th class="sortable" data-sort="vote" scope="col" aria-sort="none"><span class="th-full">Estimated vote</span><span class="th-short">Vote</span></th>
+          <th scope="col">Comment</th>
         </tr></thead>
         <tbody>
           <tr><td>Netherlands</td><td>4.0%</td><td class="yes">Yes</td><td>Lead authority. RDW Article 39 approval 10 Apr 2026.</td></tr>
@@ -258,10 +264,11 @@
           var dir = current === "ascending" ? "desc" : "asc";
           headers.forEach(function (h) { h.setAttribute("aria-sort", "none"); });
           th.setAttribute("aria-sort", dir === "asc" ? "ascending" : "descending");
+          var col = th.cellIndex;
           var rows = Array.prototype.slice.call(tbody.rows);
           rows.sort(function (a, b) {
-            var av = cellKey(a.cells[idx], type);
-            var bv = cellKey(b.cells[idx], type);
+            var av = cellKey(a.cells[col], type);
+            var bv = cellKey(b.cells[col], type);
             var cmp = av < bv ? -1 : av > bv ? 1 : 0;
             if (cmp === 0) {
               var an = (a.cells[0].textContent || "").toLowerCase();
