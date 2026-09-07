@@ -17,7 +17,7 @@
       --amber:#ffc14d; --blue:#5b8cff; --r:24px;
     }
     * { box-sizing:border-box; margin:0; padding:0; }
-    html, body { background:var(--canvas); color:var(--ink); font-family:Inter, system-ui, sans-serif; }
+    html, body { background:var(--canvas); color:var(--ink); font-family:Inter, system-ui, sans-serif; overflow-x:hidden; }
     body { min-height:100vh; }
     .wrap { max-width:960px; margin:0 auto; padding:40px 20px 80px; }
     .kicker { font-size:13px; color:var(--muted); letter-spacing:.04em; font-weight:500; }
@@ -54,10 +54,11 @@
       background:linear-gradient(90deg,#ff4d4d 0%,#ff7a3d 18%,#ffc14d 42%,#c6e04a 62%,#3dd68c 82%,#2ee0a0 100%);
     }
     .meter-ends { display:flex; justify-content:space-between; color:#7d8798; font-size:13px; font-weight:400; }
-    .panel { background:var(--panel); border-radius:var(--r); box-shadow:inset 0 0 0 1px rgba(255,255,255,.04); padding:22px 8px 8px; margin-bottom:16px; }
+    .panel { background:var(--panel); border-radius:var(--r); box-shadow:inset 0 0 0 1px rgba(255,255,255,.04); padding:22px 8px 8px; margin-bottom:16px; overflow:hidden; }
     .panel h3 { font-size:18px; font-weight:500; padding:0 16px 12px; }
+    .table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
     table { width:100%; border-collapse:collapse; font-size:14px; }
-    th, td { padding:11px 16px; border-bottom:1px solid var(--line-soft); }
+    th, td { padding:11px 16px; border-bottom:1px solid var(--line-soft); vertical-align:top; }
     th { color:var(--muted); font-weight:500; font-size:12px; letter-spacing:.04em; text-align:left; }
     th.sortable { cursor:pointer; user-select:none; white-space:nowrap; }
     th.sortable:hover { color:#fff; }
@@ -67,7 +68,8 @@
     td:first-child { color:#fff; font-weight:500; text-align:left; }
     th:nth-child(2), td:nth-child(2) { text-align:center; font-variant-numeric:tabular-nums; color:var(--body); }
     th:nth-child(3), td:nth-child(3) { text-align:left; }
-    th:nth-child(4), td:nth-child(4) { text-align:left; color:var(--body); font-weight:400; font-size:13px; max-width:28em; }
+    th:nth-child(4), td:nth-child(4) { text-align:left; color:var(--body); font-weight:400; font-size:13px; }
+    td:nth-child(4) { overflow-wrap:anywhere; word-break:break-word; }
     tr:last-child td { border-bottom:0; }
     .yes { color:var(--green); font-weight:600; }
     .no { color:var(--red); font-weight:600; }
@@ -80,11 +82,45 @@
     .fail { color:var(--red); }
     .pass { color:var(--green); }
     .note { color:var(--muted); font-size:13px; line-height:1.55; }
-    @media (max-width:560px) {
+    @media (max-width:720px) {
       .wrap { padding:24px 14px 56px; }
       .clock { padding:18px 16px; }
       .totals { grid-template-columns:1fr; }
-      th, td { padding:11px 10px; }
+      .panel { padding:18px 12px 8px; }
+      .panel h3 { padding:0 4px 10px; }
+      .table-scroll { overflow:visible; }
+      thead tr {
+        display:grid;
+        grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr) minmax(0,.8fr);
+        column-gap:8px;
+      }
+      th { padding:8px 4px 10px; }
+      th:nth-child(4) { display:none; }
+      tbody tr {
+        display:grid;
+        grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr) minmax(0,.8fr);
+        grid-template-areas:
+          "c p v"
+          "m m m";
+        column-gap:8px;
+        align-items:baseline;
+        border-bottom:1px solid var(--line-soft);
+      }
+      tbody tr:last-child { border-bottom:0; }
+      td { padding:10px 4px 2px; border-bottom:0; max-width:none; }
+      td:nth-child(1) { grid-area:c; }
+      td:nth-child(2) { grid-area:p; text-align:right; }
+      td:nth-child(3) { grid-area:v; text-align:right; }
+      td:nth-child(4) {
+        grid-area:m;
+        padding:2px 4px 12px;
+        font-size:12.5px;
+        line-height:1.45;
+      }
+    }
+    @media (max-width:560px) {
+      .units { gap:6px; }
+      .unit { padding:12px 4px 10px; }
     }
   </style>
 </head>
@@ -92,7 +128,7 @@
   <div class="wrap">
     <div class="kicker">EU · TCMV · Article 39</div>
     <h1>Estimated TCMV vote by country</h1>
-    <p class="lede">Unofficial daily estimate of how the 27 member states may vote on EU-wide recognition of the Dutch Article 39 file. An EU-wide yes needs at least 15 of 27 states and 65% of the EU population. Last updated <time datetime="2026-09-07T20:35:00+02:00">7 September 2026, 20:35</time>.</p>
+    <p class="lede">Unofficial daily estimate of how the 27 member states may vote on EU-wide recognition of the Dutch Article 39 file. An EU-wide yes needs at least 15 of 27 states and 65% of the EU population. Last updated <time datetime="2026-09-07T22:20:00+02:00">7 September 2026, 22:20</time>.</p>
 
     <section class="clock" id="tcmv-sjanse-kort" data-prosent="25" aria-label="Countdown to possible TCMV vote">
       <div class="clock-head">
@@ -125,6 +161,7 @@
 
     <section class="panel">
       <h3>Estimated vote</h3>
+      <div class="table-scroll">
       <table>
         <thead><tr>
           <th class="sortable" data-sort="text" scope="col" aria-sort="none">Country</th>
@@ -162,6 +199,7 @@
           <tr><td>Malta</td><td>0.1%</td><td class="no">No</td><td>No public process.</td></tr>
         </tbody>
       </table>
+      </div>
     </section>
 
     <div class="totals">
