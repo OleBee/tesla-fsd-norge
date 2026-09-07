@@ -138,7 +138,7 @@
     <header>
       <div class="kicker">Norge · EØS · Statens vegvesen</div>
       <h1>Tesla FSD Supervised i Norge</h1>
-      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-06T08:30:00+02:00">6. september 2026 kl. 08.30</time>.</p>
+      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-07T08:35:00+02:00">7. september 2026 kl. 08.35</time>.</p>
     </header>
     <div class="layout">
       <div class="main">
@@ -287,23 +287,23 @@
         mini.className = 'card mini';
         mini.innerHTML = '<div class="clock-head"><span class="badge soft"><i></i> ' + r171.certainty + '</span></div><h3>' + r171.title + '</h3><p class="when">' + r171.dateLabel + '</p>' + unitsMarkup(r2) + '<p class="sub">' + r171.why + '</p>';
         document.getElementById("all-clocks").appendChild(mini);
-        function setMeter(id, pct) {
-          var el = document.getElementById(id);
-          if (!el) return;
-          el.style.width = Math.max(0, Math.min(100, pct)) + '%';
-        }
-        setMeter('sjanse-fyll', parseInt(document.getElementById('sjanse-kort').getAttribute('data-prosent') || '0', 10));
-        setMeter('tcmv-sjanse-fyll', parseInt(document.getElementById('tcmv-sjanse-kort').getAttribute('data-prosent') || '0', 10));
         built = true;
+        // meters
+        document.querySelectorAll('[data-prosent]').forEach(function(el) {
+          var p = parseFloat(el.getAttribute('data-prosent')) || 0;
+          var fill = el.querySelector('.meter-fill');
+          if (fill) fill.style.width = Math.min(100, Math.max(0, p)) + '%';
+        });
       }
       function tick() {
         var now = new Date();
         if (!built) build(now);
-        var hero = nextDated(now);
-        fillUnits(document.getElementById('hero-units'), remaining(hero.iso, now));
-        var r171 = milestones[1];
-        var mini = document.querySelector('#all-clocks .card.mini');
-        if (mini) fillUnits(mini, remaining(r171.iso, now));
+        else {
+          var hero = nextDated(now);
+          fillUnits(document.getElementById('hero-units'), remaining(hero.iso, now));
+          var mini = document.querySelector('#all-clocks .card.mini');
+          if (mini) fillUnits(mini, remaining(milestones[1].iso, now));
+        }
       }
       tick();
       setInterval(tick, 1000);
