@@ -1,8 +1,8 @@
 {
-  "sist_sjekket": "2026-09-07",
-  "sist_sjekket_nb": "7. september 2026",
-  "sist_oppdatert_iso": "2026-09-07T08:35:00+02:00",
-  "sist_oppdatert_nb": "7. september 2026 kl. 08.35",
+  "sist_sjekket": "2026-09-08",
+  "sist_sjekket_nb": "8. september 2026",
+  "sist_oppdatert_iso": "2026-09-08T08:34:00+02:00",
+  "sist_oppdatert_nb": "8. september 2026 kl. 08.34",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Ikke kundegodkjent. Begrenset testing med Tesla-trente sikkerhetsførere.",
@@ -11,20 +11,21 @@
     { "land": "Litauen", "dato": "2026-05-20", "sti": "anerkjennelse" },
     { "land": "Estland", "dato": "2026-05-29", "sti": "anerkjennelse" },
     { "land": "Danmark", "dato": "2026-06-09", "sti": "anerkjennelse" },
-    { "land": "Belgia", "dato": "2026-06-10", "sti": "anerkjennelse" }
+    { "land": "Belgia", "dato": "2026-06-10", "sti": "anerkjennelse" },
+    { "land": "Slovenia", "dato": "2026-09-07", "sti": "anerkjennelse" }
   ],
-  "eu_andel_befolkning_prosent": 8.9,
+  "eu_andel_befolkning_prosent": 9.4,
   "programvaregren": "v14.2.2",
   "tcmv": {
     "siste_mote": "2026-06-30",
     "siste_utfall": "diskusjon uten avstemning",
     "neste_dato": "2026-10-06",
     "neste_sikkerhet": "rykte",
-    "dager_til": 29,
-    "oktober_godkjenning_prosent": 25,
+    "dager_til": 28,
+    "oktober_godkjenning_prosent": 28,
     "etikett": "Sjanse for at TCMV godkjenner i oktober",
     "sannsynlig_utfall": "åpent",
-    "kommentar": "Uoffisiell sjanse for TCMV-ja i oktober: ca. 25 %. 6. okt er rykte og Tesla-utsagn. Agendaen er ikke i komitologiregisteret. Fem land dekker 8,9 % av befolkningen. Store land blokkerer fortsatt 15+65 %."
+    "kommentar": "Uoffisiell sjanse for TCMV-ja i oktober: ca. 28 %. 6. okt er rykte og Tesla-utsagn. Agendaen er ikke i komitologiregisteret. Seks land dekker 9,4 % av befolkningen. Store land blokkerer fortsatt 15+65 %."
   },
   "norge_denne_maneden": {
     "prosent": 1,
@@ -43,12 +44,13 @@
     { "dato": "2026-09-04", "prosent": 1, "merknad": "Ingen materiell endring" },
     { "dato": "2026-09-05", "prosent": 1, "merknad": "Ingen materiell endring" },
     { "dato": "2026-09-06", "prosent": 1, "merknad": "Ingen materiell endring" },
-    { "dato": "2026-09-07", "prosent": 1, "merknad": "Ingen materiell endring" }
+    { "dato": "2026-09-07", "prosent": 1, "merknad": "Ingen materiell endring" },
+    { "dato": "2026-09-08", "prosent": 1, "merknad": "Slovenia sjette land; ingen norsk endring" }
   ],
   "series_02": {
     "forventet": "2027-01",
     "merknad": "UN R171 Series 02 ventes i kraft sent i januar 2027. Parallell vei, ikke norsk go-live."
   },
   "side_layout": "slim-meter-2026-09-03-tcmv-combo",
-  "materiell_endring": false
+  "materiell_endring": true
 }
