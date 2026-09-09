@@ -138,7 +138,7 @@
     <header>
       <div class="kicker">Norge · EØS · Statens vegvesen</div>
       <h1>Tesla FSD Supervised i Norge</h1>
-      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-08T08:34:00+02:00">8. september 2026 kl. 08.34</time>.</p>
+      <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-09T08:34:00+02:00">9. september 2026 kl. 08.34</time>.</p>
     </header>
     <div class="layout">
       <div class="main">
@@ -282,15 +282,16 @@
         var heroUnits = document.getElementById("hero-units");
         var r = remaining(hero.iso, now);
         heroUnits.outerHTML = unitsMarkup(r).replace('class="units"', 'class="units" id="hero-units" aria-live="polite"').replace('class="awaiting"', 'class="awaiting" id="hero-units"');
-        document.getElementById("all-clocks").innerHTML = '';
-        var r171 = milestones[1];
-        var r2 = remaining(r171.iso, now);
-        var mini = document.createElement('div');
-        mini.className = 'card mini';
-        mini.innerHTML = '<div class="clock-head"><span class="badge soft"><i></i> ' + r171.certainty + '</span></div><h3>' + r171.title + '</h3><p class="when">' + r171.dateLabel + '</p>' + unitsMarkup(r2) + '<p class="sub">' + r171.why + '</p>';
-        document.getElementById("all-clocks").appendChild(mini);
-        document.querySelectorAll('[data-prosent]').forEach(function(el) {
-          var p = parseFloat(el.getAttribute('data-prosent')) || 0;
+        var all = document.getElementById("all-clocks");
+        all.innerHTML = '';
+        var m = milestones[1];
+        var r2 = remaining(m.iso, now);
+        var card = document.createElement('div');
+        card.className = 'card mini';
+        card.innerHTML = '<div class="clock-head"><span class="badge soft"><i></i> ' + m.certainty + '</span></div><h3>' + m.title + '</h3><p class="when">' + m.dateLabel + '</p>' + unitsMarkup(r2) + '<p class="sub">' + m.why + '</p>';
+        all.appendChild(card);
+        document.querySelectorAll('.meter').forEach(function(el) {
+          var p = parseInt(el.closest('[data-prosent]') ? el.closest('[data-prosent]').getAttribute('data-prosent') : '0', 10) || 0;
           var fill = el.querySelector('.meter-fill');
           if (fill) fill.style.width = Math.min(100, Math.max(0, p)) + '%';
         });
