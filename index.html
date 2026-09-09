@@ -131,11 +131,28 @@
       .panel { padding:22px 18px 20px; }
       .meter { padding:28px 0 4px; }
     }
+  
+    .site-nav {
+      display:flex; flex-wrap:wrap; gap:4px 2px; align-items:center;
+      margin:0 0 28px; padding:0 0 14px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      font-size:13px; font-weight:500;
+    }
+    .site-nav a {
+      color:#8b95a8; text-decoration:none;
+      padding:6px 12px; border-radius:999px;
+    }
+    .site-nav a:hover { color:#fff; background:rgba(255,255,255,.06); text-decoration:none; }
+    .site-nav a.active {
+      color:#fff; background:rgba(91,140,255,.18);
+      box-shadow:inset 0 0 0 1px rgba(91,140,255,.35);
+    }
   </style>
 </head>
 <body>
   <div class="wrap" id="top">
-    <header>
+    <nav class="site-nav" aria-label="Site"><a href="index.html" class="active" aria-current="page">Norway</a><a href="tcmv.html">TCMV</a><a href="europa.html">Europe</a></nav>
+<header>
       <div class="kicker">Norge · EØS · Statens vegvesen</div>
       <h1>Tesla FSD Supervised i Norge</h1>
       <p class="lede">Én side. Offisiell status, neste milepæl og hva som faktisk må skje før vanlige norske eiere kan aktivere funksjonen. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-09T20:29:00+02:00">9. september 2026 kl. 20.29</time>.</p>
@@ -212,7 +229,7 @@
               <tr><td>Tyskland, Frankrike, Italia, Spania</td><td class="wait">Ingen snarvei</td><td>Store land som blokkerer befolkningskravet for TCMV-flertall (15 stater og 65 %).</td></tr>
             </tbody>
           </table>
-          <p class="note">Denne siden er uoffisiell. Den erstatter ikke vegvesen.no, RDW eller Tesla. Ingen juridisk rådgivning og ingen datoer som løfte. Se også <a href="tcmv.html">TCMV landestimater</a> · <a href="europa.html">Europe feed (EN)</a>.</p>
+          <p class="note">Denne siden er uoffisiell. Den erstatter ikke vegvesen.no, RDW eller Tesla. Ingen juridisk rådgivning og ingen datoer som løfte.</p>
         </section>
       </div>
       <aside class="rail panel" id="tidslinje" aria-label="Tidslinje">
