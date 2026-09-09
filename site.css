@@ -1,0 +1,115 @@
+/* Shared visual system — Tesla FSD Norge / Europe pages */
+:root {
+  --canvas: #070b14;
+  --panel: #0e1624;
+  --panel-2: #121b2c;
+  --ink: #ffffff;
+  --body: #9aa3b5;
+  --muted: #8b95a8;
+  --meta: #7d8798;
+  --line: rgba(255, 255, 255, .08);
+  --line-soft: rgba(255, 255, 255, .06);
+  --blue: #5b8cff;
+  --red: #ff6b6b;
+  --amber: #ffc14d;
+  --green: #3dd68c;
+  --r: 24px;
+  --panel-inset: inset 0 0 0 1px rgba(255, 255, 255, .04);
+  --wrap-pad: 48px 24px 80px;
+  --wrap-pad-sm: 28px 16px 64px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: Inter, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+}
+body { min-height: 100vh; }
+
+.wrap {
+  margin: 0 auto;
+  padding: var(--wrap-pad);
+}
+
+header {
+  margin-bottom: 28px;
+  max-width: 42em;
+}
+
+.kicker {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: .04em;
+}
+
+h1 {
+  font-size: clamp(32px, 5.2vw, 48px);
+  line-height: 1.12;
+  font-weight: 500;
+  letter-spacing: -.03em;
+  margin: 10px 0 14px;
+  color: #fff;
+}
+
+.lede {
+  color: var(--body);
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 42em;
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: var(--r);
+  box-shadow: var(--panel-inset);
+  padding: 28px 28px 24px;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.note {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 20px;
+  line-height: 1.5;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 2px;
+  align-items: center;
+  margin: 0 0 28px;
+  padding: 0 0 14px;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+  font-weight: 500;
+}
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+.site-nav a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, .06);
+  text-decoration: none;
+}
+.site-nav a.active {
+  color: #fff;
+  background: rgba(91, 140, 255, .18);
+  box-shadow: inset 0 0 0 1px rgba(91, 140, 255, .35);
+}
+
+@media (max-width: 720px) {
+  .wrap { padding: var(--wrap-pad-sm); }
+}

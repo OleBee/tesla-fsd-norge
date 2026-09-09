@@ -9,31 +9,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
   <style>
-    :root {
-      --canvas:#070b14; --panel:#0e1624; --panel-2:#121b2c; --ink:#fff;
-      --body:#9aa3b5; --muted:#8b95a8; --line:rgba(255,255,255,.08);
-      --line-soft:rgba(255,255,255,.06); --green:#3dd68c; --red:#ff6b6b;
-      --amber:#ffc14d; --blue:#5b8cff; --r:24px;
-    }
-    * { box-sizing:border-box; margin:0; padding:0; }
-    html, body { background:var(--canvas); color:var(--ink); font-family:Inter, system-ui, sans-serif; overflow-x:hidden; }
-    body { min-height:100vh; }
-    .wrap { max-width:960px; margin:0 auto; padding:40px 20px 80px; }
-    .kicker { font-size:13px; color:var(--muted); letter-spacing:.04em; font-weight:500; }
-    h1 { font-size:clamp(30px,5.2vw,44px); font-weight:500; letter-spacing:-.03em; margin:10px 0 12px; line-height:1.12; }
-    .lede { color:var(--body); font-size:15px; line-height:1.55; max-width:42em; }
+html { overflow-x:hidden; }
+    .wrap { max-width:960px; }
     .lede time { color:#fff; }
-    a { color:var(--blue); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    .clock { background:var(--panel); border-radius:var(--r); box-shadow:inset 0 0 0 1px rgba(255,255,255,.04); padding:24px 24px 22px; margin:24px 0 18px; }
-    .clock-head { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+    .clock { background:var(--panel); border-radius:var(--r); box-shadow:var(--panel-inset); padding:24px 24px 22px; margin:24px 0 18px; }
+    .clock-head { display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
     .badge { display:inline-flex; align-items:center; gap:8px; border:1px solid rgba(255,193,77,.4); color:#ffd27a; padding:6px 12px; border-radius:999px; font-size:12px; font-weight:500; }
     .badge i { width:6px; height:6px; border-radius:50%; background:var(--amber); }
     .clock h2 { font-size:26px; font-weight:500; letter-spacing:-.03em; margin:14px 0 6px; }
     .when { color:#fff; font-size:16px; font-weight:500; }
     .units { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:18px 0 4px; }
-    .unit { background:var(--panel-2); border-radius:16px; padding:16px 6px 14px; text-align:center; box-shadow:inset 0 0 0 1px rgba(255,255,255,.04); }
+    .unit { background:var(--panel-2); border-radius:16px; padding:16px 6px 14px; text-align:center; box-shadow:var(--panel-inset); }
     .unit .n { font-variant-numeric:tabular-nums; font-size:clamp(26px,6vw,40px); font-weight:500; line-height:1; }
     .unit .u { display:block; margin-top:8px; font-size:12px; font-weight:500; color:var(--muted); }
     .clock .why { color:var(--muted); font-size:14px; line-height:1.5; }
@@ -46,15 +34,15 @@
       font-weight:500; line-height:.9; letter-spacing:-.04em; color:#fff;
     }
     .meter-readout .n .pct { font-size:.38em; font-weight:500; margin-left:1px; color:rgba(255,255,255,.38); vertical-align:super; }
-    .meter-caption { margin:16px 0 0; color:#8b95a8; font-size:16px; font-weight:400; line-height:1.4; }
+    .meter-caption { margin:16px 0 0; color:var(--muted); font-size:16px; font-weight:400; line-height:1.4; }
     .meter-bar { position:relative; margin:36px 0 10px; }
     .meter-track { height:8px; border-radius:999px; background:#2a3344; overflow:hidden; }
     .meter-fill {
       height:100%; width:25%; border-radius:999px;
       background:linear-gradient(90deg,#ff4d4d 0%,#ff7a3d 18%,#ffc14d 42%,#c6e04a 62%,#3dd68c 82%,#2ee0a0 100%);
     }
-    .meter-ends { display:flex; justify-content:space-between; color:#7d8798; font-size:13px; font-weight:400; }
-    .panel { background:var(--panel); border-radius:var(--r); box-shadow:inset 0 0 0 1px rgba(255,255,255,.04); padding:22px 8px 8px; margin-bottom:16px; overflow:hidden; }
+    .meter-ends { display:flex; justify-content:space-between; color:var(--meta); font-size:13px; font-weight:400; }
+    .panel { background:var(--panel); border-radius:var(--r); box-shadow:var(--panel-inset); padding:22px 8px 8px; margin-bottom:16px; overflow:hidden; }
     .panel h3 { font-size:18px; font-weight:500; padding:0 16px 12px; }
     .table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
     table { width:100%; border-collapse:collapse; font-size:14px; }
@@ -77,15 +65,13 @@
     .no { color:var(--red); font-weight:600; }
     .uncertain { color:var(--amber); font-weight:600; }
     .totals { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:18px; }
-    .card { background:var(--panel); border-radius:var(--r); padding:22px 16px 18px; text-align:center; box-shadow:inset 0 0 0 1px rgba(255,255,255,.04); }
+    .card { background:var(--panel); border-radius:var(--r); padding:22px 16px 18px; text-align:center; box-shadow:var(--panel-inset); }
     .card .lbl { color:var(--muted); font-size:13px; margin-bottom:10px; }
     .card .n { font-size:clamp(36px,7vw,48px); font-weight:500; letter-spacing:-.03em; line-height:1; }
     .card .need { color:var(--muted); font-size:13px; margin-top:10px; }
     .fail { color:var(--red); }
     .pass { color:var(--green); }
-    .note { color:var(--muted); font-size:13px; line-height:1.55; }
     @media (max-width:720px) {
-      .wrap { padding:24px 14px 56px; }
       .clock { padding:18px 16px; }
       .totals { grid-template-columns:1fr; }
       .panel { padding:18px 12px 8px; }
@@ -128,30 +114,16 @@
       .units { gap:6px; }
       .unit { padding:12px 4px 10px; }
     }
-  
-    .site-nav {
-      display:flex; flex-wrap:wrap; gap:4px 2px; align-items:center;
-      margin:0 0 28px; padding:0 0 14px;
-      border-bottom:1px solid rgba(255,255,255,.08);
-      font-size:13px; font-weight:500;
-    }
-    .site-nav a {
-      color:#8b95a8; text-decoration:none;
-      padding:6px 12px; border-radius:999px;
-    }
-    .site-nav a:hover { color:#fff; background:rgba(255,255,255,.06); text-decoration:none; }
-    .site-nav a.active {
-      color:#fff; background:rgba(91,140,255,.18);
-      box-shadow:inset 0 0 0 1px rgba(91,140,255,.35);
-    }
   </style>
 </head>
 <body>
   <div class="wrap">
-<nav class="site-nav" aria-label="Site"><a href="index.html">Norway</a><a href="tcmv.html" class="active" aria-current="page">TCMV</a><a href="europa.html">Europe</a></nav>
-<div class="kicker">EU · TCMV · Article 39</div>
-    <h1>Estimated TCMV vote by country</h1>
-    <p class="lede">Unofficial daily estimate of how the 27 member states may vote on EU-wide recognition of the Dutch Article 39 file. An EU-wide yes needs at least 15 of 27 states and 65% of the EU population. Last updated <time datetime="2026-09-09T20:13:20+02:00">9 September 2026, 20:13</time>.</p>
+    <nav class="site-nav" aria-label="Site"><a href="index.html">Norway</a><a href="tcmv.html" class="active" aria-current="page">TCMV</a><a href="europa.html">Europe</a></nav>
+<header>
+      <div class="kicker">EU · TCMV · Article 39</div>
+      <h1>Estimated TCMV vote by country</h1>
+      <p class="lede">Unofficial daily estimate of how the 27 member states may vote on EU-wide recognition of the Dutch Article 39 file. An EU-wide yes needs at least 15 of 27 states and 65% of the EU population. Last updated <time datetime="2026-09-09T20:13:20+02:00">9 September 2026, 20:13</time>.</p>
+    </header>
 
     <section class="clock" id="tcmv-sjanse-kort" data-prosent="25" aria-label="Countdown to possible TCMV vote">
       <div class="clock-head">
