@@ -72,7 +72,7 @@
       <p class="lede">Unofficial daily estimate of how the 27 member states may vote on EU-wide recognition of the Dutch Article 39 file. An EU-wide yes needs at least 15 of 27 states and 65% of the EU population. Last updated <time datetime="2026-09-10T08:16:31+02:00">10 September 2026, 08:16</time>.</p>
     </header>
 
-    <section class="clock" id="tcmv-sjanse-kort" data-prosent="25" aria-label="Countdown to possible TCMV vote">
+    <section class="clock" id="tcmv-sjanse-kort" data-prosent="28" aria-label="Countdown to possible TCMV vote">
       <div class="clock-head">
         <span class="badge"><i></i> Possible vote</span>
         <span class="badge"><i></i> Rumour on X</span>
@@ -86,9 +86,9 @@
         <div class="unit"><span class="n" data-part="secs">––</span><span class="u">sec</span></div>
       </div>
       <div class="lbl">Chance of a TCMV yes in October</div>
-      <div class="meter" role="img" aria-label="Unofficial 25 percent chance of a TCMV yes in October">
+      <div class="meter" role="img" aria-label="Unofficial 28 percent chance of a TCMV yes in October">
         <div class="meter-readout">
-          <div class="n"><span>25</span><span class="pct">%</span></div>
+          <div class="n"><span>28</span><span class="pct">%</span></div>
           <p class="meter-caption">Unofficial chance of an EU-wide yes in October</p>
         </div>
         <div class="meter-bar">
@@ -215,6 +215,13 @@
           });
           rows.forEach(function (row) { tbody.appendChild(row); });
         });
+      });
+    })();
+    (function () {
+      document.querySelectorAll('[data-prosent]').forEach(function (el) {
+        var p = parseInt(el.getAttribute('data-prosent') || '0', 10) || 0;
+        var fill = el.querySelector('.meter-fill');
+        if (fill) fill.style.width = Math.min(100, Math.max(0, p)) + '%';
       });
     })();
   </script>
