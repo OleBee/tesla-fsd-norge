@@ -1,4 +1,4 @@
-/* Shared visual system — Tesla FSD Norge / Europe pages */
+/* Shared visual system — Tesla FSD Norge / Europe / TCMV */
 :root {
   --canvas: #070b14;
   --panel: #0e1624;
@@ -13,30 +13,39 @@
   --red: #ff6b6b;
   --amber: #ffc14d;
   --green: #3dd68c;
+  --purple: #c084fc;
   --r: 24px;
   --panel-inset: inset 0 0 0 1px rgba(255, 255, 255, .04);
+  --wrap-max: 1120px;
   --wrap-pad: 48px 24px 80px;
   --wrap-pad-sm: 28px 16px 64px;
+  --header-max: 42em;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html, body {
+html {
+  overflow-x: hidden;
+  background: var(--canvas);
+}
+body {
+  min-height: 100vh;
   background: var(--canvas);
   color: var(--ink);
   font-family: Inter, -apple-system, "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;
 }
-body { min-height: 100vh; }
 
 .wrap {
+  max-width: var(--wrap-max);
   margin: 0 auto;
   padding: var(--wrap-pad);
 }
 
 header {
   margin-bottom: 28px;
-  max-width: 42em;
+  max-width: var(--header-max);
 }
 
 .kicker {
@@ -55,13 +64,29 @@ h1 {
   color: #fff;
 }
 
-.lede time { color:#fff; }
+h2 {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 14px 0 10px;
+  font-weight: 500;
+  letter-spacing: -.03em;
+  color: #fff;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: #fff;
+}
+
 .lede {
   color: var(--body);
   font-size: 16px;
   line-height: 1.5;
-  max-width: 42em;
+  max-width: var(--header-max);
 }
+.lede time { color: #fff; }
 
 .panel {
   background: var(--panel);
@@ -78,11 +103,9 @@ a:hover { text-decoration: underline; }
   font-size: 13px;
   margin-top: 20px;
   line-height: 1.5;
-  background: transparent;
-  border: 0;
-  padding: 0;
 }
 
+/* Shared top nav — identical on every page */
 .site-nav {
   display: flex;
   flex-wrap: wrap;
@@ -111,6 +134,140 @@ a:hover { text-decoration: underline; }
   box-shadow: inset 0 0 0 1px rgba(91, 140, 255, .35);
 }
 
+/* Shared badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .22);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.badge i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+}
+.badge.soft { border-color: rgba(91, 140, 255, .45); color: #9bb6ff; }
+.badge.soft i { background: var(--blue); }
+.badge.warn { border-color: rgba(255, 193, 77, .4); color: #ffd27a; }
+.badge.warn i { background: var(--amber); }
+
+/* Compact feed badges (Europe) */
+.badge.feed {
+  gap: 6px;
+  padding: 3px 10px;
+  font-size: 11px;
+  color: #c5cddb;
+  border-color: rgba(255, 255, 255, .18);
+}
+.badge.feed i { width: 5px; height: 5px; background: var(--blue); }
+.badge.feed.svv i { background: var(--green); }
+.badge.feed.circabc i { background: var(--amber); }
+.badge.feed.norway i { background: var(--red); }
+.badge.feed.tcmv-vote i { background: var(--blue); }
+.badge.feed.news i { background: var(--purple); }
+
+/* Shared meter */
+.meter {
+  margin-top: 22px;
+  padding: 36px 8px 8px;
+  border-top: 1px solid var(--line-soft);
+}
+.meter-readout { text-align: center; }
+.meter-readout .n {
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(64px, 9vw, 88px);
+  font-weight: 500;
+  line-height: .9;
+  letter-spacing: -.04em;
+  color: #fff;
+}
+.meter-readout .n .pct {
+  font-size: .38em;
+  font-weight: 500;
+  margin-left: 1px;
+  color: rgba(255, 255, 255, .38);
+  vertical-align: super;
+}
+.meter-caption {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.meter-bar { position: relative; margin: 36px 0 10px; }
+.meter-track {
+  height: 8px;
+  border-radius: 999px;
+  background: #2a3344;
+  overflow: hidden;
+}
+.meter-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ff4d4d 0%, #ff7a3d 18%, #ffc14d 42%, #c6e04a 62%, #3dd68c 82%, #2ee0a0 100%);
+  transition: width .8s cubic-bezier(.22, 1, .36, 1);
+}
+.meter-ends {
+  display: flex;
+  justify-content: space-between;
+  color: var(--meta);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* Shared countdown units */
+.units {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 18px 0 4px;
+}
+.unit {
+  background: var(--panel-2);
+  border-radius: 16px;
+  padding: 16px 6px 14px;
+  text-align: center;
+  box-shadow: var(--panel-inset);
+}
+.unit .n {
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(26px, 6vw, 40px);
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+}
+.unit .u {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.sub, .why {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 12px;
+}
+.lbl {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 400;
+  margin-top: 12px;
+}
+
 @media (max-width: 720px) {
   .wrap { padding: var(--wrap-pad-sm); }
+  .panel { padding: 22px 18px 20px; }
+  .units { gap: 6px; }
 }

@@ -11,46 +11,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="site.css">
   <style>
-.wrap { max-width:820px; }
+
     .standings {
-      display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:28px 0 8px;
+      display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:0 0 20px;
     }
     .stat {
       background:var(--panel); border-radius:var(--r); padding:18px 16px;
       box-shadow:var(--panel-inset);
     }
-    .stat .n { font-variant-numeric:tabular-nums; font-size:clamp(28px,5vw,36px); font-weight:500; letter-spacing:-.03em; }
+    .stat .n {
+      font-variant-numeric:tabular-nums; font-size:clamp(28px,5vw,36px);
+      font-weight:500; letter-spacing:-.03em;
+    }
     .stat .u { display:block; margin-top:6px; font-size:12px; color:var(--muted); line-height:1.35; }
-    .panel { margin-top:20px; }
-    h2 { font-size:18px; font-weight:500; margin:0 0 16px; }
+    .panel { margin-top:0; margin-bottom:16px; }
+    .panel h2 { font-size:20px; margin:0 0 16px; }
     .feed { list-style:none; }
     .feed li { padding:20px 0; border-bottom:1px solid var(--line-soft); }
     .feed li:first-child { padding-top:0; }
     .feed li:last-child { border-bottom:0; padding-bottom:0; }
     .meta-row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:8px; }
-    .when { color:var(--muted); font-size:12px; font-weight:500; }
-    .badge {
-      display:inline-flex; align-items:center; gap:6px;
-      border:1px solid rgba(255,255,255,.18); padding:3px 10px;
-      border-radius:999px; font-size:11px; font-weight:500; color:#c5cddb;
-    }
-    .badge i { width:5px; height:5px; border-radius:50%; background:var(--blue); }
-    .badge.svv i { background:var(--green); }
-    .badge.circabc i { background:var(--amber); }
-    .badge.norway i { background:var(--red); }
-    .badge.tcmv-vote i { background:var(--blue); }
-    .badge.news i { background:#c084fc; }
-    .title { font-size:17px; font-weight:500; color:#fff; line-height:1.35; }
-    .title a { color:#fff; text-decoration:none; }
-    .title a:hover { color:var(--blue); text-decoration:underline; }
+    .feed .when { color:var(--muted); font-size:12px; font-weight:500; }
+    .feed .title { font-size:17px; font-weight:500; color:#fff; line-height:1.35; }
+    .feed .title a { color:#fff; text-decoration:none; }
+    .feed .title a:hover { color:var(--blue); text-decoration:underline; }
     .summary { margin-top:8px; color:var(--body); font-size:14px; line-height:1.5; }
-    .why { margin-top:8px; color:var(--muted); font-size:13px; line-height:1.45; }
-    .why strong { color:#c5cddb; font-weight:500; }
+    .feed .why { margin-top:8px; font-size:13px; }
+    .feed .why strong { color:#c5cddb; font-weight:500; }
     .empty { color:var(--muted); font-size:15px; }
     @media (max-width:720px) {
       .standings { grid-template-columns:1fr; }
-      .panel { padding:22px 18px; }
     }
+
   </style>
 </head>
 <body>
@@ -113,7 +105,7 @@
           items.forEach(function (it) {
             var src = it.source || "";
             var label = SOURCE_LABEL[src] || src || "Update";
-            var cls = "badge " + (src === "tcmv-vote" ? "tcmv-vote" : src);
+            var cls = "badge feed " + (src === "tcmv-vote" ? "tcmv-vote" : (src || "news"));
             var title = esc(it.title || "Update");
             var titleHtml = it.url
               ? '<a href="' + esc(it.url) + '" rel="noopener">' + title + "</a>"
