@@ -55,6 +55,7 @@ h1 {
   color: #fff;
 }
 
+.lede time { color:#fff; }
 .lede {
   color: var(--body);
   font-size: 16px;
