@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-09-09T21:52:03+02:00",
+  "updated_iso": "2026-09-10T22:05:00+02:00",
   "standings": {
     "yes_countries": 6,
     "eu_population_pct": 9.4,
@@ -21,6 +21,53 @@
         "approval",
         "slovenia",
         "article-39"
+      ]
+    },
+    {
+      "id": "news-france-utac-musk-tabarot-2026-09-03",
+      "iso": "2026-09-03T14:00:00+02:00",
+      "source": "news",
+      "title": "France starts UTAC road tests after Musk–Tabarot FSD talks",
+      "summary": "French Transport Minister Philippe Tabarot said he had a constructive exchange with Elon Musk on 2 September. Tesla provided two FSD Supervised series cars for independent UTAC on-road tests so France can verify Dutch/Tesla data on French roads before a possible TCMV vote (October rumour or early December). Reuters and Connexion France report the tests; this is not a French customer approval.",
+      "why_it_matters": "France is a large-population swing vote for the 15-state / 65% TCMV bar. Testing after the July safety veto is a material thaw — still not an approval, and speed/attention concerns remain on the record.",
+      "url": "https://www.reuters.com/technology/france-starts-tests-teslas-self-driving-tech-2026-09-03/",
+      "tags": [
+        "france",
+        "utac",
+        "tcmv",
+        "article-39",
+        "dcas",
+        "news"
+      ]
+    },
+    {
+      "id": "news-sweden-riksdag-ambition-2026-08-31",
+      "iso": "2026-08-31T12:00:00+02:00",
+      "source": "news",
+      "title": "Sweden restates ambition for Union-wide FSD Supervised approval",
+      "summary": "In a written Riksdag answer dated 31 August 2026 (published 1 September), Infrastructure Minister Andreas Carlson said the government’s starting point and ambition is that a Union-wide approval of systems such as Tesla FSD (Supervised) should be put in place, after evaluations that include Trafikverket’s assessments. He did not lock in a yes vote and did not cancel Trafikverket’s speed-limit concerns.",
+      "why_it_matters": "Official Swedish signal ahead of TCMV: Stockholm wants EU-wide clearance if the safety case holds, even while the agency has urged a no unless deliberate over-speed is removed.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svar-pa-skriftlig-fraga/sveriges-standpunkt-i-eu-gallande-behandling-av_hd121000/",
+      "tags": [
+        "sweden",
+        "tcmv",
+        "riksdag",
+        "news"
+      ]
+    },
+    {
+      "id": "news-sweden-carlson-fsd-video-2026-08-30",
+      "iso": "2026-08-30T18:00:00+02:00",
+      "source": "news",
+      "title": "Swedish transport minister filmed riding Tesla with FSD in Mullsjö",
+      "summary": "Around 30 August 2026, Infrastructure Minister Andreas Carlson posted an Instagram Story of himself riding in a Tesla with FSD Supervised during authorised testing in Mullsjö (one of the Swedish municipalities with Transportstyrelsen test permits). The clip circulated on X via accounts such as @AlexanderKr; treat X amplification as rumour/secondary. ITavisen and local SVT coverage document the Mullsjö testing context. Not a national customer approval.",
+      "why_it_matters": "Political visibility for supervised FSD in Sweden while TCMV talks continue — symbolic, not a regulatory green light for Swedish owners.",
+      "url": "https://itavisen.no/2026/09/01/tesla-fsd-eu-godkjenning-oktober/",
+      "tags": [
+        "sweden",
+        "rumour-x",
+        "testing",
+        "news"
       ]
     },
     {
