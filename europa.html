@@ -12,18 +12,6 @@
   <link rel="stylesheet" href="site.css">
   <style>
 
-    .standings {
-      display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:0 0 20px;
-    }
-    .stat {
-      background:var(--panel); border-radius:var(--r); padding:18px 16px;
-      box-shadow:var(--panel-inset);
-    }
-    .stat .n {
-      font-variant-numeric:tabular-nums; font-size:clamp(28px,5vw,36px);
-      font-weight:500; letter-spacing:-.03em;
-    }
-    .stat .u { display:block; margin-top:6px; font-size:12px; color:var(--muted); line-height:1.35; }
     .panel { margin-top:0; margin-bottom:16px; }
     .panel h2 { font-size:20px; margin:0 0 16px; }
     .feed { list-style:none; }
@@ -39,9 +27,6 @@
     .feed .why { margin-top:8px; font-size:13px; }
     .feed .why strong { color:#c5cddb; font-weight:500; }
     .empty { color:var(--muted); font-size:15px; }
-    @media (max-width:720px) {
-      .standings { grid-template-columns:1fr; }
-    }
 
   </style>
 </head>
@@ -53,11 +38,6 @@
       <h1>Tesla FSD Supervised in Europe</h1>
       <p class="lede">Unofficial English feed for the EU Article 39 / TCMV process around Tesla FSD Supervised. New posts appear only when something material changes. Last updated <time id="feed-updated">—</time>.</p>
     </header>
-    <div class="standings" id="standings" aria-label="Where things stand">
-      <div class="stat"><span class="n" id="stat-yes">—</span><span class="u">EU countries with national customer approval</span></div>
-      <div class="stat"><span class="n" id="stat-tcmv">—</span><span class="u">Unofficial chance of a TCMV yes in October</span></div>
-      <div class="stat"><span class="n" id="stat-no">—</span><span class="u">Unofficial chance Norway customers get FSD this month</span></div>
-    </div>
     <section class="panel">
       <h2>Latest</h2>
       <ul class="feed" id="feed"></ul>
@@ -92,10 +72,6 @@
           var t = document.getElementById("feed-updated");
           t.setAttribute("datetime", data.updated_iso || "");
           t.textContent = fmt(data.updated_iso);
-          var s = data.standings || {};
-          document.getElementById("stat-yes").textContent = (s.yes_countries != null ? s.yes_countries : "—") + (s.eu_population_pct != null ? " · " + s.eu_population_pct + "%" : "");
-          document.getElementById("stat-tcmv").textContent = s.tcmv_october_pct != null ? ("~" + s.tcmv_october_pct + "%") : "—";
-          document.getElementById("stat-no").textContent = s.norway_this_month_pct != null ? ("~" + s.norway_this_month_pct + "%") : "—";
           var items = data.items || [];
           var feed = document.getElementById("feed");
           var empty = document.getElementById("feed-empty");
