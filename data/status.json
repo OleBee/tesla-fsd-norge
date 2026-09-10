@@ -1,18 +1,42 @@
 {
-  "sist_sjekket": "2026-09-09",
-  "sist_sjekket_nb": "9. september 2026",
-  "sist_oppdatert_iso": "2026-09-09T20:29:00+02:00",
-  "sist_oppdatert_nb": "9. september 2026 kl. 20.29",
+  "sist_sjekket": "2026-09-10",
+  "sist_sjekket_nb": "10. september 2026",
+  "sist_oppdatert_iso": "2026-09-10T07:16:00+02:00",
+  "sist_oppdatert_nb": "10. september 2026 kl. 07.16",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Ikke kundegodkjent. Begrenset testing med Tesla-trente sikkerhetsførere.",
   "eu_land": [
-    { "land": "Nederland", "dato": "2026-04-10", "sti": "RDW artikkel 39" },
-    { "land": "Litauen", "dato": "2026-05-20", "sti": "anerkjennelse" },
-    { "land": "Estland", "dato": "2026-05-29", "sti": "anerkjennelse" },
-    { "land": "Danmark", "dato": "2026-06-09", "sti": "anerkjennelse" },
-    { "land": "Belgia", "dato": "2026-06-10", "sti": "anerkjennelse" },
-    { "land": "Slovenia", "dato": "2026-09-07", "sti": "anerkjennelse" }
+    {
+      "land": "Nederland",
+      "dato": "2026-04-10",
+      "sti": "RDW artikkel 39"
+    },
+    {
+      "land": "Litauen",
+      "dato": "2026-05-20",
+      "sti": "anerkjennelse"
+    },
+    {
+      "land": "Estland",
+      "dato": "2026-05-29",
+      "sti": "anerkjennelse"
+    },
+    {
+      "land": "Danmark",
+      "dato": "2026-06-09",
+      "sti": "anerkjennelse"
+    },
+    {
+      "land": "Belgia",
+      "dato": "2026-06-10",
+      "sti": "anerkjennelse"
+    },
+    {
+      "land": "Slovenia",
+      "dato": "2026-09-07",
+      "sti": "anerkjennelse"
+    }
   ],
   "eu_andel_befolkning_prosent": 9.4,
   "programvaregren": "v14.2.2",
@@ -21,7 +45,7 @@
     "siste_utfall": "diskusjon uten avstemning",
     "neste_dato": "2026-10-06",
     "neste_sikkerhet": "rykte",
-    "dager_til": 27,
+    "dager_til": 26,
     "oktober_godkjenning_prosent": 28,
     "etikett": "Sjanse for at TCMV godkjenner i oktober",
     "sannsynlig_utfall": "åpent",
@@ -33,20 +57,81 @@
     "kommentar": "Uoffisielt skjønnstall, ikke et tall fra Vegvesenet. Ingen SVV-vedtak og ingen TCMV-avstemning i september. Neste mulige port er oktobermøtet."
   },
   "sjanse_historikk": [
-    { "dato": "2026-04-10", "prosent": 1, "merknad": "RDW-godkjenning i Nederland" },
-    { "dato": "2026-05-20", "prosent": 4, "merknad": "Første EU-anerkjennelser" },
-    { "dato": "2026-06-10", "prosent": 12, "merknad": "Fem land, håp om juni-avstemning" },
-    { "dato": "2026-06-30", "prosent": 3, "merknad": "TCMV uten votum" },
-    { "dato": "2026-07-22", "prosent": 2, "merknad": "Frankrike sier nei" },
-    { "dato": "2026-08-26", "prosent": 2, "merknad": "Ingen september-port" },
-    { "dato": "2026-09-02", "prosent": 1, "merknad": "Ingen TCMV i september" },
-    { "dato": "2026-09-03", "prosent": 1, "merknad": "September uten port; TCMV-oktober satt til 25 %" },
-    { "dato": "2026-09-04", "prosent": 1, "merknad": "Ingen materiell endring" },
-    { "dato": "2026-09-05", "prosent": 1, "merknad": "Ingen materiell endring" },
-    { "dato": "2026-09-06", "prosent": 1, "merknad": "Ingen materiell endring" },
-    { "dato": "2026-09-07", "prosent": 1, "merknad": "Ingen materiell endring" },
-    { "dato": "2026-09-08", "prosent": 1, "merknad": "Slovenia sjette land; ingen norsk endring" },
-    { "dato": "2026-09-09", "prosent": 1, "merknad": "Ingen materiell endring" }
+    {
+      "dato": "2026-04-10",
+      "prosent": 1,
+      "merknad": "RDW-godkjenning i Nederland"
+    },
+    {
+      "dato": "2026-05-20",
+      "prosent": 4,
+      "merknad": "Første EU-anerkjennelser"
+    },
+    {
+      "dato": "2026-06-10",
+      "prosent": 12,
+      "merknad": "Fem land, håp om juni-avstemning"
+    },
+    {
+      "dato": "2026-06-30",
+      "prosent": 3,
+      "merknad": "TCMV uten votum"
+    },
+    {
+      "dato": "2026-07-22",
+      "prosent": 2,
+      "merknad": "Frankrike sier nei"
+    },
+    {
+      "dato": "2026-08-26",
+      "prosent": 2,
+      "merknad": "Ingen september-port"
+    },
+    {
+      "dato": "2026-09-02",
+      "prosent": 1,
+      "merknad": "Ingen TCMV i september"
+    },
+    {
+      "dato": "2026-09-03",
+      "prosent": 1,
+      "merknad": "September uten port; TCMV-oktober satt til 25 %"
+    },
+    {
+      "dato": "2026-09-04",
+      "prosent": 1,
+      "merknad": "Ingen materiell endring"
+    },
+    {
+      "dato": "2026-09-05",
+      "prosent": 1,
+      "merknad": "Ingen materiell endring"
+    },
+    {
+      "dato": "2026-09-06",
+      "prosent": 1,
+      "merknad": "Ingen materiell endring"
+    },
+    {
+      "dato": "2026-09-07",
+      "prosent": 1,
+      "merknad": "Ingen materiell endring"
+    },
+    {
+      "dato": "2026-09-08",
+      "prosent": 1,
+      "merknad": "Slovenia sjette land; ingen norsk endring"
+    },
+    {
+      "dato": "2026-09-09",
+      "prosent": 1,
+      "merknad": "Ingen materiell endring"
+    },
+    {
+      "dato": "2026-09-10",
+      "prosent": 1,
+      "merknad": "Ingen materiell endring"
+    }
   ],
   "series_02": {
     "forventet": "2027-01",
