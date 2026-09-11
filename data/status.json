@@ -1,8 +1,8 @@
 {
-  "sist_sjekket": "2026-09-10",
-  "sist_sjekket_nb": "10. september 2026",
-  "sist_oppdatert_iso": "2026-09-10T22:05:00+02:00",
-  "sist_oppdatert_nb": "10. september 2026 kl. 22.05",
+  "sist_sjekket": "2026-09-11",
+  "sist_sjekket_nb": "11. september 2026",
+  "sist_oppdatert_iso": "2026-09-11T07:18:00+02:00",
+  "sist_oppdatert_nb": "11. september 2026 kl. 07.18",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Ikke kundegodkjent. Begrenset testing med Tesla-trente sikkerhetsførere.",
@@ -45,7 +45,7 @@
     "siste_utfall": "diskusjon uten avstemning",
     "neste_dato": "2026-10-06",
     "neste_sikkerhet": "rykte",
-    "dager_til": 26,
+    "dager_til": 25,
     "oktober_godkjenning_prosent": 28,
     "etikett": "Sjanse for at TCMV godkjenner i oktober",
     "sannsynlig_utfall": "åpent",
@@ -131,6 +131,11 @@
       "dato": "2026-09-10",
       "prosent": 1,
       "merknad": "Frankrike UTAC-veitester + Sverige-signal; ingen norsk endring"
+    },
+    {
+      "dato": "2026-09-11",
+      "prosent": 1,
+      "merknad": "Ingen materiell endring"
     }
   ],
   "series_02": {
@@ -138,5 +143,5 @@
     "merknad": "UN R171 Series 02 ventes i kraft sent i januar 2027. Parallell vei, ikke norsk go-live."
   },
   "side_layout": "slim-meter-2026-09-03-tcmv-combo",
-  "materiell_endring": true
+  "materiell_endring": false
 }
