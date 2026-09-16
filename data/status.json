@@ -1,8 +1,8 @@
 {
-  "sist_sjekket": "2026-09-15",
-  "sist_sjekket_nb": "15. september 2026",
-  "sist_oppdatert_iso": "2026-09-15T07:13:50+02:00",
-  "sist_oppdatert_nb": "15. september 2026 kl. 07.13",
+  "sist_sjekket": "2026-09-16",
+  "sist_sjekket_nb": "16. september 2026",
+  "sist_oppdatert_iso": "2026-09-16T07:12:04+02:00",
+  "sist_oppdatert_nb": "16. september 2026 kl. 07.12",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Ikke kundegodkjent. Begrenset testing med Tesla-trente sikkerhetsførere.",
@@ -45,7 +45,7 @@
     "siste_utfall": "diskusjon uten avstemning",
     "neste_dato": "2026-10-06",
     "neste_sikkerhet": "rykte",
-    "dager_til": 21,
+    "dager_til": 20,
     "oktober_godkjenning_prosent": 28,
     "etikett": "Sjanse for at TCMV godkjenner i oktober",
     "sannsynlig_utfall": "åpent",
@@ -154,6 +154,11 @@
     },
     {
       "dato": "2026-09-15",
+      "prosent": 1,
+      "merknad": "Ingen materiell endring"
+    },
+    {
+      "dato": "2026-09-16",
       "prosent": 1,
       "merknad": "Ingen materiell endring"
     }
