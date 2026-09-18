@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="site.css">
   <style>
-    .panel { margin-top:0; margin-bottom:16px; }
+    .panel { margin-bottom:16px; }
     .panel h2 { font-size:20px; margin:0 0 16px; }
     .feed { list-style:none; }
     .feed li { padding:20px 0; border-bottom:1px solid var(--line-soft); }
@@ -27,26 +27,26 @@
     .feed .why { margin-top:8px; font-size:13px; }
     .feed .why strong { color:#c5cddb; font-weight:500; }
     .empty { color:var(--muted); font-size:15px; }
-    .site-footer { margin-top:12px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; line-height:1.5; }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <nav class="site-nav" aria-label="Hovedmeny">
-      <a href="index.html">Norge</a>
-      <a href="tcmv.html">TCMV</a>
-      <a href="europa.html" class="active" aria-current="page">Europa</a>
+    <nav class="site-nav" aria-label="Hovednavigasjon">
+      <a class="brand" href="index.html">fsd<span>norge.no</span></a>
+      <a class="nav-link" href="index.html">Norge</a>
+      <a class="nav-link" href="tcmv.html">TCMV</a>
+      <a class="nav-link active" href="europa.html" aria-current="page">Europa</a>
     </nav>
     <header>
       <div class="kicker">EU · FSD Supervised · live-feed</div>
       <h1>Tesla FSD Supervised i Europa</h1>
-      <p class="lede">Uoffisiell norsk feed for EU artikkel 39 / TCMV-prosessen rundt Tesla FSD Supervised. Nye poster vises bare når noe materiellt endrer seg. Sist oppdatert <time id="feed-updated">—</time>.</p>
+      <p class="lede">Uoffisiell norsk feed for EU artikkel 39 / TCMV-prosessen. Nye poster vises bare når noe materiellt endrer seg. Sist oppdatert <time id="feed-updated">—</time>.</p>
     </header>
     <section class="panel">
       <h2>Siste nytt</h2>
       <ul class="feed" id="feed" aria-label="Europa-feed"></ul>
       <p class="empty" id="feed-empty" hidden>Ingen innlegg ennå.</p>
-      <p class="note">Uoffisiell. Ingen juridisk rådgivning. Erstatter ikke vegvesen.no, RDW, Tesla eller EU-komitologiregisteret. FSD Supervised er SAE nivå 2 — føreren er alltid ansvarlig.</p>
+      <p class="note">Uoffisiell. Ingen juridisk rådgivning. Erstatter ikke vegvesen.no, RDW, Tesla eller EU-komitologiregisteret. FSD Supervised er SAE nivå 2 — føreren er alltid ansvarlig. Se <a href="index.html">norsk status</a>.</p>
     </section>
     <footer class="site-footer">
       <p>fsdnorge.no — feed-data fra <a href="data/europa-feed.json">data/europa-feed.json</a>.</p>
@@ -64,8 +64,7 @@
       function fmt(iso) {
         if (!iso) return "—";
         try {
-          var d = new Date(iso);
-          return d.toLocaleString("nb-NO", { day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Oslo" });
+          return new Date(iso).toLocaleString("nb-NO", { day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Oslo" });
         } catch (e) { return iso; }
       }
       function esc(s) {
@@ -90,14 +89,12 @@
             var label = SOURCE_LABEL[src] || src || "Oppdatering";
             var cls = "badge feed " + (src === "tcmv-vote" ? "tcmv-vote" : (src || "news"));
             var title = esc(it.title || "Oppdatering");
-            var titleHtml = it.url
-              ? '<a href="' + esc(it.url) + '" rel="noopener">' + title + "</a>"
-              : title;
+            var titleHtml = it.url ? '<a href="' + esc(it.url) + '" rel="noopener">' + title + "</a>" : title;
             var li = document.createElement("li");
             li.innerHTML =
-              '<div class="meta-row"><span class="' + cls + '"><i></i> ' + esc(label) + "</span>" +
-              '<span class="when">' + esc(fmt(it.iso)) + "</span></div>" +
-              '<div class="title">' + titleHtml + "</div>" +
+              '<div class="meta-row"><span class="' + cls + '"><i></i> ' + esc(label) + "</span>' +
+              '<span class="when">' + esc(fmt(it.iso)) + "</span></div>' +
+              '<div class="title">' + titleHtml + "</div>' +
               (it.summary ? '<p class="summary">' + esc(it.summary) + "</p>" : "") +
               (it.why_it_matters ? '<p class="why"><strong>Hvorfor det betyr noe.</strong> ' + esc(it.why_it_matters) + "</p>" : "");
             feed.appendChild(li);

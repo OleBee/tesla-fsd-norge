@@ -272,7 +272,89 @@ a:hover { text-decoration: underline; }
   .units { gap: 6px; }
 }
 
-/* Hub disclaimer */
+
+/* Brand + nav links */
+.site-nav .brand {
+  margin-right: auto;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  padding-left: 0;
+}
+.site-nav .brand span { color: var(--blue); }
+.site-nav .brand:hover { background: transparent; text-decoration: none; color: #fff; }
+.site-nav .nav-link { color: var(--muted); }
+.site-nav .nav-link.active {
+  color: #fff;
+  background: rgba(91, 140, 255, .18);
+  box-shadow: inset 0 0 0 1px rgba(91, 140, 255, .35);
+}
+
+/* Fact cards */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 0 0 20px;
+}
+.fact {
+  background: var(--panel);
+  border-radius: 18px;
+  padding: 18px 16px;
+  box-shadow: var(--panel-inset);
+}
+.fact-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.fact-value {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.35;
+}
+.fact-value.neg { color: var(--red); }
+.fact-value.pos { color: var(--green); }
+.fact-value.warn { color: var(--amber); }
+.fact p {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--body);
+  line-height: 1.45;
+}
+
+/* Check list */
+.check-list { list-style: none; margin: 0; }
+.check-list li {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 10px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--body);
+}
+.check-list li:first-child { padding-top: 0; }
+.check-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.check-list .mark {
+  width: 22px; height: 22px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 600; flex-shrink: 0; margin-top: 1px;
+}
+.check-list .mark.no { background: rgba(255,107,107,.15); color: var(--red); }
+.check-list .mark.yes { background: rgba(61,214,140,.15); color: var(--green); }
+.check-list .mark.wait { background: rgba(255,193,77,.15); color: var(--amber); }
+.check-list strong { color: #fff; font-weight: 500; }
+
+/* Sources */
+.sources { list-style: none; display: grid; gap: 10px; }
+.sources li { font-size: 14px; line-height: 1.45; color: var(--body); }
+.sources a { font-weight: 500; }
+
+/* Disclaimer */
 .disclaimer {
   margin-top: 14px;
   padding: 12px 14px;
@@ -286,37 +368,46 @@ a:hover { text-decoration: underline; }
 }
 .disclaimer strong { color: #ffd27a; font-weight: 500; }
 
-/* Shared site footer */
+/* Footer */
 .site-footer {
   margin-top: 28px;
-  padding-top: 20px;
+  padding: 24px;
   border-top: 1px solid var(--line);
+  text-align: center;
   color: var(--muted);
   font-size: 13px;
   line-height: 1.5;
-  max-width: var(--header-max);
 }
 .site-footer a { color: var(--blue); }
 
-/* TCMV totals cards */
+/* Totals cards (TCMV) */
+.totals { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 0 0 20px; }
 .totals .card {
   background: var(--panel);
   border-radius: 18px;
   padding: 18px 16px;
   box-shadow: var(--panel-inset);
 }
-.totals .card .n {
+.totals .lbl { margin-top: 0; font-size: 13px; color: var(--muted); }
+.totals .n {
   font-variant-numeric: tabular-nums;
   font-size: clamp(28px, 5vw, 36px);
   font-weight: 500;
   letter-spacing: -.03em;
   margin-top: 8px;
 }
-.totals .card .n.fail { color: var(--red); }
-.totals .card .n.pass { color: var(--green); }
-.totals .card .need {
-  margin-top: 6px;
-  font-size: 12px;
-  color: var(--muted);
-  line-height: 1.35;
+.totals .n.fail { color: var(--red); }
+.totals .n.pass { color: var(--green); }
+.totals .need { margin-top: 6px; font-size: 12px; color: var(--muted); line-height: 1.35; }
+
+@media (max-width: 900px) {
+  .facts { grid-template-columns: 1fr; }
+  .totals { grid-template-columns: 1fr; }
 }
+
+.awaiting { font-variant-numeric: tabular-nums; font-size: 24px; font-weight: 500; margin: 14px 0 8px; color: var(--muted); }
+.when { color: #fff; font-size: 16px; font-weight: 500; }
+.clock-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.sub { color: var(--muted); font-size: 14px; line-height: 1.5; margin-top: 12px; }
+.card.mini { background: var(--panel); border-radius: var(--r); box-shadow: var(--panel-inset); padding: 24px; }
+.card.mini h3 { font-size: 18px; margin: 10px 0 4px; }

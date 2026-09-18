@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-09-18T22:17:00+02:00",
+  "updated_iso": "2026-09-18T22:30:00+02:00",
   "standings": {
     "yes_countries": 6,
     "eu_population_pct": 9.4,
@@ -13,8 +13,8 @@
       "id": "seed-slovenia-2026-09-07",
       "iso": "2026-09-07T12:00:00+02:00",
       "source": "tcmv-vote",
-      "title": "Slovenia blir det sjette EU-landet med nasjonal kundegodkjenning",
-      "summary": "Tesla Europe sier at Slovenia har anerkjent den nederlandske artikkel 39-saken. Utrulling ventes snart. Seks land dekker fortsatt bare omkring 9,4 % av EU-befolkningen.",
+      "title": "Slovenia blir sjette EU-land med nasjonal kundegodkjenning",
+      "summary": "Tesla Europe sier at Slovenia har anerkjent den nederlandske artikkel 39-saken. Utrulling ventes snart. Seks land dekker fortsatt bare ca. 9,4 % av EU-befolkningen.",
       "why_it_matters": "Fortsatt langt under TCMV-tersklene (15 av 27 stater og 65 % av befolkningen).",
       "url": "https://fsdnorge.no/tcmv.html",
       "tags": [
@@ -28,8 +28,8 @@
       "iso": "2026-09-03T14:00:00+02:00",
       "source": "news",
       "title": "Frankrike starter UTAC-veitester etter Musk–Tabarot FSD-samtale",
-      "summary": "Fransk transportminister Philippe Tabarot sa at han hadde en konstruktiv utveksling med Elon Musk 2. september. Tesla stilte med to FSD Supervised-serie biler til uavhengige UTAC-veitester, slik at Frankrike kan verifisere nederlandske/Tesla-data på franske veier før mulig TCMV-avstemning (oktober-rykte eller tidlig desember). Reuters og Connexion France omtaler testene; dette er ikke fransk kundegodkjenning.",
-      "why_it_matters": "Frankrike er en stor befolknings-svingstemme for TCMV-kravet 15 stater / 65 %. Testing etter juli-nei er en materiell tøvær — fortsatt ikke godkjenning, og bekymringer om fart/oppmerksomhet står.",
+      "summary": "Fransk transportminister Philippe Tabarot sa at han hadde en konstruktiv samtale med Elon Musk 2. september. Tesla stilte med to FSD Supervised-serie biler til uavhengige UTAC-veitester. Reuters omtaler testene; dette er ikke fransk kundegodkjenning.",
+      "why_it_matters": "Frankrike er en stor befolknings-svingstemme for TCMV-kravet 15 stater / 65 %. Testing etter juli-nei er materiell tøvær — fortsatt ikke godkjenning.",
       "url": "https://www.reuters.com/technology/france-starts-tests-teslas-self-driving-tech-2026-09-03/",
       "tags": [
         "france",
@@ -45,8 +45,8 @@
       "iso": "2026-08-31T12:00:00+02:00",
       "source": "news",
       "title": "Sverige gjentar ambisjon om unionsomfattende FSD Supervised-godkjenning",
-      "summary": "I et skriftlig riksdagssvar datert 31. august 2026 (publisert 1. september) sa infrastrukturminister Andreas Carlson at regjeringens utgangspunkt og ambisjon er at en unionsomfattende godkjenning av systemer som Tesla FSD (Supervised) skal komme på plass, etter evalueringer som inkluderer Trafikverkets vurderinger. Han låste ikke en ja-stemme og avlyste ikke Trafikverkets hastighetsbekymringer.",
-      "why_it_matters": "Offisielt svensk signal før TCMV: Stockholm ønsker EU-omfattende klarering hvis sikkerhetsgrunnlaget holder, selv om etaten har anbefalt nei med mindre bevisst overhastighet fjernes.",
+      "summary": "I et skriftlig riksdagssvar 31. august 2026 sa infrastrukturminister Andreas Carlson at ambisjonen er unionsomfattende godkjenning etter evalueringer. Han låste ikke en ja-stemme.",
+      "why_it_matters": "Offisielt svensk signal før TCMV: ønsker EU-klarering hvis sikkerhetsgrunnlaget holder.",
       "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svar-pa-skriftlig-fraga/sveriges-standpunkt-i-eu-gallande-behandling-av_hd121000/",
       "tags": [
         "sweden",
@@ -60,8 +60,8 @@
       "iso": "2026-08-30T18:00:00+02:00",
       "source": "news",
       "title": "Svensk transportminister filmet i Tesla med FSD i Mullsjö",
-      "summary": "Omkring 30. august 2026 la infrastrukturminister Andreas Carlson ut en Instagram Story der han kjører i Tesla med FSD Supervised under autorisert testing i Mullsjö (en av kommunene med Transportstyrelsen-testtillatelser). Klippet sirkulerte på X via kontoer som @AlexanderKr; behandle X-spredning som rykte/sekundær. ITavisen og lokal SVT-dekning dokumenterer Mullsjö-konteksten. Ikke nasjonal kundegodkjenning.",
-      "why_it_matters": "Politisk synlighet for supervised FSD i Sverige mens TCMV-samtalene fortsetter — symbolsk, ikke grønt lys for svenske eiere.",
+      "summary": "Omkring 30. august 2026 la Andreas Carlson ut Instagram Story fra autorisert FSD-testing i Mullsjö. Behandle X-spredning som rykte/sekundær. Ikke nasjonal kundegodkjenning.",
+      "why_it_matters": "Politisk synlighet — symbolsk, ikke grønt lys for svenske eiere.",
       "url": "https://itavisen.no/2026/09/01/tesla-fsd-eu-godkjenning-oktober/",
       "tags": [
         "sweden",
@@ -76,7 +76,7 @@
       "source": "svv",
       "title": "Statens vegvesens side sist oppdatert 3. juli 2026",
       "summary": "SVV gjentar: Norge er ikke kundegodkjent; bare begrenset testing; kundedemoer stanset til Tesla endrer budskapet; neste TCMV-vindu i oktober.",
-      "why_it_matters": "Offisiell norsk grunnlinje inntil SVV publiserer en nyere oppdatering.",
+      "why_it_matters": "Offisiell norsk grunnlinje inntil SVV publiserer nyere oppdatering.",
       "url": "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/",
       "tags": [
         "norway",

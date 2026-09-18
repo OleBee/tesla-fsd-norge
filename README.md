@@ -4,7 +4,7 @@ Uoffisiell statushub om godkjenning av Tesla FSD Supervised (SAE nivå 2) i Norg
 
 **Canonical URL:** [https://fsdnorge.no/](https://fsdnorge.no/)
 
-Speil på GitHub Pages: [https://olebee.github.io/tesla-fsd-norge/](https://olebee.github.io/tesla-fsd-norge/) (custom domain `fsdnorge.no` via `CNAME`).
+Speil på GitHub Pages: [https://OleBee.github.io/tesla-fsd-norge/](https://OleBee.github.io/tesla-fsd-norge/) (custom domain `fsdnorge.no` via `CNAME`).
 
 ## Sider
 
@@ -46,15 +46,6 @@ Ved skriving til `index.html`: ingress med «Sist oppdatert D. måned ÅÅÅÅ k
 
 ## Kilderegel
 
-Offisiell status bygger på:
-
-- Statens vegvesen
-- RDW
-- Nasjonale typegodkjenningsmyndigheter (f.eks. Færdselsstyrelsen)
-- Europakommisjonen / TCMV / komitologiregisteret
-- EUR-Lex (EU 2018/858)
-- UNECE / UN R171 / WP.29
-- ETSC når det gjelder uavhengig trafikksikkerhetsvurdering
-- Tesla Europe / offisiell brukermanual
+Offisiell status bygger på Statens vegvesen, RDW, nasjonale typegodkjenningsmyndigheter, Europakommisjonen/TCMV/komitologiregisteret, EUR-Lex (2018/858), UNECE/UN R171/WP.29, ETSC og Tesla Europe.
 
 Rykter fra troverdige kontoer på X kan tas med i hero og tidslinje, men må merkes som rykte. De får ikke erstatte offisiell status. Ikke finn på godkjenninger.
