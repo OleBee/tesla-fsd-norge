@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tesla FSD Supervised in Europe — live feed</title>
-  <meta name="description" content="Unofficial English live feed for the EU Article 39 / TCMV process around Tesla FSD Supervised. New posts appear only when something material changes.">
+  <title>Tesla FSD Supervised i Europa — live-feed</title>
+  <meta name="description" content="Uoffisiell norsk live-feed for EU artikkel 39 / TCMV-prosessen rundt Tesla FSD Supervised. Nye poster bare ved materiell endring.">
+  <link rel="canonical" href="https://fsdnorge.no/europa.html">
   <meta name="theme-color" content="#070b14">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="site.css">
   <style>
-
     .panel { margin-top:0; margin-bottom:16px; }
     .panel h2 { font-size:20px; margin:0 0 16px; }
     .feed { list-style:none; }
@@ -27,38 +27,45 @@
     .feed .why { margin-top:8px; font-size:13px; }
     .feed .why strong { color:#c5cddb; font-weight:500; }
     .empty { color:var(--muted); font-size:15px; }
-
+    .site-footer { margin-top:12px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; line-height:1.5; }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <nav class="site-nav" aria-label="Site"><a href="index.html">Norway</a><a href="tcmv.html">TCMV</a><a href="europa.html" class="active" aria-current="page">Europe</a></nav>
-<header>
-      <div class="kicker">EU · FSD Supervised · live feed</div>
-      <h1>Tesla FSD Supervised in Europe</h1>
-      <p class="lede">Unofficial English feed for the EU Article 39 / TCMV process around Tesla FSD Supervised. New posts appear only when something material changes. Last updated <time id="feed-updated">—</time>.</p>
+    <nav class="site-nav" aria-label="Hovedmeny">
+      <a href="index.html">Norge</a>
+      <a href="tcmv.html">TCMV</a>
+      <a href="europa.html" class="active" aria-current="page">Europa</a>
+    </nav>
+    <header>
+      <div class="kicker">EU · FSD Supervised · live-feed</div>
+      <h1>Tesla FSD Supervised i Europa</h1>
+      <p class="lede">Uoffisiell norsk feed for EU artikkel 39 / TCMV-prosessen rundt Tesla FSD Supervised. Nye poster vises bare når noe materiellt endrer seg. Sist oppdatert <time id="feed-updated">—</time>.</p>
     </header>
     <section class="panel">
-      <h2>Latest</h2>
-      <ul class="feed" id="feed"></ul>
-      <p class="empty" id="feed-empty" hidden>No items yet.</p>
-      <p class="note">Unofficial. Not legal advice. Does not replace vegvesen.no, RDW, Tesla or the EU comitology register. FSD Supervised is Level 2 — the driver remains responsible.</p>
+      <h2>Siste nytt</h2>
+      <ul class="feed" id="feed" aria-label="Europa-feed"></ul>
+      <p class="empty" id="feed-empty" hidden>Ingen innlegg ennå.</p>
+      <p class="note">Uoffisiell. Ingen juridisk rådgivning. Erstatter ikke vegvesen.no, RDW, Tesla eller EU-komitologiregisteret. FSD Supervised er SAE nivå 2 — føreren er alltid ansvarlig.</p>
     </section>
+    <footer class="site-footer">
+      <p>fsdnorge.no — feed-data fra <a href="data/europa-feed.json">data/europa-feed.json</a>.</p>
+    </footer>
   </div>
   <script>
     (function () {
       var SOURCE_LABEL = {
         svv: "SVV",
         circabc: "CIRCABC",
-        "tcmv-vote": "TCMV estimate",
-        norway: "Norway status",
-        news: "News"
+        "tcmv-vote": "TCMV-estimat",
+        norway: "Norgestatus",
+        news: "Nyheter"
       };
       function fmt(iso) {
         if (!iso) return "—";
         try {
           var d = new Date(iso);
-          return d.toLocaleString("en-GB", { day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Oslo" });
+          return d.toLocaleString("nb-NO", { day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Oslo" });
         } catch (e) { return iso; }
       }
       function esc(s) {
@@ -80,9 +87,9 @@
           empty.hidden = true;
           items.forEach(function (it) {
             var src = it.source || "";
-            var label = SOURCE_LABEL[src] || src || "Update";
+            var label = SOURCE_LABEL[src] || src || "Oppdatering";
             var cls = "badge feed " + (src === "tcmv-vote" ? "tcmv-vote" : (src || "news"));
-            var title = esc(it.title || "Update");
+            var title = esc(it.title || "Oppdatering");
             var titleHtml = it.url
               ? '<a href="' + esc(it.url) + '" rel="noopener">' + title + "</a>"
               : title;
@@ -92,13 +99,13 @@
               '<span class="when">' + esc(fmt(it.iso)) + "</span></div>" +
               '<div class="title">' + titleHtml + "</div>" +
               (it.summary ? '<p class="summary">' + esc(it.summary) + "</p>" : "") +
-              (it.why_it_matters ? '<p class="why"><strong>Why it matters.</strong> ' + esc(it.why_it_matters) + "</p>" : "");
+              (it.why_it_matters ? '<p class="why"><strong>Hvorfor det betyr noe.</strong> ' + esc(it.why_it_matters) + "</p>" : "");
             feed.appendChild(li);
           });
         })
         .catch(function () {
           document.getElementById("feed-empty").hidden = false;
-          document.getElementById("feed-empty").textContent = "Could not load data/europa-feed.json.";
+          document.getElementById("feed-empty").textContent = "Kunne ikke laste data/europa-feed.json.";
         });
     })();
   </script>

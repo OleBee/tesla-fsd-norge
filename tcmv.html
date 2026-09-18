@@ -1,58 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Estimated TCMV vote by country</title>
-  <meta name="description" content="Unofficial daily estimate of how EU member states may vote in TCMV on Tesla FSD Supervised. Qualified majority needs 15 of 27 states and 65 percent of the EU population.">
+  <title>Estimert TCMV-stemme per land — Tesla FSD Supervised</title>
+  <meta name="description" content="Uoffisiell daglig vurdering av hvordan EU-landene kan stemme i TCMV om Tesla FSD Supervised. Kvalifisert flertall krever 15 av 27 stater og 65 prosent av EU-befolkningen.">
   <meta name="theme-color" content="#070b14">
+  <link rel="canonical" href="https://fsdnorge.no/tcmv.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="site.css">
   <style>
-
     .page-header { margin-bottom:8px; max-width:var(--header-max); }
     .clock {
       background:var(--panel); border-radius:var(--r); box-shadow:var(--panel-inset);
       padding:28px 28px 24px; margin:0 0 20px;
     }
     .clock-head { display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
-    .clock h2 { font-size:28px; }
+    .clock h2 { font-size:26px; }
     .when { color:#fff; font-size:16px; font-weight:500; }
     .clock .why { margin-top:8px; }
     .meter { margin-top:10px; padding:28px 0 8px; }
     .panel { padding:28px 28px 24px; margin-bottom:16px; overflow:hidden; }
-    .table-scroll-wrapper { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    .table-scroll-wrapper, .table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
     table { width:100%; border-collapse:collapse; font-size:14px; }
     th, td { text-align:left; padding:14px 8px; border-bottom:1px solid var(--line-soft); vertical-align:top; }
     th { color:var(--muted); font-weight:500; font-size:12px; }
+    th.sortable { cursor:pointer; user-select:none; }
+    th.sortable:hover { color:#fff; }
+    .th-short { display:none; }
     td { color:var(--body); }
     td:first-child { color:#fff; font-weight:500; }
     .yes { color:var(--green); font-weight:500; }
     .no { color:var(--red); font-weight:500; }
     .uncertain { color:var(--amber); font-weight:500; }
-    .totals { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:0 0 20px; }
-    .tot {
-      background:var(--panel); border-radius:18px; padding:18px 16px;
-      box-shadow:var(--panel-inset);
-    }
-    .tot .n { font-variant-numeric:tabular-nums; font-size:clamp(28px,5vw,36px); font-weight:500; letter-spacing:-.03em; }
-    .tot .u { display:block; margin-top:6px; font-size:12px; color:var(--muted); line-height:1.35; }
+    .totals { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin:0 0 20px; }
     @media (max-width:720px) {
       .totals { grid-template-columns:1fr; }
       .clock { padding:22px 18px 20px; }
-      /* mobile CSS lock: stack table rows */
-      .table-scroll-wrapper { overflow:visible; }
+      .th-full { display:none; }
+      .th-short { display:inline; }
+      .table-scroll-wrapper, .table-scroll { overflow:visible; }
       table, thead, tbody, th, td, tr { display:block; width:100%; }
       thead { display:none; }
       tr {
         background:var(--panel-2); border-radius:16px; padding:14px 14px 10px;
         margin:0 0 10px; box-shadow:var(--panel-inset);
       }
-      td {
-        border:0; padding:4px 0; color:var(--body);
-      }
+      td { border:0; padding:4px 0; color:var(--body); }
       td:first-child { color:#fff; font-size:16px; margin-bottom:4px; }
       td::before {
         content:attr(data-label);
@@ -60,85 +56,90 @@
       }
       td:first-child::before { display:none; }
     }
-
   </style>
 </head>
 <body>
   <div class="wrap">
-    <nav class="site-nav" aria-label="Site"><a href="index.html">Norway</a><a href="tcmv.html" class="active" aria-current="page">TCMV</a><a href="europa.html">Europe</a></nav>
-<header>
-      <div class="kicker">EU · TCMV · Article 39</div>
-      <h1>Estimated TCMV vote by country</h1>
-      <p class="lede">Unofficial daily estimate of how the 27 member states may vote on EU-wide recognition of the Dutch Article 39 file. An EU-wide yes needs at least 15 of 27 states and 65% of the EU population. Last updated <time datetime="2026-09-18T07:06:00+02:00">18 September 2026, 07:06</time>.</p>
+    <nav class="site-nav" aria-label="Hovednavigasjon">
+      <a class="brand" href="index.html">fsd<span>norge.no</span></a>
+      <a class="nav-link" href="index.html">Norge</a>
+      <a class="nav-link active" href="tcmv.html" aria-current="page">TCMV</a>
+      <a class="nav-link" href="europa.html">Europa</a>
+    </nav>
+
+    <header>
+      <div class="kicker">EU · TCMV · Artikkel 39</div>
+      <h1>Estimert TCMV-stemme per land</h1>
+      <p class="lede">Uoffisiell daglig vurdering av hvordan de 27 medlemsstatene kan stemme om EU-omfattende anerkjennelse av den nederlandske artikkel 39-saken. Et EU-ja krever minst 15 av 27 stater og 65 % av EU-befolkningen. Sist oppdatert <time datetime="2026-09-18T07:06:00+02:00">18. september 2026 kl. 07.06</time>.</p>
     </header>
 
-    <section class="clock" id="tcmv-sjanse-kort" data-prosent="28" aria-label="Countdown to possible TCMV vote">
+    <section class="clock" id="tcmv-sjanse-kort" data-prosent="28" aria-label="Nedtelling til mulig TCMV-avstemning">
       <div class="clock-head">
-        <span class="badge"><i></i> Possible vote</span>
-        <span class="badge"><i></i> Rumour on X</span>
+        <span class="badge warn"><i></i> Mulig avstemning</span>
+        <span class="badge warn"><i></i> Rykte på X</span>
       </div>
-      <h2>TCMV may vote on 6 October</h2>
-      <p class="when">Tuesday 6 October 2026 · 09:00 CEST</p>
+      <h2>TCMV kan stemme 6. oktober</h2>
+      <p class="when">Tirsdag 6. oktober 2026 · kl. 09.00 CEST</p>
       <div class="units" id="units" aria-live="polite">
-        <div class="unit"><span class="n" data-part="days">––</span><span class="u">days</span></div>
-        <div class="unit"><span class="n" data-part="hours">––</span><span class="u">hours</span></div>
+        <div class="unit"><span class="n" data-part="days">––</span><span class="u">dager</span></div>
+        <div class="unit"><span class="n" data-part="hours">––</span><span class="u">timer</span></div>
         <div class="unit"><span class="n" data-part="mins">––</span><span class="u">min</span></div>
-        <div class="unit"><span class="n" data-part="secs">––</span><span class="u">sec</span></div>
+        <div class="unit"><span class="n" data-part="secs">––</span><span class="u">sek</span></div>
       </div>
-      <div class="lbl">Chance of a TCMV yes in October</div>
-      <div class="meter" role="img" aria-label="Unofficial 28 percent chance of a TCMV yes in October">
+      <div class="lbl">Sjanse for TCMV-ja i oktober</div>
+      <div class="meter" role="img" aria-label="Uoffisiell 28 prosent sjanse for TCMV-ja i oktober">
         <div class="meter-readout">
           <div class="n"><span>28</span><span class="pct">%</span></div>
-          <p class="meter-caption">Unofficial chance of an EU-wide yes in October</p>
+          <p class="meter-caption">Uoffisiell sjanse for EU-ja i oktober</p>
         </div>
         <div class="meter-bar">
           <div class="meter-track">
             <div class="meter-fill"></div>
           </div>
         </div>
-        <div class="meter-ends"><span>0%</span><span>50%</span><span>100%</span></div>
+        <div class="meter-ends"><span>0 %</span><span>50 %</span><span>100 %</span></div>
       </div>
-      <p class="why">Unofficial estimate, not a Commission figure. 6 October is a rumour on X and from Tesla Europe. The agenda is not yet in the comitology register. Large states still block 15+65%.</p>
+      <p class="why">Uoffisielt skjønnstall, ikke et tall fra Kommisjonen. 6. oktober er rykte på X og fra Tesla Europe. Agendaen er ikke i komitologiregisteret ennå. Store land blokkerer fortsatt 15+65 %.</p>
     </section>
 
     <section class="panel">
-      <h3>Estimated vote</h3>
+      <h3>Estimert stemme</h3>
       <div class="table-scroll">
       <table>
         <thead><tr>
-          <th class="sortable" data-sort="text" scope="col" aria-sort="none">Country</th>
-          <th class="sortable" data-sort="num" scope="col" aria-sort="none"><span class="th-full">Population share</span><span class="th-short">Share</span></th>
-          <th class="sortable" data-sort="vote" scope="col" aria-sort="none"><span class="th-full">Estimated vote</span><span class="th-short">Vote</span></th>
-          <th scope="col">Comment</th>
+          <th class="sortable" data-sort="text" scope="col" aria-sort="none">Land</th>
+          <th class="sortable" data-sort="num" scope="col" aria-sort="none"><span class="th-full">Befolkningsandel</span><span class="th-short">Andel</span></th>
+          <th class="sortable" data-sort="vote" scope="col" aria-sort="none"><span class="th-full">Estimert stemme</span><span class="th-short">Stemme</span></th>
+          <th scope="col">Merknad</th>
         </tr></thead>
         <tbody>
-          <tr><td>Netherlands</td><td>4.0%</td><td class="yes">Yes</td><td>Lead authority. RDW Article 39 approval 10 Apr 2026.</td></tr>
-          <tr><td>Belgium</td><td>2.6%</td><td class="yes">Yes</td><td>National recognition 10 Jun 2026 after in-country tests.</td></tr>
-          <tr><td>Denmark</td><td>1.3%</td><td class="yes">Yes</td><td>Færdselsstyrelsen 9 Jun 2026 after own file review.</td></tr>
-          <tr><td>Lithuania</td><td>0.6%</td><td class="yes">Yes</td><td>Recognised the Dutch file 20 May 2026. OTA live.</td></tr>
-          <tr><td>Estonia</td><td>0.3%</td><td class="yes">Yes</td><td>Recognised the Dutch file 29 May 2026.</td></tr>
-          <tr><td>Slovenia</td><td>0.5%</td><td class="yes">Yes</td><td>National approval 7 Sep 2026 (Tesla Europe). Rollout soon.</td></tr>
-          <tr><td>Germany</td><td>18.6%</td><td class="uncertain">Uncertain</td><td>KBA/BMV assessing. No national shortcut. Largest population weight.</td></tr>
-          <tr><td>France</td><td>15.2%</td><td class="uncertain">Uncertain</td><td>National no 22 Jul; road tests + EU-path talks early Sep.</td></tr>
-          <tr><td>Italy</td><td>13.1%</td><td class="uncertain">Uncertain</td><td>In review. Large-state blocker for the 65% threshold.</td></tr>
-          <tr><td>Spain</td><td>10.9%</td><td class="uncertain">Uncertain</td><td>No unilateral Article 39. Wants Commission/UN coordination.</td></tr>
-          <tr><td>Finland</td><td>1.3%</td><td class="uncertain">Uncertain</td><td>In review. Winter roads and speed-offset concerns.</td></tr>
-          <tr><td>Ireland</td><td>1.2%</td><td class="uncertain">Uncertain</td><td>In review with NSAI. No customer go-ahead.</td></tr>
-          <tr><td>Greece</td><td>2.3%</td><td class="uncertain">Uncertain</td><td>Earlier bill talk. Still listed as in review, not live.</td></tr>
-          <tr><td>Sweden</td><td>2.4%</td><td class="no">No</td><td>Written opposition unless speed offset is removed.</td></tr>
-          <tr><td>Poland</td><td>8.1%</td><td class="no">No</td><td>No public recognition process. Next-largest silent state.</td></tr>
-          <tr><td>Romania</td><td>4.2%</td><td class="no">No</td><td>No public process toward the Dutch file.</td></tr>
-          <tr><td>Czechia</td><td>2.4%</td><td class="no">No</td><td>Waiting on Brussels. No national shortcut.</td></tr>
-          <tr><td>Portugal</td><td>2.4%</td><td class="no">No</td><td>No public customer process.</td></tr>
-          <tr><td>Hungary</td><td>2.1%</td><td class="no">No</td><td>No public process.</td></tr>
-          <tr><td>Austria</td><td>2.0%</td><td class="no">No</td><td>No public process.</td></tr>
-          <tr><td>Bulgaria</td><td>1.4%</td><td class="no">No</td><td>No public process.</td></tr>
-          <tr><td>Croatia</td><td>0.9%</td><td class="no">No</td><td>No public process.</td></tr>
-          <tr><td>Slovakia</td><td>1.2%</td><td class="no">No</td><td>No public process.</td></tr>
-          <tr><td>Latvia</td><td>0.4%</td><td class="no">No</td><td>Unlike EE/LT, no recognition of the Dutch file.</td></tr>
-          <tr><td>Luxembourg</td><td>0.2%</td><td class="no">No</td><td>No public process.</td></tr>
-          <tr><td>Cyprus</td><td>0.2%</td><td class="no">No</td><td>No public process.</td></tr>
-          <tr><td>Malta</td><td>0.1%</td><td class="no">No</td><td>No public process.</td></tr>
+          <tr><td>Nederland</td><td data-label="Befolkningsandel">4,0 %</td><td class="yes" data-label="Estimert stemme">Ja</td><td data-label="Merknad">Ledende myndighet. RDW artikkel 39-godkjenning 10. april 2026.</td></tr>
+          <tr><td>Belgia</td><td data-label="Befolkningsandel">2,6 %</td><td class="yes" data-label="Estimert stemme">Ja</td><td data-label="Merknad">Nasjonal anerkjennelse 10. juni 2026 etter tester i landet.</td></tr>
+          <tr><td>Danmark</td><td data-label="Befolkningsandel">1,3 %</td><td class="yes" data-label="Estimert stemme">Ja</td><td data-label="Merknad">Færdselsstyrelsen 9. juni 2026 etter egen saksbehandling.</td></tr>
+          <tr><td>Litauen</td><td data-label="Befolkningsandel">0,6 %</td><td class="yes" data-label="Estimert stemme">Ja</td><td data-label="Merknad">Anerkjente den nederlandske saken 20. mai 2026. OTA live.</td></tr>
+          <tr><td>Estland</td><td data-label="Befolkningsandel">0,3 %</td><td class="yes" data-label="Estimert stemme">Ja</td><td data-label="Merknad">Anerkjente den nederlandske saken 29. mai 2026.</td></tr>
+          <tr><td>Slovenia</td><td data-label="Befolkningsandel">0,5 %</td><td class="yes" data-label="Estimert stemme">Ja</td><td data-label="Merknad">Nasjonal godkjenning 7. september 2026 (Tesla Europe). Utrulling snart.</td></tr>
+          <tr><td>Tyskland</td><td data-label="Befolkningsandel">18,6 %</td><td class="uncertain" data-label="Estimert stemme">Usikker</td><td data-label="Merknad">KBA/BMV vurderer. Ingen nasjonal snarvei. Største befolkningsvekt.</td></tr>
+          <tr><td>Frankrike</td><td data-label="Befolkningsandel">15,2 %</td><td class="uncertain" data-label="Estimert stemme">Usikker</td><td data-label="Merknad">Nasjonalt nei 22. juli; veitester og EU-samtaler tidlig i september.</td></tr>
+          <tr><td>Italia</td><td data-label="Befolkningsandel">13,1 %</td><td class="uncertain" data-label="Estimert stemme">Usikker</td><td data-label="Merknad">Under vurdering. Storland som blokkerer 65 %-terskelen.</td></tr>
+          <tr><td>Spania</td><td data-label="Befolkningsandel">10,9 %</td><td class="uncertain" data-label="Estimert stemme">Usikker</td><td data-label="Merknad">Ingen ensidig artikkel 39. Ønsker Kommisjons-/FN-koordinering.</td></tr>
+          <tr><td>Finland</td><td data-label="Befolkningsandel">1,3 %</td><td class="uncertain" data-label="Estimert stemme">Usikker</td><td data-label="Merknad">Under vurdering. Bekymring for vinterføre og hastighetsavvik.</td></tr>
+          <tr><td>Irland</td><td data-label="Befolkningsandel">1,2 %</td><td class="uncertain" data-label="Estimert stemme">Usikker</td><td data-label="Merknad">Under vurdering hos NSAI. Ingen kundegodkjenning.</td></tr>
+          <tr><td>Hellas</td><td data-label="Befolkningsandel">2,3 %</td><td class="uncertain" data-label="Estimert stemme">Usikker</td><td data-label="Merknad">Tidligere snakk om lovforslag. Fortsatt under vurdering, ikke live.</td></tr>
+          <tr><td>Sverige</td><td data-label="Befolkningsandel">2,4 %</td><td class="no" data-label="Estimert stemme">Nei</td><td data-label="Merknad">Skriftlig motstand med mindre hastighetsavviket fjernes.</td></tr>
+          <tr><td>Polen</td><td data-label="Befolkningsandel">8,1 %</td><td class="no" data-label="Estimert stemme">Nei</td><td data-label="Merknad">Ingen offentlig anerkjennelsesprosess. Nest største «stille» land.</td></tr>
+          <tr><td>Romania</td><td data-label="Befolkningsandel">4,2 %</td><td class="no" data-label="Estimert stemme">Nei</td><td data-label="Merknad">Ingen offentlig prosess mot den nederlandske saken.</td></tr>
+          <tr><td>Tsjekkia</td><td data-label="Befolkningsandel">2,4 %</td><td class="no" data-label="Estimert stemme">Nei</td><td data-label="Merknad">Venter på Brussel. Ingen nasjonal snarvei.</td></tr>
+          <tr><td>Portugal</td><td data-label="Befolkningsandel">2,4 %</td><td class="no" data-label="Estimert stemme">Nei</td><td data-label="Merknad">Ingen offentlig kundeprosess.</td></tr>
+          <tr><td>Ungarn</td><td data-label="Befolkningsandel">2,1 %</td><td class="no" data-label="Estimert stemme">Nei</td><td data-label="Merknad">Ingen offentlig prosess.</td></tr>
+          <tr><td>Østerrike</td><td data-label="Befolkningsandel">2,0 %</td><td class="no" data-label="Estimert stemme">Nei</td><td data-label="Merknad">Ingen offentlig prosess.</td></tr>
+          <tr><td>Bulgaria</td><td data-label="Befolkningsandel">1,4 %</td><td class="no" data-label="Estimert stemme">Nei</td><td data-label="Merknad">Ingen offentlig prosess.</td></tr>
+          <tr><td>Kroatia</td><td data-label="Befolkningsandel">0,9 %</td><td class="no" data-label="Estimert stemme">Nei</td><td data-label="Merknad">Ingen offentlig prosess.</td></tr>
+          <tr><td>Slovakia</td><td data-label="Befolkningsandel">1,2 %</td><td class="no" data-label="Estimert stemme">Nei</td><td data-label="Merknad">Ingen offentlig prosess.</td></tr>
+          <tr><td>Latvia</td><td data-label="Befolkningsandel">0,4 %</td><td class="no" data-label="Estimert stemme">Nei</td><td data-label="Merknad">I motsetning til EE/LT: ingen anerkjennelse av den nederlandske saken.</td></tr>
+          <tr><td>Luxembourg</td><td data-label="Befolkningsandel">0,2 %</td><td class="no" data-label="Estimert stemme">Nei</td><td data-label="Merknad">Ingen offentlig prosess.</td></tr>
+          <tr><td>Kypros</td><td data-label="Befolkningsandel">0,2 %</td><td class="no" data-label="Estimert stemme">Nei</td><td data-label="Merknad">Ingen offentlig prosess.</td></tr>
+          <tr><td>Malta</td><td data-label="Befolkningsandel">0,1 %</td><td class="no" data-label="Estimert stemme">Nei</td><td data-label="Merknad">Ingen offentlig prosess.</td></tr>
         </tbody>
       </table>
       </div>
@@ -146,19 +147,25 @@
 
     <div class="totals">
       <div class="card">
-        <div class="lbl">Countries estimated Yes</div>
+        <div class="lbl">Land estimert til Ja</div>
         <div class="n fail">6 / 27</div>
-        <div class="need">Needs 15 · below threshold</div>
+        <div class="need">Krever 15 · under terskel</div>
       </div>
       <div class="card">
-        <div class="lbl">Population they represent</div>
-        <div class="n fail">9.3%</div>
-        <div class="need">Needs 65% · below threshold</div>
+        <div class="lbl">Befolkning de representerer</div>
+        <div class="n fail">9,3 %</div>
+        <div class="need">Krever 65 % · under terskel</div>
       </div>
     </div>
 
-    <p class="note">Red = below threshold. Green when both thresholds are met at the same time. Only Yes counts toward the totals. Uncertain counts as neither. Yes = national customer recognition of the Dutch file. No = written opposition, public refusal of the shortcut with no later EU-yes signal, or no public process. Uncertain = in review or mixed signals (France opened road tests after a July national no; Germany/Italy/Spain have not committed). Population shares: Eurostat 1 January 2025. Not a TCMV record.</p>
+    <p class="note">Rødt = under terskel. Grønt når begge tersklene er oppfylt samtidig. Bare Ja teller i summeringen. Usikker teller ikke. Ja = nasjonal kundegodkjenning av den nederlandske saken. Nei = skriftlig motstand, offentlig avvisning av snarveien uten senere EU-ja-signal, eller ingen offentlig prosess. Usikker = under vurdering eller blandede signaler (Frankrike åpnet veitester etter nasjonalt nei i juli; Tyskland/Italia/Spania har ikke forpliktet seg). Befolkningsandeler: Eurostat 1. januar 2025. Dette er ikke en TCMV-protokoll. Norge stemmer ikke, men kan følge via EØS — se <a href="index.html">Norge-status</a>.</p>
   </div>
+
+  <footer class="site-footer">
+    <p><strong style="color:#c5cddb;font-weight:500">fsdnorge.no</strong> — uoffisiell TCMV-oversikt.<br>
+    FSD = Supervised / nivå 2. Føreren er alltid ansvarlig.</p>
+  </footer>
+
   <script>
     (function () {
       var target = new Date("2026-10-06T09:00:00+02:00");
@@ -186,14 +193,14 @@
       if (!table) return;
       var tbody = table.tBodies[0];
       var headers = table.querySelectorAll("th.sortable");
-      var voteRank = { yes: 0, uncertain: 1, no: 2 };
+      var voteRank = { ja: 0, usikker: 1, nei: 2 };
       function cellKey(td, type) {
         var raw = (td.textContent || "").trim();
-        if (type === "num") return parseFloat(raw.replace("%","").replace(",", ".")) || 0;
+        if (type === "num") return parseFloat(raw.replace("%","").replace(/\s/g,"").replace(",", ".")) || 0;
         if (type === "vote") return voteRank[raw.toLowerCase()] != null ? voteRank[raw.toLowerCase()] : 9;
         return raw.toLowerCase();
       }
-      headers.forEach(function (th, idx) {
+      headers.forEach(function (th) {
         th.addEventListener("click", function () {
           var type = th.getAttribute("data-sort") || "text";
           var current = th.getAttribute("aria-sort");
