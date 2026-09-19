@@ -582,3 +582,112 @@ td:first-child { color: #fff; font-weight: 500; }
   .layout { grid-template-columns: 1fr; gap: 16px; }
   .rail { position: static; }
 }
+
+/* ——— Historie-side ——— */
+/* Skisse — historie.html (ikke i produksjon ennå) */
+.pack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 0 0 20px;
+}
+.pack {
+  background: var(--panel);
+  border-radius: 18px;
+  padding: 18px 16px;
+  box-shadow: var(--panel-inset);
+}
+.pack .tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.pack h3 { font-size: 18px; margin: 0 0 8px; }
+.pack p { font-size: 14px; color: var(--body); line-height: 1.45; margin: 0; }
+.pack.fsd .tag { color: var(--green); }
+.pack.eap .tag { color: var(--amber); }
+
+.callout-split {
+  margin: 0 0 20px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: var(--panel);
+  box-shadow: var(--panel-inset);
+  border-left: 3px solid var(--blue);
+}
+.callout-split strong { color: #fff; font-weight: 600; }
+
+.hw-figure {
+  margin: 0 0 12px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--panel-inset);
+}
+.hw-figure img { display: block; width: 100%; height: auto; }
+.hw-figure figcaption {
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--muted);
+  background: var(--panel);
+}
+
+.era { margin: 0 0 28px; }
+.era-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: .03em;
+  margin: 0 0 12px;
+}
+.era .timeline { margin-left: 7px; }
+
+@media (max-width: 900px) {
+  .pack-grid { grid-template-columns: 1fr; }
+}
+
+.pack-grid.four { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1100px) {
+  .pack-grid.four { grid-template-columns: repeat(2, 1fr); }
+}
+.pack ul {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.pack li {
+  font-size: 13px;
+  color: var(--body);
+  line-height: 1.4;
+  padding: 4px 0 4px 14px;
+  position: relative;
+}
+.pack li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+.pack.eap li::before { background: var(--amber); }
+.pack.fsd li::before { background: var(--green); }
+.pack.capability .tag { color: var(--purple); }
+.pack.capability li::before { background: var(--purple); }
+.callout-split.warn { border-left-color: var(--amber); }
+.callout-split.geo { border-left-color: var(--green); }
+.era .timeline .what strong { color: #fff; font-weight: 500; }
+.section-intro {
+  color: var(--body);
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 42em;
+  margin: 0 0 16px;
+}
+
+.hw-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 0 8px; }
