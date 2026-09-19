@@ -5,7 +5,7 @@
   "sist_oppdatert_nb": "18. september 2026 kl. 22.30",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
-  "norge_status": "Ikke kundegodkjent. Begrenset testing med Tesla-trente sikkerhetsførere.",
+  "norge_status": "Statens vegvesen har ikke godkjent FSD Supervised for vanlig kundekjøring. Det som finnes, er begrenset testing med Tesla-trente sikkerhetsførere — ikke kundegodkjenning.",
   "eu_land": [
     {
       "land": "Nederland",
@@ -49,12 +49,12 @@
     "oktober_godkjenning_prosent": 28,
     "etikett": "Sjanse for at TCMV godkjenner i oktober",
     "sannsynlig_utfall": "åpent",
-    "kommentar": "Uoffisiell sjanse for TCMV-ja i oktober: ca. 28 %. 6. okt er rykte og Tesla-utsagn. Agendaen er ikke i komitologiregisteret. Seks land dekker 9,4 % av befolkningen. Store land blokkerer fortsatt 15+65 %."
+    "kommentar": "Uoffisiell sjanse for TCMV-ja i oktober: ca. 28 %. SVV: møte i oktober, avstemning avhenger av svar. 6. okt er rykte (Tesla Europe / X). Agendaen er ikke i komitologiregisteret. Seks land dekker 9,4 %. Store land blokkerer fortsatt 15+65 %."
   },
   "norge_denne_maneden": {
     "prosent": 1,
-    "etikett": "Sjanse for FSD til norske eiere i september",
-    "kommentar": "Uoffisielt skjønnstall, ikke et tall fra Vegvesenet. Ingen SVV-vedtak og ingen TCMV-avstemning i september. Neste mulige port er oktobermøtet."
+    "etikett": "Sjanse for FSD til norske eiere denne måneden",
+    "kommentar": "Uoffisielt skjønnstall, ikke et tall fra Vegvesenet. Ingen SVV-vedtak denne måneden. Neste mulige port er TCMV-møtet i oktober."
   },
   "sjanse_historikk": [
     {
@@ -178,5 +178,5 @@
     "merknad": "UN R171 Series 02 ventes i kraft sent i januar 2027. Parallell vei, ikke norsk go-live."
   },
   "side_layout": "slim-meter-2026-09-03-tcmv-combo",
-  "materiell_endring": false
+  "materiell_endring": true
 }

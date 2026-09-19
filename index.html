@@ -7,54 +7,25 @@
   <meta name="description" content="Faktabasert status for godkjenning av Tesla FSD Supervised (SAE nivå 2) i Norge. Offisiell linje fra Statens vegvesen, TCMV og EØS. Ikke kundegodkjent.">
   <link rel="canonical" href="https://fsdnorge.no/">
   <meta name="theme-color" content="#070b14">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="fsdnorge.no">
+  <meta property="og:title" content="Tesla FSD i Norge — godkjenningsstatus">
+  <meta property="og:description" content="Faktabasert status for godkjenning av Tesla FSD Supervised (SAE nivå 2) i Norge. Kort svar: nei for vanlige eiere.">
+  <meta property="og:url" content="https://fsdnorge.no/">
+  <meta property="og:image" content="https://fsdnorge.no/og-default.png">
+  <meta property="og:locale" content="nb_NO">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tesla FSD i Norge — godkjenningsstatus">
+  <meta name="twitter:description" content="Faktabasert status for godkjenning av Tesla FSD Supervised (SAE nivå 2) i Norge. Kort svar: nei for vanlige eiere.">
+  <meta name="twitter:image" content="https://fsdnorge.no/og-default.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="site.css">
-  <style>
-    .layout { display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:20px; align-items:start; }
-    .status { margin:0 0 20px; }
-    .status-copy .lbl { margin-top:20px; }
-    .status p { color:var(--body); line-height:1.5; max-width:42em; }
-    .clock-head { display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
-    .clocks { display:grid; grid-template-columns:1fr; gap:20px; margin:0 0 20px; }
-    .mini .units { margin:14px 0 10px; }
-    .mini .unit { padding:12px 4px; }
-    .mini .unit .n { font-size:clamp(20px,5vw,28px); }
-    .mini h3 { font-size:18px; font-weight:500; margin:10px 0 4px; color:#fff; }
-    .mini .when { color:#fff; font-size:14px; font-weight:500; }
-    .mini .sub { margin-top:8px; }
-    .awaiting { font-variant-numeric:tabular-nums; font-size:24px; font-weight:500; margin:14px 0 8px; color:var(--muted); }
-    .card.mini { background:var(--panel); border-radius:var(--r); box-shadow:var(--panel-inset); padding:24px; }
-    section { margin:0 0 20px; }
-    .rail { position:sticky; top:24px; }
-    .rail h3 { margin-bottom:16px; }
-    .timeline { list-style:none; border-left:1px solid var(--line); margin-left:7px; }
-    .timeline li { padding:0 0 18px 16px; position:relative; }
-    .timeline li:last-child { padding-bottom:0; }
-    .timeline li::before { content:""; position:absolute; left:-4px; top:7px; width:7px; height:7px; border-radius:50%; background:#5b8cff; }
-    .timeline li.next::before { background:var(--amber); }
-    .timeline .when { color:var(--muted); font-size:12px; font-weight:500; }
-    .timeline .what { margin-top:3px; font-size:14px; color:#c5cddb; }
-    table { width:100%; border-collapse:collapse; font-size:14px; }
-    th, td { text-align:left; padding:14px 8px; border-bottom:1px solid var(--line-soft); }
-    th { color:var(--muted); font-weight:500; font-size:12px; }
-    td { color:var(--body); }
-    td:first-child { color:#fff; font-weight:500; }
-    .ok { color:var(--green); font-weight:500; }
-    .no { color:var(--red); font-weight:500; }
-    .wait { color:var(--amber); font-weight:500; }
-    .tcmv-combo .clock-head { margin-bottom:2px; }
-    .tcmv-combo .when { color:#fff; font-size:16px; font-weight:500; margin-top:10px; }
-    .tcmv-combo .units { margin:18px 0 4px; }
-    .tcmv-combo .meter { margin-top:10px; padding-top:28px; }
-    .tcmv-combo .lbl { margin-top:8px; }
-    .svv-meta { display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; margin-top:14px; font-size:13px; color:var(--muted); }
-    @media (max-width:980px) {
-      .layout { grid-template-columns:1fr; gap:16px; }
-      .rail { position:static; }
-    }
-  </style>
 </head>
 <body>
   <div class="wrap" id="top">
@@ -68,7 +39,7 @@
     <header>
       <div class="kicker">Norge · Statens vegvesen · FSD Supervised (SAE nivå 2)</div>
       <h1>Er Tesla FSD Supervised godkjent i Norge?</h1>
-      <p class="lede">Kort svar for vanlige eiere: <strong style="color:#fff;font-weight:500">nei</strong>. Faktabasert status fra Statens vegvesen, TCMV og EØS — ingen oppdiktede godkjenninger. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-18T22:30:00+02:00">18. september 2026 kl. 22.30</time>.</p>
+      <p class="lede">Kort svar: <strong style="color:#fff;font-weight:500">nei</strong>. Vanlige norske eiere kan ikke aktivere FSD Supervised. Status bygger på Statens vegvesen, TCMV og EØS — ikke på rykter. Sist oppdatert <time id="sist-oppdatert" datetime="2026-09-18T22:30:00+02:00">18. september 2026 kl. 22.30</time>.</p>
     </header>
 
     <div class="facts" aria-label="Norsk status i kortform">
@@ -80,7 +51,7 @@
       <div class="fact">
         <div class="fact-label">SVV-infoside</div>
         <div class="fact-value warn" id="fakt-svv">Sist oppdatert 3. juli 2026</div>
-        <p id="fakt-svv-p">Ingen ny kundegodkjenning siden da.</p>
+        <p id="fakt-svv-p">Offisiell linje uendret siden da. Ingen ny kundegodkjenning.</p>
       </div>
       <div class="fact">
         <div class="fact-label">Systemnivå</div>
@@ -95,12 +66,12 @@
           <div class="status-copy">
             <span class="badge" id="norge-badge"><i></i> Ikke kundegodkjent</span>
             <h2 id="norge-tittel">FSD Supervised er ikke godkjent for vanlige eiere</h2>
-            <p id="norge-ingress">Statens vegvesen har ikke godkjent Tesla FSD Supervised for vanlig kundekjøring i Norge. Det som finnes, er begrenset testing med Tesla-trente sikkerhetsførere.</p>
+            <p id="norge-ingress">Statens vegvesen har ikke godkjent FSD Supervised for vanlig kundekjøring. Det som finnes, er begrenset testing med Tesla-trente sikkerhetsførere — ikke kundegodkjenning.</p>
             <p class="disclaimer" id="l2-disclaimer"><strong>Viktig:</strong> FSD Supervised er et førerstøttesystem på SAE nivå 2. Føreren er alltid ansvarlig og må følge med.</p>
             <div class="svv-meta" id="svv-meta">
               <span>Kilde: <a id="svv-lenke" href="https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/" rel="noopener">vegvesen.no</a></span>
             </div>
-            <div class="lbl" id="sjanse-etikett">Sjanse for FSD til norske eiere i september</div>
+            <div class="lbl" id="sjanse-etikett">Sjanse for FSD til norske eiere denne måneden</div>
           </div>
           <div class="meter" role="img" aria-labelledby="sjanse-etikett sjanse-tall sjanse-meter-caption">
             <div class="meter-readout">
@@ -114,7 +85,7 @@
             </div>
             <div class="meter-ends"><span>0%</span><span>50%</span><span>100%</span></div>
           </div>
-          <p class="sub" id="sjanse-kommentar">Uoffisielt skjønnstall, ikke et tall fra Vegvesenet. Ingen SVV-vedtak og ingen TCMV-avstemning i september. Neste mulige port er oktobermøtet.</p>
+          <p class="sub" id="sjanse-kommentar">Uoffisielt skjønnstall, ikke et tall fra Vegvesenet. Ingen SVV-vedtak denne måneden. Neste mulige port er TCMV-møtet i oktober.</p>
         </div>
 
         <section class="panel">
@@ -130,11 +101,11 @@
         <div class="status panel tcmv-combo" id="tcmv-sjanse-kort" data-prosent="28">
           <div class="status-copy">
             <div class="clock-head">
-              <span class="badge warn"><i></i> Mulig avstemning</span>
-              <span class="badge warn" id="hero-certainty"><i></i> Rykte på X</span>
+              <span class="badge soft"><i></i> TCMV-møte i oktober</span>
+              <span class="badge warn" id="hero-certainty"><i></i> 6. okt · rykte</span>
             </div>
-            <h2 id="hero-title">TCMV kan stemme i oktober</h2>
-            <p>Neste realistiske EU-port er TCMV-møtet. Et ja krever minst 15 av 27 stater og 65 % av befolkningen. Seks godkjente land dekker 9,4 %.</p>
+            <h2 id="hero-title">TCMV møtes i oktober — avstemning er mulig, ikke bekreftet</h2>
+            <p>Datoen 6. oktober er rykte (Tesla Europe / X). SVV skriver bare «oktober» og at avstemning avhenger av svarene. Et ja krever minst 15 av 27 stater og 65 % av befolkningen. Seks godkjente land dekker ca. 9,4 %.</p>
             <p class="when" id="hero-date">6. oktober 2026</p>
           </div>
           <div class="units" id="hero-units" aria-live="polite">
@@ -156,7 +127,7 @@
             </div>
             <div class="meter-ends"><span>0%</span><span>50%</span><span>100%</span></div>
           </div>
-          <p class="sub" id="tcmv-sjanse-kommentar">Uoffisielt skjønnstall, ikke et tall fra Kommisjonen. 6. oktober er rykte på X og fra Tesla Europe. Agendaen er ikke publisert.</p>
+          <p class="sub" id="tcmv-sjanse-kommentar">Uoffisielt skjønnstall, ikke et tall fra Kommisjonen. 6. oktober er rykte (Tesla Europe / X). Agendaen er ikke i komitologiregisteret ennå. Seks land dekker 9,4 %.</p>
           <p class="why" id="hero-why" hidden></p>
         </div>
 
@@ -165,7 +136,7 @@
         <section class="panel">
           <h3>Land som påvirkes av avstemningen</h3>
           <p class="lede" style="margin-bottom:16px;">Et TCMV-vedtak gjelder EU-landene. Norge har ingen stemme, men følger som hovedregel gjennom EØS — med mindre Statens vegvesen stanser innføringen av sikkerhetshensyn.</p>
-          <table>
+          <table class="countries-table">
             <thead><tr><th>Land</th><th>Kundegodkjenning</th><th>Merknad</th></tr></thead>
             <tbody>
               <tr><td>Nederland</td><td class="ok">Kundegodkjent</td><td>RDW 10.04.2026. Opprinnelig artikkel 39-godkjenning.</td></tr>
@@ -208,7 +179,7 @@
           <li><div class="when">30.–31. august 2026</div><div class="what">Sveriges infrastrukturminister Andreas Carlson filmes i Tesla med FSD under testing i Mullsjö (rykte/sekundær). Riksdagssvar: ambisjon om unionsomfattende godkjenning, uten låst ja-stemme.</div></li>
           <li><div class="when">1.–3. september 2026</div><div class="what">Tesla Europe peker på mulig TCMV-avstemning 6. oktober. Frankrike starter UTAC-veitester (Reuters). Ikke fransk eller EU-kundegodkjenning.</div></li>
           <li><div class="when">7. september 2026</div><div class="what">Slovenia blir sjette EU-land med nasjonal kundegodkjenning. Befolkningsandel ca. 9,4 %.</div></li>
-          <li class="next"><div class="when">6. oktober 2026 · rykte på X</div><div class="what">Mulig TCMV-avstemning. Uoffisiell sjanse for ja: ca. 28 %. Agendaen er ikke i komitologiregisteret ennå.</div></li>
+          <li class="next"><div class="when">Oktober 2026 · SVV · 6. okt rykte</div><div class="what">TCMV-møte i oktober (SVV). Datoen 6. oktober er rykte. Avstemning mulig, ikke bekreftet. Uoffisiell sjanse for ja: ca. 28 %.</div></li>
           <li><div class="when">Sent i januar 2027</div><div class="what">UN R171 Series 02 ventes i kraft. Parallell, langsiktig vei.</div></li>
         </ul>
       </aside>
@@ -223,7 +194,7 @@
   <script>
     (function () {
       var milestones = [
-        { id: "tcmv", title: "TCMV kan stemme i oktober", dateLabel: "6. oktober 2026", iso: "2026-10-06T09:00:00+02:00", certainty: "Rykte på X", why: "Uoffisielt skjønnstall, ikke et tall fra Kommisjonen. 6. oktober er rykte på X og fra Tesla Europe. Agendaen er ikke publisert. Seks land dekker 9,4 %. Store land blokkerer fortsatt 15+65 %." },
+        { id: "tcmv", title: "TCMV møtes i oktober — avstemning er mulig, ikke bekreftet", dateLabel: "6. oktober 2026", iso: "2026-10-06T09:00:00+02:00", certainty: "6. okt · rykte", why: "Uoffisielt skjønnstall, ikke et tall fra Kommisjonen. SVV: TCMV-møte i oktober, avstemning avhenger av svar. 6. oktober er rykte (Tesla Europe / X). Agendaen er ikke i komitologiregisteret. Seks land dekker 9,4 %. Store land blokkerer fortsatt 15+65 %." },
         { id: "r171", title: "UN R171 Series 02", dateLabel: "Sent i januar 2027", iso: "2027-01-20T00:00:00+01:00", certainty: "Veiledende", why: "Langsiktig regelverksvei. Parallell med oktober-avstemningen, ikke det samme som at systemet tas i bruk i Norge." }
       ];
       function pad(n) { return String(n).padStart(2, "0"); }

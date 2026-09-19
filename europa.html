@@ -7,6 +7,21 @@
   <meta name="description" content="Uoffisiell norsk live-feed for EU artikkel 39 / TCMV-prosessen rundt Tesla FSD Supervised. Nye poster bare ved materiell endring.">
   <link rel="canonical" href="https://fsdnorge.no/europa.html">
   <meta name="theme-color" content="#070b14">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="fsdnorge.no">
+  <meta property="og:title" content="Europa-feed — FSD / TCMV — fsdnorge.no">
+  <meta property="og:description" content="Live-feed for EU artikkel 39 / TCMV. Rykte merkes separat fra vedtak.">
+  <meta property="og:url" content="https://fsdnorge.no/europa.html">
+  <meta property="og:image" content="https://fsdnorge.no/og-default.png">
+  <meta property="og:locale" content="nb_NO">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Europa-feed — FSD / TCMV — fsdnorge.no">
+  <meta name="twitter:description" content="Live-feed for EU artikkel 39 / TCMV. Rykte merkes separat fra vedtak.">
+  <meta name="twitter:image" content="https://fsdnorge.no/og-default.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -40,7 +55,7 @@
     <header>
       <div class="kicker">EU · FSD Supervised · live-feed</div>
       <h1>Tesla FSD Supervised i Europa</h1>
-      <p class="lede">Uoffisiell norsk feed for EU artikkel 39 / TCMV-prosessen. Nye poster vises bare når noe materiellt endrer seg. Sist oppdatert <time id="feed-updated">—</time>.</p>
+      <p class="lede">Live-feed for EU artikkel 39 / TCMV. Poster merkes etter kilde. Rykte får egen badge og erstatter ikke SVV- eller Kommisjonsvedtak. Sist oppdatert <time id="feed-updated">—</time>.</p>
     </header>
     <section class="panel">
       <h2>Siste nytt</h2>
@@ -92,11 +107,11 @@
             var titleHtml = it.url ? '<a href="' + esc(it.url) + '" rel="noopener">' + title + "</a>" : title;
             var li = document.createElement("li");
             li.innerHTML =
-              '<div class="meta-row"><span class="' + cls + '"><i></i> ' + esc(label) + "</span>' +
-              '<span class="when">' + esc(fmt(it.iso)) + "</span></div>' +
-              '<div class="title">' + titleHtml + "</div>' +
-              (it.summary ? '<p class="summary">' + esc(it.summary) + "</p>" : "") +
-              (it.why_it_matters ? '<p class="why"><strong>Hvorfor det betyr noe.</strong> ' + esc(it.why_it_matters) + "</p>" : "");
+              '<div class="meta-row"><span class="' + cls + '"><i></i> ' + esc(label) + '</span>' +
+              '<span class="when">' + esc(fmt(it.iso)) + '</span></div>' +
+              '<div class="title">' + titleHtml + '</div>' +
+              (it.summary ? '<p class="summary">' + esc(it.summary) + '</p>' : '') +
+              (it.why_it_matters ? '<p class="why"><strong>Hvorfor det betyr noe.</strong> ' + esc(it.why_it_matters) + '</p>' : '');
             feed.appendChild(li);
           });
         })
