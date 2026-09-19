@@ -691,3 +691,57 @@ td:first-child { color: #fff; font-weight: 500; }
 
 .hw-table { width: 100%; border-collapse: collapse; font-size: 14px; }
 .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 0 8px; }
+
+/* Artikkelmal — historie reportasje (skisse) */
+.article {
+  max-width: 42em;
+  margin: 0 auto 40px;
+}
+.article .lede-article {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--body);
+  margin: 0 0 28px;
+}
+.article .lede-article strong { color: #fff; font-weight: 500; }
+.article h2 {
+  font-size: 26px;
+  margin: 40px 0 14px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+.article p {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--body);
+  margin: 0 0 1.15em;
+}
+.article p strong { color: #fff; font-weight: 500; }
+.article-figure {
+  margin: 28px 0 32px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--panel-inset);
+  background: var(--panel);
+}
+.article-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.article-figure figcaption {
+  padding: 12px 16px 14px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.article .sources-block {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.article .sources-block h2 { font-size: 20px; }
+@media (max-width: 720px) {
+  .article p { font-size: 16px; }
+  .article h2 { font-size: 22px; }
+}
