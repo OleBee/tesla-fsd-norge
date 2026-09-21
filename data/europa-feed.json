@@ -1,14 +1,29 @@
 {
-  "updated_iso": "2026-09-18T22:30:00+02:00",
+  "updated_iso": "2026-09-21T16:43:00+02:00",
   "standings": {
-    "yes_countries": 6,
-    "eu_population_pct": 9.4,
-    "tcmv_october_pct": 28,
+    "yes_countries": 7,
+    "eu_population_pct": 11.8,
+    "tcmv_october_pct": 30,
     "norway_this_month_pct": 1,
     "next_tcmv": "2026-10-06",
     "next_tcmv_certainty": "rumour"
   },
   "items": [
+    {
+      "id": "norway-czechia-2026-09-21",
+      "iso": "2026-09-21T16:43:00+02:00",
+      "source": "norway",
+      "title": "Czechia becomes seventh EU country with national FSD Supervised recognition",
+      "summary": "Czech Ministry of Transport recognised the Dutch Article 39 provisional type approval for Tesla FSD Supervised on 21 September 2026. Tesla Europe confirms rollout soon. Seven member states now cover about 11.8% of the EU population. Norway remains without customer approval.",
+      "why_it_matters": "Adds population weight ahead of the rumoured 6 October TCMV window, but still far below the 15-state / 65% thresholds. No change to Norway’s SVV stance.",
+      "url": "https://md.gov.cz/Media/Media-a-tiskove-zpravy",
+      "tags": [
+        "approval",
+        "czechia",
+        "article-39",
+        "norway"
+      ]
+    },
     {
       "id": "seed-slovenia-2026-09-07",
       "iso": "2026-09-07T12:00:00+02:00",

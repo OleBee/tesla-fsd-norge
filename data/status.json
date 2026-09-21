@@ -1,8 +1,8 @@
 {
-  "sist_sjekket": "2026-09-18",
-  "sist_sjekket_nb": "18. september 2026",
-  "sist_oppdatert_iso": "2026-09-18T22:30:00+02:00",
-  "sist_oppdatert_nb": "18. september 2026 kl. 22.30",
+  "sist_sjekket": "2026-09-21",
+  "sist_sjekket_nb": "21. september 2026",
+  "sist_oppdatert_iso": "2026-09-21T16:43:00+02:00",
+  "sist_oppdatert_nb": "21. september 2026 kl. 16.43",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Statens vegvesen har ikke godkjent FSD Supervised for vanlig kundekjøring. Det som finnes, er begrenset testing med Tesla-trente sikkerhetsførere — ikke kundegodkjenning.",
@@ -36,20 +36,25 @@
       "land": "Slovenia",
       "dato": "2026-09-07",
       "sti": "anerkjennelse"
+    },
+    {
+      "land": "Tsjekkia",
+      "dato": "2026-09-21",
+      "sti": "anerkjennelse"
     }
   ],
-  "eu_andel_befolkning_prosent": 9.4,
+  "eu_andel_befolkning_prosent": 11.8,
   "programvaregren": "v14.2.2",
   "tcmv": {
     "siste_mote": "2026-06-30",
     "siste_utfall": "diskusjon uten avstemning",
     "neste_dato": "2026-10-06",
     "neste_sikkerhet": "rykte",
-    "dager_til": 18,
-    "oktober_godkjenning_prosent": 28,
+    "dager_til": 15,
+    "oktober_godkjenning_prosent": 30,
     "etikett": "Sjanse for at TCMV godkjenner i oktober",
     "sannsynlig_utfall": "åpent",
-    "kommentar": "Uoffisiell sjanse for TCMV-ja i oktober: ca. 28 %. SVV: møte i oktober, avstemning avhenger av svar. 6. okt er rykte (Tesla Europe / X). Agendaen er ikke i komitologiregisteret. Seks land dekker 9,4 %. Store land blokkerer fortsatt 15+65 %."
+    "kommentar": "Uoffisiell sjanse for TCMV-ja i oktober: ca. 30 %. SVV: møte i oktober, avstemning avhenger av svar. 6. okt er rykte (Tesla Europe / X). Agendaen er ikke i komitologiregisteret. Sju land dekker 11,8 %. Store land blokkerer fortsatt 15+65 %."
   },
   "norge_denne_maneden": {
     "prosent": 1,
@@ -171,6 +176,11 @@
       "dato": "2026-09-18",
       "prosent": 1,
       "merknad": "Ingen materiell endring"
+    },
+    {
+      "dato": "2026-09-21",
+      "prosent": 1,
+      "merknad": "Tsjekkia sjuende EU-land; ingen norsk endring"
     }
   ],
   "series_02": {
