@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-09-21T16:50:00+02:00",
+  "updated_iso": "2026-09-21T16:55:00+02:00",
   "standings": {
     "yes_countries": 7,
     "eu_population_pct": 11.8,
@@ -9,6 +9,22 @@
     "next_tcmv_certainty": "rumour"
   },
   "items": [
+    {
+      "id": "news-latvia-proposal-2026-09-21",
+      "iso": "2026-09-21T16:55:00+02:00",
+      "source": "news",
+      "title": "Latvia’s economy ministry proposes Cabinet recognition of Dutch FSD Supervised approval",
+      "summary": "On 21 September 2026 the Latvian Ministry of Economics published a proposal for the Cabinet of Ministers to recognise the Dutch RDW Article 39 provisional type approval. If Cabinet agrees, CSDD would have ten working days to finish Tesla’s application review. This is not yet a customer go-ahead — Latvia remains without national approval until that decision.",
+      "why_it_matters": "Shows a formal Baltic follow-on path after EE/LT, but only a proposal. Does not change the Yes count for TCMV; map status is Uncertain until recognition.",
+      "url": "https://en.bb.lv/article/technologies/2026/09/21/in-latvia-teslas-next-generation-autopilot-may-be-allowed-110761",
+      "tags": [
+        "latvia",
+        "news",
+        "article-39",
+        "proposal",
+        "tcmv"
+      ]
+    },
     {
       "id": "tcmv-czechia-2026-09-21",
       "iso": "2026-09-21T16:50:00+02:00",
