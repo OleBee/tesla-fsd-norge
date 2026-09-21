@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-09-21T16:43:00+02:00",
+  "updated_iso": "2026-09-21T16:50:00+02:00",
   "standings": {
     "yes_countries": 7,
     "eu_population_pct": 11.8,
@@ -9,6 +9,22 @@
     "next_tcmv_certainty": "rumour"
   },
   "items": [
+    {
+      "id": "tcmv-czechia-2026-09-21",
+      "iso": "2026-09-21T16:50:00+02:00",
+      "source": "tcmv-vote",
+      "title": "Czechia flips to Yes on the TCMV map — 7/27 and 11.8% population",
+      "summary": "Czechia’s Ministry of Transport recognised the Dutch Article 39 file on 21 September 2026. Latvia’s economy ministry proposed Cabinet recognition the same day (still Uncertain — not a customer go-ahead). Unofficial October yes chance moved to 30%.",
+      "why_it_matters": "Vote math improved modestly, but the 15-state / 65% thresholds still need the large economies.",
+      "url": "https://fsdnorge.no/tcmv.html",
+      "tags": [
+        "tcmv",
+        "czechia",
+        "latvia",
+        "article-39",
+        "vote-map"
+      ]
+    },
     {
       "id": "norway-czechia-2026-09-21",
       "iso": "2026-09-21T16:43:00+02:00",
