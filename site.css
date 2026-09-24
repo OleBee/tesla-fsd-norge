@@ -804,3 +804,10 @@ td:first-child { color: #fff; font-weight: 500; }
     margin-bottom: 2px;
   }
 }
+
+.article .ts {
+  color: var(--muted);
+  font-size: 0.85em;
+  font-weight: 500;
+  white-space: nowrap;
+}
