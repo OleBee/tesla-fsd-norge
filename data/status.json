@@ -1,8 +1,8 @@
 {
-  "sist_sjekket": "2026-09-23",
-  "sist_sjekket_nb": "23. september 2026",
-  "sist_oppdatert_iso": "2026-09-23T07:02:54+02:00",
-  "sist_oppdatert_nb": "23. september 2026 kl. 07.02",
+  "sist_sjekket": "2026-09-24",
+  "sist_sjekket_nb": "24. september 2026",
+  "sist_oppdatert_iso": "2026-09-24T07:17:35+02:00",
+  "sist_oppdatert_nb": "24. september 2026 kl. 07.17",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Statens vegvesen har ikke godkjent FSD Supervised for vanlig kundekjøring. Det som finnes, er begrenset testing med Tesla-trente sikkerhetsførere — ikke kundegodkjenning.",
@@ -50,7 +50,7 @@
     "siste_utfall": "diskusjon uten avstemning",
     "neste_dato": "2026-10-06",
     "neste_sikkerhet": "rykte",
-    "dager_til": 13,
+    "dager_til": 12,
     "oktober_godkjenning_prosent": 30,
     "etikett": "Sjanse for at TCMV godkjenner i oktober",
     "sannsynlig_utfall": "åpent",
@@ -189,6 +189,11 @@
     },
     {
       "dato": "2026-09-23",
+      "prosent": 1,
+      "merknad": "Ingen materiell endring"
+    },
+    {
+      "dato": "2026-09-24",
       "prosent": 1,
       "merknad": "Ingen materiell endring"
     }
