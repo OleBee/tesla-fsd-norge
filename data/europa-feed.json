@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-09-21T16:55:00+02:00",
+  "updated_iso": "2026-09-25T08:00:00+02:00",
   "standings": {
     "yes_countries": 7,
     "eu_population_pct": 11.8,
@@ -9,6 +9,23 @@
     "next_tcmv_certainty": "rumour"
   },
   "items": [
+    {
+      "id": "news-brussel-johanna-speed-offset-2026-09-25",
+      "iso": "2026-09-25T08:00:00+02:00",
+      "source": "news",
+      "title": "Johanna.be: FSD Supervised overskred 30-grensen i 55 % av Brussel-testene",
+      "summary": "Belgisk NGO Johanna.be (Electrek/Reuters 24.09) testet ~400 km i Brussel i juli: overskridelse i 55 % av 30-sonene (snitt 44 km/t) og 42 % i 20-soner; skjerm viste ofte 50 der skiltet sa 30. Rapport sendt RDW og flamske myndigheter 7. sep. RDW vil vurdere den i overvåkingen — ikke tilbaketrekking. Speed Offset er allerede et nordisk/fransk stridspunkt foran TCMV.",
+      "why_it_matters": "Treffer Speed Offset-debatten SVV har flagget. Ingen norsk kundegodkjenning. Sju EU-land kjører allerede. 6. oktober er fortsatt rykte.",
+      "url": "https://fsdnorge.no/nyheter/brussel-speed-offset.html",
+      "tags": [
+        "belgium",
+        "speed-offset",
+        "johanna",
+        "tcmv",
+        "news",
+        "rdw"
+      ]
+    },
     {
       "id": "news-latvia-proposal-2026-09-21",
       "iso": "2026-09-21T16:55:00+02:00",
