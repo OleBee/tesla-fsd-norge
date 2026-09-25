@@ -12,7 +12,7 @@ Det er en NGO-test: tre dager i juli, rundt **400 kilometer**, ikke et myndighet
 
 Likevel treffer tallene det som allerede har satt Sverige, Frankrike og Norge i bevegelse: **Speed Offset** — hvordan systemet leser og følger fartsgrenser. Det er dette punktet TCMV-diskusjonen henger på.
 
-En konkret dato **6. oktober** sirkulerer som mulig avstemningsdag. Det er **rykte** / presseforventning, ikke bekreftet agenda. Statens vegvesen skriver at neste TCMV-møte er i **oktober**, og at avstemning *kan* komme da.
+CIRCABC-agendaen bekrefter TCMV-møtet **6. oktober 2026** (SVV sa «oktober»). At det blir *avstemning* den dagen er fortsatt ikke bekreftet — agendaen har Art. 39 NL som fortsettelse av diskusjoner.
 
 ---
 
@@ -80,7 +80,7 @@ Føreren forblir ansvarlig. Autopilot og FSD Supervised er separate Level 2-pakk
   "source": "news",
   "title": "Johanna.be: FSD Supervised overskred 30-grensen i 55 % av Brussel-testene",
   "summary": "Belgisk NGO Johanna.be (Electrek/Reuters 24.09) testet ~400 km i Brussel i juli: overskridelse i 55 % av 30-sonene (snitt 44 km/t) og 42 % i 20-soner; skjerm viste ofte 50 der skiltet sa 30. Rapport sendt RDW og flamske myndigheter 7. sep. RDW vil vurdere den i overvåkingen — ikke tilbaketrekking. Speed Offset er allerede et nordisk/fransk stridspunkt foran TCMV.",
-  "why_it_matters": "Treffer Speed Offset-debatten SVV har flagget. Ingen norsk kundegodkjenning. Sju EU-land kjører allerede. 6. oktober er fortsatt rykte.",
+  "why_it_matters": "Treffer Speed Offset-debatten SVV har flagget. Ingen norsk kundegodkjenning. Sju EU-land kjører allerede. CIRCABC bekrefter TCMV 6. okt som Art. 39-diskusjon (continuation) — ikke votum.",
   "url": "https://fsdnorge.no/nyheter/brussel-speed-offset.html",
   "tags": ["belgium", "speed-offset", "johanna", "tcmv", "news", "rdw"]
 }

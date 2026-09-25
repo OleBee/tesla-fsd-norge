@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-09-25T17:16:00+02:00",
+  "updated_iso": "2026-09-25T19:56:00+02:00",
   "standings": {
     "yes_countries": 7,
     "eu_population_pct": 11.8,
@@ -9,6 +9,23 @@
     "next_tcmv_certainty": "agenda"
   },
   "items": [
+    {
+      "id": "news-eu-votum-desember-vindu-2026-09-25",
+      "iso": "2026-09-25T19:56:00+02:00",
+      "source": "news",
+      "title": "EU-votum tidligst desember: CIRCABC continuation 6. okt — ikke avstemning",
+      "summary": "Reuters/TeslaNorth (25.09.2026): EU-avstemning om Teslas overvåkede FSD tidligst desember. CIRCABC-agenda for TCMV 6. oktober har Art. 39 NL som continuation of discussions — ikke votum. Speed Offset og nordisk motstand har skjøvet votumet; systemet kjører allerede i sju EU-land.",
+      "why_it_matters": "Oktober-vinduet for votum er lukket ifølge presse + agenda. Desember er tidligste presseforventning. Ingen norsk kundeja. Ingen låst norsk dato.",
+      "url": "https://fsdnorge.no/nyheter/eu-votum-desember-vindu.html",
+      "tags": [
+        "tcmv",
+        "circabc",
+        "vote-delay",
+        "december",
+        "news",
+        "article-39"
+      ]
+    },
     {
       "id": "circabc-agenda-119-text-2026-09-25",
       "iso": "2026-09-25T17:16:00+02:00",
