@@ -5,12 +5,12 @@
   "sist_oppdatert_nb": "25. september 2026 kl. 17.16",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
-  "norge_status": "Statens vegvesen har ikke godkjent FSD Supervised for vanlig kundekjøring. Det som finnes, er begrenset testing med Tesla-trente sikkerhetsførere — ikke kundegodkjenning.",
+  "norge_status": "Statens vegvesen åpner fortsatt ikke for vanlig kundekjøring. Tesla får teste med egne, trente sikkerhetsførere — begrenset testing, ikke din bil.",
   "eu_land": [
     {
       "land": "Nederland",
       "dato": "2026-04-10",
-      "sti": "RDW artikkel 39"
+      "sti": "RDW Art. 39"
     },
     {
       "land": "Litauen",
@@ -54,12 +54,12 @@
     "oktober_godkjenning_prosent": 30,
     "etikett": "Sjanse for at TCMV godkjenner i oktober",
     "sannsynlig_utfall": "åpent",
-    "kommentar": "CIRCABC-agenda for 119. TCMV 6. oktober 2026 (10:00–15:00) er lest. Art. 39 NL står som «Continuation of discussions on request of the Netherlands for an Art. 39 authorisation» (11:45–12:10) — fortsettelse av diskusjoner, ikke planlagt avstemning. AOB (14:30–15:00): oppdateringer om forberedelse av sekundærlovgivning for large-series ADS og tilpasning til AI-forordningen — oppdatering/forberedelse, ikke votum. Uoffisiell sjanse for TCMV-ja i oktober: ca. 30 %. Sju land dekker 11,8 %. Store land blokkerer fortsatt 15+65 %."
+    "kommentar": "Agenda lest: Art. 39 NL som fortsettelse av diskusjoner; under eventuelt: sekundærlovgivning for ADS i storserie. Avstemning ikke på agendaen. Presse peker tidligst desember. Uoffisiell sjanse ca. 30 %."
   },
   "norge_denne_maneden": {
     "prosent": 1,
-    "etikett": "Sjanse for FSD til norske eiere denne måneden",
-    "kommentar": "Uoffisielt skjønnstall, ikke et tall fra Vegvesenet. Ingen SVV-vedtak denne måneden. Neste mulige port er TCMV-møtet i oktober."
+    "etikett": "Uoffisiell sjanse for norske eiere denne måneden",
+    "kommentar": "Uoffisielt skjønnstall — ikke fra Vegvesenet. Ingen SVV-vedtak denne måneden. Neste mulige port er TCMV-møtet i oktober (EUs tekniske komité for motorkjøretøy)."
   },
   "sjanse_historikk": [
     {
@@ -200,12 +200,12 @@
     {
       "dato": "2026-09-25",
       "prosent": 1,
-      "merknad": "CIRCABC-agenda lest: Art. 39 NL fortsettelse + ADS AOB 6. okt"
+      "merknad": "CIRCABC-agenda lest: Art. 39 NL fortsettelse 6. okt; under eventuelt ADS i storserie"
     }
   ],
   "series_02": {
     "forventet": "2027-01",
-    "merknad": "UN R171 Series 02 ventes i kraft sent i januar 2027. Parallell vei, ikke norsk go-live."
+    "merknad": "UN R171 Series 02 ventes i kraft sent i januar 2027 — parallell, langsiktig vei ved siden av Art. 39, ikke norsk kundeaktivering."
   },
   "side_layout": "slim-meter-2026-09-03-tcmv-combo",
   "materiell_endring": true
