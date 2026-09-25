@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-09-25T17:13:00+02:00",
+  "updated_iso": "2026-09-25T17:16:00+02:00",
   "standings": {
     "yes_countries": 7,
     "eu_population_pct": 11.8,
@@ -10,17 +10,19 @@
   },
   "items": [
     {
-      "id": "circabc-agenda-119-2026-09-25",
-      "iso": "2026-09-25T17:13:00+02:00",
+      "id": "circabc-agenda-119-text-2026-09-25",
+      "iso": "2026-09-25T17:16:00+02:00",
       "source": "circabc",
-      "title": "CIRCABC: Agenda PDF for TCMV 119th meeting (6 Oct 2026) published",
-      "summary": "The TCMV library folder for the 119th meeting now lists «Agenda TCMV 06.10.2026» (and «Agenda TCMV 06.10.2026_.pdf»). The folder was empty on the previous watcher snapshot (2026-09-24). PDF body not read in this update; Article 39 / FSD on the agenda is not confirmed from document text.",
-      "why_it_matters": "6 October moves from Tesla Europe rumour toward an official CIRCABC agenda date for the meeting. A vote is still not confirmed. Norway remains without customer approval.",
+      "title": "CIRCABC agenda text: Art. 39 NL continuation + large-series ADS on TCMV 6 Oct",
+      "summary": "Draft Agenda 119th TCMV (Brussels 11 Sep 2026; meeting 6 Oct 2026 10:00–15:00). Material items: «Continuation of discussions on request of the Netherlands for an Art. 39 authorisation» (11:45–12:10) — continuation of discussions, not a scheduled vote. AOB: «Updates on the preparation of secondary legislation for large-series ADS and alignment with AI Act» (14:30–15:00) — preparation update, not a vote.",
+      "why_it_matters": "Meeting date and Art. 39 / ADS presence are now confirmed from CIRCABC agenda document text (earlier update only knew the PDF title). A vote is still not on the agenda. Unofficial October yes chance remains ~30 %. Norway still without customer approval.",
       "url": "https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/0f4e0c81-ae0d-445a-80f4-4d9fe3e265c5?p=1&n=10&sort=modified_DESC",
       "tags": [
         "tcmv",
         "circabc",
         "agenda",
+        "article-39",
+        "ads",
         "comitology"
       ]
     },
