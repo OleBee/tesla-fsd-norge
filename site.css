@@ -71,23 +71,6 @@ a:hover { text-decoration: underline; }
   padding-bottom: 2px;
 }
 .brand-mark:hover { text-decoration: none; color: #fff; }
-.anchor-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 2px;
-  justify-content: center;
-  font-size: 13px;
-  font-weight: 500;
-}
-.anchor-nav a {
-  color: var(--blue);
-  padding: 5px 12px;
-  border-radius: 999px;
-}
-.anchor-nav a:hover {
-  background: rgba(142, 204, 188, .12);
-  text-decoration: none;
-}
 
 /* —— 3-column dashboard —— */
 .dash {
