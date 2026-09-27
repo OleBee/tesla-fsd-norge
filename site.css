@@ -9,11 +9,16 @@
   --meta: #7d8798;
   --line: rgba(255, 255, 255, .08);
   --line-soft: rgba(255, 255, 255, .06);
-  --blue: #5b8cff;
-  --red: #ff6b6b;
-  --amber: #ffc14d;
-  --green: #3dd68c;
-  --purple: #c084fc;
+  /* Accent palette sampled from Ole's label text (Pillow) — do not invent */
+  --salmon: #cd626a;   /* soft red/salmon */
+  --mint: #8eccbc;     /* mint */
+  --lavender: #b282ee; /* lavender */
+  --peach: #df9f70;    /* peach */
+  --blue: var(--mint); /* interactive / default accent */
+  --red: var(--salmon);
+  --amber: var(--peach);
+  --green: var(--mint);
+  --purple: var(--lavender);
   --r: 20px;
   --panel-inset: inset 0 0 0 1px rgba(255, 255, 255, .045);
   --wrap-max: 1360px;
@@ -62,6 +67,8 @@ a:hover { text-decoration: underline; }
   letter-spacing: -.03em;
   color: #fff;
   text-decoration: none;
+  border-bottom: 2px solid var(--salmon);
+  padding-bottom: 2px;
 }
 .brand-mark:hover { text-decoration: none; color: #fff; }
 .anchor-nav {
@@ -78,7 +85,7 @@ a:hover { text-decoration: underline; }
   border-radius: 999px;
 }
 .anchor-nav a:hover {
-  background: rgba(91, 140, 255, .12);
+  background: rgba(142, 204, 188, .12);
   text-decoration: none;
 }
 
@@ -100,7 +107,13 @@ a:hover { text-decoration: underline; }
   color: #fff;
   margin-bottom: 14px;
   padding: 0 2px;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 8px;
+  display: inline-block;
 }
+.col-feed .col-head { border-bottom-color: var(--salmon); }
+.col-timeline .col-head { border-bottom-color: var(--mint); }
+.col-status .col-head { border-bottom-color: var(--lavender); }
 
 .panel {
   background: var(--panel);
@@ -196,13 +209,18 @@ a:hover { text-decoration: underline; }
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--blue);
+  background: var(--mint);
 }
-.badge.svv i { background: var(--green); }
-.badge.circabc i { background: var(--amber); }
-.badge.norway i { background: var(--red); }
-.badge.tcmv-vote i { background: var(--blue); }
-.badge.news i { background: var(--purple); }
+.badge.svv i { background: var(--mint); }
+.badge.svv { border-color: rgba(142, 204, 188, .35); }
+.badge.circabc i { background: var(--peach); }
+.badge.circabc { border-color: rgba(223, 159, 112, .35); }
+.badge.norway i { background: var(--salmon); }
+.badge.norway { border-color: rgba(205, 98, 106, .4); }
+.badge.tcmv-vote i { background: var(--peach); }
+.badge.tcmv-vote { border-color: rgba(223, 159, 112, .35); }
+.badge.news i { background: var(--lavender); }
+.badge.news { border-color: rgba(178, 130, 238, .35); }
 
 /* —— Timeline (middle) —— */
 .timeline-panel {
@@ -228,15 +246,15 @@ a:hover { text-decoration: underline; }
   height: 9px;
   border-radius: 50%;
   background: var(--blue);
-  box-shadow: 0 0 0 3px rgba(91, 140, 255, .15);
+  box-shadow: 0 0 0 3px rgba(142, 204, 188, .18);
 }
 .timeline li.neste::before {
   background: var(--amber);
-  box-shadow: 0 0 0 3px rgba(255, 193, 77, .2);
+  box-shadow: 0 0 0 3px rgba(223, 159, 112, .22);
 }
 .timeline li.langsiktig::before {
   background: var(--purple);
-  box-shadow: 0 0 0 3px rgba(192, 132, 252, .18);
+  box-shadow: 0 0 0 3px rgba(178, 130, 238, .2);
 }
 .timeline .when {
   color: var(--muted);
@@ -261,7 +279,16 @@ a:hover { text-decoration: underline; }
   border-radius: var(--r);
   box-shadow: var(--panel-inset);
   padding: 22px 20px 18px;
+  border-left: 3px solid var(--mint);
 }
+#kort-norge { border-left-color: var(--salmon); }
+#kort-norge .stat-bar-fill { background: var(--salmon); }
+#kort-tcmv-cd { border-left-color: var(--peach); }
+#kort-tcmv { border-left-color: var(--peach); }
+#kort-tcmv .stat-bar-fill:not(.gradient) { background: var(--peach); }
+#kort-land { border-left-color: var(--mint); }
+#kort-land .mini-bar > span { background: var(--mint); }
+#kort-series { border-left-color: var(--lavender); }
 .stat-pct {
   font-variant-numeric: tabular-nums;
   font-size: clamp(48px, 6vw, 64px);
@@ -298,7 +325,7 @@ a:hover { text-decoration: underline; }
   transition: width .8s cubic-bezier(.22, 1, .36, 1);
 }
 .stat-bar-fill.gradient {
-  background: linear-gradient(90deg, #ff4d4d 0%, #ff7a3d 18%, #ffc14d 42%, #c6e04a 62%, #3dd68c 82%, #2ee0a0 100%);
+  background: linear-gradient(90deg, var(--salmon) 0%, var(--peach) 32%, var(--mint) 66%, var(--lavender) 100%);
 }
 
 .countdown-card .cd-date {
@@ -351,10 +378,10 @@ a:hover { text-decoration: underline; }
 .cd-done {
   margin: 14px 0 4px;
   padding: 14px 12px;
-  background: rgba(255, 193, 77, .08);
-  border: 1px solid rgba(255, 193, 77, .25);
+  background: rgba(223, 159, 112, .1);
+  border: 1px solid rgba(223, 159, 112, .28);
   border-radius: 12px;
-  color: #ffd27a;
+  color: var(--peach);
   font-size: 14px;
   font-weight: 500;
   text-align: center;
