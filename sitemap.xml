@@ -5,44 +5,4 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://fsdnorge.no/historie.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://fsdnorge.no/tcmv.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://fsdnorge.no/europa.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://fsdnorge.no/nyheter/eu-votum-desember-vindu.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://fsdnorge.no/nyheter/belgia-fsd-norge.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://fsdnorge.no/nyheter/arendalsuka-selvkjoring.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://fsdnorge.no/nyheter/brussel-speed-offset.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://fsdnorge.no/nyheter/circabc-tcmv-agenda-6-okt.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.2</priority>
-  </url>
 </urlset>

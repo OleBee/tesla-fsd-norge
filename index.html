@@ -291,9 +291,13 @@
         var cls = "badge " + (src === "tcmv-vote" ? "tcmv-vote" : src);
         var title = esc(it.title || "Oppdatering");
         var href = it.url || "";
-        // Interne nyhets-URL-er redirecter til forsiden — pek anker i stedet
+        // Interne URL-er er tynne redirects til forsiden — pek anker i stedet (unngå redirect-loop)
         if (!href || /fsdnorge\.no\/nyheter\//.test(href) || /^nyheter\//.test(href) || href.indexOf("/nyheter/") === 0) {
           href = "#siste-nytt";
+        } else if (/fsdnorge\.no\/(tcmv|europa|historie)\.html/.test(href) || /^(tcmv|europa|historie)\.html$/.test(href)) {
+          if (/tcmv\.html/.test(href)) href = "#status";
+          else if (/historie\.html/.test(href)) href = "#tidslinje";
+          else href = "#siste-nytt";
         }
         var titleHtml = href && href !== "#siste-nytt"
           ? ('<a href="' + esc(href) + '"' + (href.indexOf("http") === 0 ? ' rel="noopener"' : "") + ">" + title + "</a>")

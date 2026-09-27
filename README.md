@@ -1,51 +1,36 @@
 # Tesla FSD i Norge
 
-Uoffisiell statushub om godkjenning av Tesla FSD Supervised (SAE nivå 2) i Norge. Primært for norske Tesla-eiere som vil ha klare fakta — ikke spekulasjon uten kilde.
+Uoffisiell statusside om godkjenning av Tesla FSD Supervised (SAE nivå 2) i Norge. Primært for norske Tesla-eiere som vil ha klare fakta — ikke spekulasjon uten kilde.
 
 **Canonical URL:** [https://fsdnorge.no/](https://fsdnorge.no/)
 
 Speil på GitHub Pages: [https://OleBee.github.io/tesla-fsd-norge/](https://OleBee.github.io/tesla-fsd-norge/) (custom domain `fsdnorge.no` via `CNAME`).
 
-## Sider
+## Én side (singleside dashboard)
 
-- [`index.html`](index.html) — norsk godkjennings-hub (status, L2-disclaimer, kilder, tidslinje)
-- [`tcmv.html`](tcmv.html) — estimert TCMV-stemme per EU-land (bokmål)
-- [`europa.html`](europa.html) — live-feed for EU artikkel 39 / TCMV (bokmål UI + `data/europa-feed.json`)
+- [`index.html`](index.html) — Siste nytt (feed) · Historikk/Tidslinje · Forklaring (statuskort)
+- Gamle URL-er (`europa.html`, `tcmv.html`, `historie.html`, `nyheter/*`) er tynne redirects til `/` (noindex)
 
-## Data
+## Data (JSON-only publish)
 
-- [`data/status.json`](data/status.json) — strukturert snapshot (EU-land, TCMV, norsk månedssjanse, tidsserie)
+- [`data/status.json`](data/status.json) — tall, sjanser, countdown, `timeline[]`
+- [`data/europa-feed.json`](data/europa-feed.json) — feed-elementer (title, summary, why_it_matters, iso, source/tags)
 - [`data/svv-siste.json`](data/svv-siste.json) — siste sjekk av Statens vegvesens FSD-side
-- [`data/europa-feed.json`](data/europa-feed.json) — feed-elementer for Europa-siden (behold nøkler/form)
 
-## Sideinnhold (Norge)
+Ikke lag nye HTML-artikkelsider. Publiser via JSON; Chief of Staff pusher.
 
-Huben skal være faktabasert. Behold:
+## Layout
 
-- statusbanner med sjansemåler (fra `data/status.json` når tilgjengelig)
-- tydelig SAE nivå 2 / Supervised-disclaimer
-- faktaboks for norsk status + SVV-lenke
-- hero-nedtelling til neste TCMV-vindu
-- én miniklokke: UN R171 Series 02
-- landtabell **Land som påvirkes av avstemningen**
-- tidslinje
-- kilder/lenker
-- kort uoffisiell-disclaimer
+Tre kolonner: feed | tidslinje | statuskort (countdown TCMV + Series 02, sjanser, landtall). Hydrering fra `data/*.json`. Behold automasjonsvennlige IDer i `index.html`.
 
-Måler styres av `data-prosent` på `#sjanse-kort` / `#tcmv-sjanse-kort`. Behold automasjonsvennlige IDer.
+Hele den offentlige UI-en er bokmål.
 
-Hele den offentlige UI-en er bokmål (nav, aria-labels, tomtilstander, title, meta).
+## Automatiseringer (CoS eier)
 
-## Automatiseringer
-
-- **FSD-status til GitHub** — daglig kl. 08.30 Europe/Oslo. Oppdaterer `index.html` og `data/status.json`. Skal respektere hub-layouten. Rører ikke `tcmv.html`.
-- **LAZARUS** (internt navn) — daglig kl. 07.00 Europe/Oslo. Eier `tcmv.html`. Navnet skal ikke vises offentlig.
-- **SVV FSD-side endring** — hverdager 08–16. Skriver til repoet ved materiell endring. Rører `data/svv-siste.json`.
-
-Ved skriving til `index.html`: ingress med «Sist oppdatert D. måned ÅÅÅÅ kl. TT.MM» (Europe/Oslo). Samme tidspunkt i `data/status.json` som `sist_oppdatert_iso` og `sist_oppdatert_nb`. Skriv aldri «Oppdateres daglig».
+Rutiner og push ligger hos Chief of Staff. Redaksjonsbot: `fsdnorge`. Etter TCMV-møte: oppdater singleside-JSON (`status.json` / `europa-feed.json`), ikke gamle `tcmv.html`.
 
 ## Kilderegel
 
 Offisiell status bygger på Statens vegvesen, RDW, nasjonale typegodkjenningsmyndigheter, Europakommisjonen/TCMV/komitologiregisteret, EUR-Lex (2018/858), UNECE/UN R171/WP.29, ETSC og Tesla Europe.
 
-Rykter fra troverdige kontoer på X kan tas med i hero og tidslinje, men må merkes som rykte. De får ikke erstatte offisiell status. Ikke finn på godkjenninger.
+Rykter fra troverdige kontoer på X kan tas med, men må merkes som rykte. De får ikke erstatte offisiell status. Ikke finn på godkjenninger.
