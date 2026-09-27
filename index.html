@@ -20,7 +20,7 @@
   <meta property="og:locale" content="nb_NO">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Er Tesla FSD godkjent i Norge? Status 2026">
-  <meta name="twitter:description" content="Kort svar: nei. FSD Supervised er ikke kundegodkjent i Norge. SAE nivå 2 — du er alltid ansvarlig. Naboland kjører allerede.">
+  <meta name="twitter:description" content="Kort svar: nei. FSD Supervised er ikke kundegodkjent i Norge. SAE nivå 2 — du er alltid ansvarlig.">
   <meta name="twitter:image" content="https://fsdnorge.no/og-default.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,20 +37,14 @@
       "name": "fsdnorge.no",
       "description": "Uoffisiell statusside for Tesla FSD Supervised i Norge — SAE nivå 2, føreren er ansvarlig.",
       "inLanguage": "nb-NO",
-      "publisher": {
-        "@type": "Organization",
-        "name": "fsdnorge.no",
-        "url": "https://fsdnorge.no/"
-      }
+      "publisher": { "@type": "Organization", "name": "fsdnorge.no", "url": "https://fsdnorge.no/" }
     },
     {
       "@type": "WebPage",
       "@id": "https://fsdnorge.no/#webpage",
       "url": "https://fsdnorge.no/",
       "name": "Er Tesla FSD godkjent i Norge? Status 2026",
-      "isPartOf": {
-        "@id": "https://fsdnorge.no/#website"
-      },
+      "isPartOf": { "@id": "https://fsdnorge.no/#website" },
       "inLanguage": "nb-NO",
       "description": "Kort svar: nei. Statens vegvesen har ikke godkjent FSD Supervised for vanlige eiere. SAE nivå 2."
     },
@@ -81,14 +75,6 @@
             "@type": "Answer",
             "text": "CIRCABC-agenda for 6. oktober bekrefter Art. 39 NL som fortsettelse av diskusjoner — ikke avstemning. Presse peker tidligst desember."
           }
-        },
-        {
-          "@type": "Question",
-          "name": "Hva skjer for Norge hvis TCMV sier ja?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Norge har ikke stemme. EØS + SVV-vurdering. Et EU-ja er ikke norsk kundeaktivering samme dag."
-          }
         }
       ]
     }
@@ -98,337 +84,358 @@
 </head>
 <body>
   <div class="wrap" id="top">
-    <nav class="site-nav" aria-label="Hovednavigasjon">
-      <a class="brand" href="index.html">fsd<span>norge.no</span></a>
-      <a class="nav-link active" href="index.html" aria-current="page">Norge</a>
-      <a class="nav-link" href="historie.html">Historie</a>
-      <a class="nav-link" href="tcmv.html">TCMV</a>
-      <a class="nav-link" href="europa.html">Europa</a>
-      <a class="nav-link" href="nyheter/eu-votum-desember-vindu.html">Nyheter</a>
-    </nav>
-
-    <header>
-      <div class="kicker">Norge · Statens vegvesen · FSD Supervised (SAE nivå 2)</div>
-      <h1>Er Tesla FSD Supervised godkjent i Norge?</h1>
-      <p class="lede"><strong style="color:#fff;font-weight:500">Nei.</strong> Statens vegvesen har fortsatt ikke godkjent FSD Supervised for vanlige eiere. Du får ikke aktivert systemet i bilen din i dag — infosiden deres sto uendret sist de oppdaterte offentlig (<strong style="color:#fff;font-weight:500">3. juli 2026</strong>). Mens Norge venter, kjører eiere allerede i sju EU-land. Sist sjekket her: <time id="sist-oppdatert" datetime="2026-09-25T17:16:00+02:00">25. september 2026 kl. 17.16</time>.</p><p class="lede" style="margin-top:12px;">FSD Supervised er førerstøtte på SAE nivå 2: bilen styrer, bremser og holder farten, men du overvåker hele tiden og er juridisk ansvarlig. Det er ikke selvkjøring — og det er ikke det samme som Autopilot.</p>
+    <header class="topbar">
+      <a class="brand-mark" href="/">fsdnorge</a>
+      <nav class="anchor-nav" aria-label="Seksjoner">
+        <a href="#siste-nytt">Siste nytt</a>
+        <a href="#tidslinje">Tidslinje</a>
+        <a href="#status">Status</a>
+      </nav>
     </header>
 
-    <div class="facts" aria-label="Norsk status i kortform">
-      <div class="fact">
-        <div class="fact-label">Kundegodkjenning</div>
-        <div class="fact-value neg" id="fakt-kunde">Ikke godkjent</div>
-        <p id="fakt-kunde-p">Du kan ikke slå på FSD Supervised som vanlig eier.</p>
-      </div>
-      <div class="fact">
-        <div class="fact-label">SVV-infoside</div>
-        <div class="fact-value warn" id="fakt-svv">Sist oppdatert 3. juli 2026</div>
-        <p id="fakt-svv-p">Offisiell linje uendret. Ingen ny kundegodkjenning siden 3. juli.</p>
-      </div>
-      <div class="fact">
-        <div class="fact-label">Systemnivå</div>
-        <div class="fact-value">Nivå 2 · Supervised</div>
-        <p>Førerstøtte — du er ansvarlig, ikke bilen.</p>
-      </div>
-    </div>
+    <div class="dash">
+      <!-- LEFT: feed -->
+      <section class="col col-feed" id="siste-nytt" aria-labelledby="feed-head">
+        <h2 class="col-head" id="feed-head">Siste nytt</h2>
+        <div class="panel feed-panel">
+          <ul class="feed" id="feed" aria-label="Nyhetsfeed"></ul>
+          <p class="feed-empty" id="feed-empty" hidden>Laster …</p>
+          <p class="feed-foot">Uoffisiell side. Ingen tilknytning til Tesla, Statens vegvesen eller EU-kommisjonen. Tall og sjanser er skjønn — ikke offisielle vedtak.</p>
+        </div>
+      </section>
 
-    <div class="layout">
-      <div class="main">
-        <div class="status panel" id="sjanse-kort" data-prosent="1">
-          <div class="status-copy">
-            <span class="badge" id="norge-badge"><i></i> Ikke kundegodkjent</span>
-            <h2 id="norge-tittel">Ingen kundegodkjenning — du venter fortsatt</h2>
-            <p id="norge-ingress">Statens vegvesen åpner fortsatt ikke for vanlig kundekjøring. Tesla får teste med egne, trente sikkerhetsførere — begrenset testing, ikke din bil.</p>
-            <p class="disclaimer" id="l2-disclaimer"><strong>Viktig:</strong> Fortsatt SAE nivå 2. Du følger med og tar over når det trengs.</p>
-            <div class="svv-meta" id="svv-meta">
-              <span>Kilde: <a id="svv-lenke" href="https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/" rel="noopener">vegvesen.no</a></span>
-            </div>
-            <div class="lbl" id="sjanse-etikett">Uoffisiell sjanse for norske eiere denne måneden</div>
+      <!-- MIDDLE: timeline -->
+      <aside class="col col-timeline" id="tidslinje" aria-labelledby="tl-head">
+        <h2 class="col-head" id="tl-head">Historikk / Tidslinje</h2>
+        <div class="panel timeline-panel">
+          <ul class="timeline" id="timeline" aria-label="Tidslinje"></ul>
+        </div>
+      </aside>
+
+      <!-- RIGHT: status cards -->
+      <aside class="col col-status" id="status" aria-labelledby="status-head">
+        <h2 class="col-head" id="status-head">Forklaring</h2>
+        <div class="status-stack">
+
+          <div class="stat-card" id="kort-norge" data-prosent="1">
+            <div class="stat-pct"><span id="norge-tall">1</span><span class="pct">%</span></div>
+            <p class="stat-label" id="norge-etikett">Uoffisiell sjanse for norske eiere denne måneden</p>
+            <div class="stat-bar" aria-hidden="true"><div class="stat-bar-fill" id="norge-fyll"></div></div>
           </div>
-          <div class="meter" role="img" aria-labelledby="sjanse-etikett sjanse-tall sjanse-meter-caption">
-            <div class="meter-readout">
-              <div class="n"><span id="sjanse-tall">1</span><span class="pct">%</span></div>
-              <p class="meter-caption" id="sjanse-meter-caption">Uoffisiell sjanse — ikke et tall fra Vegvesenet</p>
+
+          <div class="stat-card countdown-card" id="kort-tcmv-cd">
+            <div class="cd-date" id="tcmv-dato">6. oktober 2026</div>
+            <div class="units" id="tcmv-units" aria-live="polite">
+              <div class="unit"><span class="n" data-part="days">––</span><span class="u">dager</span></div>
+              <div class="unit"><span class="n" data-part="hours">––</span><span class="u">timer</span></div>
+              <div class="unit"><span class="n" data-part="mins">––</span><span class="u">min</span></div>
+              <div class="unit"><span class="n" data-part="secs">––</span><span class="u">sek</span></div>
             </div>
-            <div class="meter-bar">
-              <div class="meter-track">
-                <div class="meter-fill" id="sjanse-fyll"></div>
+            <p class="cd-note" id="tcmv-cd-note">TCMV-oktober: Art. 39 NL som fortsettelse — ikke planlagt avstemning.</p>
+            <p class="cd-done" id="tcmv-done" hidden>Møtet er holdt — oppdaterer</p>
+          </div>
+
+          <div class="stat-card" id="kort-tcmv" data-prosent="30">
+            <div class="stat-pct"><span id="tcmv-tall">30</span><span class="pct">%</span></div>
+            <p class="stat-label" id="tcmv-etikett">Sjanse for at TCMV godkjenner i oktober</p>
+            <div class="stat-bar" aria-hidden="true"><div class="stat-bar-fill gradient" id="tcmv-fyll"></div></div>
+          </div>
+
+          <div class="stat-card" id="kort-land">
+            <div class="split-stats">
+              <div>
+                <div class="n"><span id="land-tall">7</span> / 27 land</div>
+                <div class="lbl">med nasjonal anerkjennelse</div>
+                <div class="mini-bar"><span id="land-fyll"></span></div>
+              </div>
+              <div>
+                <div class="n"><span id="bef-tall">11,8</span> %</div>
+                <div class="lbl">av EU-befolkningen</div>
+                <div class="mini-bar"><span id="bef-fyll"></span></div>
               </div>
             </div>
-            <div class="meter-ends"><span>0%</span><span>50%</span><span>100%</span></div>
           </div>
-          <p class="sub" id="sjanse-kommentar">Uoffisielt skjønnstall — ikke fra Vegvesenet. Ingen SVV-vedtak denne måneden. Neste mulige port er TCMV-møtet i oktober (EUs tekniske komité for motorkjøretøy).</p>
+
+          <div class="stat-card countdown-card" id="kort-series">
+            <div class="cd-title">UN R171 Series 02</div>
+            <div class="cd-date" id="series-dato">Sent i januar 2027</div>
+            <div class="units" id="series-units" aria-live="polite">
+              <div class="unit"><span class="n" data-part="days">––</span><span class="u">dager</span></div>
+              <div class="unit"><span class="n" data-part="hours">––</span><span class="u">timer</span></div>
+              <div class="unit"><span class="n" data-part="mins">––</span><span class="u">min</span></div>
+              <div class="unit"><span class="n" data-part="secs">––</span><span class="u">sek</span></div>
+            </div>
+            <p class="cd-note" id="series-note">Langsiktig spor — parallelt med Art. 39, ikke norsk kundeaktivering.</p>
+            <p class="cd-done" id="series-done" hidden>Målet er passert — oppdaterer</p>
+          </div>
+
         </div>
-
-        <section class="panel">
-          <h3>Hva er tillatt — og hva er det ikke?</h3>
-          <ul class="check-list">
-            <li><span class="mark no" aria-hidden="true">✗</span><div><strong>Ikke godkjent:</strong> vanlig kundekjøring med FSD Supervised. Du får det ikke på.</div></li>
-            <li><span class="mark wait" aria-hidden="true">·</span><div><strong>Begrenset testing:</strong> Tesla med egne sikkerhetsførere. Det er ikke kundegodkjenning.</div></li>
-            <li><span class="mark no" aria-hidden="true">✗</span><div><strong>Ikke selvkjøring:</strong> SAE nivå 2 — du overvåker og griper inn.</div></li>
-            <li><span class="mark yes" aria-hidden="true">✓</span><div><strong>Annen førerstøtte:</strong> Autopilot og TACC har egne godkjenninger. Denne siden handler bare om FSD Supervised.</div></li>
-          </ul>
-          <p class="note">Les også <a href="historie.html">historien om Autopilot og FSD</a> — pakkeskill, maskinvare, EU/Norge.</p>
-          <p class="note" style="margin-top:8px;">Nyhet: <a href="nyheter/eu-votum-desember-vindu.html">EU-votum tidligst desember — fortsettelse av diskusjonene, ikke avstemning</a>. Også <a href="nyheter/circabc-tcmv-agenda-6-okt.html">CIRCABC TCMV 6. okt</a>, <a href="nyheter/brussel-speed-offset.html">Brussel / Speed Offset</a>, <a href="nyheter/arendalsuka-selvkjoring.html">Arendalsuka</a> og <a href="nyheter/belgia-fsd-norge.html">Belgia vs. Norge</a>.</p>
-        </section>
-
-        <section class="panel" aria-label="Prosess">
-          <h3>Dette må skje før noe endrer seg</h3>
-          <ul class="check-list">
-            <li><span class="mark wait" aria-hidden="true">1</span><div><strong>RDW (Nederland):</strong> Den nederlandske typegodkjenningsmyndigheten godkjente FSD Supervised 10. april 2026 via Art. 39. Det er startpunktet EU må behandle.</div></li>
-            <li><span class="mark wait" aria-hidden="true">2</span><div><strong>TCMV (EU):</strong> Medlemslandene må si ja — minst 15 av 27 stater og 65 % av befolkningen. Agendaen 6. oktober er fortsettelse av Art. 39 NL-diskusjonen, ikke votum.</div></li>
-            <li><span class="mark wait" aria-hidden="true">3</span><div><strong>Norge (EØS + SVV):</strong> Norge har ikke stemme. SVV følger og kan stanse av sikkerhetshensyn. Kundedemoer er stanset til Tesla endrer materiell etaten mener er villedende. Et EU-ja er ikke norsk kundeaktivering samme dag.</div></li>
-          </ul>
-        </section>
-
-        <div class="status panel tcmv-combo" id="tcmv-sjanse-kort" data-prosent="30">
-          <div class="status-copy">
-            <div class="clock-head">
-              <span class="badge soft"><i></i> TCMV-møte i oktober</span>
-              <span class="badge warn" id="hero-certainty"><i></i> 6. okt · agenda</span>
-            </div>
-            <h2 id="hero-title">6. oktober: Art. 39 NL på agendaen — fortsettelse, ikke avstemning</h2>
-            <p>Agendaen i CIRCABC (EUs dokumentportal) for 119. TCMV-møte <strong style="color:#fff;font-weight:500">6. oktober 2026 (10:00–15:00)</strong> er lest. Der står fortsettelse av diskusjonene om nederlandsk Art. 39-tillatelse — «Continuation of discussions on request of the Netherlands for an Art. 39 authorisation» — kl. 11:45–12:10. Det er <strong style="color:#fff;font-weight:500">fortsettelse</strong>, ikke planlagt avstemning. Under eventuelt (14:30–15:00): oppdateringer om forberedelse av sekundærlovgivning for automatiserte kjøresystemer (ADS) i storserie, og tilpasning til AI-forordningen. Presseforventning (Reuters m.fl.) peker tidligst på desember for votum. Et ja krever fortsatt minst 15 av 27 stater og 65 prosent av befolkningen. Sju land dekker om lag 11,8 prosent.</p>
-            <p class="when" id="hero-date">6. oktober 2026</p>
-          </div>
-          <div class="units" id="hero-units" aria-live="polite">
-            <div class="unit"><span class="n" data-part="days">––</span><span class="u">dager</span></div>
-            <div class="unit"><span class="n" data-part="hours">––</span><span class="u">timer</span></div>
-            <div class="unit"><span class="n" data-part="mins">––</span><span class="u">min</span></div>
-            <div class="unit"><span class="n" data-part="secs">––</span><span class="u">sek</span></div>
-          </div>
-          <div class="lbl" id="tcmv-sjanse-etikett">Sjanse for at TCMV godkjenner i oktober</div>
-          <div class="meter" role="img" aria-labelledby="tcmv-sjanse-etikett tcmv-sjanse-tall tcmv-sjanse-meter-caption">
-            <div class="meter-readout">
-              <div class="n"><span id="tcmv-sjanse-tall">30</span><span class="pct">%</span></div>
-              <p class="meter-caption" id="tcmv-sjanse-meter-caption">Uoffisiell sjanse for TCMV-ja i oktober</p>
-            </div>
-            <div class="meter-bar">
-              <div class="meter-track">
-                <div class="meter-fill" id="tcmv-sjanse-fyll"></div>
-              </div>
-            </div>
-            <div class="meter-ends"><span>0%</span><span>50%</span><span>100%</span></div>
-          </div>
-          <p class="sub" id="tcmv-sjanse-kommentar">Agenda lest: Art. 39 NL som fortsettelse av diskusjoner; under eventuelt: sekundærlovgivning for ADS i storserie. Avstemning ikke på agendaen. Presse peker tidligst desember. Uoffisiell sjanse ca. 30 %.</p>
-          <p class="why" id="hero-why" hidden></p>
-        </div>
-
-        <div class="clocks" id="all-clocks"></div>
-
-        <section class="panel">
-          <h3>Land som påvirkes av avstemningen</h3>
-          <p class="lede" style="margin-bottom:16px;">Et TCMV-vedtak gjelder EU. Norge har ikke stemme, men følger normalt via EØS — med mindre Vegvesenet stanser innføring.</p>
-          <table class="countries-table">
-            <thead><tr><th>Land</th><th>Kundegodkjenning</th><th>Merknad</th></tr></thead>
-            <tbody>
-              <tr><td>Nederland</td><td class="ok">Kundegodkjent</td><td>RDW 10.04.2026. Opprinnelig Art. 39-godkjenning.</td></tr>
-              <tr><td>Litauen</td><td class="ok">Kundegodkjent</td><td>Anerkjennelse 20.05.2026</td></tr>
-              <tr><td>Estland</td><td class="ok">Kundegodkjent</td><td>Anerkjennelse 29.05.2026</td></tr>
-              <tr><td>Danmark</td><td class="ok">Kundegodkjent</td><td>09.06.2026</td></tr>
-              <tr><td>Belgia</td><td class="ok">Kundegodkjent</td><td>10.06.2026</td></tr>
-              <tr><td>Slovenia</td><td class="ok">Kundegodkjent</td><td>07.09.2026. Tesla Europe: utrulling snart.</td></tr>
-              <tr><td>Tsjekkia</td><td class="ok">Kundegodkjent</td><td>21.09.2026. MD ČR anerkjente RDW Art. 39. Tesla Europe: utrulling snart.</td></tr>
-              <tr><td>Norge</td><td class="no">Ikke kundegodkjent</td><td>EØS. Begrenset testing. Venter fortsatt på EU- eller SVV-vedtak.</td></tr>
-              <tr><td>Tyskland, Frankrike, Italia, Spania</td><td class="wait">Ingen snarvei</td><td>Store land som holder befolkningskravet låst (15 stater og 65 %).</td></tr>
-            </tbody>
-          </table>
-          <p class="note">Uoffisiell side. Erstatter ikke vegvesen.no, RDW eller Tesla. Ingen juridisk rådgivning — og ingen datoer som løfte.</p>
-        </section>
-
-        <section class="panel" id="kilder" aria-label="Kilder">
-          <h3>Kilder og lenker</h3>
-          <ul class="sources">
-            <li><a href="https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/" rel="noopener">Statens vegvesen — førerstøttesystemer / FSD</a></li>
-            <li><a href="https://www.rdw.nl/" rel="noopener">RDW (Nederland) — typegodkjenning</a></li>
-            <li><a href="https://ec.europa.eu/transparency/comitology-register/screen/home" rel="noopener">EU komitologiregister / TCMV</a></li>
-            <li><a href="https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/0f4e0c81-ae0d-445a-80f4-4d9fe3e265c5?p=1&amp;n=10&amp;sort=modified_DESC" rel="noopener">CIRCABC — TCMV 119. møte (6. okt 2026)</a></li>
-            <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018R0858" rel="noopener">EUR-Lex — forordning (EU) 2018/858</a></li>
-            <li><a href="https://unece.org/transport/vehicle-regulations" rel="noopener">UNECE — UN R171 / WP.29</a></li>
-            <li><a href="tcmv.html">Estimert TCMV-stemme per land</a> · <a href="europa.html">Europa-feed</a></li>
-            <li><a href="data/status.json">data/status.json</a> · <a href="data/svv-siste.json">data/svv-siste.json</a></li>
-          </ul>
-        </section>
-      </div>
-
-      <aside class="rail panel" id="tidslinje" aria-label="Tidslinje">
-        <div class="kicker">Historikk</div>
-        <h3>Tidslinje</h3>
-        <ul class="timeline">
-          <li><div class="when">10. april 2026</div><div class="what">RDW i Nederland gir foreløpig typegodkjenning via Art. 39 og UN R171.</div></li>
-          <li><div class="when">5. mai 2026</div><div class="what">RDW presenterer saken for TCMV. Norge deltar uten stemmerett.</div></li>
-          <li><div class="when">20. mai – 10. juni 2026</div><div class="what">Litauen, Estland, Danmark og Belgia anerkjenner den nederlandske godkjenningen — kunder får kjøre.</div></li>
-          <li><div class="when">30. juni 2026</div><div class="what">TCMV diskuterer videre — ingen avstemning. SVV oppdaterer infosiden 3. juli.</div></li>
-          <li><div class="when">22. juli 2026</div><div class="what">Frankrike sier nei til ensidig nasjonal godkjenning «slik systemet står».</div></li>
-          <li><div class="when">26. august 2026</div><div class="what">Tesla Europe melder 100 millioner km FSD Supervised i de fem godkjente landene (selskapets egen teller).</div></li>
-          <li><div class="when">30.–31. august 2026</div><div class="what">Sveriges infrastrukturminister Andreas Carlson filmes i Tesla med FSD under testing i Mullsjö (rykte/sekundærkilde). Riksdagssvar: ambisjon om unionsomfattende godkjenning — uten låst ja-stemme.</div></li>
-          <li><div class="when">1.–3. september 2026</div><div class="what">Tesla Europe peker på mulig TCMV-avstemning 6. oktober. Frankrike starter UTAC-veitester (Reuters) — ikke fransk eller EU-kundegodkjenning.</div></li>
-          <li><div class="when">7. september 2026</div><div class="what">Slovenia blir sjette EU-land med nasjonal kundegodkjenning. Befolkningsandel ca. 9,4 %.</div></li>
-          <li><div class="when">21. september 2026</div><div class="what">Tsjekkia blir sjuende EU-land med nasjonal kundegodkjenning (MD ČR / Tesla Europe). Befolkningsandel ca. 11,8 %. Norge står uendret.</div></li>
-          <li><div class="when">25. september 2026</div><div class="what">CIRCABC-agenda for TCMV 6. okt lest: Art. 39 NL som fortsettelse av diskusjoner (11:45–12:10). Under eventuelt: sekundærlovgivning for ADS i storserie og AI-forordningen. Avstemning står ikke på agendaen.</div></li>
-          <li class="next"><div class="when">6. oktober 2026 · CIRCABC-agenda</div><div class="what">TCMV 119. møte (10:00–15:00): fortsettelse av Art. 39 NL-diskusjoner; under eventuelt ADS-sekundærlovgivning. Avstemning ikke planlagt. Uoffisiell sjanse for ja: ca. 30 %.</div></li>
-          <li><div class="when">Sent i januar 2027</div><div class="what">UN R171 Series 02 ventes i kraft — parallell, langsiktig vei ved siden av Art. 39.</div></li>
-        </ul>
       </aside>
     </div>
 
     <footer class="site-footer">
-      <p><strong style="color:#c5cddb;font-weight:500">fsdnorge.no</strong> — uoffisiell statusside for Tesla FSD Supervised i Norge.<br>
+      <p><strong>fsdnorge</strong> — uoffisiell statusside for Tesla FSD Supervised i Norge.<br>
       FSD Supervised er SAE nivå 2-førerstøtte. Du er alltid ansvarlig. Ingen tilknytning til Tesla eller Statens vegvesen.</p>
     </footer>
   </div>
 
   <script>
-    (function () {
-      var milestones = [
-        { id: "tcmv", title: "6. oktober: Art. 39 NL på agendaen — fortsettelse, ikke avstemning", dateLabel: "6. oktober 2026", iso: "2026-10-06T10:00:00+02:00", certainty: "6. okt · agenda", why: "Agenda lest: Art. 39 NL som fortsettelse av diskusjoner (11:45–12:10); under eventuelt: sekundærlovgivning for ADS i storserie og AI-forordningen (14:30–15:00). Avstemning ikke på agendaen. Presse peker tidligst desember. Uoffisiell sjanse ca. 30 %." },
-        { id: "r171", title: "UN R171 Series 02", dateLabel: "Sent i januar 2027", iso: "2027-01-20T00:00:00+01:00", certainty: "Veiledende", why: "Langsiktig regelverksvei — parallell med Art. 39-sporet, ikke det samme som norsk kundeaktivering." }
-      ];
-      function pad(n) { return String(n).padStart(2, "0"); }
-      function remaining(iso, now) {
-        if (!iso) return null;
-        var ms = new Date(iso).getTime() - now.getTime();
-        if (ms <= 0) return { done: true, days: 0, hours: 0, mins: 0, secs: 0 };
-        var s = Math.floor(ms / 1000);
-        return { done: false, days: Math.floor(s / 86400), hours: Math.floor((s % 86400) / 3600), mins: Math.floor((s % 3600) / 60), secs: s % 60 };
+  (function () {
+    var SOURCE_LABEL = {
+      svv: "SVV",
+      circabc: "CIRCABC",
+      "tcmv-vote": "TCMV-estimat",
+      norway: "Norgestatus",
+      news: "Nyheter"
+    };
+
+    var state = {
+      tcmvIso: "2026-10-06T10:00:00+02:00",
+      seriesIso: "2027-01-25T00:00:00+01:00"
+    };
+
+    function pad(n) { return String(n).padStart(2, "0"); }
+
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c];
+      });
+    }
+
+    function fmtDateTime(iso) {
+      if (!iso) return "—";
+      try {
+        return new Date(iso).toLocaleString("nb-NO", {
+          day: "numeric", month: "long", year: "numeric",
+          hour: "2-digit", minute: "2-digit", timeZone: "Europe/Oslo"
+        });
+      } catch (e) { return iso; }
+    }
+
+    function fmtDate(isoOrYmd) {
+      if (!isoOrYmd) return "—";
+      try {
+        var d = isoOrYmd.length <= 10
+          ? new Date(isoOrYmd + "T12:00:00+02:00")
+          : new Date(isoOrYmd);
+        return d.toLocaleDateString("nb-NO", {
+          day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Oslo"
+        });
+      } catch (e) { return isoOrYmd; }
+    }
+
+    function remaining(iso, now) {
+      if (!iso) return null;
+      var ms = new Date(iso).getTime() - now.getTime();
+      if (ms <= 0) return { done: true, days: 0, hours: 0, mins: 0, secs: 0 };
+      var s = Math.floor(ms / 1000);
+      return {
+        done: false,
+        days: Math.floor(s / 86400),
+        hours: Math.floor((s % 86400) / 3600),
+        mins: Math.floor((s % 3600) / 60),
+        secs: s % 60
+      };
+    }
+
+    function fillUnits(root, r) {
+      if (!root) return;
+      if (!r || r.done) return;
+      var days = root.querySelector('[data-part="days"]');
+      if (!days) return;
+      days.textContent = String(r.days).padStart(2, "0");
+      root.querySelector('[data-part="hours"]').textContent = pad(r.hours);
+      root.querySelector('[data-part="mins"]').textContent = pad(r.mins);
+      root.querySelector('[data-part="secs"]').textContent = pad(r.secs);
+    }
+
+    function setCountdown(unitsId, doneId, iso, now) {
+      var units = document.getElementById(unitsId);
+      var done = document.getElementById(doneId);
+      var r = remaining(iso, now);
+      if (!r || r.done) {
+        if (units) units.hidden = true;
+        if (done) done.hidden = false;
+        return;
       }
-      function unitsMarkup(r) {
-        if (!r) return '<p class="awaiting">Avventer</p>';
-        if (r.done) return '<p class="awaiting">Passert</p>';
-        return '<div class="units">' +
-          '<div class="unit"><span class="n" data-part="days">' + String(r.days).padStart(2, "0") + '</span><span class="u">dager</span></div>' +
-          '<div class="unit"><span class="n" data-part="hours">' + pad(r.hours) + '</span><span class="u">timer</span></div>' +
-          '<div class="unit"><span class="n" data-part="mins">' + pad(r.mins) + '</span><span class="u">min</span></div>' +
-          '<div class="unit"><span class="n" data-part="secs">' + pad(r.secs) + '</span><span class="u">sek</span></div></div>';
+      if (units) units.hidden = false;
+      if (done) done.hidden = true;
+      fillUnits(units, r);
+    }
+
+    function setBar(el, pct) {
+      if (!el) return;
+      el.style.width = Math.min(100, Math.max(0, pct)) + "%";
+    }
+
+    function setText(id, text) {
+      var el = document.getElementById(id);
+      if (el && text != null && text !== "") el.textContent = text;
+    }
+
+    /* —— Feed —— */
+    function renderFeed(data) {
+      var feed = document.getElementById("feed");
+      var empty = document.getElementById("feed-empty");
+      var items = (data && data.items) || [];
+      feed.innerHTML = "";
+      if (!items.length) {
+        empty.hidden = false;
+        empty.textContent = "Ingen innlegg ennå.";
+        return;
       }
-      function fillUnits(root, r) {
-        if (!root) return;
-        var box = root.querySelector(".units") || root;
-        if (!r || r.done) return;
-        var days = box.querySelector('[data-part="days"]');
-        if (!days) return;
-        days.textContent = String(r.days).padStart(2, "0");
-        box.querySelector('[data-part="hours"]').textContent = pad(r.hours);
-        box.querySelector('[data-part="mins"]').textContent = pad(r.mins);
-        box.querySelector('[data-part="secs"]').textContent = pad(r.secs);
-      }
-      function paintMeters() {
-        document.querySelectorAll("[data-prosent]").forEach(function (el) {
-          var p = parseInt(el.getAttribute("data-prosent") || "0", 10) || 0;
-          var fill = el.querySelector(".meter-fill");
-          if (fill) fill.style.width = Math.min(100, Math.max(0, p)) + "%";
+      empty.hidden = true;
+      items.forEach(function (it) {
+        var src = it.source || "news";
+        var label = SOURCE_LABEL[src] || src;
+        var cls = "badge " + (src === "tcmv-vote" ? "tcmv-vote" : src);
+        var title = esc(it.title || "Oppdatering");
+        var href = it.url || "#";
+        var titleHtml = '<a href="' + esc(href) + '"' +
+          (href.indexOf("http") === 0 ? ' rel="noopener"' : "") + ">" + title + "</a>";
+        var li = document.createElement("li");
+        li.className = "feed-item";
+        li.innerHTML =
+          '<div class="feed-meta"><span class="' + cls + '"><i></i> ' + esc(label) + "</span>" +
+          '<span class="feed-when">' + esc(fmtDateTime(it.iso)) + "</span></div>" +
+          '<div class="feed-title">' + titleHtml + "</div>" +
+          (it.summary ? '<p class="feed-summary">' + esc(it.summary) + "</p>" : "") +
+          (it.why_it_matters
+            ? '<p class="feed-why"><strong>Hvorfor det betyr noe:</strong> ' + esc(it.why_it_matters) + "</p>"
+            : "");
+        feed.appendChild(li);
+      });
+    }
+
+    /* —— Timeline —— */
+    function buildFallbackTimeline(status) {
+      var items = [];
+      (status.eu_land || []).forEach(function (l) {
+        items.push({
+          dato: l.dato,
+          tekst: l.land + " — " + (l.sti === "RDW Art. 39"
+            ? "RDW Art. 39 typegodkjenning"
+            : "nasjonal anerkjennelse av RDW Art. 39") + ".",
+          fase: "passert"
+        });
+      });
+      if (status.tcmv && status.tcmv.neste_dato) {
+        items.push({
+          dato: status.tcmv.neste_dato,
+          tekst: "TCMV-møte: Art. 39 NL fortsettelse. Avstemning ikke planlagt.",
+          fase: "neste",
+          etikett: "CIRCABC-agenda"
         });
       }
-      var built = false;
-      function build(now) {
-        var hero = milestones[0];
-        document.getElementById("hero-title").textContent = hero.title;
-        document.getElementById("hero-date").textContent = hero.dateLabel;
-        document.getElementById("hero-why").textContent = hero.why;
-        var tcmvKom = document.getElementById("tcmv-sjanse-kommentar");
-        if (tcmvKom) tcmvKom.textContent = hero.why;
-        var cert = document.getElementById("hero-certainty");
-        cert.innerHTML = "<i></i> " + hero.certainty;
-        cert.className = "badge " + (hero.certainty === "Forventet" ? "soft" : "warn");
-        var heroUnits = document.getElementById("hero-units");
-        var r = remaining(hero.iso, now);
-        heroUnits.outerHTML = unitsMarkup(r).replace('class="units"', 'class="units" id="hero-units" aria-live="polite"').replace('class="awaiting"', 'class="awaiting" id="hero-units"');
-        var all = document.getElementById("all-clocks");
-        all.innerHTML = "";
-        var m = milestones[1];
-        var r2 = remaining(m.iso, now);
-        var card = document.createElement("div");
-        card.className = "card mini";
-        card.innerHTML = '<div class="clock-head"><span class="badge soft"><i></i> ' + m.certainty + '</span></div><h3>' + m.title + '</h3><p class="when">' + m.dateLabel + '</p>' + unitsMarkup(r2) + '<p class="sub">' + m.why + '</p>';
-        all.appendChild(card);
-        paintMeters();
-        built = true;
+      if (status.series_02) {
+        items.push({
+          dato: status.series_02.iso ? status.series_02.iso.slice(0, 10) : "2027-01-25",
+          tekst: status.series_02.merknad || "UN R171 Series 02 ventes i kraft.",
+          fase: "langsiktig",
+          etikett: "Series 02"
+        });
       }
-      function tick() {
-        var now = new Date();
-        if (!built) build(now);
-        fillUnits(document.getElementById("hero-units"), remaining(milestones[0].iso, now));
-        var mini = document.querySelector("#all-clocks .card.mini");
-        if (mini) fillUnits(mini, remaining(milestones[1].iso, now));
-      }
-      paintMeters();
-      tick();
-      setInterval(tick, 1000);
+      items.sort(function (a, b) { return (a.dato || "").localeCompare(b.dato || ""); });
+      return items;
+    }
 
-      function setText(id, text) {
-        var el = document.getElementById(id);
-        if (el && text != null && text !== "") el.textContent = text;
-      }
-      function applyStatus(data) {
-        if (!data) return;
-        if (data.sist_oppdatert_iso || data.sist_oppdatert_nb) {
-          var t = document.getElementById("sist-oppdatert");
-          if (t) {
-            if (data.sist_oppdatert_iso) t.setAttribute("datetime", data.sist_oppdatert_iso);
-            if (data.sist_oppdatert_nb) t.textContent = data.sist_oppdatert_nb;
-          }
-        }
-        var ok = !!data.norge_kundegodkjent;
-        var badge = document.getElementById("norge-badge");
-        if (badge) {
-          badge.innerHTML = ok ? "<i></i> Kundegodkjent" : "<i></i> Ikke kundegodkjent";
-          badge.className = ok ? "badge soft" : "badge";
-        }
-        setText("norge-tittel", ok ? "FSD Supervised er kundegodkjent i Norge" : "Ingen kundegodkjenning — du venter fortsatt");
-        if (data.norge_status) setText("norge-ingress", data.norge_status);
-        setText("fakt-kunde", ok ? "Godkjent" : "Ikke godkjent");
-        var fk = document.getElementById("fakt-kunde");
-        if (fk) { fk.className = "fact-value " + (ok ? "pos" : "neg"); }
-        setText("fakt-kunde-p", ok ? "Du kan slå på FSD Supervised som vanlig eier." : "Du kan ikke slå på FSD Supervised som vanlig eier.");
-        if (data.svv_sist_oppdatert_nb) setText("fakt-svv", "Sist oppdatert " + data.svv_sist_oppdatert_nb);
-        var nm = data.norge_denne_maneden || {};
-        var kort = document.getElementById("sjanse-kort");
-        if (kort && nm.prosent != null) {
-          kort.setAttribute("data-prosent", String(nm.prosent));
-          setText("sjanse-tall", String(nm.prosent));
-        }
-        if (nm.etikett) setText("sjanse-etikett", nm.etikett);
-        if (nm.kommentar) setText("sjanse-kommentar", nm.kommentar);
-        var tm = data.tcmv || {};
-        var tcmvKort = document.getElementById("tcmv-sjanse-kort");
-        if (tcmvKort && tm.oktober_godkjenning_prosent != null) {
-          tcmvKort.setAttribute("data-prosent", String(tm.oktober_godkjenning_prosent));
-          setText("tcmv-sjanse-tall", String(tm.oktober_godkjenning_prosent));
-        }
-        if (tm.etikett) setText("tcmv-sjanse-etikett", tm.etikett);
-        if (tm.kommentar) {
-          setText("tcmv-sjanse-kommentar", tm.kommentar);
-          milestones[0].why = tm.kommentar;
-        }
-        paintMeters();
-      }
-      function applySvv(svv) {
-        if (!svv) return;
-        if (svv.svv_sist_oppdatert_nb) setText("fakt-svv", "Sist oppdatert " + svv.svv_sist_oppdatert_nb);
-        if (svv.sammendrag) setText("fakt-svv-p", svv.sammendrag);
-        if (svv.betydning_for_eiere) {
-          var meta = document.getElementById("svv-meta");
-          if (meta && !document.getElementById("svv-betydning")) {
-            var s = document.createElement("span");
-            s.id = "svv-betydning";
-            s.textContent = svv.betydning_for_eiere;
-            meta.appendChild(document.createTextNode(" · "));
-            meta.appendChild(s);
-          }
-        }
-        if (svv.url) {
-          var a = document.getElementById("svv-lenke");
-          if (a) a.href = svv.url;
-        }
-      }
-      Promise.all([
-        fetch("data/status.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }),
-        fetch("data/svv-siste.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
-      ]).then(function (pair) {
-        applyStatus(pair[0]);
-        applySvv(pair[1]);
-        paintMeters();
+    function renderTimeline(status) {
+      var list = document.getElementById("timeline");
+      var items = (status && status.timeline && status.timeline.length)
+        ? status.timeline
+        : buildFallbackTimeline(status || {});
+      list.innerHTML = "";
+      items.forEach(function (it) {
+        var li = document.createElement("li");
+        var fase = it.fase || "passert";
+        if (fase === "neste" || fase === "next") li.className = "neste";
+        else if (fase === "langsiktig") li.className = "langsiktig";
+        var when = fmtDate(it.dato);
+        if (it.etikett) when += " · " + it.etikett;
+        li.innerHTML =
+          '<div class="when">' + esc(when) + "</div>" +
+          '<div class="what">' + esc(it.tekst || "") + "</div>";
+        list.appendChild(li);
       });
-    })();
+    }
+
+    /* —— Status cards —— */
+    function applyStatus(data) {
+      if (!data) return;
+
+      var nm = data.norge_denne_maneden || {};
+      if (nm.prosent != null) {
+        setText("norge-tall", String(nm.prosent));
+        document.getElementById("kort-norge").setAttribute("data-prosent", String(nm.prosent));
+        setBar(document.getElementById("norge-fyll"), nm.prosent);
+      }
+      if (nm.etikett) setText("norge-etikett", nm.etikett);
+
+      var tm = data.tcmv || {};
+      if (tm.neste_iso) state.tcmvIso = tm.neste_iso;
+      else if (tm.neste_dato) state.tcmvIso = tm.neste_dato + "T10:00:00+02:00";
+      if (tm.neste_dato) setText("tcmv-dato", fmtDate(tm.neste_dato));
+      if (tm.oktober_godkjenning_prosent != null) {
+        setText("tcmv-tall", String(tm.oktober_godkjenning_prosent));
+        document.getElementById("kort-tcmv").setAttribute("data-prosent", String(tm.oktober_godkjenning_prosent));
+        setBar(document.getElementById("tcmv-fyll"), tm.oktober_godkjenning_prosent);
+      }
+      if (tm.etikett) setText("tcmv-etikett", tm.etikett);
+      if (tm.kommentar) setText("tcmv-cd-note", tm.kommentar);
+
+      var landN = (data.eu_land || []).length;
+      setText("land-tall", String(landN));
+      setBar(document.getElementById("land-fyll"), (landN / 27) * 100);
+
+      var bef = data.eu_andel_befolkning_prosent;
+      if (bef != null) {
+        setText("bef-tall", String(bef).replace(".", ","));
+        setBar(document.getElementById("bef-fyll"), bef);
+      }
+
+      var s2 = data.series_02 || {};
+      if (s2.iso) state.seriesIso = s2.iso;
+      if (s2.dato_nb) setText("series-dato", s2.dato_nb);
+      else if (s2.forventet) setText("series-dato", "Sent i januar 2027");
+      if (s2.merknad) setText("series-note", s2.merknad);
+
+      renderTimeline(data);
+    }
+
+    function applySvv(svv) {
+      /* Soft enrichment only — main cards come from status.json */
+      if (!svv) return;
+    }
+
+    function tick() {
+      var now = new Date();
+      setCountdown("tcmv-units", "tcmv-done", state.tcmvIso, now);
+      setCountdown("series-units", "series-done", state.seriesIso, now);
+    }
+
+    /* Initial paint from embedded defaults, then hydrate */
+    setBar(document.getElementById("norge-fyll"), 1);
+    setBar(document.getElementById("tcmv-fyll"), 30);
+    setBar(document.getElementById("land-fyll"), (7 / 27) * 100);
+    setBar(document.getElementById("bef-fyll"), 11.8);
+    tick();
+    setInterval(tick, 1000);
+
+    Promise.all([
+      fetch("data/status.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }),
+      fetch("data/europa-feed.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }),
+      fetch("data/svv-siste.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
+    ]).then(function (triple) {
+      applyStatus(triple[0]);
+      if (triple[1]) renderFeed(triple[1]);
+      else {
+        document.getElementById("feed-empty").hidden = false;
+        document.getElementById("feed-empty").textContent = "Kunne ikke laste data/europa-feed.json.";
+      }
+      applySvv(triple[2]);
+      tick();
+    });
+  })();
   </script>
 </body>
 </html>

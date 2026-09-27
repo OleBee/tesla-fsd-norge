@@ -54,7 +54,8 @@
     "oktober_godkjenning_prosent": 30,
     "etikett": "Sjanse for at TCMV godkjenner i oktober",
     "sannsynlig_utfall": "åpent",
-    "kommentar": "Agenda lest: Art. 39 NL som fortsettelse av diskusjoner; under eventuelt: sekundærlovgivning for ADS i storserie. Avstemning ikke på agendaen. Presse peker tidligst desember. Uoffisiell sjanse ca. 30 %."
+    "kommentar": "Agenda lest: Art. 39 NL som fortsettelse av diskusjoner; under eventuelt: sekundærlovgivning for ADS i storserie. Avstemning ikke på agendaen. Presse peker tidligst desember. Uoffisiell sjanse ca. 30 %.",
+    "neste_iso": "2026-10-06T10:00:00+02:00"
   },
   "norge_denne_maneden": {
     "prosent": 1,
@@ -205,8 +206,84 @@
   ],
   "series_02": {
     "forventet": "2027-01",
-    "merknad": "UN R171 Series 02 ventes i kraft sent i januar 2027 — parallell, langsiktig vei ved siden av Art. 39, ikke norsk kundeaktivering."
+    "merknad": "UN R171 Series 02 ventes i kraft sent i januar 2027 — parallell, langsiktig vei ved siden av Art. 39, ikke norsk kundeaktivering.",
+    "iso": "2027-01-25T00:00:00+01:00",
+    "dato_nb": "Sent i januar 2027"
   },
-  "side_layout": "slim-meter-2026-09-03-tcmv-combo",
-  "materiell_endring": true
+  "side_layout": "singleside-dashboard-2026-09-27",
+  "materiell_endring": true,
+  "timeline": [
+    {
+      "dato": "2026-04-10",
+      "tekst": "RDW i Nederland gir foreløpig typegodkjenning via Art. 39 og UN R171.",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-05-05",
+      "tekst": "RDW presenterer saken for TCMV. Norge deltar uten stemmerett.",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-05-20",
+      "tekst": "Litauen anerkjenner — første EU-land etter Nederland.",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-05-29",
+      "tekst": "Estland anerkjenner RDW Art. 39.",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-06-09",
+      "tekst": "Danmark anerkjenner — kunder får kjøre.",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-06-10",
+      "tekst": "Belgia anerkjenner. Fem land kjører FSD Supervised.",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-06-30",
+      "tekst": "TCMV diskuterer Art. 39 NL — ingen avstemning.",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-07-03",
+      "tekst": "SVV oppdaterer infosiden. Fortsatt ikke kundegodkjent i Norge.",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-07-22",
+      "tekst": "Frankrike sier nei til ensidig nasjonal godkjenning «slik systemet står».",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-09-07",
+      "tekst": "Slovenia blir sjette EU-land med nasjonal kundegodkjenning.",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-09-21",
+      "tekst": "Tsjekkia blir sjuende EU-land. Befolkningsandel ca. 11,8 %.",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-09-25",
+      "tekst": "CIRCABC-agenda lest: Art. 39 NL som fortsettelse 6. okt — ikke votum.",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-10-06",
+      "tekst": "TCMV 119. møte: fortsettelse Art. 39 NL. Avstemning ikke planlagt.",
+      "fase": "neste",
+      "etikett": "CIRCABC-agenda"
+    },
+    {
+      "dato": "2027-01-25",
+      "tekst": "UN R171 Series 02 ventes i kraft — langsiktig spor parallelt med Art. 39.",
+      "fase": "langsiktig",
+      "etikett": "Series 02"
+    }
+  ]
 }
