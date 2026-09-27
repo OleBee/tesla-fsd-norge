@@ -185,7 +185,7 @@
       svv: "SVV",
       circabc: "CIRCABC",
       "tcmv-vote": "TCMV-estimat",
-      norway: "Norgestatus",
+      norway: "Norgesstatus",
       news: "Nyheter"
     };
 
@@ -290,9 +290,14 @@
         var label = SOURCE_LABEL[src] || src;
         var cls = "badge " + (src === "tcmv-vote" ? "tcmv-vote" : src);
         var title = esc(it.title || "Oppdatering");
-        var href = it.url || "#";
-        var titleHtml = '<a href="' + esc(href) + '"' +
-          (href.indexOf("http") === 0 ? ' rel="noopener"' : "") + ">" + title + "</a>";
+        var href = it.url || "";
+        // Interne nyhets-URL-er redirecter til forsiden — pek anker i stedet
+        if (!href || /fsdnorge\.no\/nyheter\//.test(href) || /^nyheter\//.test(href) || href.indexOf("/nyheter/") === 0) {
+          href = "#siste-nytt";
+        }
+        var titleHtml = href && href !== "#siste-nytt"
+          ? ('<a href="' + esc(href) + '"' + (href.indexOf("http") === 0 ? ' rel="noopener"' : "") + ">" + title + "</a>")
+          : ('<span>' + title + "</span>");
         var li = document.createElement("li");
         li.className = "feed-item";
         li.innerHTML =
