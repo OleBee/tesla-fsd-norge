@@ -1,6 +1,6 @@
 {
-  "sist_sjekket": "2026-09-25",
-  "sist_sjekket_nb": "25. september 2026",
+  "sist_sjekket": "2026-09-28",
+  "sist_sjekket_nb": "28. september 2026",
   "sist_oppdatert_iso": "2026-09-25T17:16:00+02:00",
   "sist_oppdatert_nb": "25. september 2026 kl. 17.16",
   "svv_sist_oppdatert_nb": "3. juli 2026",
@@ -50,7 +50,7 @@
     "siste_utfall": "diskusjon uten avstemning",
     "neste_dato": "2026-10-06",
     "neste_sikkerhet": "agenda",
-    "dager_til": 9,
+    "dager_til": 8,
     "oktober_godkjenning_prosent": 30,
     "etikett": "Sjanse for at TCMV godkjenner i oktober",
     "sannsynlig_utfall": "åpent",
@@ -202,6 +202,11 @@
       "dato": "2026-09-25",
       "prosent": 1,
       "merknad": "CIRCABC-agenda lest: Art. 39 NL fortsettelse 6. okt; under eventuelt ADS i storserie"
+    },
+    {
+      "dato": "2026-09-28",
+      "prosent": 1,
+      "merknad": "Ingen materiell endring"
     }
   ],
   "series_02": {
@@ -211,7 +216,7 @@
     "dato_nb": "Sent i januar 2027"
   },
   "side_layout": "singleside-dashboard-2026-09-27",
-  "materiell_endring": true,
+  "materiell_endring": false,
   "timeline": [
     {
       "dato": "2026-04-10",
