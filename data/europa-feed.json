@@ -1,14 +1,29 @@
 {
-  "updated_iso": "2026-09-25T19:56:00+02:00",
+  "updated_iso": "2026-09-29T11:25:00+02:00",
   "standings": {
-    "yes_countries": 7,
-    "eu_population_pct": 11.8,
+    "yes_countries": 8,
+    "eu_population_pct": 12.7,
     "tcmv_october_pct": 30,
     "norway_this_month_pct": 1,
     "next_tcmv": "2026-10-06",
     "next_tcmv_certainty": "agenda"
   },
   "items": [
+    {
+      "id": "news-croatia-2026-09-29",
+      "iso": "2026-09-29T10:02:00+02:00",
+      "source": "news",
+      "title": "Kroatia blir åttende EU-land med FSD Supervised – Norge står fortsatt utenfor",
+      "summary": "Kroatia har godkjent FSD Supervised, ifølge Tesla Europe. «FSD Supervised now approved in Croatia» (FSD Supervised er nå godkjent i Kroatia), skrev selskapets offisielle X-konto @teslaeurope kl. 10.02 tirsdag 29. september 2026. Utrullingen starter snart, lover Tesla. Dermed har åtte EU-land sagt ja til systemet, og de dekker om lag 12,7 % av EU-befolkningen (Eurostat, 1. januar 2025). En egen kunngjøring fra det kroatiske samferdselsdepartementet (MMPI) har vi ikke funnet ennå. Dato for vedtaket og eventuelle vilkår er derfor ikke bekreftet.",
+      "why_it_matters": "Enda et EU-land sier ja, mens norske eiere venter. Statens vegvesen har ikke godkjent FSD Supervised for vanlige eiere, og Norge har som EØS-land ingen stemme i TCMV (EUs tekniske komité for motorkjøretøy). Agendaen for møtet 6. oktober har fortsatt ingen avstemning, og pressen peker på desember som tidligste mulighet. Åtte land og 12,7 % er langt unna tersklene på 15 land og 65 % av befolkningen.",
+      "url": "https://x.com/teslaeurope",
+      "tags": [
+        "approval",
+        "croatia",
+        "article-39",
+        "norway"
+      ]
+    },
     {
       "id": "news-eu-votum-desember-vindu-2026-09-25",
       "iso": "2026-09-25T19:56:00+02:00",
