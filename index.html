@@ -139,12 +139,12 @@
           <div class="stat-card" id="kort-land">
             <div class="split-stats">
               <div>
-                <div class="n"><span id="land-tall">7</span> / 27 land</div>
+                <div class="n"><span id="land-tall">8</span> / 27 land</div>
                 <div class="lbl">med nasjonal anerkjennelse</div>
                 <div class="mini-bar"><span id="land-fyll"></span></div>
               </div>
               <div>
-                <div class="n"><span id="bef-tall">11,8</span> %</div>
+                <div class="n"><span id="bef-tall">12,7</span> %</div>
                 <div class="lbl">av EU-befolkningen</div>
                 <div class="mini-bar"><span id="bef-fyll"></span></div>
               </div>
@@ -193,7 +193,7 @@
 
     function esc(s) {
       return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
-        return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c];
+        return ({ "&": "&", "<": "<", ">": ">", '"': """, "'": "&#39;" })[c];
       });
     }
 
@@ -420,8 +420,8 @@
     /* Initial paint from embedded defaults, then hydrate */
     setBar(document.getElementById("norge-fyll"), 1);
     setBar(document.getElementById("tcmv-fyll"), 30);
-    setBar(document.getElementById("land-fyll"), (7 / 27) * 100);
-    setBar(document.getElementById("bef-fyll"), 11.8);
+    setBar(document.getElementById("land-fyll"), (8 / 27) * 100);
+    setBar(document.getElementById("bef-fyll"), 12.7);
     tick();
     setInterval(tick, 1000);
 
