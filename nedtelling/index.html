@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Når kommer FSD Supervised i ditt land? Nedtelling per land – fsdnorge</title>
+  <meta name="description" content="Estimert dato for FSD Supervised i hvert europeisk land, med kilder og metode. Norge har ikke noe estimat ennå: Statens vegvesen venter på EU.">
+  <link rel="canonical" href="https://fsdnorge.no/nedtelling/">
+  <meta name="theme-color" content="#070b14">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="fsdnorge.no">
+  <meta property="og:title" content="Når kommer FSD Supervised i ditt land?">
+  <meta property="og:description" content="Nedtelling per land med estimert dato, kilder og metode. Norge: ingen estimat ennå.">
+  <meta property="og:url" content="https://fsdnorge.no/nedtelling/">
+  <meta property="og:image" content="https://fsdnorge.no/og-default.png">
+  <meta property="og:locale" content="nb_NO">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Når kommer FSD Supervised i ditt land?">
+  <meta name="twitter:description" content="Nedtelling per land med estimert dato, kilder og metode. Norge: ingen estimat ennå.">
+  <meta name="twitter:image" content="https://fsdnorge.no/og-default.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/site.css">
+  <style>
+    .nt-wrap { max-width: 1100px; }
+    .nt-back { font-size: 13px; color: var(--muted); }
+    .nt-hero { margin-bottom: 22px; }
+    .nt-hero h1 { font-size: clamp(26px, 4vw, 38px); font-weight: 600; letter-spacing: -.03em; line-height: 1.15; margin-bottom: 12px; }
+    .nt-lede { font-size: 16px; line-height: 1.55; color: var(--body); max-width: 46em; }
+    .nt-flag { display: inline-block; margin-top: 12px; font-size: 12px; font-weight: 500; color: var(--peach); border: 1px solid rgba(223, 159, 112, .35); border-radius: 999px; padding: 4px 12px; }
+    .nt-meta { margin-top: 10px; font-size: 12px; color: var(--meta); }
+    .nt-top { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 14px; margin-bottom: 26px; }
+    .nt-eu p { font-size: 14px; line-height: 1.55; color: var(--body); }
+    .nt-eu .split-stats { margin-bottom: 14px; }
+    .nt-h2 { font-size: 15px; font-weight: 600; color: #fff; margin: 30px 0 14px; padding-bottom: 8px; border-bottom: 2px solid var(--mint); display: inline-block; }
+    .nt-h2.est { border-bottom-color: var(--peach); }
+    .nt-h2.none { border-bottom-color: var(--lavender); }
+    .nt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+    .nt-card { background: var(--panel); border-radius: var(--r); box-shadow: var(--panel-inset); padding: 18px 18px 16px; border-left: 3px solid var(--lavender); min-width: 0; }
+    .nt-card.s-lansert { border-left-color: var(--mint); }
+    .nt-card.s-godkjent { border-left-color: var(--peach); }
+    .nt-card.s-anerkj { border-left-color: var(--peach); }
+    .nt-card.s-eu { border-left-color: var(--lavender); }
+    .nt-card.s-ukjent { border-left-color: #3a4457; }
+    .nt-card.is-norge { border-left-color: var(--salmon); box-shadow: var(--panel-inset), 0 0 0 1px rgba(205, 98, 106, .55); }
+    .nt-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+    .nt-iso { font-size: 11px; font-weight: 600; color: var(--muted); background: var(--panel-2); border-radius: 6px; padding: 2px 7px; letter-spacing: .04em; }
+    .nt-land { font-size: 17px; font-weight: 600; letter-spacing: -.02em; }
+    .nt-when { font-size: 13px; font-weight: 500; color: var(--muted); margin: 6px 0 2px; }
+    .nt-big { font-size: 20px; font-weight: 600; letter-spacing: -.02em; color: #fff; }
+    .nt-card .units { grid-template-columns: repeat(3, 1fr); margin: 10px 0 4px; }
+    .nt-why { margin-top: 10px; font-size: 13px; line-height: 1.5; color: var(--body); }
+    .nt-tidligst { margin-top: 6px; font-size: 12px; line-height: 1.45; color: var(--muted); }
+    .nt-foot { margin-top: 10px; font-size: 12px; color: var(--meta); display: flex; flex-wrap: wrap; gap: 4px 10px; }
+    .nt-foot a { color: var(--mint); }
+    .nt-norge-lede { margin-top: 10px; font-size: 14px; line-height: 1.5; color: #c5cddb; }
+    .nt-method { margin-top: 34px; }
+    .nt-method h2 { font-size: 17px; font-weight: 600; margin-bottom: 12px; }
+    .nt-method ol { padding-left: 20px; }
+    .nt-method li, .nt-method p { font-size: 14px; line-height: 1.6; color: var(--body); margin-bottom: 8px; }
+    .nt-method strong { color: #fff; font-weight: 500; }
+    .badge.s-lansert i { background: var(--mint); }
+    .badge.s-godkjent i, .badge.s-anerkj i { background: var(--peach); }
+    .badge.s-eu i { background: var(--lavender); }
+    .badge.s-ukjent i { background: #6b7588; }
+    .badge.est-tag { color: var(--peach); border-color: rgba(223, 159, 112, .35); }
+    @media (max-width: 820px) { .nt-top { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap nt-wrap" id="top">
+    <header class="topbar">
+      <a class="brand-mark" href="/">fsdnorge</a>
+      <a class="nt-back" href="/">← Til forsiden</a>
+    </header>
+
+    <section class="nt-hero">
+      <h1>Når kommer FSD Supervised i ditt land?</h1>
+      <p class="nt-lede" id="nt-lede">FSD Supervised er godkjent i <span id="nt-lede-tall">8</span> av 27 EU-land. I Norge venter eierne fortsatt. Her ser du status for hvert land, en estimert dato der vi har grunnlag for det, og kildene bak.</p>
+      <span class="nt-flag">Alle datoer i nedtellingen er estimater, ikke vedtak</span>
+      <p class="nt-meta">Sist oppdatert: <span id="nt-sist">29. september 2026</span></p>
+    </section>
+
+    <div class="nt-top">
+      <div id="nt-norge-slot"></div>
+      <div class="stat-card nt-eu" id="nt-eu">
+        <div class="split-stats">
+          <div>
+            <div class="n"><span id="nt-land-tall">8</span> / 27 land</div>
+            <div class="lbl">i EU har godkjent</div>
+          </div>
+          <div>
+            <div class="n"><span id="nt-bef-tall">12,7</span> %</div>
+            <div class="lbl">av EU-befolkningen</div>
+          </div>
+        </div>
+        <p>EUs tekniske komité for motorkjøretøy (TCMV) møtes 6. oktober, men agendaen har ingen avstemning om FSD Supervised. Tidligste mulige votum er i desember 2026. Et ja krever 15 av 27 land og 65 % av EU-befolkningen.</p>
+      </div>
+    </div>
+
+    <h2 class="nt-h2 est" id="h-est">Estimat med nedtelling</h2>
+    <div class="nt-grid" id="nt-est"></div>
+
+    <h2 class="nt-h2" id="h-lansert">Allerede lansert</h2>
+    <div class="nt-grid" id="nt-lansert"></div>
+
+    <h2 class="nt-h2 none" id="h-none">Ingen estimat ennå</h2>
+    <div class="nt-grid" id="nt-none"></div>
+
+    <section class="panel nt-method" id="metode" aria-labelledby="metode-head">
+      <h2 id="metode-head">Slik lager vi estimatene</h2>
+      <p>Vi finner aldri på datoer. Et estimat er en beregning ut fra kildene under hvert land – ikke et løfte fra Tesla eller myndighetene.</p>
+      <ol>
+        <li><strong>Lansert:</strong> Datoen er den første dokumenterte utrullingen til kunder, kunngjort av Tesla eller observert hos eiere. Mangler den, viser vi godkjenningsdatoen og sier fra.</li>
+        <li><strong>Godkjent, utrulling snart:</strong> Godkjenningsdatoen pluss den typiske ventetiden fra godkjenning til første utrulling i landene som allerede har fått FSD Supervised. <span id="nt-grunnlag"></span></li>
+        <li><strong>Venter på anerkjennelse:</strong> Landet behandler den nederlandske godkjenningen selv. Vi lager bare et estimat når neste steg i saken har en kjent dato eller frist.</li>
+        <li><strong>Venter på EU-vedtak:</strong> Landet venter på en felles avgjørelse i EU. Vi lager ikke noe estimat før TCMV har satt saken opp til avstemning. Etter et ja må Europakommisjonen også fatte et formelt vedtak.</li>
+        <li><strong>Ukjent:</strong> Vi har ikke funnet noen offentlig sak. Da blir det ikke noe estimat.</li>
+      </ol>
+      <p><strong>Sikkerhet:</strong> høy betyr at datoen er dokumentert av en myndighet, Tesla eller flere uavhengige kilder. Middels betyr at datoen hviler på én kilde, eierinnlegg eller en beregning. Lav betyr at vi mangler grunnlag for en dato.</p>
+      <p>Vi sjekker kildene hver dag. Endrer fakta seg, endrer vi estimatet – og da ser du det i «sist oppdatert».</p>
+    </section>
+
+    <footer class="site-footer">
+      <p><strong>fsdnorge</strong> – uoffisiell statusside for Tesla FSD Supervised i Norge.<br>
+      FSD Supervised er SAE nivå 2-førerstøtte. Du er alltid ansvarlig. Ingen tilknytning til Tesla eller Statens vegvesen.</p>
+    </footer>
+  </div>
+
+  <script>
+  (function () {
+    var STATUS = {
+      "lansert": { label: "Lansert", cls: "s-lansert" },
+      "godkjent, utrulling snart": { label: "Godkjent, utrulling snart", cls: "s-godkjent" },
+      "venter på anerkjennelse": { label: "Venter på anerkjennelse", cls: "s-anerkj" },
+      "venter på EU-vedtak": { label: "Venter på EU-vedtak", cls: "s-eu" },
+      "ukjent": { label: "Ukjent", cls: "s-ukjent" }
+    };
+    var STATUS_ORDER = ["godkjent, utrulling snart", "venter på anerkjennelse", "venter på EU-vedtak", "ukjent"];
+    var cards = [];
+
+    function pad(n) { return String(n).padStart(2, "0"); }
+
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return "&#" + c.charCodeAt(0) + ";";
+      });
+    }
+
+    function fmtDate(ymd) {
+      if (!ymd) return "";
+      try {
+        return new Date(ymd + "T12:00:00Z").toLocaleDateString("nb-NO", {
+          day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Oslo"
+        });
+      } catch (e) { return ymd; }
+    }
+
+    function fmtDateTime(iso) {
+      if (!iso) return "";
+      try {
+        var d = new Date(iso);
+        var dag = d.toLocaleDateString("nb-NO", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Oslo" });
+        var kl = d.toLocaleTimeString("nb-NO", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Oslo" }).replace(":", ".");
+        return dag + " kl. " + kl;
+      } catch (e) { return iso; }
+    }
+
+    function target(ymd) {
+      var p = ymd.split("-");
+      return new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2]), 0, 0, 0);
+    }
+
+    function host(u) {
+      try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return "kilde"; }
+    }
+
+    function sourcesHtml(list) {
+      var out = [];
+      (list || []).forEach(function (u, i) {
+        if (!/^https:\/\//.test(u)) return;
+        out.push('<a href="' + esc(u) + '" rel="noopener" target="_blank">[' + (i + 1) + "] " + esc(host(u)) + "</a>");
+      });
+      return out.join(" ");
+    }
+
+    function cardHtml(c, isNorge) {
+      var st = STATUS[c.status] || STATUS.ukjent;
+      var h = '<div class="nt-head"><span class="nt-iso">' + esc(c.iso) + '</span>' +
+        '<span class="nt-land">' + esc(c.land) + "</span>" +
+        '<span class="badge ' + st.cls + '"><i></i> ' + esc(st.label) + "</span></div>";
+
+      if (c.status === "lansert") {
+        if (c.lansert_dato) {
+          h += '<div class="nt-big">Lansert ' + esc(fmtDate(c.lansert_dato)) + "</div>";
+          if (c.godkjent_dato) h += '<div class="nt-when">Godkjent ' + esc(fmtDate(c.godkjent_dato)) + "</div>";
+        } else {
+          h += '<div class="nt-big">Lansert</div>' +
+            '<div class="nt-when">Godkjent ' + esc(fmtDate(c.godkjent_dato)) + " · utrullingsdato ikke bekreftet</div>";
+        }
+      } else if (c.estimert_dato) {
+        h += '<div class="nt-when"><span class="badge est-tag">estimat</span> ' + esc(fmtDate(c.estimert_dato)) + "</div>" +
+          '<div class="units" data-target="' + esc(c.estimert_dato) + '" aria-live="polite">' +
+          '<div class="unit"><span class="n" data-part="days">––</span><span class="u">dager</span></div>' +
+          '<div class="unit"><span class="n" data-part="hours">––</span><span class="u">timer</span></div>' +
+          '<div class="unit"><span class="n" data-part="mins">––</span><span class="u">min</span></div>' +
+          "</div>" +
+          '<p class="cd-done" hidden>Estimatet er passert – vi venter på bekreftet utrulling</p>';
+        if (c.godkjent_dato) h += '<div class="nt-when">Godkjent ' + esc(fmtDate(c.godkjent_dato)) + "</div>";
+      } else {
+        h += '<div class="nt-big">Ingen estimat ennå</div>';
+      }
+
+      if (isNorge) {
+        h += '<p class="nt-norge-lede">Danske eiere har kjørt med FSD Supervised siden juni. Norske eiere venter fortsatt på Brussel – og deretter på Statens vegvesen.</p>';
+      }
+      h += '<p class="nt-why">' + esc(c.begrunnelse) + "</p>";
+      if (!c.estimert_dato && c.status !== "lansert" && c.tidligst) h += '<p class="nt-tidligst">' + esc(c.tidligst) + "</p>";
+      h += '<div class="nt-foot"><span>Sikkerhet: ' + esc(c.sikkerhet) + "</span><span>Sjekket " + esc(fmtDate(c.sist_oppdatert)) + "</span></div>";
+      h += '<div class="nt-foot">Kilder: ' + sourcesHtml(c.kilder) + "</div>";
+      return h;
+    }
+
+    function makeCard(c, isNorge) {
+      var st = STATUS[c.status] || STATUS.ukjent;
+      var el = document.createElement("article");
+      el.className = "nt-card " + st.cls + (isNorge ? " is-norge" : "");
+      el.innerHTML = cardHtml(c, isNorge);
+      return el;
+    }
+
+    function tick() {
+      var now = new Date();
+      cards.forEach(function (el) {
+        var u = el.querySelector(".units[data-target]");
+        if (!u) return;
+        var ms = target(u.getAttribute("data-target")).getTime() - now.getTime();
+        var done = el.querySelector(".cd-done");
+        if (ms <= 0) {
+          u.hidden = true;
+          if (done) done.hidden = false;
+          return;
+        }
+        var m = Math.floor(ms / 60000);
+        u.querySelector('[data-part="days"]').textContent = pad(Math.floor(m / 1440));
+        u.querySelector('[data-part="hours"]').textContent = pad(Math.floor((m % 1440) / 60));
+        u.querySelector('[data-part="mins"]').textContent = pad(m % 60);
+      });
+    }
+
+    function render(data) {
+      var land = (data && data.land) || [];
+      var est = [], lansert = [], none = [];
+      land.forEach(function (c) {
+        if (c.status === "lansert") lansert.push(c);
+        else if (c.estimert_dato) est.push(c);
+        else none.push(c);
+      });
+      est.sort(function (a, b) { return a.estimert_dato.localeCompare(b.estimert_dato); });
+      lansert.sort(function (a, b) {
+        return (a.lansert_dato || a.godkjent_dato || "").localeCompare(b.lansert_dato || b.godkjent_dato || "");
+      });
+      none.sort(function (a, b) {
+        var d = STATUS_ORDER.indexOf(a.status) - STATUS_ORDER.indexOf(b.status);
+        return d !== 0 ? d : a.land.localeCompare(b.land, "nb");
+      });
+
+      function fill(id, list, headId) {
+        var box = document.getElementById(id);
+        box.innerHTML = "";
+        list.forEach(function (c) {
+          var el = makeCard(c, c.iso === "NO");
+          box.appendChild(el);
+          cards.push(el);
+        });
+        if (!list.length) document.getElementById(headId).hidden = true;
+      }
+      fill("nt-est", est, "h-est");
+      fill("nt-lansert", lansert, "h-lansert");
+      fill("nt-none", none, "h-none");
+
+      var no = land.filter(function (c) { return c.iso === "NO"; })[0];
+      if (no) {
+        var slot = document.getElementById("nt-norge-slot");
+        var top = makeCard(no, true);
+        slot.appendChild(top);
+        cards.push(top);
+      }
+
+      if (data.sist_oppdatert_iso) document.getElementById("nt-sist").textContent = fmtDateTime(data.sist_oppdatert_iso);
+      var o = data.oppsummering || {};
+      if (o.eu_godkjent != null) {
+        document.getElementById("nt-land-tall").textContent = String(o.eu_godkjent);
+        document.getElementById("nt-lede-tall").textContent = String(o.eu_godkjent);
+      }
+      if (o.eu_befolkning_prosent != null) document.getElementById("nt-bef-tall").textContent = String(o.eu_befolkning_prosent).replace(".", ",");
+
+      var m = data.metode || {};
+      if (m.grunnlag && m.grunnlag.length) {
+        var parts = m.grunnlag.map(function (g) { return g.iso + " " + g.dager; });
+        var med = String(m.utrullingsforsinkelse_median_dager).replace(".", ",");
+        document.getElementById("nt-grunnlag").textContent =
+          "Grunnlaget i dag (dager fra godkjenning til utrulling): " + parts.join(", ") +
+          ". Medianen er " + med + " dager, rundet opp til " + m.utrullingsforsinkelse_brukt_dager + ".";
+      }
+      tick();
+    }
+
+    fetch("/data/nedtelling.json", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (d) render(d);
+        else document.getElementById("nt-est").textContent = "Kunne ikke laste data/nedtelling.json.";
+      })
+      .catch(function () { document.getElementById("nt-est").textContent = "Kunne ikke laste data/nedtelling.json."; });
+    setInterval(tick, 30000);
+  })();
+  </script>
+</body>
+</html>
