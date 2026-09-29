@@ -1,6 +1,6 @@
 {
-  "sist_sjekket": "2026-09-28",
-  "sist_sjekket_nb": "28. september 2026",
+  "sist_sjekket": "2026-09-29",
+  "sist_sjekket_nb": "29. september 2026",
   "sist_oppdatert_iso": "2026-09-25T17:16:00+02:00",
   "sist_oppdatert_nb": "25. september 2026 kl. 17.16",
   "svv_sist_oppdatert_nb": "3. juli 2026",
@@ -50,7 +50,7 @@
     "siste_utfall": "diskusjon uten avstemning",
     "neste_dato": "2026-10-06",
     "neste_sikkerhet": "agenda",
-    "dager_til": 8,
+    "dager_til": 7,
     "oktober_godkjenning_prosent": 30,
     "etikett": "Sjanse for at TCMV godkjenner i oktober",
     "sannsynlig_utfall": "åpent",
@@ -205,6 +205,11 @@
     },
     {
       "dato": "2026-09-28",
+      "prosent": 1,
+      "merknad": "Ingen materiell endring"
+    },
+    {
+      "dato": "2026-09-29",
       "prosent": 1,
       "merknad": "Ingen materiell endring"
     }
