@@ -1,6 +1,6 @@
 {
-  "sist_sjekket": "2026-09-29",
-  "sist_sjekket_nb": "29. september 2026",
+  "sist_sjekket": "2026-09-30",
+  "sist_sjekket_nb": "30. september 2026",
   "sist_oppdatert_iso": "2026-09-29T11:25:00+02:00",
   "sist_oppdatert_nb": "29. september 2026 kl. 11.25",
   "svv_sist_oppdatert_nb": "3. juli 2026",
@@ -55,7 +55,7 @@
     "siste_utfall": "diskusjon uten avstemning",
     "neste_dato": "2026-10-06",
     "neste_sikkerhet": "agenda",
-    "dager_til": 7,
+    "dager_til": 6,
     "oktober_godkjenning_prosent": 30,
     "etikett": "Sjanse for at TCMV godkjenner i oktober",
     "sannsynlig_utfall": "åpent",
@@ -217,6 +217,11 @@
       "dato": "2026-09-29",
       "prosent": 1,
       "merknad": "Kroatia åttende EU-land ifølge Tesla Europe; ingen norsk endring"
+    },
+    {
+      "dato": "2026-09-30",
+      "prosent": 1,
+      "merknad": "Ingen materiell endring"
     }
   ],
   "series_02": {
@@ -226,7 +231,7 @@
     "dato_nb": "Sent i januar 2027"
   },
   "side_layout": "singleside-dashboard-2026-09-27",
-  "materiell_endring": true,
+  "materiell_endring": false,
   "timeline": [
     {
       "dato": "2026-04-10",
