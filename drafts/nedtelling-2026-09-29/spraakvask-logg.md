@@ -45,3 +45,48 @@ Ventetid fra godkjenning til første dokumenterte utrulling: NL 1 (10.→11.04),
 
 ## Resultat
 Hard språksjekkliste: bestått. Validator: `python3 scripts/validate_nedtelling.py` → 0 feil, 0 advarsler.
+
+---
+
+# Runde 2 (30.09.2026): scenariomodell – alle land får dato
+
+Omfang: `nedtelling/index.html` (ingress, meta/OG/Twitter, seksjoner, kortmerker, metodeboks, Norge-kort), `data/nedtelling.json` (versjon 2: `modell`-blokk, `metode`/`modell_steg`/`fakta` per land), maltekster i `scripts/modell_nedtelling.py`, `scripts/validate_nedtelling.py`, `daglig-oppdatering.md`.
+Skills lest på nytt før vask: fsd-redaksjon, bie-stil, norsk-bokm-l, norsk-bokmaal-rettskrivning (komma.md, forvekslinger.md, llm-typiske-feil.md).
+
+## Redaksjonelt
+- Oles bestilling 30.09: ingen «Ingen estimat ennå». Seksjonen er fjernet. To nye seksjoner: «Estimat ut fra kildene» (observert) og «Modellert estimat».
+- Skillet står på hvert kort: merkelappen «estimat» (oransje) eller «modellert estimat» (lilla) + «modellsteg N». Hver begrunnelse starter med «Modellsteg …».
+- Antagelser er merket med ordet «antagelse» der de brukes: TCMV-dato 1. desember 2026, påslag 30 og 180 dager, EØS-etterslep for Island og Liechtenstein.
+- Norge: aldri omtalt som godkjent. Datoen er betinget («Gjentar det seg, får norske eiere FSD Supervised først 27. juli 2028 – mer enn ett år etter EU-landene»). Kritikken rettes mot etterslepet (BlueCruise: 470 dager), ikke mot teknologien. Kortteksten: «… og deretter på Statens vegvesen, som brukte 470 dager på BlueCruise.»
+- Meta: «Norge: ingen estimat ennå» → «Norge havner bakerst i modellen fordi Statens vegvesen venter på EU» / «Norge havner bakerst i køen» (stemmer: NO/IS/LI har seneste dato).
+
+## Faktagrunnlag (sjekket 30.09)
+- Signal → vedtak: BE 12.05 (VRT: De Ridder gir testlov) → 10.06 = 29 d; CZ 10.06 (Autohled: departementet uttaler seg første gang på X, onsdag 10. juni) → 21.09 = 103 d; SI 11.07 (Portal24: Vrtovec «v kratkem tudi pri nas») → 07.09 = 58 d; HR 10.09 (DZM til Autonet, via eletric-vehicles.com) → 29.09 = 19 d. Median 43,5 → 44, maks 103. LT/EE/DK utelatt (ingen datert myndighetssignal funnet), NL utelatt (ga selve godkjenningen).
+- Signaldatoer for åpne saker: LV 21.09 (bb.lv), FI 23.06 (Traficom), GR 20.05 (evwire), IE 10.05 (RTÉ), IT 13.07 (teslers.it).
+- TCMV → EU-godkjenning: ETSC 20.03.2024 («met … this week and approved» BlueCruise og BMW) → Ford 30.07.2024 («following approval by the European Commission») = 132 d.
+- EU → Norge: Ford 30.07.2024 → Ford Motor Norge 12.11.2025 («Statens vegvesen og Samferdselsdepartementet har konkludert at EUs godkjenning av BlueCruise også er gjeldende i Norge») = 470 d.
+- Kroatia 30.09: fortsatt ikke rapportert utrullet (Tesla: «Rollout will begin soon»). Estimat 1. oktober står.
+
+## Språkvask (rettskrivning)
+- Komma: fjernet komma foran etterstilt «fordi»-setning (3 steder: meta og metodeboks) – Språkrådet: normalt ikke komma foran etterstilt leddsetning.
+- Komma etter innskutt nødvendig relativsetning beholdt: «I landene som har godkjent, gikk det …»; «At Island bruker like lang tid, er en antagelse.»
+- «bruker vi lengste ventetid» → «bruker vi den lengste ventetiden» (bestemt form med adjektiv krever «den»).
+- «Til slutt kommer ventetiden til utrulling» → «Til slutt legger vi på ventetiden til utrulling» (aktivt verb, samme verb som i resten av metoden).
+- «Der ingen vedtak finnes» → «Der det ikke finnes noe vedtak» (mer naturlig ordstilling).
+- «TCMV sa ja uka fram til 20. mars» → «i uka fram til»; komma mellom to helsetninger i parentes → semikolon.
+- «Det er en antagelse: Ingen avstemning …» → «Datoen er en antagelse. Ingen avstemning …» (to korte setninger).
+- Tall: «to dager» med bokstaver (≤ 12) i maltekstene via funksjon `antall()`; 30, 44, 103, 132, 180, 470 med sifre. Desimalkomma (43,5; 1,5).
+- «antagelse» valgt (Bokmålsordboka har antagelse/antakelse som sidestilte former) og brukt konsekvent. «fram» konsekvent.
+- Tankestrek (–) i «Steg 1 – åpen nasjonal sak» osv. og i Norge-teksten; pil (→) bare i merket «modellsteg 1 → 2».
+
+## Klart språk / anti-maskin
+- Maltekstene er kortet ned og variert: steg 4 åpner med «Uten en kjent nasjonal sak …» (unngår gjentakelse av «Vi har ikke funnet noen offentlig nasjonal sak» rett før), steg 5 bruker «(utenfor EU og EØS)» i stedet for å gjenta landnavnet.
+- GB-fakta skrevet om for ikke å si «står utenfor» to ganger.
+- Ingen tomme forsterkere, ingen «hen», ingen tidskoder (validatoren sjekker også `fakta`).
+
+## Bevisst urørt
+- Egennavn: BlueCruise, Ford, TCMV, RDW, CSDD, Traficom, Statens vegvesen, Samferdselsdepartementet. URL-er.
+- JS-logikk utenom tekst. `esc()` bruker fortsatt numeriske tegnkoder.
+
+## Resultat
+Hard språksjekkliste: bestått. `python3 scripts/modell_nedtelling.py --check` → 0 avvik. `python3 scripts/validate_nedtelling.py` → 0 feil, 0 advarsler. `node --check` på skriptet i `nedtelling/index.html`: OK.
