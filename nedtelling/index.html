@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Når kommer FSD Supervised i ditt land? Nedtelling per land – fsdnorge</title>
-  <meta name="description" content="Estimert dato for FSD Supervised i hvert europeisk land, med kilder og metode. Norge har ikke noe estimat ennå: Statens vegvesen venter på EU.">
+  <meta name="description" content="Estimert dato for FSD Supervised i hvert europeisk land, med kilder og en åpen modell. Norge havner bakerst i modellen fordi Statens vegvesen venter på EU.">
   <link rel="canonical" href="https://fsdnorge.no/nedtelling/">
   <meta name="theme-color" content="#070b14">
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -14,13 +14,13 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="fsdnorge.no">
   <meta property="og:title" content="Når kommer FSD Supervised i ditt land?">
-  <meta property="og:description" content="Nedtelling per land med estimert dato, kilder og metode. Norge: ingen estimat ennå.">
+  <meta property="og:description" content="Nedtelling per land med estimert dato, kilder og åpen modell. Norge havner bakerst i køen.">
   <meta property="og:url" content="https://fsdnorge.no/nedtelling/">
   <meta property="og:image" content="https://fsdnorge.no/og-default.png">
   <meta property="og:locale" content="nb_NO">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Når kommer FSD Supervised i ditt land?">
-  <meta name="twitter:description" content="Nedtelling per land med estimert dato, kilder og metode. Norge: ingen estimat ennå.">
+  <meta name="twitter:description" content="Nedtelling per land med estimert dato, kilder og åpen modell. Norge havner bakerst i køen.">
   <meta name="twitter:image" content="https://fsdnorge.no/og-default.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +39,7 @@
     .nt-eu .split-stats { margin-bottom: 14px; }
     .nt-h2 { font-size: 15px; font-weight: 600; color: #fff; margin: 30px 0 14px; padding-bottom: 8px; border-bottom: 2px solid var(--mint); display: inline-block; }
     .nt-h2.est { border-bottom-color: var(--peach); }
-    .nt-h2.none { border-bottom-color: var(--lavender); }
+    .nt-h2.mod { border-bottom-color: var(--lavender); }
     .nt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
     .nt-card { background: var(--panel); border-radius: var(--r); box-shadow: var(--panel-inset); padding: 18px 18px 16px; border-left: 3px solid var(--lavender); min-width: 0; }
     .nt-card.s-lansert { border-left-color: var(--mint); }
@@ -55,7 +55,6 @@
     .nt-big { font-size: 20px; font-weight: 600; letter-spacing: -.02em; color: #fff; }
     .nt-card .units { grid-template-columns: repeat(3, 1fr); margin: 10px 0 4px; }
     .nt-why { margin-top: 10px; font-size: 13px; line-height: 1.5; color: var(--body); }
-    .nt-tidligst { margin-top: 6px; font-size: 12px; line-height: 1.45; color: var(--muted); }
     .nt-foot { margin-top: 10px; font-size: 12px; color: var(--meta); display: flex; flex-wrap: wrap; gap: 4px 10px; }
     .nt-foot a { color: var(--mint); }
     .nt-norge-lede { margin-top: 10px; font-size: 14px; line-height: 1.5; color: #c5cddb; }
@@ -69,6 +68,9 @@
     .badge.s-eu i { background: var(--lavender); }
     .badge.s-ukjent i { background: #6b7588; }
     .badge.est-tag { color: var(--peach); border-color: rgba(223, 159, 112, .35); }
+    .badge.mod-tag { color: var(--lavender); border-color: rgba(167, 139, 250, .4); }
+    .nt-steg { font-size: 12px; color: var(--meta); margin-left: 4px; }
+    .nt-method h3 { font-size: 15px; font-weight: 600; color: #fff; margin: 18px 0 8px; }
     @media (max-width: 820px) { .nt-top { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -81,7 +83,7 @@
 
     <section class="nt-hero">
       <h1>Når kommer FSD Supervised i ditt land?</h1>
-      <p class="nt-lede" id="nt-lede">FSD Supervised er godkjent i <span id="nt-lede-tall">8</span> av 27 EU-land. I Norge venter eierne fortsatt. Her ser du status for hvert land, en estimert dato der vi har grunnlag for det, og kildene bak.</p>
+      <p class="nt-lede" id="nt-lede">FSD Supervised er godkjent i <span id="nt-lede-tall">8</span> av 27 EU-land. I Norge venter eierne fortsatt. Her ser du status, en estimert dato og kildene for hvert land. Der det ikke finnes noe vedtak, regner vi ut datoen med en åpen modell og merker den «modellert estimat».</p>
       <span class="nt-flag">Alle datoer i nedtellingen er estimater, ikke vedtak</span>
       <p class="nt-meta">Sist oppdatert: <span id="nt-sist">29. september 2026</span></p>
     </section>
@@ -103,27 +105,35 @@
       </div>
     </div>
 
-    <h2 class="nt-h2 est" id="h-est">Estimat med nedtelling</h2>
+    <h2 class="nt-h2 est" id="h-est">Estimat ut fra kildene</h2>
     <div class="nt-grid" id="nt-est"></div>
+
+    <h2 class="nt-h2 mod" id="h-mod">Modellert estimat</h2>
+    <div class="nt-grid" id="nt-mod"></div>
 
     <h2 class="nt-h2" id="h-lansert">Allerede lansert</h2>
     <div class="nt-grid" id="nt-lansert"></div>
 
-    <h2 class="nt-h2 none" id="h-none">Ingen estimat ennå</h2>
-    <div class="nt-grid" id="nt-none"></div>
-
     <section class="panel nt-method" id="metode" aria-labelledby="metode-head">
       <h2 id="metode-head">Slik lager vi estimatene</h2>
-      <p>Vi finner aldri på datoer. Et estimat er en beregning ut fra kildene under hvert land – ikke et løfte fra Tesla eller myndighetene.</p>
+      <p>Alle land har en dato, men datoene er ikke like sterke. Et <strong>estimat</strong> bygger på et kjent vedtak. Et <strong>modellert estimat</strong> er regnet ut med modellen under, og hver antagelse står oppført. Ingen av datoene er løfter fra Tesla eller myndighetene, og vi finner aldri på fakta.</p>
+
+      <h3>Estimat ut fra kildene</h3>
       <ol>
         <li><strong>Lansert:</strong> Datoen er den første dokumenterte utrullingen til kunder, kunngjort av Tesla eller observert hos eiere. Mangler den, viser vi godkjenningsdatoen og sier fra.</li>
         <li><strong>Godkjent, utrulling snart:</strong> Godkjenningsdatoen pluss den typiske ventetiden fra godkjenning til første utrulling i landene som allerede har fått FSD Supervised. <span id="nt-grunnlag"></span></li>
-        <li><strong>Venter på anerkjennelse:</strong> Landet behandler den nederlandske godkjenningen selv. Vi lager bare et estimat når neste steg i saken har en kjent dato eller frist.</li>
-        <li><strong>Venter på EU-vedtak:</strong> Landet venter på en felles avgjørelse i EU. Vi lager ikke noe estimat før TCMV har satt saken opp til avstemning. Etter et ja må Europakommisjonen også fatte et formelt vedtak.</li>
-        <li><strong>Ukjent:</strong> Vi har ikke funnet noen offentlig sak. Da blir det ikke noe estimat.</li>
       </ol>
-      <p><strong>Sikkerhet:</strong> høy betyr at datoen er dokumentert av en myndighet, Tesla eller flere uavhengige kilder. Middels betyr at datoen hviler på én kilde, eierinnlegg eller en beregning. Lav betyr at vi mangler grunnlag for en dato.</p>
-      <p>Vi sjekker kildene hver dag. Endrer fakta seg, endrer vi estimatet – og da ser du det i «sist oppdatert».</p>
+
+      <h3>Modellert estimat – fem steg</h3>
+      <ol>
+        <li><strong>Steg 1 – åpen nasjonal sak:</strong> Vi tar datoen for det første offentlige signalet om saken og legger på ventetiden vi har sett fra et slikt signal til vedtak. <span id="nt-signal">Belgia 29 dager, Tsjekkia 103, Slovenia 58 og Kroatia 19. Medianen er 43,5 dager, rundet opp til 44. Lengste ventetid er 103 dager.</span> Litauen, Estland og Danmark er ikke med fordi vi ikke har funnet et datert offentlig signal fra myndighetene før vedtaket. Nederland er ikke med fordi RDW, den nederlandske typegodkjenningsmyndigheten, ga selve godkjenningen. Er medianen passert uten vedtak, bruker vi den lengste ventetiden. Er også den passert, går landet over til steg 2. Til slutt legger vi på ventetiden til utrulling.</li>
+        <li><strong>Steg 2 – EU-scenariet:</strong> <span id="nt-tcmv">Vi antar at EUs tekniske komité for motorkjøretøy (TCMV) sier ja 1. desember 2026. Datoen er en antagelse. Ingen avstemning er satt opp, og desember er tidligste mulige votum.</span> Så legger vi på tiden det tok fra ja i TCMV til EU-godkjenningen av Fords BlueCruise var på plass: <span id="nt-eu-dager">132</span> dager (TCMV sa ja i uka fram til 20. mars 2024; Ford meldte EU-godkjenningen 30. juli 2024). Med ventetiden til utrulling gir det <span id="nt-eu-dato">14. april 2027</span>.</li>
+        <li><strong>Steg 3 – Norge og EØS:</strong> Statens vegvesen sier at etaten følger EU. Vi legger derfor det norske etterslepet fra BlueCruise på EU-scenariet: Fra EU-godkjenningen 30. juli 2024 gikk det <span id="nt-eos-dager">470</span> dager til Statens vegvesen og Samferdselsdepartementet slo fast 12. november 2025 at den også gjelder i Norge. Island og Liechtenstein får samme etterslep. For dem er det en antagelse.</li>
+        <li><strong>Steg 4 – ingen kjent sak:</strong> EU-scenariet pluss <span id="nt-ukjent">30</span> dager. Påslaget er en antagelse.</li>
+        <li><strong>Steg 5 – utenfor EU og EØS:</strong> Sveits og Storbritannia: EU-scenariet pluss <span id="nt-ikkeeu">180</span> dager. Påslaget er en antagelse; vi har ingen observert presedens.</li>
+      </ol>
+      <p><strong>Sikkerhet:</strong> høy betyr at datoen er dokumentert av en myndighet, Tesla eller flere uavhengige kilder. Middels betyr at datoen hviler på én kilde, eierinnlegg eller en enkel beregning ut fra et kjent vedtak. Lav betyr at datoen kommer fra modellen. Alle modellerte estimater har lav sikkerhet.</p>
+      <p>Vi sjekker kildene og regner modellen på nytt hver dag. Får vi en bekreftet dato for avstemningen i TCMV, et nytt vedtak eller et nytt signal, flytter datoene seg – og det ser du i «sist oppdatert».</p>
     </section>
 
     <footer class="site-footer">
@@ -141,8 +151,8 @@
       "venter på EU-vedtak": { label: "Venter på EU-vedtak", cls: "s-eu" },
       "ukjent": { label: "Ukjent", cls: "s-ukjent" }
     };
-    var STATUS_ORDER = ["godkjent, utrulling snart", "venter på anerkjennelse", "venter på EU-vedtak", "ukjent"];
     var cards = [];
+    var EOS = 470;
 
     function pad(n) { return String(n).padStart(2, "0"); }
 
@@ -204,7 +214,11 @@
             '<div class="nt-when">Godkjent ' + esc(fmtDate(c.godkjent_dato)) + " · utrullingsdato ikke bekreftet</div>";
         }
       } else if (c.estimert_dato) {
-        h += '<div class="nt-when"><span class="badge est-tag">estimat</span> ' + esc(fmtDate(c.estimert_dato)) + "</div>" +
+        var tag = c.metode === "modell"
+          ? '<span class="badge mod-tag">modellert estimat</span> '
+          : '<span class="badge est-tag">estimat</span> ';
+        var steg = c.metode === "modell" && c.modell_steg ? '<span class="nt-steg">· modellsteg ' + esc(c.modell_steg) + "</span>" : "";
+        h += '<div class="nt-when">' + tag + esc(fmtDate(c.estimert_dato)) + steg + "</div>" +
           '<div class="units" data-target="' + esc(c.estimert_dato) + '" aria-live="polite">' +
           '<div class="unit"><span class="n" data-part="days">––</span><span class="u">dager</span></div>' +
           '<div class="unit"><span class="n" data-part="hours">––</span><span class="u">timer</span></div>' +
@@ -213,14 +227,13 @@
           '<p class="cd-done" hidden>Estimatet er passert – vi venter på bekreftet utrulling</p>';
         if (c.godkjent_dato) h += '<div class="nt-when">Godkjent ' + esc(fmtDate(c.godkjent_dato)) + "</div>";
       } else {
-        h += '<div class="nt-big">Ingen estimat ennå</div>';
+        h += '<div class="nt-when">Dato mangler i datagrunnlaget</div>';
       }
 
       if (isNorge) {
-        h += '<p class="nt-norge-lede">Danske eiere har kjørt med FSD Supervised siden juni. Norske eiere venter fortsatt på Brussel – og deretter på Statens vegvesen.</p>';
+        h += '<p class="nt-norge-lede">Danske eiere har kjørt med FSD Supervised siden juni. Norske eiere venter på Brussel – og deretter på Statens vegvesen, som brukte ' + esc(EOS) + ' dager på BlueCruise.</p>';
       }
       h += '<p class="nt-why">' + esc(c.begrunnelse) + "</p>";
-      if (!c.estimert_dato && c.status !== "lansert" && c.tidligst) h += '<p class="nt-tidligst">' + esc(c.tidligst) + "</p>";
       h += '<div class="nt-foot"><span>Sikkerhet: ' + esc(c.sikkerhet) + "</span><span>Sjekket " + esc(fmtDate(c.sist_oppdatert)) + "</span></div>";
       h += '<div class="nt-foot">Kilder: ' + sourcesHtml(c.kilder) + "</div>";
       return h;
@@ -255,19 +268,21 @@
 
     function render(data) {
       var land = (data && data.land) || [];
-      var est = [], lansert = [], none = [];
+      if (data.modell && data.modell.eos_etterslep_dager != null) EOS = data.modell.eos_etterslep_dager;
+      var est = [], mod = [], lansert = [];
       land.forEach(function (c) {
         if (c.status === "lansert") lansert.push(c);
-        else if (c.estimert_dato) est.push(c);
-        else none.push(c);
+        else if (c.metode === "modell") mod.push(c);
+        else est.push(c);
       });
-      est.sort(function (a, b) { return a.estimert_dato.localeCompare(b.estimert_dato); });
+      function byDate(a, b) {
+        var d = (a.estimert_dato || "9999").localeCompare(b.estimert_dato || "9999");
+        return d !== 0 ? d : a.land.localeCompare(b.land, "nb");
+      }
+      est.sort(byDate);
+      mod.sort(byDate);
       lansert.sort(function (a, b) {
         return (a.lansert_dato || a.godkjent_dato || "").localeCompare(b.lansert_dato || b.godkjent_dato || "");
-      });
-      none.sort(function (a, b) {
-        var d = STATUS_ORDER.indexOf(a.status) - STATUS_ORDER.indexOf(b.status);
-        return d !== 0 ? d : a.land.localeCompare(b.land, "nb");
       });
 
       function fill(id, list, headId) {
@@ -281,8 +296,8 @@
         if (!list.length) document.getElementById(headId).hidden = true;
       }
       fill("nt-est", est, "h-est");
+      fill("nt-mod", mod, "h-mod");
       fill("nt-lansert", lansert, "h-lansert");
-      fill("nt-none", none, "h-none");
 
       var no = land.filter(function (c) { return c.iso === "NO"; })[0];
       if (no) {
@@ -308,6 +323,28 @@
           "Grunnlaget i dag (dager fra godkjenning til utrulling): " + parts.join(", ") +
           ". Medianen er " + med + " dager, rundet opp til " + m.utrullingsforsinkelse_brukt_dager + ".";
       }
+
+      var mo = data.modell || {};
+      function setTxt(id, t) { var el = document.getElementById(id); if (el && t != null) el.textContent = String(t); }
+      var NAVN = {};
+      land.forEach(function (c) { NAVN[c.iso] = c.land; });
+      if (mo.signal_grunnlag && mo.signal_grunnlag.length) {
+        var sg = mo.signal_grunnlag.map(function (g) { return (NAVN[g.iso] || g.iso) + " " + g.dager; });
+        setTxt("nt-signal", "Grunnlaget i dag (dager fra signal til vedtak): " + sg.join(", ") +
+          ". Medianen er " + String(mo.signal_median_dager).replace(".", ",") + " dager, rundet opp til " +
+          mo.signal_brukt_dager + ". Lengste ventetid er " + mo.signal_maks_dager + " dager.");
+      }
+      if (mo.tcmv_dato) {
+        setTxt("nt-tcmv", mo.tcmv_dato_antatt
+          ? "Vi antar at EUs tekniske komité for motorkjøretøy (TCMV) sier ja " + fmtDate(mo.tcmv_dato) +
+            ". Datoen er en antagelse, og ingen avstemning er satt opp."
+          : "EUs tekniske komité for motorkjøretøy (TCMV) skal stemme " + fmtDate(mo.tcmv_dato) + ", og vi antar et ja.");
+      }
+      setTxt("nt-eu-dager", mo.eu_ikrafttredelse_dager);
+      if (mo.eu_scenario_dato) setTxt("nt-eu-dato", fmtDate(mo.eu_scenario_dato));
+      setTxt("nt-eos-dager", mo.eos_etterslep_dager);
+      setTxt("nt-ukjent", mo.ukjent_margin_dager);
+      setTxt("nt-ikkeeu", mo.ikke_eu_margin_dager);
       tick();
     }
 
