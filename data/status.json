@@ -1,8 +1,8 @@
 {
   "sist_sjekket": "2026-10-02",
   "sist_sjekket_nb": "2. oktober 2026",
-  "sist_oppdatert_iso": "2026-09-29T11:25:00+02:00",
-  "sist_oppdatert_nb": "29. september 2026 kl. 11.25",
+  "sist_oppdatert_iso": "2026-10-02T11:20:00+02:00",
+  "sist_oppdatert_nb": "2. oktober 2026 kl. 11.20",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Statens vegvesen åpner fortsatt ikke for vanlig kundekjøring. Tesla får teste med egne, trente sikkerhetsførere — begrenset testing, ikke din bil.",
@@ -54,18 +54,18 @@
     "siste_mote": "2026-06-30",
     "siste_utfall": "diskusjon uten avstemning",
     "neste_dato": "2026-10-06",
-    "neste_sikkerhet": "agenda",
+    "neste_sikkerhet": "ingen votum (SVV)",
     "dager_til": 4,
-    "oktober_godkjenning_prosent": 30,
-    "etikett": "Sjanse for at TCMV godkjenner i oktober",
-    "sannsynlig_utfall": "åpent",
-    "kommentar": "Agenda lest: Art. 39 NL som fortsettelse av diskusjoner; under eventuelt: sekundærlovgivning for ADS i storserie. Avstemning ikke på agendaen. Presse peker tidligst desember. Uoffisiell sjanse ca. 30 %.",
+    "oktober_godkjenning_prosent": 0,
+    "etikett": "Sjanse for TCMV-ja i oktober – ingen avstemning (SVV)",
+    "sannsynlig_utfall": "ingen votum",
+    "kommentar": "Ingen avstemning 6. oktober, bekrefter Statens vegvesen. Møtet fortsetter diskusjonen om Nederlands artikkel 39-sak. Neste mulighet er desember 2026; datoen er ikke kjent.",
     "neste_iso": "2026-10-06T10:00:00+02:00"
   },
   "norge_denne_maneden": {
     "prosent": 1,
     "etikett": "Uoffisiell sjanse for norske eiere denne måneden",
-    "kommentar": "Uoffisielt skjønnstall — ikke fra Vegvesenet. Ingen SVV-vedtak denne måneden. Neste mulige port er TCMV-møtet i oktober (EUs tekniske komité for motorkjøretøy)."
+    "kommentar": "Uoffisielt skjønnstall – ikke fra Statens vegvesen. TCMV stemmer ikke i oktober, og SVV vurderer ingen tidligere norsk innføring så lenge systemet ikke oppfyller FN Reg. 171. Neste mulighet for et EU-votum er desember 2026."
   },
   "sjanse_historikk": [
     {
@@ -227,6 +227,11 @@
       "dato": "2026-10-01",
       "prosent": 1,
       "merknad": "Ingen materiell endring"
+    },
+    {
+      "dato": "2026-10-02",
+      "prosent": 1,
+      "merknad": "SVV: ingen TCMV-votum 6. okt; neste mulighet desember"
     }
   ],
   "series_02": {
@@ -236,7 +241,7 @@
     "dato_nb": "Sent i januar 2027"
   },
   "side_layout": "singleside-dashboard-2026-09-27",
-  "materiell_endring": false,
+  "materiell_endring": true,
   "timeline": [
     {
       "dato": "2026-04-10",
@@ -304,10 +309,15 @@
       "fase": "passert"
     },
     {
+      "dato": "2026-10-02",
+      "tekst": "SVV bekrefter at TCMV ikke stemmer 6. oktober. Neste mulighet er desember 2026. Norge sendte ikke inn spørsmål eller kommentarer.",
+      "fase": "passert"
+    },
+    {
       "dato": "2026-10-06",
-      "tekst": "TCMV 119. møte: fortsettelse Art. 39 NL. Avstemning ikke planlagt.",
+      "tekst": "TCMV 119. møte: fortsettelse av diskusjonen om Nederlands artikkel 39-sak. Ingen avstemning, bekreftet av SVV.",
       "fase": "neste",
-      "etikett": "CIRCABC-agenda"
+      "etikett": "Ingen votum (SVV)"
     },
     {
       "dato": "2027-01-25",

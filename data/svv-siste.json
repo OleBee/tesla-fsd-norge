@@ -2,9 +2,11 @@
   "sjekket_iso": "2026-10-02",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "url": "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/",
-  "materiell_endring": false,
-  "status": "uendret",
-  "sammendrag": "Ingen materiell endring. SVV-siden står uendret siden 3. juli 2026.",
-  "betydning_for_eiere": "Fortsatt ikke kundegodkjent. Begrenset testing. Kundedemoer stanset til Tesla endrer budskapet.",
-  "norge_kundegodkjent": false
+  "materiell_endring": true,
+  "status": "oppdatert",
+  "sammendrag": "Ny seksjon «Oppdatering 2. oktober om TCMV-møte»: ingen avstemning i TCMV 6. oktober fordi godkjenningsmyndighetene i majoriteten av medlemslandene har signalisert at de ikke er klare til å stemme. Neste mulighet er desember 2026. Norge har ikke sendt inn spørsmål eller kommentarer. Feltet «Sist oppdatert» viser fortsatt 3. juli 2026.",
+  "betydning_for_eiere": "Fortsatt ikke kundegodkjent. SVV vurderer ingen tidligere norsk innføring så lenge systemet ikke oppfyller FN Reg. 171, og har ingen prosess med Tesla om dette nå. Begrenset testing. Kundedemoer stanset til Tesla endrer budskapet.",
+  "norge_kundegodkjent": false,
+  "svv_oppdatering_nb": "2. oktober 2026",
+  "svv_oppdatering_tittel": "Oppdatering 2. oktober om TCMV-møte"
 }
