@@ -90,3 +90,25 @@ Skills lest på nytt før vask: fsd-redaksjon, bie-stil, norsk-bokm-l, norsk-bok
 
 ## Resultat
 Hard språksjekkliste: bestått. `python3 scripts/modell_nedtelling.py --check` → 0 avvik. `python3 scripts/validate_nedtelling.py` → 0 feil, 0 advarsler. `node --check` på skriptet i `nedtelling/index.html`: OK.
+
+---
+
+# Runde 3 – Kroatia lansert (03.10.2026)
+
+## Faktagrunnlag (sjekket 03.10 med WebFetch)
+- Slobodna Dalmacija, 1. oktober 2026 kl. 16:24: «Tesla je omogućila korištenje sustava Full Self-Driving (FSD) … i u Hrvatskoj». En eier kjører med systemet i sentrum av Šibenik. Tittelen «Do jučer nam se ovo činilo kao SF» betyr «fram til i går virket dette som science fiction». Den er retorisk og oppgir ingen dato for utrullingen.
+- Moj Kraj, 1. oktober 2026 kl. 16:50: siterer Slobodna Dalmacija og har ingen egen dato.
+- Søk (dnevno.hr, npscp.hr, portofon, notateslaapp, croatiaweek): Tesla meldte godkjenning 29.09 («Rollout will begin soon»). Ingen kilde oppgir en tidligere eierdato.
+- Konklusjon: `lansert_dato` = 2026-10-01 (artikkeldatoen, første daterte eierrapport). Begrunnelsen sier at nøyaktig dato for utrullingen ikke er kjent. Samme nivå som Slovenia/Estland (eierrapporter), sikkerhet middels.
+- Utrullingsmedian med HR (29.09 → 01.10 = 2 d): NL 1, LT 0, DK 2, BE 1, SI 3, CZ 2, HR 2 → median 2 (før 1,5). Brukt verdi er fortsatt 2, så ingen modellerte datoer flytter seg (`modell_nedtelling.py --today 2026-10-03`: 24 land, 0 avvik).
+
+## Språkmølla (fire skills) på ny synlig tekst
+Gjelder HR-begrunnelsen, tidslinjelinja i status.json og metodelinja «Medianen er 2 dager.»
+- Rettskrivning: «Avisa Slobodna Dalmacija viste 1. oktober …» i stedet for å starte setningen med et tall. «datoen for artikkelen» → «artikkeldatoen». Stor bokstav etter kolon i tidslinja fordi en hel setning følger.
+- Klart språk: korte setninger og én opplysning per setning. Usikkerheten står eksplisitt: «Nøyaktig dato for utrullingen er ikke kjent».
+- Anti-maskin: ingen forsterkere og ingen gjentatte åpninger. Metodelinja viser ikke lenger «rundet opp til 2» når medianen allerede er 2 (JS-betingelse).
+- Tall: sifre i målelista («NL 1, LT 0 … Medianen er 2 dager»), fordi tallene står i en rekke med andre måltall. Unntaket er bevisst.
+- Statisk reservetekst for «Sist oppdatert» er endret fra 29. september til 3. oktober 2026. JS overskriver den fra JSON.
+
+## Resultat
+`validate_nedtelling.py` → exit 0. `node --check` OK. `esc()` er uendret og bruker numeriske tegnkoder.

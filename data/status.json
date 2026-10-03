@@ -1,8 +1,8 @@
 {
   "sist_sjekket": "2026-10-02",
   "sist_sjekket_nb": "2. oktober 2026",
-  "sist_oppdatert_iso": "2026-10-02T11:20:00+02:00",
-  "sist_oppdatert_nb": "2. oktober 2026 kl. 11.20",
+  "sist_oppdatert_iso": "2026-10-03T10:50:00+02:00",
+  "sist_oppdatert_nb": "3. oktober 2026 kl. 10.50",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Statens vegvesen åpner fortsatt ikke for vanlig kundekjøring. Tesla får teste med egne, trente sikkerhetsførere — begrenset testing, ikke din bil.",
@@ -306,6 +306,11 @@
     {
       "dato": "2026-09-29",
       "tekst": "Kroatia blir åttende EU-land ifølge Tesla Europe. Befolkningsandel ca. 12,7 %.",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-10-01",
+      "tekst": "Kroatia: Avisa Slobodna Dalmacija viser en eier som kjører med FSD Supervised i Šibenik. Utrullingen er i gang.",
       "fase": "passert"
     },
     {

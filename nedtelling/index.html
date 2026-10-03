@@ -85,7 +85,7 @@
       <h1>Når kommer FSD Supervised i ditt land?</h1>
       <p class="nt-lede" id="nt-lede">FSD Supervised er godkjent i <span id="nt-lede-tall">8</span> av 27 EU-land. I Norge venter eierne fortsatt. Her ser du status, en estimert dato og kildene for hvert land. Der det ikke finnes noe vedtak, regner vi ut datoen med en åpen modell og merker den «modellert estimat».</p>
       <span class="nt-flag">Alle datoer i nedtellingen er estimater, ikke vedtak</span>
-      <p class="nt-meta">Sist oppdatert: <span id="nt-sist">29. september 2026</span></p>
+      <p class="nt-meta">Sist oppdatert: <span id="nt-sist">3. oktober 2026</span></p>
     </section>
 
     <div class="nt-top">
@@ -321,7 +321,8 @@
         var med = String(m.utrullingsforsinkelse_median_dager).replace(".", ",");
         document.getElementById("nt-grunnlag").textContent =
           "Grunnlaget i dag (dager fra godkjenning til utrulling): " + parts.join(", ") +
-          ". Medianen er " + med + " dager, rundet opp til " + m.utrullingsforsinkelse_brukt_dager + ".";
+          ". Medianen er " + med + " dager" +
+          (Number(m.utrullingsforsinkelse_median_dager) === Number(m.utrullingsforsinkelse_brukt_dager) ? "." : ", rundet opp til " + m.utrullingsforsinkelse_brukt_dager + ".");
       }
 
       var mo = data.modell || {};

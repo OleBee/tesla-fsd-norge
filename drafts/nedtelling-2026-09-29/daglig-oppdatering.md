@@ -44,7 +44,7 @@ Skriptet regner ut `estimert_dato`, `modell_steg` og `begrunnelse` (= `fakta` + 
 | Parameter | Nå | Type |
 |---|---|---|
 | `modell.signal_grunnlag` | BE 12.05→10.06 (29), CZ 10.06→21.09 (103), SI 11.07→07.09 (58), HR 10.09→29.09 (19). Median 43,5 → 44, maks 103 | observert |
-| `metode.utrullingsforsinkelse_brukt_dager` | 2 (median 1,5 rundet opp) | observert |
+| `metode.utrullingsforsinkelse_brukt_dager` | 2 (median av sju land: NL 1, LT 0, DK 2, BE 1, SI 3, CZ 2, HR 2; per 03.10) | observert |
 | `modell.tcmv_dato` | 2026-12-01 | **antagelse** (`tcmv_dato_antatt` = true) |
 | `modell.eu_ikrafttredelse_dager` | 132 (BlueCruise: TCMV 20.03.2024 → EU-godkjent 30.07.2024) | observert presedens |
 | `modell.eos_etterslep_dager` | 470 (BlueCruise: EU 30.07.2024 → Norge 12.11.2025) | observert presedens for NO, antagelse for IS/LI |
