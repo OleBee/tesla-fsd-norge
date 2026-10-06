@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-10-02T11:20:00+02:00",
+  "updated_iso": "2026-10-06T19:04:12+02:00",
   "standings": {
     "yes_countries": 8,
     "eu_population_pct": 12.7,
@@ -9,6 +9,21 @@
     "next_tcmv_certainty": "ingen votum (SVV)"
   },
   "items": [
+    {
+      "id": "tcmv-119-holdt-2026-10-06",
+      "iso": "2026-10-06T19:04:12+02:00",
+      "source": "tcmv",
+      "title": "TCMV-møtet 6. oktober er holdt — fortsatt ingen avstemning om FSD Supervised",
+      "summary": "EUs tekniske komité for motorvogner (TCMV) møttes 6. oktober. På agendaen sto fortsettelse av Nederlands artikkel 39-sak. Det ble ikke stemt, slik Statens vegvesen varslet 2. oktober. Neste mulighet er desember 2026; nøyaktig dato er ikke kjent. CIRCABC-mappa hadde fortsatt bare agendaen da vi sjekket sist.",
+      "why_it_matters": "Norge står fortsatt uten kundegodkjenning. Åtte EU-land kjører allerede FSD Supervised nasjonalt.",
+      "url": "https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/0f4e0c81-ae0d-445a-80f4-4d9fe3e265c5",
+      "tags": [
+        "tcmv",
+        "eu",
+        "art39",
+        "svv"
+      ]
+    },
     {
       "id": "svv-tcmv-ingen-votum-2026-10-02",
       "iso": "2026-10-02T11:20:00+02:00",

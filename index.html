@@ -112,27 +112,27 @@
         <h2 class="col-head" id="status-head">Status</h2>
         <div class="status-stack">
 
-          <div class="stat-card" id="kort-norge" data-prosent="1">
-            <div class="stat-pct"><span id="norge-tall">1</span><span class="pct">%</span></div>
+          <div class="stat-card" id="kort-norge" data-prosent="0">
+            <div class="stat-pct"><span id="norge-tall">0</span><span class="pct">%</span></div>
             <p class="stat-label" id="norge-etikett">Uoffisiell sjanse for norske eiere denne måneden</p>
             <div class="stat-bar" aria-hidden="true"><div class="stat-bar-fill" id="norge-fyll"></div></div>
           </div>
 
           <div class="stat-card countdown-card" id="kort-tcmv-cd">
-            <div class="cd-date" id="tcmv-dato">6. oktober 2026</div>
+            <div class="cd-date" id="tcmv-dato">Desember 2026</div>
             <div class="units" id="tcmv-units" aria-live="polite">
               <div class="unit"><span class="n" data-part="days">––</span><span class="u">dager</span></div>
               <div class="unit"><span class="n" data-part="hours">––</span><span class="u">timer</span></div>
               <div class="unit"><span class="n" data-part="mins">––</span><span class="u">min</span></div>
               <div class="unit"><span class="n" data-part="secs">––</span><span class="u">sek</span></div>
             </div>
-            <p class="cd-note" id="tcmv-cd-note">Ingen avstemning 6. oktober, bekrefter Statens vegvesen.</p>
-            <p class="cd-done" id="tcmv-done" hidden>Møtet er holdt — oppdaterer</p>
+            <p class="cd-note" id="tcmv-cd-note">TCMV-møtet 6. oktober er holdt uten avstemning. Neste mulighet er desember; nøyaktig dato er ikke kjent.</p>
+            <p class="cd-done" id="tcmv-done" hidden>Møtet er holdt</p>
           </div>
 
           <div class="stat-card" id="kort-tcmv" data-prosent="0">
             <div class="stat-pct"><span id="tcmv-tall">0</span><span class="pct">%</span></div>
-            <p class="stat-label" id="tcmv-etikett">Sjanse for TCMV-ja i oktober – ingen avstemning (SVV)</p>
+            <p class="stat-label" id="tcmv-etikett">Sjanse for TCMV-ja i desember – dato ikke kjent</p>
             <div class="stat-bar" aria-hidden="true"><div class="stat-bar-fill gradient" id="tcmv-fyll"></div></div>
           </div>
 
@@ -186,7 +186,7 @@
     };
 
     var state = {
-      tcmvIso: "2026-10-06T10:00:00+02:00",
+      tcmvIso: "2026-12-15T10:00:00+01:00",
       seriesIso: "2027-01-25T00:00:00+01:00"
     };
 
@@ -379,7 +379,8 @@
       var tm = data.tcmv || {};
       if (tm.neste_iso) state.tcmvIso = tm.neste_iso;
       else if (tm.neste_dato) state.tcmvIso = tm.neste_dato + "T10:00:00+02:00";
-      if (tm.neste_dato) setText("tcmv-dato", fmtDate(tm.neste_dato));
+      if (tm.neste_dato_nb) setText("tcmv-dato", tm.neste_dato_nb);
+      else if (tm.neste_dato) setText("tcmv-dato", fmtDate(tm.neste_dato));
       if (tm.oktober_godkjenning_prosent != null) {
         setText("tcmv-tall", String(tm.oktober_godkjenning_prosent));
         document.getElementById("kort-tcmv").setAttribute("data-prosent", String(tm.oktober_godkjenning_prosent));
@@ -419,7 +420,7 @@
     }
 
     /* Initial paint from embedded defaults, then hydrate */
-    setBar(document.getElementById("norge-fyll"), 1);
+    setBar(document.getElementById("norge-fyll"), 0);
     setBar(document.getElementById("tcmv-fyll"), 30);
     setBar(document.getElementById("land-fyll"), (8 / 27) * 100);
     setBar(document.getElementById("bef-fyll"), 12.7);

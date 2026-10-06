@@ -1,8 +1,8 @@
 {
   "sist_sjekket": "2026-10-06",
   "sist_sjekket_nb": "6. oktober 2026",
-  "sist_oppdatert_iso": "2026-10-06T07:54:48+02:00",
-  "sist_oppdatert_nb": "6. oktober 2026 kl. 07.54",
+  "sist_oppdatert_iso": "2026-10-06T19:04:12+02:00",
+  "sist_oppdatert_nb": "6. oktober 2026 kl. 19.04",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Statens vegvesen åpner fortsatt ikke for vanlig kundekjøring. Tesla får teste med egne, trente sikkerhetsførere — begrenset testing, ikke din bil.",
@@ -51,21 +51,22 @@
   "eu_andel_befolkning_prosent": 12.7,
   "programvaregren": "v14.2.2",
   "tcmv": {
-    "siste_mote": "2026-06-30",
+    "siste_mote": "2026-10-06",
     "siste_utfall": "diskusjon uten avstemning",
-    "neste_dato": "2026-10-06",
-    "neste_sikkerhet": "ingen votum (SVV)",
-    "dager_til": 0,
+    "neste_dato": "2026-12-15",
+    "neste_sikkerhet": "ukjent dato (desember)",
+    "dager_til": 70,
     "oktober_godkjenning_prosent": 0,
-    "etikett": "Sjanse for TCMV-ja i oktober – ingen avstemning (SVV)",
-    "sannsynlig_utfall": "ingen votum",
-    "kommentar": "Ingen avstemning 6. oktober, bekrefter Statens vegvesen. Møtet fortsetter diskusjonen om Nederlands artikkel 39-sak. Neste mulighet er desember 2026; datoen er ikke kjent.",
-    "neste_iso": "2026-10-06T10:00:00+02:00"
+    "etikett": "Sjanse for TCMV-ja i desember – dato ikke kjent",
+    "sannsynlig_utfall": "ukjent",
+    "kommentar": "TCMV-møtet 6. oktober er holdt. Det ble ikke stemt, slik Statens vegvesen varslet. Neste mulighet er desember 2026; nøyaktig møtedato er ikke kjent ennå.",
+    "neste_iso": "2026-12-15T10:00:00+01:00",
+    "neste_dato_nb": "Desember 2026"
   },
   "norge_denne_maneden": {
-    "prosent": 1,
+    "prosent": 0,
     "etikett": "Uoffisiell sjanse for norske eiere denne måneden",
-    "kommentar": "Uoffisielt skjønnstall – ikke fra Statens vegvesen. TCMV stemmer ikke i oktober, og SVV vurderer ingen tidligere norsk innføring så lenge systemet ikke oppfyller FN Reg. 171. Neste mulighet for et EU-votum er desember 2026."
+    "kommentar": "Uoffisielt skjønnstall – ikke fra Statens vegvesen. Oktober-møtet er holdt uten votum. SVV vurderer ingen tidligere norsk innføring så lenge systemet ikke oppfyller FN Reg. 171. Neste EU-mulighet er desember 2026."
   },
   "sjanse_historikk": [
     {
@@ -335,9 +336,14 @@
     },
     {
       "dato": "2026-10-06",
-      "tekst": "TCMV 119. møte: fortsettelse av diskusjonen om Nederlands artikkel 39-sak. Ingen avstemning, bekreftet av SVV.",
+      "tekst": "TCMV 119. møte holdt: fortsettelse av diskusjonen om Nederlands artikkel 39-sak. Ingen avstemning, slik SVV varslet.",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-12-15",
+      "tekst": "Neste mulige TCMV-port for Art. 39 / FSD Supervised. Nøyaktig møtedato er ikke kjent ennå.",
       "fase": "neste",
-      "etikett": "Ingen votum (SVV)"
+      "etikett": "Dato ukjent"
     },
     {
       "dato": "2027-01-25",
