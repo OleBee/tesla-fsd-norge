@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-10-06T19:06:00+02:00",
+  "updated_iso": "2026-10-07T18:45:00+02:00",
   "standings": {
     "yes_countries": 8,
     "eu_population_pct": 12.7,
@@ -9,6 +9,21 @@
     "next_tcmv_certainty": "ingen votum (SVV)"
   },
   "items": [
+    {
+      "id": "news-slovakia-raz-announcement-2026-10-07",
+      "iso": "2026-10-07T18:45:00+02:00",
+      "source": "news",
+      "title": "Slovakia lover FSD-ja «om få dager» – men brevet til Nederland er ikke sendt ennå",
+      "summary": "Slovakias samferdselsminister Jozef Ráž jr. sier i en video at Slovakia om få dager sender et brev til Nederland om at landet anerkjenner RDWs godkjenning av FSD Supervised. Da kan systemet tas i bruk på slovakiske veier. Foreløpig er dette en kunngjøring, ikke en godkjenning: Vi har ikke funnet noen pressemelding fra departementet eller omtale i slovakiske medier som bekrefter at brevet er sendt. Sporet er det samme som Litauen, Kroatia og Tsjekkia har fulgt. RDW godkjente FSD Supervised 10. april etter artikkel 39 i EU-forordning 2018/858 – unntaksveien for ny teknologi. Godkjenningen gjelder bare i Nederland, men andre land kan godta den nasjonalt og melde fra skriftlig til RDW. Det er dette brevet Ráž snakker om. Tsjekkia gjorde det 21. september. Siden da kan slovakiske eiere bruke FSD på tsjekkiske veier, men systemet slår seg av ved grensen fordi registreringslandet avgjør. Inntil brevet er sendt og Tesla bekrefter utrulling, kan ingen slovakisk eier bruke FSD hjemme. I EU står saken stille: TCMV-møtet 6. oktober hadde bare diskusjon, og tidligste avstemning er i desember. FSD Supervised er førerstøtte på SAE-nivå 2, og føreren har hele ansvaret.",
+      "why_it_matters": "Blir Slovakia med, er ni EU-land på artikkel 39-sporet, og presset før EU-avstemningen øker. Norge venter fortsatt på Brussel via EØS mens nabolandene i EU tar snarveien selv. Statens vegvesen har ikke godkjent FSD Supervised for vanlige eiere, og et løfte i Bratislava er ikke et vedtak.",
+      "url": "https://x.com/slovakevguy/status/2107848969934274710",
+      "tags": [
+        "slovakia",
+        "article-39",
+        "announcement",
+        "news"
+      ]
+    },
     {
       "id": "news-germany-bmv-tad-10pct-2026-10-06",
       "iso": "2026-10-06T19:06:00+02:00",
