@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Er Tesla FSD godkjent i Norge? Status 2026</title>
   <meta name="description" content="Nei. Statens vegvesen har ikke godkjent FSD Supervised for vanlige eiere. Du kan ikke aktivere det i bilen. SAE nivå 2. Status fra SVV, TCMV og EØS.">
-  <link rel="canonical" href="https://fsdnorge.no/">
+  <link rel="canonical" href="https://tadnorge.no/">
   <meta name="theme-color" content="#070b14">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="favicon-192.png" sizes="192x192">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="fsdnorge.no">
+  <meta property="og:site_name" content="TAD Norge">
   <meta property="og:title" content="Er Tesla FSD godkjent i Norge? Status 2026">
   <meta property="og:description" content="Nei. SVV har ikke godkjent FSD Supervised for vanlige eiere. Du får det ikke på bilen i dag. SAE nivå 2 — du er alltid ansvarlig.">
-  <meta property="og:url" content="https://fsdnorge.no/">
-  <meta property="og:image" content="https://fsdnorge.no/og-default.png">
+  <meta property="og:url" content="https://tadnorge.no/">
+  <meta property="og:image" content="https://tadnorge.no/og-default.png">
   <meta property="og:locale" content="nb_NO">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Er Tesla FSD godkjent i Norge? Status 2026">
   <meta name="twitter:description" content="Kort svar: nei. FSD Supervised er ikke kundegodkjent i Norge. SAE nivå 2 — du er alltid ansvarlig.">
-  <meta name="twitter:image" content="https://fsdnorge.no/og-default.png">
+  <meta name="twitter:image" content="https://tadnorge.no/og-default.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -32,25 +32,25 @@
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://fsdnorge.no/#website",
-      "url": "https://fsdnorge.no/",
-      "name": "fsdnorge.no",
+      "@id": "https://tadnorge.no/#website",
+      "url": "https://tadnorge.no/",
+      "name": "TAD Norge",
       "description": "Uoffisiell statusside for Tesla FSD Supervised i Norge — SAE nivå 2, føreren er ansvarlig.",
       "inLanguage": "nb-NO",
-      "publisher": { "@type": "Organization", "name": "fsdnorge.no", "url": "https://fsdnorge.no/" }
+      "publisher": { "@type": "Organization", "name": "TAD Norge", "url": "https://tadnorge.no/" }
     },
     {
       "@type": "WebPage",
-      "@id": "https://fsdnorge.no/#webpage",
-      "url": "https://fsdnorge.no/",
+      "@id": "https://tadnorge.no/#webpage",
+      "url": "https://tadnorge.no/",
       "name": "Er Tesla FSD godkjent i Norge? Status 2026",
-      "isPartOf": { "@id": "https://fsdnorge.no/#website" },
+      "isPartOf": { "@id": "https://tadnorge.no/#website" },
       "inLanguage": "nb-NO",
       "description": "Kort svar: nei. Statens vegvesen har ikke godkjent FSD Supervised for vanlige eiere. SAE nivå 2."
     },
     {
       "@type": "FAQPage",
-      "@id": "https://fsdnorge.no/#faq",
+      "@id": "https://tadnorge.no/#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -85,7 +85,7 @@
 <body>
   <div class="wrap" id="top">
     <header class="topbar">
-      <a class="brand-mark" href="/">fsdnorge</a>
+      <a class="brand-mark" href="/">tadnorge</a>
     </header>
 
     <div class="dash">
@@ -169,7 +169,8 @@
     </div>
 
     <footer class="site-footer">
-      <p><strong>fsdnorge</strong> — uoffisiell statusside for Tesla FSD Supervised i Norge.<br>
+      <p><strong>TAD Norge</strong> — uoffisiell statusside for Tesla FSD Supervised i Norge.<br>
+      TAD står for Tesla Assisted Driving, navnet Tesla nå bruker på europeiske nettsider for systemet som før het FSD Supervised. Nytt navn, samme system. Vi har sett navnet direkte på Teslas nederlandske side. For Tyskland og Norge har vi bare skjermbilder delt på X. Navnet er Teslas eget og ikke vedtatt av EU.<br>
       FSD Supervised er SAE nivå 2-førerstøtte. Du er alltid ansvarlig. Ingen tilknytning til Tesla eller Statens vegvesen.<br>
       <a href="/nedtelling/">Nedtelling per land (estimat)</a></p>
     </footer>
@@ -288,9 +289,9 @@
         var title = esc(it.title || "Oppdatering");
         var href = it.url || "";
         // Interne URL-er er tynne redirects til forsiden — pek anker i stedet (unngå redirect-loop)
-        if (!href || /fsdnorge\.no\/nyheter\//.test(href) || /^nyheter\//.test(href) || href.indexOf("/nyheter/") === 0) {
+        if (!href || /(?:fsd|tad)norge\.no\/nyheter\//.test(href) || /^nyheter\//.test(href) || href.indexOf("/nyheter/") === 0) {
           href = "#siste-nytt";
-        } else if (/fsdnorge\.no\/(tcmv|europa|historie)\.html/.test(href) || /^(tcmv|europa|historie)\.html$/.test(href)) {
+        } else if (/(?:fsd|tad)norge\.no\/(tcmv|europa|historie)\.html/.test(href) || /^(tcmv|europa|historie)\.html$/.test(href)) {
           if (/tcmv\.html/.test(href)) href = "#status";
           else if (/historie\.html/.test(href)) href = "#tidslinje";
           else href = "#siste-nytt";
