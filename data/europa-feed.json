@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-10-07T18:45:00+02:00",
+  "updated_iso": "2026-10-08T08:15:00+02:00",
   "standings": {
     "yes_countries": 8,
     "eu_population_pct": 12.7,
@@ -9,6 +9,22 @@
     "next_tcmv_certainty": "ingen votum (SVV)"
   },
   "items": [
+    {
+      "id": "news-reuters-svv-markedsforing-2026-10-08",
+      "iso": "2026-10-08T08:15:00+02:00",
+      "source": "news",
+      "title": "Reuters: Statens vegvesen kaller Teslas påstander om sparte liv «markedsføring»",
+      "summary": "Statens vegvesen (SVV) regner Teslas påstander om at FSD Supervised redder liv som markedsføring. Det sier sjefingeniør Stein-Helge Mundal til nyhetsbyrået Reuters, som 7. oktober publiserte en stor gjennomgang av hvordan Tesla presser på for å få systemet godkjent i Europa. Mundal sier at etaten ikke godkjenner systemer fordi de er populære, og ikke avviser dem fordi de er kontroversielle. Han mener navnet «Full Self-Driving» kan få førere til å tro at systemet kan mer enn det faktisk kan. Reuters har fått innsyn i hundrevis av sider med e-post mellom Tesla og myndigheter i sju land, blant dem Nederland, Sverige og Norge. Ifølge byrået prøvde Tesla å gjøre gjennomgangen hos den nederlandske godkjenningsmyndigheten RDW billigere og mindre omfattende, og RDW gikk med på noe av det. Blant annet tilbød RDW å følge deler av testene på avstand. Sju trafikksikkerhetsforskere sier til Reuters at Teslas egen Europa-studie ikke beviser at FSD hindrer dødsulykker. RDW svarer at vurderingen var uavhengig og grundig, med over 3000 timer testing og mer enn 1000 testkjøringer på bane og offentlig vei. Etaten konkluderte med at FSD kan bedre trafikksikkerheten når det brukes riktig, og anbefalte godkjenning i hele EU. Den tsjekkiske myndigheten sier at den ikke har grunn til å tvile på at RDW var upartisk. Reuters viser også til en e-post fra en gruppe norske Tesla-eiere i mai, som kritiserte det de kalte en passiv og byråkratisk norsk behandling av saken.",
+      "why_it_matters": "Nå vet norske eiere svart på hvitt hvordan Statens vegvesen tenker: Popularitet teller ikke, og etaten går ikke foran EU. SVV vurderer ingen norsk innføring så lenge systemet ikke oppfyller FN Reg. 171 (FN-regelverket for førerstøttesystemer), og har ingen prosess med Tesla nå. I mellomtiden kjører åtte EU-land FSD Supervised på RDWs godkjenning, og RDW står ved vurderingen sin. Neste mulighet for et EU-ja er møtet i TCMV (EUs tekniske komité for motorvogner) i desember; datoen er ikke kjent. FSD Supervised er førerstøtte på SAE-nivå 2, og føreren har hele ansvaret.",
+      "url": "https://www.reuters.com/investigations/tesla-is-browbeating-eu-approve-its-full-self-driving-tech-pressure-is-working-2026-10-07/",
+      "tags": [
+        "svv",
+        "norway",
+        "rdw",
+        "reuters",
+        "news"
+      ]
+    },
     {
       "id": "news-slovakia-raz-announcement-2026-10-07",
       "iso": "2026-10-07T18:45:00+02:00",

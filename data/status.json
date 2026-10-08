@@ -1,8 +1,8 @@
 {
-  "sist_sjekket": "2026-10-07",
-  "sist_sjekket_nb": "7. oktober 2026",
-  "sist_oppdatert_iso": "2026-10-07T07:55:49+02:00",
-  "sist_oppdatert_nb": "7. oktober 2026 kl. 07.55",
+  "sist_sjekket": "2026-10-08",
+  "sist_sjekket_nb": "8. oktober 2026",
+  "sist_oppdatert_iso": "2026-10-08T08:15:00+02:00",
+  "sist_oppdatert_nb": "8. oktober 2026 kl. 08.15",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Statens vegvesen åpner fortsatt ikke for vanlig kundekjøring. Tesla får teste med egne, trente sikkerhetsførere — begrenset testing, ikke din bil.",
@@ -55,7 +55,7 @@
     "siste_utfall": "diskusjon uten avstemning",
     "neste_dato": "2026-12-15",
     "neste_sikkerhet": "ukjent dato (desember)",
-    "dager_til": 69,
+    "dager_til": 68,
     "oktober_godkjenning_prosent": 0,
     "etikett": "Sjanse for TCMV-ja i desember – dato ikke kjent",
     "sannsynlig_utfall": "ukjent",
@@ -347,6 +347,11 @@
     {
       "dato": "2026-10-07",
       "tekst": "Slovakia: Samferdselsministeren lover å anerkjenne RDW-godkjenningen om få dager. Brevet er ikke bekreftet sendt.",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-10-07",
+      "tekst": "Reuters-gjennomgang: Statens vegvesen kaller Teslas påstander om sparte liv markedsføring. RDW står ved sin uavhengige vurdering.",
       "fase": "passert"
     },
     {
