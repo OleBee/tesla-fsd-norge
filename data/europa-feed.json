@@ -1,14 +1,47 @@
 {
-  "updated_iso": "2026-10-08T08:04:00+02:00",
+  "updated_iso": "2026-10-08T22:25:00+02:00",
   "standings": {
     "yes_countries": 8,
     "eu_population_pct": 12.7,
     "tcmv_october_pct": 0,
-    "norway_this_month_pct": 1,
-    "next_tcmv": "2026-10-06",
-    "next_tcmv_certainty": "ingen votum (SVV)"
+    "norway_this_month_pct": 0,
+    "next_tcmv": "2026-12",
+    "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "news-tesla-tad-navn-agenda-2026-10-08",
+      "iso": "2026-10-08T22:25:00+02:00",
+      "source": "news",
+      "title": "Tesla døper om FSD i Nederland og flere EU-land – dokumentene viser ingen skjult EU-avstemning",
+      "summary": "Tesla har byttet navn på FSD Supervised på flere europeiske nettsider. På den nederlandske siden (tesla.com/nl_nl/fsd) heter systemet nå «Tesla Assisted Driving». For Tyskland og Norge har vi bare skjermbilder delt på X. De viser navnet «Tesla Assisted Driving Basic», på norsk «Tesla Assistert kjøring grunnleggende». Ifølge det tyske samferdselsdepartementet (BMV) tilbød Tesla selv det nye navnet. Den tyske X-kontoen @FSD_DE mener navnebyttet og en endret agenda kan bety at TCMV (EUs tekniske komité for motorvogner) likevel stemte over FSD 6. oktober. Det er en spekulasjon, ikke et vedtak. Agendaen ble riktignok endret 5. oktober, viser EUs komitéregister (Comitology Register). Møtet skulle nå slutte kl. 12.30 i stedet for kl. 15, to saker om tunge kjøretøy ble strøket, og AOB (Any other business, altså eventuelt) havnet rett etter artikkel 39-saken. Artikkel 39 er unntaksregelen den nederlandske godkjenningsmyndigheten RDW brukte da den godkjente FSD Supervised i april. Selve FSD-punktet står uendret som fortsettelse av diskusjonene om Nederlands søknad, ikke som avstemning. Etter EUs komitéforordning (182/2011) skal medlemslandene som hovedregel få utkastet til et vedtak minst 14 dager før møtet. Verken Kommisjonen, RDW eller Tesla har meldt om noen avstemning, og referatet er ikke publisert i registeret eller på CIRCABC. Reuters og Electrek skrev 8. oktober at avstemningen tidligst kommer i desember.",
+      "why_it_matters": "Navnebyttet tar bort et av argumentene mot FSD. Statens vegvesen (SVV) kalte i mai Teslas informasjon til kundene villedende fordi det ikke sto at systemet er førerstøtte. Nå står det i navnet. Neste mulighet for et EU-ja er fortsatt desember 2026, og i Norge er FSD Supervised ennå ikke godkjent for vanlige eiere.",
+      "url": "https://ec.europa.eu/transparency/comitology-register/screen/documents/118164/2/consult",
+      "sources": [
+        "https://ec.europa.eu/transparency/comitology-register/screen/documents/118164/2/consult",
+        "https://ec.europa.eu/transparency/comitology-register/screen/documents/118164/1/consult",
+        "https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/0f4e0c81-ae0d-445a-80f4-4d9fe3e265c5",
+        "https://www.bmv.de/SharedDocs/DE/Artikel/StV/Digitalisierung-der-Mobilitaet/aktueller-stand-tesla-assistenzsysteme.html",
+        "https://www.timeslive.co.za/motoring/2026-10-08-musk-welcomes-german-backing-of-tesla-tech-as-it-chases-eu-approval/",
+        "https://electrek.co/2026/10/08/tesla-fsd-europe-rdw-pressure-reuters/",
+        "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/",
+        "https://eur-lex.europa.eu/eli/reg/2011/182/oj",
+        "https://www.tesla.com/nl_nl/fsd",
+        "https://x.com/FSD_DE/status/2108270604688220453",
+        "https://x.com/RoamingNorway/status/2108282311045247185",
+        "https://x.com/EddiVolutionDE/status/2108276786303737951"
+      ],
+      "tags": [
+        "tesla",
+        "tad",
+        "rename",
+        "tcmv",
+        "agenda",
+        "rumor",
+        "article-39",
+        "news"
+      ]
+    },
     {
       "id": "news-reuters-svv-markedsforing-2026-10-08",
       "iso": "2026-10-08T08:15:00+02:00",
