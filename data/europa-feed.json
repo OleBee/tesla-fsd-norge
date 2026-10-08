@@ -14,7 +14,7 @@
       "iso": "2026-10-08T22:25:00+02:00",
       "source": "news",
       "title": "Tesla døper om FSD i Nederland og flere EU-land – dokumentene viser ingen skjult EU-avstemning",
-      "summary": "Tesla har byttet navn på FSD Supervised på flere europeiske nettsider. På den nederlandske siden (tesla.com/nl_nl/fsd) heter systemet nå «Tesla Assisted Driving». For Tyskland og Norge har vi bare skjermbilder delt på X. De viser navnet «Tesla Assisted Driving Basic», på norsk «Tesla Assistert kjøring grunnleggende». Ifølge det tyske samferdselsdepartementet (BMV) tilbød Tesla selv det nye navnet. Den tyske X-kontoen @FSD_DE mener navnebyttet og en endret agenda kan bety at TCMV (EUs tekniske komité for motorvogner) likevel stemte over FSD 6. oktober. Det er en spekulasjon, ikke et vedtak. Agendaen ble riktignok endret 5. oktober, viser EUs komitéregister (Comitology Register). Møtet skulle nå slutte kl. 12.30 i stedet for kl. 15, to saker om tunge kjøretøy ble strøket, og AOB (Any other business, altså eventuelt) havnet rett etter artikkel 39-saken. Artikkel 39 er unntaksregelen den nederlandske godkjenningsmyndigheten RDW brukte da den godkjente FSD Supervised i april. Selve FSD-punktet står uendret som fortsettelse av diskusjonene om Nederlands søknad, ikke som avstemning. Etter EUs komitéforordning (182/2011) skal medlemslandene som hovedregel få utkastet til et vedtak minst 14 dager før møtet. Verken Kommisjonen, RDW eller Tesla har meldt om noen avstemning, og referatet er ikke publisert i registeret eller på CIRCABC. Reuters og Electrek skrev 8. oktober at avstemningen tidligst kommer i desember.",
+      "summary": "Tesla har byttet navn på FSD Supervised på flere europeiske nettsider. På den nederlandske siden (tesla.com/nl_nl/fsd) heter systemet nå «Tesla Assisted Driving». For Tyskland og Norge har vi bare skjermbilder delt på X. De viser navnet «Tesla Assisted Driving Basic», på norsk «Tesla Assistert kjøring grunnleggende». Ifølge det tyske samferdselsdepartementet (BMV) tilbød Tesla selv det nye navnet. Den tyske X-kontoen @FSD_DE mener navnebyttet og en endret agenda kan bety at TCMV (EUs tekniske komité for motorvogner) likevel stemte over FSD 6. oktober. Det er en spekulasjon, ikke et vedtak. Agendaen ble riktignok endret 5. oktober, viser EUs komitéregister (Comitology Register). Møtet skulle nå slutte kl. 12.30 i stedet for kl. 15, to saker om tunge kjøretøy ble stryket, og AOB (Any other business, altså eventuelt) havnet rett etter artikkel 39-saken. Artikkel 39 er unntaksregelen den nederlandske godkjenningsmyndigheten RDW brukte da den godkjente FSD Supervised i april. Selve FSD-punktet står uendret som fortsettelse av diskusjonene om Nederlands søknad, ikke som avstemning. Etter EUs komitéforordning (182/2011) skal medlemslandene som hovedregel få utkastet til et vedtak minst 14 dager før møtet. Verken Kommisjonen, RDW eller Tesla har meldt om noen avstemning, og referatet er ikke publisert i registeret eller på CIRCABC. Reuters og Electrek skrev 8. oktober at avstemningen tidligst kommer i desember.",
       "why_it_matters": "Navnebyttet tar bort et av argumentene mot FSD. Statens vegvesen (SVV) kalte i mai Teslas informasjon til kundene villedende fordi det ikke sto at systemet er førerstøtte. Nå står det i navnet. Neste mulighet for et EU-ja er fortsatt desember 2026, og i Norge er FSD Supervised ennå ikke godkjent for vanlige eiere.",
       "url": "https://ec.europa.eu/transparency/comitology-register/screen/documents/118164/2/consult",
       "sources": [
@@ -146,7 +146,7 @@
       "title": "EU-votum tidligst desember: CIRCABC viser fortsettelse 6. okt — ikke avstemning",
       "summary": "Reuters/TeslaNorth (25.09.2026): EU-avstemning om Teslas FSD Supervised tidligst desember. CIRCABC-agenda for TCMV 6. oktober har Art. 39 NL som fortsettelse av diskusjonene («continuation of discussions») — ikke votum. Speed Offset og nordisk motstand har skjøvet votumet; systemet kjører allerede i sju EU-land.",
       "why_it_matters": "Oktober-vinduet for votum er lukket ifølge presse + agenda. Desember er tidligste presseforventning. Ingen norsk kundeja. Ingen låst norsk dato.",
-      "url": "https://fsdnorge.no/#siste-nytt",
+      "url": "https://tadnorge.no/#siste-nytt",
       "tags": [
         "tcmv",
         "circabc",
@@ -180,7 +180,7 @@
       "title": "Johanna.be: FSD Supervised overskred 30-grensen i 55 % av Brussel-testene",
       "summary": "Belgisk NGO Johanna.be (Electrek/Reuters via IEX 24.09) testet rundt 400 km i Brussel i juli: overskridelse i 55 % av 30-sonene (snitt 44 km/t) og 42 % i 20-soner; skjerm viste ofte 50 der skiltet sa 30. Rapport sendt RDW (nederlandsk typegodkjenningsmyndighet). RDW sa til Reuters at de vil vurdere den i overvåking/tilsyn — ikke tilbaketrekking, ikke formell gjenåpning. Speed Offset foran TCMV. Tesla via Reuters: 4,1× / mer enn 100 mill. km (produsentdata).",
       "why_it_matters": "Treffer Speed Offset-debatten SVV har flagget. Ingen norsk kundegodkjenning. Sju EU-land kjører allerede. Møtedato 6. oktober er bekreftet via CIRCABC; Art. 39 NL står som fortsettelse — ikke votum.",
-      "url": "https://fsdnorge.no/#siste-nytt",
+      "url": "https://tadnorge.no/#siste-nytt",
       "tags": [
         "belgium",
         "speed-offset",
@@ -213,7 +213,7 @@
       "title": "Tsjekkia til «ja» på TCMV-kartet — 7 av 27 land og 11,8 % av befolkningen",
       "summary": "Tsjekkias transportministerium anerkjente den nederlandske artikkel 39-saken 21. september 2026. Samme dag foreslo Latvias økonomidepartement regjeringsanerkjennelse (fortsatt usikkert — ikke kundegodkjenning). Uoffisiell sjanse for TCMV-ja i oktober er satt til 30 %.",
       "why_it_matters": "Stemmetallene bedret seg noe, men tersklene 15 stater / 65 % befolkning krever fortsatt de store økonomiene.",
-      "url": "https://fsdnorge.no/#status",
+      "url": "https://tadnorge.no/#status",
       "tags": [
         "tcmv",
         "czechia",
@@ -244,7 +244,7 @@
       "title": "Slovenia blir sjette EU-land med nasjonal kundegodkjenning",
       "summary": "Tesla Europe sier at Slovenia har anerkjent den nederlandske artikkel 39-saken. Utrulling ventes snart. Seks land dekker fortsatt bare ca. 9,4 % av EU-befolkningen.",
       "why_it_matters": "Fortsatt langt under TCMV-tersklene (15 av 27 stater og 65 % av befolkningen).",
-      "url": "https://fsdnorge.no/#status",
+      "url": "https://tadnorge.no/#status",
       "tags": [
         "approval",
         "slovenia",
