@@ -2,7 +2,7 @@
 
 Uoffisiell statusside om godkjenning av Tesla FSD Supervised (SAE nivå 2) i Norge. Primært for norske Tesla-eiere som vil ha klare fakta — ikke spekulasjon uten kilde.
 
-**Canonical URL:** [https://fsdnorge.no/](https://fsdnorge.no/)
+**Canonical URL:** [https://tadnorge.no/](https://tadnorge.no/) (tidligere fsdnorge.no; videresending og DNS tar Chief of Staff)
 
 Speil på GitHub Pages: [https://OleBee.github.io/tesla-fsd-norge/](https://OleBee.github.io/tesla-fsd-norge/) (custom domain `fsdnorge.no` via `CNAME`).
 
