@@ -21,3 +21,14 @@ Sitater gjengis indirekte (Reuters gjengir på engelsk) – ingen oppdiktede nor
 
 ## Nedtelling 8. okt.
 Slovakia: «ukjent» → «signal» (signal_dato 2026-10-07, Ráž-video; brevet ikke bekreftet sendt). Ny fakta-tekst gjennom samme mølle. Modellert dato 14.05.2027 → 22.11.2026 (steg 1: signal + median 44 + utrulling 2), sikkerhet lav. Øvrige land uendret. Validator: 0 feil, 0 advarsler.
+
+## Omskriving 8. okt. (Ole: «mer for FSD»)
+Ny vinkel: RDWs grundige, uavhengige vurdering først (over 3000 timer, mer enn 1000 testkjøringer, kan bedre sikkerheten brukt riktig); Mundal avfeier sparte liv som markedsføring mens norske eiere venter. Reuters-funn (lobbying, forskerkritikk) kort, RDWs svar rett etter.
+
+Sikkerhetstall (verifisert direkte på https://www.tesla.com/fsd/safety 8. okt., Nord-Amerika, alle veityper, siste 12 mnd.):
+- FSD Supervised: 5 690 675 miles per alvorlig kollisjon (1255 kollisjoner / 7,14 mrd. miles) ≈ 9,2 mill. km
+- Manuell Tesla med aktive sikkerhetssystemer: 2 076 014 miles ≈ 3,3 mill. km (forhold 2,74 → «nesten tre ganger»)
+- Tesla oppgir «7x fewer major collisions» mot estimert amerikansk snitt (698 781 miles)
+SVV-målestokk (samme bil med/uten system): ITavisen 3. juli 2026, https://itavisen.no/2026/07/03/tesla-fsd-statens-vegvesen-oppdaterer-i-dag/
+
+Mølle: språkvask (rettskrivning) + anti-maskin-runde bestått; ingen hen, ingen tidskoder, ingen lange direkte sitater, ingen norsk godkjenning. JSON gyldig, validator 0 feil, node --check på inline-skript OK.
