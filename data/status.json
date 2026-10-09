@@ -1,8 +1,8 @@
 {
-  "sist_sjekket": "2026-10-08",
-  "sist_sjekket_nb": "8. oktober 2026",
-  "sist_oppdatert_iso": "2026-10-08T08:04:00+02:00",
-  "sist_oppdatert_nb": "8. oktober 2026 kl. 08.04",
+  "sist_sjekket": "2026-10-09",
+  "sist_sjekket_nb": "9. oktober 2026",
+  "sist_oppdatert_iso": "2026-10-09T07:55:00+02:00",
+  "sist_oppdatert_nb": "9. oktober 2026 kl. 07.55",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Statens vegvesen åpner fortsatt ikke for vanlig kundekjøring. Tesla får teste med egne, trente sikkerhetsførere — begrenset testing, ikke din bil.",
@@ -55,7 +55,7 @@
     "siste_utfall": "diskusjon uten avstemning",
     "neste_dato": "2026-12-15",
     "neste_sikkerhet": "ukjent dato (desember)",
-    "dager_til": 68,
+    "dager_til": 67,
     "oktober_godkjenning_prosent": 0,
     "etikett": "Sjanse for TCMV-ja i desember – dato ikke kjent",
     "sannsynlig_utfall": "ukjent",
@@ -248,6 +248,11 @@
       "dato": "2026-10-06",
       "prosent": 1,
       "merknad": "BMV/Bilger: EU-press, TAD-navn, maks 10 % fart; TCMV uten votum"
+    },
+    {
+      "dato": "2026-10-09",
+      "prosent": 1,
+      "merknad": "Ingen materiell endring"
     }
   ],
   "series_02": {
@@ -257,7 +262,7 @@
     "dato_nb": "Sent i januar 2027"
   },
   "side_layout": "singleside-dashboard-2026-09-27",
-  "materiell_endring": true,
+  "materiell_endring": false,
   "timeline": [
     {
       "dato": "2026-04-10",
