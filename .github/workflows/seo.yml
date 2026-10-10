@@ -35,9 +35,7 @@ jobs:
         run: python3 scripts/build_seo.py
 
       - name: Valider XML
-        run: |
-          sudo apt-get install -y -qq libxml2-utils >/dev/null
-          xmllint --noout feed.xml sitemap.xml
+        run: python3 -c "import xml.etree.ElementTree as E; [E.parse(f) for f in ('feed.xml','sitemap.xml')]; print('XML ok')"
 
       - name: Commit og push ved endring
         env:
