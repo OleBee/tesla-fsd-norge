@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-10-08T22:25:00+02:00",
+  "updated_iso": "2026-10-10T09:00:00+02:00",
   "standings": {
     "yes_countries": 8,
     "eu_population_pct": 12.7,
@@ -9,6 +9,34 @@
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "news-stortinget-15-116-krf-2026-10-10",
+      "iso": "2026-10-10T09:00:00+02:00",
+      "source": "norway",
+      "title": "KrF på Stortinget: Norge ga ingen innspill til EU om FSD – Danmark har allerede sagt ja",
+      "summary": "Stortingsrepresentant Jørgen H. Kristiansen fra KrF (Kristelig Folkeparti) har sendt et skriftlig spørsmål om Teslas førerstøttesystem til samferdselsminister Kamzy Gunaratnam fra Ap (Arbeiderpartiet). Spørsmålet ble levert 8. oktober og sendt til statsråden 9. oktober. Kristiansen spør: «Vil regjeringen ta initiativ til å gi norske innspill før den kommende behandlingen i EU av førerstøttesystemet Tesla FSD (Supervised), og vil regjeringen vurdere nasjonal anerkjennelse av systemet dersom det blir godkjent i EU, slik blant annet Danmark har gjort?» I begrunnelsen skriver han at Statens vegvesen (SVV) har opplyst at Norge ikke ga innspill til EUs tekniske komité for motorvogner (TCMV) før møtet 6. oktober. Komiteen behandler den nederlandske saken som kan gi systemet godkjenning i hele EU. SVVs egen side bekrefter at Norge verken sendte spørsmål eller kommentarer. Danmark har allerede sagt ja. Det danske trafikktilsynet Færdselsstyrelsen godtok 9. juni den foreløpige godkjenningen fra RDW, den nederlandske godkjenningsmyndigheten. Tilsynet gikk gjennom den tekniske dokumentasjonen og er enig med RDW i at systemet bidrar positivt til trafikksikkerheten. Danmark ventet altså ikke på EU. Svaret fra statsråden er ikke kommet. Etter Stortingets regler skal det komme innen seks hverdager.",
+      "why_it_matters": "Danske eiere har kjørt med FSD Supervised siden juni, og åtte EU-land har sagt ja. Norge har ingen stemme i TCMV, men kan sende innspill. Før oktobermøtet lot Norge være. SVV vil heller ikke gå foran: Etaten vurderer ingen norsk innføring så lenge systemet ikke oppfyller FN Reg. 171 (FN-regelverket for førerstøttesystemer). Nå må regjeringen svare på om Norge skal fortsette å vente. Neste mulighet for et EU-ja er desember 2026, og i Norge er FSD Supervised ennå ikke godkjent for vanlige eiere.",
+      "url": "https://www.stortinget.no/no/Saker-og-publikasjoner/Sporsmal/Skriftlige-sporsmal-og-svar/Skriftlig-sporsmal/?qnid=127642",
+      "sources": [
+        "https://www.stortinget.no/no/Saker-og-publikasjoner/Sporsmal/Skriftlige-sporsmal-og-svar/Skriftlig-sporsmal/?qnid=127642",
+        "https://www.stortinget.no/no/Stortinget-og-demokratiet/Arbeidet/Sporreinstituttene",
+        "https://www.regjeringen.no/no/dep/sd/org/samferdselsminister-kamzy-gunaratnam/id3172387/",
+        "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/",
+        "https://www.fstyr.dk/nyheder/2026/jun/teslas-foererassistentsystem-fsd-supervised-er-foreloebigt-godkendt-i-danmark",
+        "https://www.dr.dk/nyheder/indland/tesla-har-faaet-go-til-udrulle-selvkoerende-biler-i-danmark",
+        "https://electrek.co/2026/06/09/tesla-fsd-approved-denmark-fourth-european-country/"
+      ],
+      "tags": [
+        "norway",
+        "stortinget",
+        "krf",
+        "denmark",
+        "svv",
+        "tcmv",
+        "article-39",
+        "news"
+      ]
+    },
     {
       "id": "news-tesla-tad-navn-agenda-2026-10-08",
       "iso": "2026-10-08T22:25:00+02:00",

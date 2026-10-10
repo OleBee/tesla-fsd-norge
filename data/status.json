@@ -1,8 +1,8 @@
 {
   "sist_sjekket": "2026-10-10",
   "sist_sjekket_nb": "10. oktober 2026",
-  "sist_oppdatert_iso": "2026-10-10T07:59:00+02:00",
-  "sist_oppdatert_nb": "10. oktober 2026 kl. 07.59",
+  "sist_oppdatert_iso": "2026-10-10T09:00:00+02:00",
+  "sist_oppdatert_nb": "10. oktober 2026 kl. 09.00",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Statens vegvesen åpner fortsatt ikke for vanlig kundekjøring. Tesla får teste med egne, trente sikkerhetsførere — begrenset testing, ikke din bil.",
@@ -66,7 +66,7 @@
   "norge_denne_maneden": {
     "prosent": 0,
     "etikett": "Uoffisiell sjanse for norske eiere denne måneden",
-    "kommentar": "Uoffisielt skjønnstall – ikke fra Statens vegvesen. Oktober-møtet er holdt uten votum. SVV vurderer ingen tidligere norsk innføring så lenge systemet ikke oppfyller FN Reg. 171. Neste EU-mulighet er desember 2026."
+    "kommentar": "Uoffisielt skjønnstall – ikke fra Statens vegvesen. Oktober-møtet er holdt uten votum. SVV vurderer ingen tidligere norsk innføring så lenge systemet ikke oppfyller FN Reg. 171. Neste EU-mulighet er desember 2026. KrF har spurt samferdselsministeren om norske innspill til EU og nasjonal anerkjennelse (sendt 9. oktober); svaret ventes innen seks hverdager."
   },
   "sjanse_historikk": [
     {
@@ -363,6 +363,12 @@
       "dato": "2026-10-07",
       "tekst": "Reuters-gjennomgang: RDW står ved sin grundige vurdering etter over 3000 testtimer. Statens vegvesen avfeier Teslas påstander om sparte liv som markedsføring.",
       "fase": "passert"
+    },
+    {
+      "dato": "2026-10-09",
+      "tekst": "Stortinget: Jørgen H. Kristiansen (KrF) spør samferdselsministeren om Norge vil gi innspill før EU-behandlingen og vurdere nasjonal anerkjennelse, slik Danmark har gjort (dok. nr. 15:116). Svaret skal etter reglene komme innen seks hverdager.",
+      "fase": "passert",
+      "etikett": "Svar ventes"
     },
     {
       "dato": "2026-12-15",
