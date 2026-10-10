@@ -66,7 +66,7 @@
   "norge_denne_maneden": {
     "prosent": 0,
     "etikett": "Uoffisiell sjanse for norske eiere denne måneden",
-    "kommentar": "Uoffisielt skjønnstall – ikke fra Statens vegvesen. Oktober-møtet er holdt uten votum. SVV vurderer ingen tidligere norsk innføring så lenge systemet ikke oppfyller FN Reg. 171. Neste EU-mulighet er desember 2026. KrF har spurt samferdselsministeren om norske innspill til EU og nasjonal anerkjennelse (sendt 9. oktober); svaret ventes innen seks hverdager."
+    "kommentar": "Uoffisielt skjønnstall – ikke fra Statens vegvesen. Oktober-møtet er holdt uten votum. SVV vurderer ingen tidligere norsk innføring så lenge systemet ikke oppfyller FN Reg. 171. Neste EU-mulighet er desember 2026. KrF har spurt samferdselsministeren om norske innspill til EU og nasjonal anerkjennelse (sendt 9. oktober); svaret skal komme innen 16. oktober."
   },
   "sjanse_historikk": [
     {
@@ -366,9 +366,9 @@
     },
     {
       "dato": "2026-10-09",
-      "tekst": "Stortinget: Jørgen H. Kristiansen (KrF) spør samferdselsministeren om Norge vil gi innspill før EU-behandlingen og vurdere nasjonal anerkjennelse, slik Danmark har gjort (dok. nr. 15:116). Svaret skal etter reglene komme innen seks hverdager.",
+      "tekst": "Stortinget: Jørgen H. Kristiansen (KrF) spør samferdselsministeren om Norge vil gi innspill før EU-behandlingen og vurdere nasjonal anerkjennelse, slik Danmark har gjort (dok. nr. 15:116). Etter forretningsordenen skal statsråden svare innen seks hverdager, det vil si innen 16. oktober, eller forklare hvorfor svaret blir forsinket.",
       "fase": "passert",
-      "etikett": "Svar ventes"
+      "etikett": "Svar innen 16.10"
     },
     {
       "dato": "2026-12-15",
