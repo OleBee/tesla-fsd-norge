@@ -1,0 +1,59 @@
+name: SEO-filer (RSS, sitemap, statisk feed)
+
+# Bygger feed.xml, sitemap.xml og den statiske feed-/tidslinjeblokken i
+# index.html på nytt når data/*.json endres. Skriptet er deterministisk:
+# har den som pushet allerede kjørt scripts/build_seo.py, blir det ingen commit.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "index.html"
+      - "scripts/build_seo.py"
+      - ".github/workflows/seo.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: seo-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Bygg SEO-filer
+        run: python3 scripts/build_seo.py
+
+      - name: Valider XML
+        run: |
+          sudo apt-get install -y -qq libxml2-utils >/dev/null
+          xmllint --noout feed.xml sitemap.xml
+
+      - name: Commit og push ved endring
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- feed.xml sitemap.xml index.html; then
+            echo "Ingen endring."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add feed.xml sitemap.xml index.html
+          git commit -m "SEO: oppdater RSS, sitemap og statisk feed fra data/*.json"
+          for i in 1 2 3; do
+            git pull --rebase -q origin main && git push origin HEAD:main && break
+            sleep 5
+          done
+          # Push med GITHUB_TOKEN starter ikke alltid en Pages-bygging av seg selv
+          gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds" >/dev/null || true

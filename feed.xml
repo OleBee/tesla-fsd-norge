@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
+    <link>https://tadnorge.no/</link>
+    <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
+    <language>nb-NO</language>
+    <lastBuildDate>Sat, 10 Oct 2026 07:00:00 GMT</lastBuildDate>
+    <image>
+      <url>https://tadnorge.no/favicon-192.png</url>
+      <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
+      <link>https://tadnorge.no/</link>
+    </image>
+    <item>
+      <title>KrF på Stortinget: Norge ga ingen innspill til EU om FSD – Danmark har allerede sagt ja</title>
+      <link>https://tadnorge.no/#news-stortinget-15-116-krf-2026-10-10</link>
+      <guid isPermaLink="false">news-stortinget-15-116-krf-2026-10-10</guid>
+      <pubDate>Sat, 10 Oct 2026 07:00:00 GMT</pubDate>
+      <description>&lt;p&gt;Stortingsrepresentant Jørgen H. Kristiansen fra KrF (Kristelig Folkeparti) har sendt et skriftlig spørsmål om Teslas førerstøttesystem til samferdselsminister Kamzy Gunaratnam fra Ap (Arbeiderpartiet). Spørsmålet ble levert 8. oktober og sendt til statsråden 9. oktober. Kristiansen spør: «Vil regjeringen ta initiativ til å gi norske innspill før den kommende behandlingen i EU av førerstøttesystemet Tesla FSD (Supervised), og vil regjeringen vurdere nasjonal anerkjennelse av systemet dersom det blir godkjent i EU, slik blant annet Danmark har gjort?» I begrunnelsen skriver han at Statens vegvesen (SVV) har opplyst at Norge ikke ga innspill til EUs tekniske komité for motorvogner (TCMV) før møtet 6. oktober. Komiteen behandler den nederlandske saken som kan gi systemet godkjenning i hele EU. Tesla kaller nå systemet «Tesla Assisted Driving» i Europa. SVVs egen side bekrefter at Norge verken sendte spørsmål eller kommentarer. Danmark har allerede sagt ja. Det danske trafikktilsynet Færdselsstyrelsen godtok 9. juni den foreløpige godkjenningen fra RDW, den nederlandske godkjenningsmyndigheten. Tilsynet gikk gjennom den tekniske dokumentasjonen og er enig med RDW i at systemet bidrar positivt til trafikksikkerheten. Danmark ventet altså ikke på EU. Svaret er ikke kommet ennå. Etter Stortingets forretningsorden skal statsråden svare innen seks hverdager, det vil si innen 16. oktober, eller forklare hvorfor svaret blir forsinket.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Danske Tesla-eiere med nyere maskinvare (HW4) har kunnet bruke FSD Supervised siden juni. Åtte EU-land, Nederland medregnet, har sagt ja. Norge har ingen stemme i TCMV, men kan sende innspill. Før oktobermøtet lot Norge være. SVV vil heller ikke gå foran: Etaten vurderer ingen norsk innføring så lenge systemet ikke oppfyller FN Reg. 171 (FN-regelverket for førerstøttesystemer). Nå må regjeringen svare på om Norge skal fortsette å vente. Neste mulighet for et EU-ja er desember 2026, og i Norge er FSD Supervised ennå ikke godkjent for vanlige eiere.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.stortinget.no/no/Saker-og-publikasjoner/Sporsmal/Skriftlige-sporsmal-og-svar/Skriftlig-sporsmal/?qnid=127642"&gt;https://www.stortinget.no/no/Saker-og-publikasjoner/Sporsmal/Skriftlige-sporsmal-og-svar/Skriftlig-sporsmal/?qnid=127642&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tesla døper om FSD i Nederland og flere EU-land – dokumentene viser ingen skjult EU-avstemning</title>
+      <link>https://tadnorge.no/#news-tesla-tad-navn-agenda-2026-10-08</link>
+      <guid isPermaLink="false">news-tesla-tad-navn-agenda-2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 20:25:00 GMT</pubDate>
+      <description>&lt;p&gt;Tesla har byttet navn på FSD Supervised på flere europeiske nettsider. På den nederlandske siden (tesla.com/nl_nl/fsd) heter systemet nå «Tesla Assisted Driving». For Tyskland og Norge har vi bare skjermbilder delt på X. De viser navnet «Tesla Assisted Driving Basic», på norsk «Tesla Assistert kjøring grunnleggende». Ifølge det tyske samferdselsdepartementet (BMV) tilbød Tesla selv det nye navnet. Den tyske X-kontoen @FSD_DE mener navnebyttet og en endret agenda kan bety at TCMV (EUs tekniske komité for motorvogner) likevel stemte over FSD 6. oktober. Det er en spekulasjon, ikke et vedtak. Agendaen ble riktignok endret 5. oktober, viser EUs komitéregister (Comitology Register). Møtet skulle nå slutte kl. 12.30 i stedet for kl. 15, to saker om tunge kjøretøy ble strøket, og AOB (Any other business, altså eventuelt) havnet rett etter artikkel 39-saken. Artikkel 39 er unntaksregelen den nederlandske godkjenningsmyndigheten RDW brukte da den godkjente FSD Supervised i april. Selve FSD-punktet står uendret som fortsettelse av diskusjonene om Nederlands søknad, ikke som avstemning. Etter EUs komitéforordning (182/2011) skal medlemslandene som hovedregel få utkastet til et vedtak minst 14 dager før møtet. Verken Kommisjonen, RDW eller Tesla har meldt om noen avstemning, og referatet er ikke publisert i registeret eller på CIRCABC. Reuters og Electrek skrev 8. oktober at avstemningen tidligst kommer i desember.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Navnebyttet tar bort et av argumentene mot FSD. Statens vegvesen (SVV) kalte i mai Teslas informasjon til kundene villedende fordi det ikke sto at systemet er førerstøtte. Nå står det i navnet. Neste mulighet for et EU-ja er fortsatt desember 2026, og i Norge er FSD Supervised ennå ikke godkjent for vanlige eiere.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://ec.europa.eu/transparency/comitology-register/screen/documents/118164/2/consult"&gt;https://ec.europa.eu/transparency/comitology-register/screen/documents/118164/2/consult&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RDW testet FSD i over 3000 timer – Vegvesenet avfeier sparte liv som «markedsføring»</title>
+      <link>https://tadnorge.no/#news-reuters-svv-markedsforing-2026-10-08</link>
+      <guid isPermaLink="false">news-reuters-svv-markedsforing-2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 06:15:00 GMT</pubDate>
+      <description>&lt;p&gt;Den nederlandske godkjenningsmyndigheten RDW testet FSD Supervised i over 3000 timer og mer enn 1000 testkjøringer på bane og offentlig vei. Konklusjonen var tydelig: Systemet kan gjøre trafikken tryggere når det brukes riktig. Likevel avfeier Statens vegvesen (SVV) Teslas påstander om sparte liv som markedsføring. Det sier sjefingeniør Stein-Helge Mundal i en stor gjennomgang fra nyhetsbyrået Reuters 7. oktober – mens norske eiere fortsatt venter. Mundal sier til Reuters at etaten ikke godkjenner systemer fordi de er populære, og ikke avviser dem fordi de er omstridte. Han mener også at navnet «Full Self-Driving» kan få førere til å tro at bilen klarer mer enn den gjør. Reuters har gått gjennom e-post mellom Tesla og myndigheter i sju land, blant dem Norge. Byrået skriver at Tesla presset på for en billigere og mindre omfattende gjennomgang hos RDW, og at sju trafikksikkerhetsforskere mener Teslas egen Europa-studie ikke beviser færre dødsulykker. RDW avviser kritikken: Vurderingen var uavhengig og grundig, og etaten anbefalte godkjenning i hele EU. Den tsjekkiske godkjenningsmyndigheten sier at den ikke har grunn til å tvile på at RDW var upartisk. Teslas egne tall trekker i samme retning. Ifølge sikkerhetsrapporten for FSD Supervised (tesla.com/fsd/safety) kjørte bilene i Nord-Amerika i snitt rundt 9,2 millioner kilometer mellom hver alvorlige kollisjon med systemet på. Kjørt manuelt, med de aktive sikkerhetssystemene i gang, klarte bilene i den samme Tesla-flåten rundt 3,3 millioner kilometer. Med FSD gikk de altså nesten tre ganger så langt. Tallene gjelder de siste tolv månedene, og en alvorlig kollisjon betyr at kollisjonsputer eller andre engangssikringer ble utløst. Mot snittet for amerikanske biler oppgir Tesla sju ganger færre alvorlige kollisjoner. Sammenligningen er i tråd med målestokken SVV selv bruker: I et svar til en norsk Tesla-entusiast i sommer skrev Mundal at bilen med FSD aktivert skal sammenlignes med den samme bilen uten (ITavisen 3. juli). Reuters viser også til en e-post fra norske Tesla-eiere i mai, som kalte den norske behandlingen passiv og byråkratisk.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; RDW har gjort jobben: over 3000 testtimer, en tydelig sikkerhetskonklusjon og en anbefaling om ja i hele EU. Åtte EU-land kjører allerede FSD Supervised på den godkjenningen. SVV vurderer likevel ingen norsk innføring så lenge systemet ikke oppfyller FN Reg. 171 (FN-regelverket for førerstøttesystemer), og etaten har ingen egen prosess med Tesla nå. Dermed må norske eiere vente på TCMV (EUs tekniske komité for motorvogner), der neste mulighet for et ja er i desember. Datoen er ikke kjent. FSD Supervised er førerstøtte på SAE-nivå 2, og føreren har hele ansvaret.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.reuters.com/investigations/tesla-is-browbeating-eu-approve-its-full-self-driving-tech-pressure-is-working-2026-10-07/"&gt;https://www.reuters.com/investigations/tesla-is-browbeating-eu-approve-its-full-self-driving-tech-pressure-is-working-2026-10-07/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Slovakia lover FSD-ja «om få dager» – men brevet til Nederland er ikke sendt ennå</title>
+      <link>https://tadnorge.no/#news-slovakia-raz-announcement-2026-10-07</link>
+      <guid isPermaLink="false">news-slovakia-raz-announcement-2026-10-07</guid>
+      <pubDate>Wed, 07 Oct 2026 16:45:00 GMT</pubDate>
+      <description>&lt;p&gt;Slovakias samferdselsminister Jozef Ráž jr. sier i en video at Slovakia om få dager sender et brev til Nederland om at landet anerkjenner RDWs godkjenning av FSD Supervised. Da kan systemet tas i bruk på slovakiske veier. Foreløpig er dette en kunngjøring, ikke en godkjenning: Vi har ikke funnet noen pressemelding fra departementet eller omtale i slovakiske medier som bekrefter at brevet er sendt. Sporet er det samme som Litauen, Kroatia og Tsjekkia har fulgt. RDW godkjente FSD Supervised 10. april etter artikkel 39 i EU-forordning 2018/858 – unntaksveien for ny teknologi. Godkjenningen gjelder bare i Nederland, men andre land kan godta den nasjonalt og melde fra skriftlig til RDW. Det er dette brevet Ráž snakker om. Tsjekkia gjorde det 21. september. Siden da kan slovakiske eiere bruke FSD på tsjekkiske veier, men systemet slår seg av ved grensen fordi registreringslandet avgjør. Inntil brevet er sendt og Tesla bekrefter utrulling, kan ingen slovakisk eier bruke FSD hjemme. I EU står saken stille: TCMV-møtet 6. oktober hadde bare diskusjon, og tidligste avstemning er i desember. FSD Supervised er førerstøtte på SAE-nivå 2, og føreren har hele ansvaret.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Blir Slovakia med, er ni EU-land på artikkel 39-sporet, og presset før EU-avstemningen øker. Norge venter fortsatt på Brussel via EØS mens nabolandene i EU tar snarveien selv. Statens vegvesen har ikke godkjent FSD Supervised for vanlige eiere, og et løfte i Bratislava er ikke et vedtak.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://x.com/slovakevguy/status/2107848969934274710"&gt;https://x.com/slovakevguy/status/2107848969934274710&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tyskland: Bilger presser på for EU-ja – Tesla tilbyr navnet TAD og maks ti prosent over fartsgrensen</title>
+      <link>https://tadnorge.no/#news-germany-bmv-tad-10pct-2026-10-06</link>
+      <guid isPermaLink="false">news-germany-bmv-tad-10pct-2026-10-06</guid>
+      <pubDate>Tue, 06 Oct 2026 17:06:00 GMT</pubDate>
+      <description>&lt;p&gt;Det tyske samferdselsdepartementet (BMV) oppdaterte 6. oktober statusen for Teslas førerstøttesystem. Statsråd Steffen Bilger sier han vil ha en rask EU-godkjenning av systemet (kjent som FSD Supervised). Tesla har tilbudt å omdøpe det til «Tesla Assisted Driving» (TAD), fordi «FSD» er misvisende: det er assistanse, og føreren må være oppmerksom. I september ble BMV og Tesla enige om at systemet kan overskride fartsgrensen med maksimalt ti prosent; Tyskland vil støtte den linjen konstruktivt i EU-prosessen. Føreren forblir 100 prosent ansvarlig. BMV fortsetter dialogen med KBA, nederlandske RDW og Tesla. Ifølge heise (dpa) sa Bilger også at hvis EU-sporet ikke fører frem, må Tyskland diskutere «hva som kan gjøres» nasjonalt — politisk vilje, ikke kundegodkjenning. TCMV 6. oktober hadde bare diskusjon, ingen avstemning; tidligste EU-votum pekes mot desember. Tyskland har ikke åpnet for vanlige kunder.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Tysk politisk press for EU-ja kan påvirke tempoet i TCMV-sporet Norge avhenger av via EØS. 10 %-avtalen og TAD-navnet er konkrete kompromisspunkter i Brussel. Det er fortsatt ingen tysk eller norsk kundegodkjenning. Åtte EU-land kjører allerede nasjonalt (~12,7 % av EU-befolkningen).&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.bmv.de/SharedDocs/DE/Artikel/StV/Digitalisierung-der-Mobilitaet/aktueller-stand-tesla-assistenzsysteme.html"&gt;https://www.bmv.de/SharedDocs/DE/Artikel/StV/Digitalisierung-der-Mobilitaet/aktueller-stand-tesla-assistenzsysteme.html&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TCMV-møtet 6. oktober er holdt — fortsatt ingen avstemning om FSD Supervised</title>
+      <link>https://tadnorge.no/#tcmv-119-holdt-2026-10-06</link>
+      <guid isPermaLink="false">tcmv-119-holdt-2026-10-06</guid>
+      <pubDate>Tue, 06 Oct 2026 17:04:12 GMT</pubDate>
+      <description>&lt;p&gt;EUs tekniske komité for motorvogner (TCMV) møttes 6. oktober. På agendaen sto fortsettelse av Nederlands artikkel 39-sak. Det ble ikke stemt, slik Statens vegvesen varslet 2. oktober. Neste mulighet er desember 2026; nøyaktig dato er ikke kjent. CIRCABC-mappa hadde fortsatt bare agendaen da vi sjekket sist.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Norge står fortsatt uten kundegodkjenning. Åtte EU-land kjører allerede FSD Supervised nasjonalt.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/0f4e0c81-ae0d-445a-80f4-4d9fe3e265c5"&gt;https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/0f4e0c81-ae0d-445a-80f4-4d9fe3e265c5&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Statens vegvesen: ingen EU-avstemning om FSD Supervised 6. oktober – Norge sendte ikke engang spørsmål</title>
+      <link>https://tadnorge.no/#svv-tcmv-ingen-votum-2026-10-02</link>
+      <guid isPermaLink="false">svv-tcmv-ingen-votum-2026-10-02</guid>
+      <pubDate>Fri, 02 Oct 2026 09:20:00 GMT</pubDate>
+      <description>&lt;p&gt;Statens vegvesen (SVV) bekrefter at det ikke blir noen avstemning om FSD Supervised når TCMV (EUs tekniske komité for motorvogner) møtes 6. oktober. Bekreftelsen står i en ny seksjon på etatens side om førerstøttesystemer, «Oppdatering 2. oktober om TCMV-møte». Årsaken er ifølge SVV at godkjenningsmyndighetene i majoriteten av medlemslandene «har signalisert at de ikke er klare til å stemme». «Neste mulighet er i desember 2026», skriver etaten. Norge har ikke sendt inn spørsmål eller kommentarer til møtet. Feltet «Sist oppdatert» nederst på siden viser fortsatt 3. juli.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Håpet om et EU-ja i oktober er borte, og desember er bare en mulighet. Norge har ingen stemme i TCMV, men kan sende spørsmål og kommentarer. Før junimøtet var Norge et av få land som gjorde det. Denne gangen sendte Norge ingenting. SVV skriver selv at noen EU-land allerede har akseptert unntakene nasjonalt – åtte EU-land har sagt ja til FSD Supervised. Likevel vil ikke etaten gå foran. SVV vurderer «ikke noen tidligere innføring av systemet i Norge» så lenge det ikke oppfyller FN Reg. 171 (FN-regelverket for førerstøttesystemer, DCAS), og har «ingen prosess med Tesla om dette nå». Norske eiere må vente på EU-avgjørelsen og deretter på at SVV fortsetter prosessen etter EØS-avtalen.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/"&gt;https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kroatia blir åttende EU-land med FSD Supervised – Norge står fortsatt utenfor</title>
+      <link>https://tadnorge.no/#news-croatia-2026-09-29</link>
+      <guid isPermaLink="false">news-croatia-2026-09-29</guid>
+      <pubDate>Tue, 29 Sep 2026 08:02:00 GMT</pubDate>
+      <description>&lt;p&gt;Kroatia har godkjent FSD Supervised, ifølge Tesla Europe. «FSD Supervised now approved in Croatia» (FSD Supervised er nå godkjent i Kroatia), skrev selskapets offisielle X-konto @teslaeurope kl. 10.02 tirsdag 29. september 2026. Utrullingen starter snart, lover Tesla. Dermed har åtte EU-land sagt ja til systemet, og de dekker om lag 12,7 % av EU-befolkningen (Eurostat, 1. januar 2025). En egen kunngjøring fra det kroatiske samferdselsdepartementet (MMPI) har vi ikke funnet ennå. Dato for vedtaket og eventuelle vilkår er derfor ikke bekreftet.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Enda et EU-land sier ja, mens norske eiere venter. Statens vegvesen har ikke godkjent FSD Supervised for vanlige eiere, og Norge har som EØS-land ingen stemme i TCMV (EUs tekniske komité for motorkjøretøy). Agendaen for møtet 6. oktober har fortsatt ingen avstemning, og pressen peker på desember som tidligste mulighet. Åtte land og 12,7 % er langt unna tersklene på 15 land og 65 % av befolkningen.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://x.com/teslaeurope"&gt;https://x.com/teslaeurope&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>EU-votum tidligst desember: CIRCABC viser fortsettelse 6. okt — ikke avstemning</title>
+      <link>https://tadnorge.no/#news-eu-votum-desember-vindu-2026-09-25</link>
+      <guid isPermaLink="false">news-eu-votum-desember-vindu-2026-09-25</guid>
+      <pubDate>Fri, 25 Sep 2026 17:56:00 GMT</pubDate>
+      <description>&lt;p&gt;Reuters/TeslaNorth (25.09.2026): EU-avstemning om Teslas FSD Supervised tidligst desember. CIRCABC-agenda for TCMV 6. oktober har Art. 39 NL som fortsettelse av diskusjonene («continuation of discussions») — ikke votum. Speed Offset og nordisk motstand har skjøvet votumet; systemet kjører allerede i sju EU-land.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Oktober-vinduet for votum er lukket ifølge presse + agenda. Desember er tidligste presseforventning. Ingen norsk kundeja. Ingen låst norsk dato.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CIRCABC-agenda: Art. 39 NL som fortsettelse + ADS i storserie på TCMV 6. okt</title>
+      <link>https://tadnorge.no/#circabc-agenda-119-text-2026-09-25</link>
+      <guid isPermaLink="false">circabc-agenda-119-text-2026-09-25</guid>
+      <pubDate>Fri, 25 Sep 2026 15:16:00 GMT</pubDate>
+      <description>&lt;p&gt;Utkast til agenda for 119. TCMV (Brussel 11.09.2026; møte 6.10.2026 kl. 10.00–15.00). Materielle punkter: «Continuation of discussions on request of the Netherlands for an Art. 39 authorisation» (11.45–12.10) — fortsettelse av diskusjonene om Nederlands Art. 39-forespørsel (unntaksvei for typegodkjenning), ikke planlagt avstemning. AOB / eventuelt: «Updates on the preparation of secondary legislation for large-series ADS and alignment with AI Act» (14.30–15.00) — oppdatering om forberedelse av sekundærlov for automatiserte kjøresystemer (ADS) i storserie og tilpasning til AI-forordningen, ikke votum.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Møtedato og Art. 39 / ADS på agendaen er nå bekreftet fra CIRCABC-dokumentteksten. Avstemning står fortsatt ikke på agendaen. Ingen norsk kundeja. Sju EU-land kjører allerede FSD Supervised.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/0f4e0c81-ae0d-445a-80f4-4d9fe3e265c5?p=1&amp;amp;n=10&amp;amp;sort=modified_DESC"&gt;https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/0f4e0c81-ae0d-445a-80f4-4d9fe3e265c5?p=1&amp;amp;n=10&amp;amp;sort=modified_DESC&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Johanna.be: FSD Supervised overskred 30-grensen i 55 % av Brussel-testene</title>
+      <link>https://tadnorge.no/#news-brussel-johanna-speed-offset-2026-09-25</link>
+      <guid isPermaLink="false">news-brussel-johanna-speed-offset-2026-09-25</guid>
+      <pubDate>Fri, 25 Sep 2026 06:00:00 GMT</pubDate>
+      <description>&lt;p&gt;Belgisk NGO Johanna.be (Electrek/Reuters via IEX 24.09) testet rundt 400 km i Brussel i juli: overskridelse i 55 % av 30-sonene (snitt 44 km/t) og 42 % i 20-soner; skjerm viste ofte 50 der skiltet sa 30. Rapport sendt RDW (nederlandsk typegodkjenningsmyndighet). RDW sa til Reuters at de vil vurdere den i overvåking/tilsyn — ikke tilbaketrekking, ikke formell gjenåpning. Speed Offset foran TCMV. Tesla via Reuters: 4,1× / mer enn 100 mill. km (produsentdata).&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Treffer Speed Offset-debatten SVV har flagget. Ingen norsk kundegodkjenning. Sju EU-land kjører allerede. Møtedato 6. oktober er bekreftet via CIRCABC; Art. 39 NL står som fortsettelse — ikke votum.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Latvias økonomidepartement foreslår at regjeringen anerkjenner nederlandsk FSD Supervised-godkjenning</title>
+      <link>https://tadnorge.no/#news-latvia-proposal-2026-09-21</link>
+      <guid isPermaLink="false">news-latvia-proposal-2026-09-21</guid>
+      <pubDate>Mon, 21 Sep 2026 14:55:00 GMT</pubDate>
+      <description>&lt;p&gt;21. september 2026 publiserte Latvias økonomidepartement et forslag om at regjeringen skal anerkjenne den nederlandske RDW artikkel 39-typegodkjenningen. Hvis regjeringen sier ja, får CSDD ti virkedager på å ferdigbehandle Teslas søknad. Dette er ikke kundegodkjenning ennå — Latvia mangler nasjonal godkjenning til beslutningen er tatt.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Viser en formell baltisk oppfølging etter Estland/Litauen, men bare et forslag. Endrer ikke «ja»-tellingen for TCMV; status er usikker til anerkjennelsen er vedtatt.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://en.bb.lv/article/technologies/2026/09/21/in-latvia-teslas-next-generation-autopilot-may-be-allowed-110761"&gt;https://en.bb.lv/article/technologies/2026/09/21/in-latvia-teslas-next-generation-autopilot-may-be-allowed-110761&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tsjekkia til «ja» på TCMV-kartet — 7 av 27 land og 11,8 % av befolkningen</title>
+      <link>https://tadnorge.no/#tcmv-czechia-2026-09-21</link>
+      <guid isPermaLink="false">tcmv-czechia-2026-09-21</guid>
+      <pubDate>Mon, 21 Sep 2026 14:50:00 GMT</pubDate>
+      <description>&lt;p&gt;Tsjekkias transportministerium anerkjente den nederlandske artikkel 39-saken 21. september 2026. Samme dag foreslo Latvias økonomidepartement regjeringsanerkjennelse (fortsatt usikkert — ikke kundegodkjenning). Uoffisiell sjanse for TCMV-ja i oktober er satt til 30 %.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Stemmetallene bedret seg noe, men tersklene 15 stater / 65 % befolkning krever fortsatt de store økonomiene.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tsjekkia blir sjuende EU-land med nasjonal anerkjennelse av FSD Supervised</title>
+      <link>https://tadnorge.no/#norway-czechia-2026-09-21</link>
+      <guid isPermaLink="false">norway-czechia-2026-09-21</guid>
+      <pubDate>Mon, 21 Sep 2026 14:43:00 GMT</pubDate>
+      <description>&lt;p&gt;Tsjekkias transportministerium anerkjente den nederlandske artikkel 39-typegodkjenningen for Tesla FSD Supervised 21. september 2026. Tesla Europe bekrefter utrulling snart. Sju medlemsland dekker nå om lag 11,8 % av EU-befolkningen. Norge er fortsatt uten kundegodkjenning.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Gir mer befolkningsvekt før TCMV 6. oktober (CIRCABC-agenda), men fortsatt langt under tersklene 15 stater / 65 %. Ingen endring i Statens vegvesens linje for Norge.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://md.gov.cz/Media/Media-a-tiskove-zpravy"&gt;https://md.gov.cz/Media/Media-a-tiskove-zpravy&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Slovenia blir sjette EU-land med nasjonal kundegodkjenning</title>
+      <link>https://tadnorge.no/#seed-slovenia-2026-09-07</link>
+      <guid isPermaLink="false">seed-slovenia-2026-09-07</guid>
+      <pubDate>Mon, 07 Sep 2026 10:00:00 GMT</pubDate>
+      <description>&lt;p&gt;Tesla Europe sier at Slovenia har anerkjent den nederlandske artikkel 39-saken. Utrulling ventes snart. Seks land dekker fortsatt bare ca. 9,4 % av EU-befolkningen.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Fortsatt langt under TCMV-tersklene (15 av 27 stater og 65 % av befolkningen).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Frankrike starter UTAC-veitester etter Musk–Tabarot FSD-samtale</title>
+      <link>https://tadnorge.no/#news-france-utac-musk-tabarot-2026-09-03</link>
+      <guid isPermaLink="false">news-france-utac-musk-tabarot-2026-09-03</guid>
+      <pubDate>Thu, 03 Sep 2026 12:00:00 GMT</pubDate>
+      <description>&lt;p&gt;Fransk transportminister Philippe Tabarot sa at han hadde en konstruktiv samtale med Elon Musk 2. september. Tesla stilte med to FSD Supervised-serie biler til uavhengige UTAC-veitester. Reuters omtaler testene; dette er ikke fransk kundegodkjenning.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Frankrike er en stor befolknings-svingstemme for TCMV-kravet 15 stater / 65 %. Testing etter juli-nei er materiell tøvær — fortsatt ikke godkjenning.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.reuters.com/technology/france-starts-tests-teslas-self-driving-tech-2026-09-03/"&gt;https://www.reuters.com/technology/france-starts-tests-teslas-self-driving-tech-2026-09-03/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sverige gjentar ambisjon om unionsomfattende FSD Supervised-godkjenning</title>
+      <link>https://tadnorge.no/#news-sweden-riksdag-ambition-2026-08-31</link>
+      <guid isPermaLink="false">news-sweden-riksdag-ambition-2026-08-31</guid>
+      <pubDate>Mon, 31 Aug 2026 10:00:00 GMT</pubDate>
+      <description>&lt;p&gt;I et skriftlig riksdagssvar 31. august 2026 sa infrastrukturminister Andreas Carlson at ambisjonen er unionsomfattende godkjenning etter evalueringer. Han låste ikke en ja-stemme.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Offisielt svensk signal før TCMV: ønsker EU-klarering hvis sikkerhetsgrunnlaget holder.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svar-pa-skriftlig-fraga/sveriges-standpunkt-i-eu-gallande-behandling-av_hd121000/"&gt;https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svar-pa-skriftlig-fraga/sveriges-standpunkt-i-eu-gallande-behandling-av_hd121000/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Svensk transportminister filmet i Tesla med FSD i Mullsjö</title>
+      <link>https://tadnorge.no/#news-sweden-carlson-fsd-video-2026-08-30</link>
+      <guid isPermaLink="false">news-sweden-carlson-fsd-video-2026-08-30</guid>
+      <pubDate>Sun, 30 Aug 2026 16:00:00 GMT</pubDate>
+      <description>&lt;p&gt;Omkring 30. august 2026 la Andreas Carlson ut Instagram Story fra autorisert FSD-testing i Mullsjö. Behandle X-spredning som rykte/sekundær. Ikke nasjonal kundegodkjenning.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Politisk synlighet — symbolsk, ikke grønt lys for svenske eiere.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://itavisen.no/2026/09/01/tesla-fsd-eu-godkjenning-oktober/"&gt;https://itavisen.no/2026/09/01/tesla-fsd-eu-godkjenning-oktober/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Statens vegvesens side sist oppdatert 3. juli 2026</title>
+      <link>https://tadnorge.no/#seed-svv-2026-07-03</link>
+      <guid isPermaLink="false">seed-svv-2026-07-03</guid>
+      <pubDate>Fri, 03 Jul 2026 10:00:00 GMT</pubDate>
+      <description>&lt;p&gt;SVV gjentar: Norge er ikke kundegodkjent; bare begrenset testing; kundedemoer stanset til Tesla endrer budskapet; neste TCMV-vindu i oktober.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Offisiell norsk grunnlinje inntil SVV publiserer nyere oppdatering.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/"&gt;https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TCMV diskuterer den nederlandske artikkel 39-saken — ingen avstemning</title>
+      <link>https://tadnorge.no/#seed-tcmv-2026-06-30</link>
+      <guid isPermaLink="false">seed-tcmv-2026-06-30</guid>
+      <pubDate>Tue, 30 Jun 2026 16:00:00 GMT</pubDate>
+      <description>&lt;p&gt;Komitédiskusjon 30. juni 2026 uten votum. Norge deltok uten stemmerett.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Første realistiske avstemningsvindu peker mot høsten; CIRCABC bekrefter møte 6. oktober, ikke nødvendigvis votum.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/0f4e0c81-ae0d-445a-80f4-4d9fe3e265c5?p=1&amp;amp;n=10&amp;amp;sort=modified_DESC"&gt;https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/0f4e0c81-ae0d-445a-80f4-4d9fe3e265c5?p=1&amp;amp;n=10&amp;amp;sort=modified_DESC&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -4,7 +4,7 @@ Uoffisiell statusside om godkjenning av Tesla FSD Supervised (SAE nivå 2) i Nor
 
 **Canonical URL:** [https://tadnorge.no/](https://tadnorge.no/) (tidligere fsdnorge.no; videresending og DNS tar Chief of Staff)
 
-Speil på GitHub Pages: [https://OleBee.github.io/tesla-fsd-norge/](https://OleBee.github.io/tesla-fsd-norge/) (custom domain `fsdnorge.no` via `CNAME`).
+Speil på GitHub Pages: [https://OleBee.github.io/tesla-fsd-norge/](https://OleBee.github.io/tesla-fsd-norge/) (custom domain `tadnorge.no` via `CNAME`).
 
 ## Én side (singleside dashboard)
 
@@ -28,6 +28,14 @@ Hele den offentlige UI-en er bokmål.
 ## Automatiseringer (CoS eier)
 
 Rutiner og push ligger hos Chief of Staff. Redaksjonsbot: `fsdnorge`. Etter TCMV-møte: oppdater singleside-JSON (`status.json` / `europa-feed.json`), ikke gamle `tcmv.html`.
+
+## SEO og deling
+
+- `scripts/build_seo.py` bygger `feed.xml` (RSS), `sitemap.xml` (med `lastmod`) og den statiske feed- og tidslinjeblokken i `index.html` (mellom `SEO:FEED`- og `SEO:TIDSLINJE`-markørene) fra `data/*.json`. Kjør `python3 scripts/build_seo.py` før push når JSON er endret. `--check` gir kode 1 hvis noe er utdatert.
+- `.github/workflows/seo.yml` kjører det samme skriptet ved push til main og committer bare hvis noe er endret. Kjør `git pull --rebase` før push hvis du ikke har kjørt skriptet selv.
+- Delingsbilde: `assets/og/tadnorge-og.png` (1200×630), kilde `scripts/og/og-image.html`, render med `bash scripts/og/render.sh`. `og-default.png` beholdes for gamle delinger.
+- Logo for strukturerte data: `assets/brand/tadnorge-logo-512.png`.
+- `robots.txt` stenger `/drafts/` og `/scripts/` for søkemotorer.
 
 ## Kilderegel
 

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<!-- Kilde for assets/og/tadnorge-og.png (1200×630). Render: bash scripts/og/render.sh -->
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: #070b14;
+    font-family: "Inter", system-ui, sans-serif;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+  }
+  .glow {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(520px 420px at 1010px 330px, rgba(142,204,188,.10), transparent 70%),
+      radial-gradient(420px 360px at 1100px 80px, rgba(178,130,238,.08), transparent 70%);
+  }
+  .card {
+    position: absolute; left: 40px; top: 40px; right: 40px; bottom: 40px;
+    background: #0e1624; border-radius: 28px;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+    overflow: hidden;
+  }
+  .stripe { position: absolute; left: 0; right: 0; bottom: 0; height: 8px; display: flex; }
+  .stripe span { flex: 1; }
+  .content { position: absolute; left: 64px; top: 58px; width: 700px; }
+  .brand { display: flex; align-items: center; gap: 18px; }
+  .brand svg { display: block; }
+  .word { font-size: 40px; font-weight: 600; letter-spacing: -.03em; line-height: 1;
+          padding-bottom: 6px; border-bottom: 3px solid #cd626a; }
+  .word small { font-size: 26px; font-weight: 500; color: #8b95a8; letter-spacing: -.01em; }
+  h1 { margin-top: 64px; font-size: 56px; line-height: 1.1; font-weight: 600; letter-spacing: -.035em; }
+  h1 em { font-style: normal; color: #8eccbc; }
+  .sub { margin-top: 24px; font-size: 24px; line-height: 1.4; color: #9aa3b5; font-weight: 400; max-width: 640px; }
+  .chips { position: absolute; left: 64px; bottom: 50px; display: flex; gap: 12px; }
+  .chip { display: flex; align-items: center; gap: 10px; font-size: 19px; font-weight: 500; color: #c5cddb;
+          background: #121b2c; border-radius: 999px; padding: 10px 18px;
+          box-shadow: inset 0 0 0 1px rgba(255,255,255,.06); }
+  .chip i { width: 10px; height: 10px; border-radius: 50%; display: block; }
+  .gauge { position: absolute; right: 66px; top: 122px; }
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="card">
+    <div class="content">
+      <div class="brand">
+        <svg width="56" height="56" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="16" fill="#070b14"/>
+          <circle cx="32" cy="32" r="17" fill="none" stroke="#263043" stroke-width="5.5"/>
+          <path d="M19.98 44.02 A17 17 0 1 1 44.02 44.02" fill="none" stroke="#8eccbc" stroke-width="5.5" stroke-linecap="round"/>
+          <circle cx="32" cy="32" r="4.5" fill="#fff"/>
+        </svg>
+        <div class="word">tadnorge<small>.no</small></div>
+      </div>
+      <h1>Vi følger godkjenningen av <em>Tesla FSD</em> i Norge og EU</h1>
+      <p class="sub">Tesla Assisted Driving (FSD Supervised) · SAE nivå 2<br>Uoffisiell statusside med kilder</p>
+    </div>
+
+    <svg class="gauge" width="300" height="300" viewBox="0 0 300 300" aria-hidden="true">
+      <defs>
+        <linearGradient id="g" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0" stop-color="#8eccbc"/>
+          <stop offset=".55" stop-color="#b282ee"/>
+          <stop offset="1" stop-color="#df9f70"/>
+        </linearGradient>
+      </defs>
+      <circle cx="150" cy="150" r="118" fill="none" stroke="#18233a" stroke-width="26"/>
+      <path d="M66.56 233.44 A118 118 0 1 1 233.44 233.44" fill="none" stroke="url(#g)" stroke-width="26" stroke-linecap="round"/>
+      <circle cx="150" cy="150" r="20" fill="#fff"/>
+      <circle cx="150" cy="150" r="58" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="2"/>
+    </svg>
+
+    <div class="chips">
+      <div class="chip"><i style="background:#8eccbc"></i>Siste nytt</div>
+      <div class="chip"><i style="background:#b282ee"></i>Tidslinje</div>
+      <div class="chip"><i style="background:#df9f70"></i>Status i Europa</div>
+    </div>
+    <div class="stripe"><span style="background:#8eccbc"></span><span style="background:#b282ee"></span><span style="background:#df9f70"></span><span style="background:#cd626a"></span></div>
+  </div>
+</body>
+</html>

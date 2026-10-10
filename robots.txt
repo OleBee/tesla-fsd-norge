@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /drafts/
+Disallow: /scripts/
 
 Sitemap: https://tadnorge.no/sitemap.xml
