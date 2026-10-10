@@ -262,7 +262,7 @@
   ],
   "series_02": {
     "forventet": "2027-01",
-    "merknad": "UN R171 Series 02 ventes i kraft sent i januar 2027 — parallell, langsiktig vei ved siden av Art. 39, ikke norsk kundeaktivering.",
+    "merknad": "Den nye versjonen av FN-regelverket R171 (Series 02) ventes å tre i kraft sent i januar 2027. Det er en langsiktig vei ved siden av artikkel 39, ikke en norsk kundeaktivering.",
     "iso": "2027-01-25T00:00:00+01:00",
     "dato_nb": "Sent i januar 2027"
   },
@@ -271,27 +271,27 @@
   "timeline": [
     {
       "dato": "2026-04-10",
-      "tekst": "RDW i Nederland gir foreløpig typegodkjenning via Art. 39 og UN R171.",
+      "tekst": "RDW, den nederlandske godkjenningsmyndigheten, gir foreløpig typegodkjenning etter artikkel 39 (EUs unntaksregel i rammeforordningen 2018/858) og FN-regelverket R171.",
       "fase": "passert"
     },
     {
       "dato": "2026-05-05",
-      "tekst": "RDW presenterer saken for TCMV. Norge deltar uten stemmerett.",
+      "tekst": "RDW presenterer saken for TCMV (EUs tekniske komité for motorvogner). Norge deltar uten stemmerett.",
       "fase": "passert"
     },
     {
       "dato": "2026-05-20",
-      "tekst": "Litauen anerkjenner — første EU-land etter Nederland.",
+      "tekst": "Litauen anerkjenner godkjenningen som første EU-land etter Nederland.",
       "fase": "passert"
     },
     {
       "dato": "2026-05-29",
-      "tekst": "Estland anerkjenner RDW Art. 39.",
+      "tekst": "Estland anerkjenner RDW-godkjenningen etter artikkel 39.",
       "fase": "passert"
     },
     {
       "dato": "2026-06-09",
-      "tekst": "Danmark anerkjenner — kunder får kjøre.",
+      "tekst": "Danmark anerkjenner godkjenningen, og kundene får kjøre.",
       "fase": "passert"
     },
     {
@@ -301,12 +301,12 @@
     },
     {
       "dato": "2026-06-30",
-      "tekst": "TCMV diskuterer Art. 39 NL — ingen avstemning.",
+      "tekst": "TCMV diskuterer Nederlands artikkel 39-sak. Ingen avstemning.",
       "fase": "passert"
     },
     {
       "dato": "2026-07-03",
-      "tekst": "SVV oppdaterer infosiden. Fortsatt ikke kundegodkjent i Norge.",
+      "tekst": "Statens vegvesen (SVV) oppdaterer informasjonssiden. FSD Supervised er fortsatt ikke godkjent for kunder i Norge.",
       "fase": "passert"
     },
     {
@@ -326,7 +326,7 @@
     },
     {
       "dato": "2026-09-25",
-      "tekst": "CIRCABC-agenda lest: Art. 39 NL som fortsettelse 6. okt — ikke votum.",
+      "tekst": "Agendaen i EUs dokumentarkiv CIRCABC viser at Nederlands artikkel 39-sak bare skal diskuteres videre 6. oktober. Ingen avstemning.",
       "fase": "passert"
     },
     {
@@ -346,12 +346,12 @@
     },
     {
       "dato": "2026-10-06",
-      "tekst": "TCMV 119. møte holdt: fortsettelse av diskusjonen om Nederlands artikkel 39-sak. Ingen avstemning, slik SVV varslet.",
+      "tekst": "TCMVs 119. møte er holdt. Diskusjonen om Nederlands artikkel 39-sak fortsatte. Ingen avstemning, slik SVV varslet.",
       "fase": "passert"
     },
     {
       "dato": "2026-10-06",
-      "tekst": "BMV (Tyskland): Bilger presser på for rask EU-godkjenning. Tesla tilbyr navnet TAD; enighet om maks ti prosent over fartsgrensen. Ingen tysk kundegodkjenning.",
+      "tekst": "Det tyske samferdselsdepartementet (BMV): Statsråd Steffen Bilger presser på for rask EU-godkjenning. Tesla tilbyr navnet TAD (Tesla Assisted Driving), og partene er enige om maks ti prosent over fartsgrensen. Ingen tysk kundegodkjenning.",
       "fase": "passert"
     },
     {
@@ -372,13 +372,13 @@
     },
     {
       "dato": "2026-12-15",
-      "tekst": "Neste mulige TCMV-port for Art. 39 / FSD Supervised. Nøyaktig møtedato er ikke kjent ennå.",
+      "tekst": "Neste mulighet for et ja i TCMV til artikkel 39-saken om FSD Supervised. Nøyaktig møtedato er ikke kjent ennå.",
       "fase": "neste",
       "etikett": "Dato ukjent"
     },
     {
       "dato": "2027-01-25",
-      "tekst": "UN R171 Series 02 ventes i kraft — langsiktig spor parallelt med Art. 39.",
+      "tekst": "Den nye versjonen av FN-regelverket R171 (Series 02) ventes å tre i kraft. Det er et langsiktig spor ved siden av artikkel 39.",
       "fase": "langsiktig",
       "etikett": "Series 02"
     }
