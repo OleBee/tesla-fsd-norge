@@ -1,8 +1,8 @@
 {
-  "sist_sjekket": "2026-10-11",
-  "sist_sjekket_nb": "11. oktober 2026",
-  "sist_oppdatert_iso": "2026-10-11T07:49:00+02:00",
-  "sist_oppdatert_nb": "11. oktober 2026 kl. 07.49",
+  "sist_sjekket": "2026-10-12",
+  "sist_sjekket_nb": "12. oktober 2026",
+  "sist_oppdatert_iso": "2026-10-12T07:55:00+02:00",
+  "sist_oppdatert_nb": "12. oktober 2026 kl. 07.55",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Statens vegvesen åpner fortsatt ikke for vanlig kundekjøring. Tesla får teste med egne, trente sikkerhetsførere — begrenset testing, ikke din bil.",
@@ -55,7 +55,7 @@
     "siste_utfall": "diskusjon uten avstemning",
     "neste_dato": "2026-12-15",
     "neste_sikkerhet": "ukjent dato (desember)",
-    "dager_til": 65,
+    "dager_til": 64,
     "oktober_godkjenning_prosent": 0,
     "etikett": "Sjanse for TCMV-ja i desember – dato ikke kjent",
     "sannsynlig_utfall": "ukjent",
@@ -261,6 +261,12 @@
     },
     {
       "dato": "2026-10-11",
+      "prosent": 1,
+      "merknad": "Ingen materiell endring"
+    }
+,
+    {
+      "dato": "2026-10-12",
       "prosent": 1,
       "merknad": "Ingen materiell endring"
     }
