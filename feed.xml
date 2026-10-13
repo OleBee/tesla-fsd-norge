@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Tue, 13 Oct 2026 06:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 16:30:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>Vegvesenet roser Teslas navnebytte – «Full Self-Driving» er borte fra de norske nettsidene</title>
+      <link>https://tadnorge.no/#news-svv-tesla-assistert-kjoring-2026-10-13</link>
+      <guid isPermaLink="false">news-svv-tesla-assistert-kjoring-2026-10-13</guid>
+      <pubDate>Tue, 13 Oct 2026 16:30:00 GMT</pubDate>
+      <description>&lt;p&gt;Statens vegvesen (SVV) ønsker velkommen at Tesla har sluttet å bruke navnet «Full Self-Driving» (FSD). Siden 8. oktober har funksjonene hett «Tesla Assistert kjøring» på Teslas norske nettsider. «Det er positivt at Tesla nå er tydeligere i ordbruken. Det viktigste for oss er at brukerne forstår at dette fortsatt er et førerstøttesystem. Føreren har ansvaret for kjøringen til enhver tid og må følge med på trafikken og være klar til å overta kontrollen umiddelbart», skriver sjefingeniør Stein-Helge Mundal i SVV til Tek.no. Ifølge Tesla gjelder navnebyttet hele Europa, og funksjonene virker som før. Selskapet har drøftet navnet med europeiske og lokale myndigheter. Den norske abonnementspakken heter nå «Tesla Assistert kjøring grunnleggende» og koster 1090 kroner i måneden. Den mer avanserte programvaren er fortsatt ikke tilgjengelig i Norge.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Navnet var en av hindringene her hjemme. I en oppdatering 13. mai kalte SVV Teslas informasjonsmateriale for kundedemoer villedende, fordi det ikke sto at systemet er førerstøtte. Etaten ville ikke tillate demoer før det var endret, og 3. juli hadde den ennå ikke fått nytt materiale. Nå står assistert kjøring i selve navnet, og SVV gir ros. Åtte EU-land har tillatt systemet, og Slovakia ventes å bli nummer ni, ifølge nyhetsbyrået Reuters. Reuters har også omtalt sju trafikksikkerhetsforskere som mener Teslas europeiske sikkerhetsstudie ikke dokumenterer påstandene. RDW, den nederlandske godkjenningsmyndigheten, avviser kritikken og sier at vurderingen var uavhengig og grundig. En EU-avstemning kan komme i desember. I Norge er systemet ennå ikke godkjent for vanlige eiere.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.tek.no/nyheter/nyhet/i/vl9npm/tesla-vraker-full-selvkjoering-navnet"&gt;https://www.tek.no/nyheter/nyhet/i/vl9npm/tesla-vraker-full-selvkjoering-navnet&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Franskmenn får prøvekjøre FSD Supervised på bilmessen i Paris – nordmenn får ikke det samme</title>
       <link>https://tadnorge.no/#news-paris-mondial-tad-provekjoring-2026-10-13</link>
