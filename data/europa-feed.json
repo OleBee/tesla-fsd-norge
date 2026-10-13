@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-10-10T09:00:00+02:00",
+  "updated_iso": "2026-10-13T08:30:00+02:00",
   "standings": {
     "yes_countries": 8,
     "eu_population_pct": 12.7,
@@ -9,6 +9,31 @@
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "news-paris-mondial-tad-provekjoring-2026-10-13",
+      "iso": "2026-10-13T08:30:00+02:00",
+      "source": "news",
+      "title": "Franskmenn får prøvekjøre FSD Supervised på bilmessen i Paris – nordmenn får ikke det samme",
+      "summary": "Tesla lar publikum på bilmessen Mondial de l'Auto i Paris prøve FSD Supervised, som i Europa nå heter «Tesla Assisted Driving». Messen er åpen for publikum 13.–18. oktober. Seks Model 3 med systemet står klare i messens testsenter for selvkjørende biler, «Autonomous Lab», ved port H i hall 7.1. Hver tur går på en sikret rute på rundt 25 minutter, med en vert i bilen som forklarer hva systemet gjør. Plass bestilles med QR-kode på stedet. Frankrike har ikke godkjent systemet for vanlige eiere, men sa i september at landet vil støtte godkjenningen etter å ha testet to biler på offentlig vei. På arrangørens egen side står to tall fra Tesla: over 100 millioner kilometer kjørt i Europa, og 4,1 ganger lavere sannsynlighet for å havne i en ulykke enn ved manuell kjøring. Det er Teslas egne tall.",
+      "why_it_matters": "I Norge har Statens vegvesen (SVV) ikke gitt Tesla lov til kundedemoer. I mai kalte etaten Teslas informasjonsmateriale villedende fordi det ikke sto at systemet er førerstøtte. Per 3. juli hadde SVV ikke fått oppdatert materiale. Nå står førerstøtte i selve navnet. Det burde gjøre det enklere å åpne for demoer også her. Neste mulighet for et EU-ja er TCMV (EUs tekniske komité for motorvogner) i desember 2026. FSD Supervised er førerstøtte på SAE-nivå 2, og føreren har hele ansvaret. I Norge er systemet ennå ikke godkjent for vanlige eiere.",
+      "url": "https://teslant.com/en/news/tesla-paris-motor-show-2026-fsd-drives-cybercab",
+      "sources": [
+        "https://teslant.com/en/news/tesla-paris-motor-show-2026-fsd-drives-cybercab",
+        "https://mondial.paris/actualites/auto-mondial/mondial-de-l-auto-2026-plus-de-5-000-essais-prevus-pour-le-centre-dessais-91977.html",
+        "https://www.myrtlebeachonline.com/news/business/article317595078.html",
+        "https://electrek.co/2026/10/09/tesla-fsd-renamed-tesla-assisted-driving-europe/",
+        "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/"
+      ],
+      "tags": [
+        "france",
+        "tesla",
+        "tad",
+        "demo",
+        "svv",
+        "norway",
+        "news"
+      ]
+    },
     {
       "id": "news-stortinget-15-116-krf-2026-10-10",
       "iso": "2026-10-10T09:00:00+02:00",
