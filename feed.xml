@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Sat, 10 Oct 2026 07:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 06:30:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>Franskmenn får prøvekjøre FSD Supervised på bilmessen i Paris – nordmenn får ikke det samme</title>
+      <link>https://tadnorge.no/#news-paris-mondial-tad-provekjoring-2026-10-13</link>
+      <guid isPermaLink="false">news-paris-mondial-tad-provekjoring-2026-10-13</guid>
+      <pubDate>Tue, 13 Oct 2026 06:30:00 GMT</pubDate>
+      <description>&lt;p&gt;Tesla lar publikum på bilmessen Mondial de l'Auto i Paris prøve FSD Supervised, som i Europa nå heter «Tesla Assisted Driving». Messen er åpen for publikum 13.–18. oktober. Seks Model 3 med systemet står klare i messens testsenter for selvkjørende biler, «Autonomous Lab», ved port H i hall 7.1. Hver tur går på en sikret rute på rundt 25 minutter, med en vert i bilen som forklarer hva systemet gjør. Plass bestilles med QR-kode på stedet. Frankrike har ikke godkjent systemet for vanlige eiere, men sa i september at landet vil støtte godkjenningen etter å ha testet to biler på offentlig vei. På arrangørens egen side står to tall fra Tesla: over 100 millioner kilometer kjørt i Europa, og 4,1 ganger lavere sannsynlighet for å havne i en ulykke enn ved manuell kjøring. Det er Teslas egne tall.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; I Norge har Statens vegvesen (SVV) ikke gitt Tesla lov til kundedemoer. I mai kalte etaten Teslas informasjonsmateriale villedende fordi det ikke sto at systemet er førerstøtte. Per 3. juli hadde SVV ikke fått oppdatert materiale. Nå står førerstøtte i selve navnet. Det burde gjøre det enklere å åpne for demoer også her. Neste mulighet for et EU-ja er TCMV (EUs tekniske komité for motorvogner) i desember 2026. FSD Supervised er førerstøtte på SAE-nivå 2, og føreren har hele ansvaret. I Norge er systemet ennå ikke godkjent for vanlige eiere.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://teslant.com/en/news/tesla-paris-motor-show-2026-fsd-drives-cybercab"&gt;https://teslant.com/en/news/tesla-paris-motor-show-2026-fsd-drives-cybercab&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>KrF på Stortinget: Norge ga ingen innspill til EU om FSD – Danmark har allerede sagt ja</title>
       <link>https://tadnorge.no/#news-stortinget-15-116-krf-2026-10-10</link>
