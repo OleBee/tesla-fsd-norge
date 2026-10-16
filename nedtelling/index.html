@@ -154,7 +154,7 @@
       <h3>Estimat ut fra kildene</h3>
       <ol>
         <li><strong>Lansert:</strong> Datoen er den første dokumenterte utrullingen til kunder, kunngjort av Tesla eller observert hos eiere. Mangler den, viser vi godkjenningsdatoen og sier fra.</li>
-        <li><strong>Godkjent, utrulling snart:</strong> Godkjenningsdatoen pluss den typiske ventetiden fra godkjenning til første utrulling i landene som allerede har fått FSD Supervised. <span id="nt-grunnlag"></span></li>
+        <li><strong>Godkjent, utrulling snart:</strong> Godkjenningsdatoen pluss den typiske ventetiden fra godkjenning til første utrulling i landene som allerede har fått FSD Supervised. Noen ganger viser vi bare godkjenningsdatoen og skriver at Tesla ikke har oppgitt noen dato. <span id="nt-grunnlag"></span></li>
       </ol>
 
       <h3>Modellert estimat – fem steg</h3>
@@ -260,6 +260,9 @@
           "</div>" +
           '<p class="cd-done" hidden>Estimatet er passert – vi venter på bekreftet utrulling</p>';
         if (c.godkjent_dato) h += '<div class="nt-when">Godkjent ' + esc(fmtDate(c.godkjent_dato)) + "</div>";
+      } else if (c.status === "godkjent, utrulling snart" && c.godkjent_dato) {
+        h += '<div class="nt-big">Godkjent ' + esc(fmtDate(c.godkjent_dato)) + "</div>" +
+          '<div class="nt-when">Tesla har ikke oppgitt noen dato for utrullingen</div>';
       } else {
         h += '<div class="nt-when">Dato mangler i datagrunnlaget</div>';
       }
@@ -310,7 +313,7 @@
         else est.push(c);
       });
       function byDate(a, b) {
-        var d = (a.estimert_dato || "9999").localeCompare(b.estimert_dato || "9999");
+        var d = (a.estimert_dato || a.godkjent_dato || "9999").localeCompare(b.estimert_dato || b.godkjent_dato || "9999");
         return d !== 0 ? d : a.land.localeCompare(b.land, "nb");
       }
       est.sort(byDate);
