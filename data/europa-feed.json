@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-10-16T12:15:00+02:00",
+  "updated_iso": "2026-10-16T12:30:00+02:00",
   "standings": {
     "yes_countries": 9,
     "eu_population_pct": 13.9,
@@ -9,6 +9,33 @@
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "news-stortinget-15-116-svar-2026-10-16",
+      "iso": "2026-10-16T12:30:00+02:00",
+      "source": "norway",
+      "title": "Statsråden svarer KrF: Norge venter på EU, selv om SVV mener systemet kjører godt",
+      "summary": "Samferdselsminister Kamzy Gunaratnam fra Ap (Arbeiderpartiet) svarte 16. oktober på det skriftlige spørsmålet fra stortingsrepresentant Jørgen H. Kristiansen fra KrF (Kristelig Folkeparti) om Teslas førerstøttesystem (dokument nr. 15:116). Hun er positiv: «Jeg er positiv til ny kjøretøyteknologi da det kan løse mange av fremtidens mobilitetsbehov og bedre trafikksikkerheten.» Norge skal likevel ikke godkjenne systemet på egen hånd: «I denne saken mener jeg at trafikksikkerheten ivaretas best ved at Norge avventer EUs beslutning.» Sier EU ja, vil Norge forholde seg til det «i henhold til våre forpliktelser etter EØS-avtalen». Statens vegvesen (SVV) gir systemet godt skussmål. Ifølge svaret mener etaten at systemet «ser ut til å håndtere normale trafikksituasjoner på en god måte». Ministeren skriver også at Tesla har moderert markedsføringen og byttet navn på systemet. På Teslas norske sider heter det nå «Tesla Assistert Kjøring». Hun begrunner ventingen med to forhold. Det første er farten: «Det har etter dette møtet blitt påvist at systemet faktisk kan bryte fartsgrenser.» Det andre er føreren: «Det er likevel usikkert hvor godt den nye teknologien kan sikre at fører er oppmerksom og klar til å ta over kontrollen umiddelbart, når systemet feiler eller ikke klarer å håndtere uforutsette situasjoner.» Motsvaret står i samme svar: Føreren har fortsatt hele ansvaret for kjøringen etter vegtrafikkloven. Svaret opplyser i tillegg at SVV ga innspill på vegne av Norge til møtet i EUs kjøretøykomité 30. juni. Innspillet gjaldt blant annet fartsgrensene og forskjellen mellom markedsføringen og brukermanualen.",
+      "why_it_matters": "Konklusjonen er den samme som før: Norge venter på EU. Ni EU-land har ikke ventet. Det danske trafikktilsynet Færdselsstyrelsen godtok 9. juni den foreløpige godkjenningen fra RDW, den nederlandske godkjenningsmyndigheten, etter å ha gått gjennom den tekniske dokumentasjonen. Slovakia gjorde det samme 16. oktober, samme dag som statsråden svarte. Nederland, Litauen, Estland, Belgia, Slovenia, Tsjekkia og Kroatia har også sagt ja. Norge har ingen stemme i TCMV (EUs tekniske komité for motorvogner). Neste mulighet for et EU-ja er desember 2026. Til da er FSD Supervised ikke godkjent for vanlige eiere i Norge.",
+      "url": "https://www.stortinget.no/no/Saker-og-publikasjoner/Sporsmal/Skriftlige-sporsmal-og-svar/Skriftlig-sporsmal/?qnid=127642",
+      "sources": [
+        "https://www.stortinget.no/no/Saker-og-publikasjoner/Sporsmal/Skriftlige-sporsmal-og-svar/Skriftlig-sporsmal/?qnid=127642",
+        "https://www.regjeringen.no/no/dep/sd/org/samferdselsminister-kamzy-gunaratnam/id3172387/",
+        "https://www.fstyr.dk/nyheder/2026/jun/teslas-foererassistentsystem-fsd-supervised-er-foreloebigt-godkendt-i-danmark",
+        "https://www.mindop.sk/media/tlacove-spravy/detail/slovensko-umoznilo-ciastocne-autonomne-riadenie-aut",
+        "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/"
+      ],
+      "tags": [
+        "norway",
+        "stortinget",
+        "krf",
+        "svv",
+        "denmark",
+        "slovakia",
+        "tcmv",
+        "tad",
+        "news"
+      ]
+    },
     {
       "id": "news-slovakia-godkjent-2026-10-16",
       "iso": "2026-10-16T12:15:00+02:00",
@@ -109,8 +136,8 @@
       "iso": "2026-10-10T09:00:00+02:00",
       "source": "norway",
       "title": "KrF på Stortinget: Norge ga ingen innspill til EU om FSD – Danmark har allerede sagt ja",
-      "summary": "Stortingsrepresentant Jørgen H. Kristiansen fra KrF (Kristelig Folkeparti) har sendt et skriftlig spørsmål om Teslas førerstøttesystem til samferdselsminister Kamzy Gunaratnam fra Ap (Arbeiderpartiet). Spørsmålet ble levert 8. oktober og sendt til statsråden 9. oktober. Kristiansen spør: «Vil regjeringen ta initiativ til å gi norske innspill før den kommende behandlingen i EU av førerstøttesystemet Tesla FSD (Supervised), og vil regjeringen vurdere nasjonal anerkjennelse av systemet dersom det blir godkjent i EU, slik blant annet Danmark har gjort?» I begrunnelsen skriver han at Statens vegvesen (SVV) har opplyst at Norge ikke ga innspill til EUs tekniske komité for motorvogner (TCMV) før møtet 6. oktober. Komiteen behandler den nederlandske saken som kan gi systemet godkjenning i hele EU. Tesla kaller nå systemet «Tesla Assisted Driving» i Europa. SVVs egen side bekrefter at Norge verken sendte spørsmål eller kommentarer. Danmark har allerede sagt ja. Det danske trafikktilsynet Færdselsstyrelsen godtok 9. juni den foreløpige godkjenningen fra RDW, den nederlandske godkjenningsmyndigheten. Tilsynet gikk gjennom den tekniske dokumentasjonen og er enig med RDW i at systemet bidrar positivt til trafikksikkerheten. Danmark ventet altså ikke på EU. Svaret er ikke kommet ennå. Etter Stortingets forretningsorden skal statsråden svare innen seks hverdager, det vil si innen 16. oktober, eller forklare hvorfor svaret blir forsinket.",
-      "why_it_matters": "Danske Tesla-eiere med nyere maskinvare (HW4) har kunnet bruke FSD Supervised siden juni. Åtte EU-land, Nederland medregnet, har sagt ja. Norge har ingen stemme i TCMV, men kan sende innspill. Før oktobermøtet lot Norge være. SVV vil heller ikke gå foran: Etaten vurderer ingen norsk innføring så lenge systemet ikke oppfyller FN Reg. 171 (FN-regelverket for førerstøttesystemer). Nå må regjeringen svare på om Norge skal fortsette å vente. Neste mulighet for et EU-ja er desember 2026, og i Norge er FSD Supervised ennå ikke godkjent for vanlige eiere.",
+      "summary": "Stortingsrepresentant Jørgen H. Kristiansen fra KrF (Kristelig Folkeparti) har sendt et skriftlig spørsmål om Teslas førerstøttesystem til samferdselsminister Kamzy Gunaratnam fra Ap (Arbeiderpartiet). Spørsmålet ble levert 8. oktober og sendt til statsråden 9. oktober. Kristiansen spør: «Vil regjeringen ta initiativ til å gi norske innspill før den kommende behandlingen i EU av førerstøttesystemet Tesla FSD (Supervised), og vil regjeringen vurdere nasjonal anerkjennelse av systemet dersom det blir godkjent i EU, slik blant annet Danmark har gjort?» I begrunnelsen skriver han at Statens vegvesen (SVV) har opplyst at Norge ikke ga innspill til EUs tekniske komité for motorvogner (TCMV) før møtet 6. oktober. Komiteen behandler den nederlandske saken som kan gi systemet godkjenning i hele EU. Tesla kaller nå systemet «Tesla Assisted Driving» i Europa. SVVs egen side bekrefter at Norge verken sendte spørsmål eller kommentarer. Danmark har allerede sagt ja. Det danske trafikktilsynet Færdselsstyrelsen godtok 9. juni den foreløpige godkjenningen fra RDW, den nederlandske godkjenningsmyndigheten. Tilsynet gikk gjennom den tekniske dokumentasjonen og er enig med RDW i at systemet bidrar positivt til trafikksikkerheten. Danmark ventet altså ikke på EU. Statsråden svarte 16. oktober.",
+      "why_it_matters": "Danske Tesla-eiere med nyere maskinvare (HW4) har kunnet bruke FSD Supervised siden juni. Åtte EU-land, Nederland medregnet, har sagt ja. Norge har ingen stemme i TCMV, men kan sende innspill. Før oktobermøtet lot Norge være. SVV vil heller ikke gå foran: Etaten vurderer ingen norsk innføring så lenge systemet ikke oppfyller FN Reg. 171 (FN-regelverket for førerstøttesystemer). Neste mulighet for et EU-ja er desember 2026, og i Norge er FSD Supervised ennå ikke godkjent for vanlige eiere.",
       "url": "https://www.stortinget.no/no/Saker-og-publikasjoner/Sporsmal/Skriftlige-sporsmal-og-svar/Skriftlig-sporsmal/?qnid=127642",
       "sources": [
         "https://www.stortinget.no/no/Saker-og-publikasjoner/Sporsmal/Skriftlige-sporsmal-og-svar/Skriftlig-sporsmal/?qnid=127642",
