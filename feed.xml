@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Tue, 13 Oct 2026 16:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 05:15:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>Tesla viste fram nye Roadster i natt – den kjører opp ned og kan fly</title>
+      <link>https://tadnorge.no/#news-tesla-roadster-visning-2026-10-16</link>
+      <guid isPermaLink="false">news-tesla-roadster-visning-2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 05:15:00 GMT</pubDate>
+      <description>&lt;p&gt;Tesla viste fram den nye Roadster natt til 16. oktober. Sendingen startet rundt kl. 02.55 norsk tid fra testanlegget til SpaceX i McGregor i Texas, ifølge Tesla, Reuters og Wired. Bilen kjørte opp en loddrett rampe ved hjelp av et sugesystem med vifter, snudde i lufta med dyser drevet av trykkluft og fløy over resten av Tesla-modellene, skriver The Verge. Tesla oppgir tre versjoner på nettsiden: Performance med to seter for vanlig vei, Thrust med to seter og dyser bak, og Rocket med ett sete og dyser rundt hele bilen. Ifølge The Verge lover Tesla 0–60 mph (knapt 100 km/t) på under 1,6 sekunder for Performance, under 0,9 sekunder for Thrust og under 0,59 sekunder for Rocket. Under visningen oppga Tesla 0,81 sekunder. Musk sier at toppfarten er over 230 mph (om lag 370 km/t), og at produksjonen starter i 2028. Pris ble ikke oppgitt. Foreløpig kan bare Performance reserveres. Rocket-versjonen er ikke godkjent for offentlig vei, opplyser Tesla.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Tesla kaller Roadster «the best of the last human-driven cars», altså en av de siste bilene der et menneske kjører. Med andre ord ser Tesla selv framtiden i biler som får mer hjelp til å kjøre. Vi har ikke funnet noe om FSD Supervised eller Tesla Assistert kjøring i Roadster, verken i Teslas poster eller på nettsiden. I Norge er FSD Supervised ennå ikke godkjent for vanlige eiere.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.tesla.com/roadster"&gt;https://www.tesla.com/roadster&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Vegvesenet roser Teslas navnebytte – «Full Self-Driving» er borte fra de norske nettsidene</title>
       <link>https://tadnorge.no/#news-svv-tesla-assistert-kjoring-2026-10-13</link>
