@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Fri, 16 Oct 2026 05:15:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 10:15:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>Slovakia sier ja: FSD Supervised godkjent i niende EU-land – Norge venter fortsatt</title>
+      <link>https://tadnorge.no/#news-slovakia-godkjent-2026-10-16</link>
+      <guid isPermaLink="false">news-slovakia-godkjent-2026-10-16</guid>
+      <pubDate>Fri, 16 Oct 2026 10:15:00 GMT</pubDate>
+      <description>&lt;p&gt;Slovakia har godkjent Teslas førerstøttesystem FSD Supervised, som i Europa nå heter Tesla Assisted Driving. Det slovakiske samferdselsdepartementet skriver 16. oktober at det offisielt har anerkjent den foreløpige typegodkjenningen. Den ga RDW, den nederlandske godkjenningsmyndigheten, i april etter artikkel 39, EUs unntaksregel for ny teknologi i rammeforordningen 2018/858. Andre land kan godta godkjenningen nasjonalt, og det har Slovakia nå gjort. Dermed har ni EU-land sagt ja, og de har om lag 13,9 % av EU-befolkningen. Samferdselsminister Jozef Ráž sier i pressemeldingen at trafikksikkerhet er svært viktig, og at departementet gjerne støtter nye løsninger som gjør veiene tryggere. Han understreker at føreren fortsatt har hele ansvaret. Ráž lovet anerkjennelsen 7. oktober, ni dager tidligere. Tesla har ikke oppgitt noen dato for utrullingen i Slovakia.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Enda et EU-land tar snarveien mens EU-avstemningen lar vente på seg. Ni av 27 land er en tredjedel av EU-landene, men fortsatt langt fra tersklene for et ja i TCMV (EUs tekniske komité for motorvogner): 15 land og 65 % av befolkningen. Neste mulighet er desember 2026. Statens vegvesen (SVV) vurderer ingen norsk innføring før det, så lenge systemet ikke oppfyller FN Reg. 171 (FN-regelverket for førerstøttesystemer). I Norge er FSD Supervised ennå ikke godkjent for vanlige eiere.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.mindop.sk/media/tlacove-spravy/detail/slovensko-umoznilo-ciastocne-autonomne-riadenie-aut"&gt;https://www.mindop.sk/media/tlacove-spravy/detail/slovensko-umoznilo-ciastocne-autonomne-riadenie-aut&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Tesla viste fram nye Roadster i natt – den kjører opp ned og kan fly</title>
       <link>https://tadnorge.no/#news-tesla-roadster-visning-2026-10-16</link>

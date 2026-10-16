@@ -1,8 +1,8 @@
 {
   "sist_sjekket": "2026-10-16",
   "sist_sjekket_nb": "16. oktober 2026",
-  "sist_oppdatert_iso": "2026-10-16T07:50:53+02:00",
-  "sist_oppdatert_nb": "16. oktober 2026 kl. 07.50",
+  "sist_oppdatert_iso": "2026-10-16T12:15:00+02:00",
+  "sist_oppdatert_nb": "16. oktober 2026 kl. 12.15",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Statens vegvesen åpner fortsatt ikke for vanlig kundekjøring. Tesla får teste med egne, trente sikkerhetsførere — begrenset testing, ikke din bil.",
@@ -46,9 +46,14 @@
       "land": "Kroatia",
       "dato": "2026-09-29",
       "sti": "anerkjennelse"
+    },
+    {
+      "land": "Slovakia",
+      "dato": "2026-10-16",
+      "sti": "anerkjennelse"
     }
   ],
-  "eu_andel_befolkning_prosent": 12.7,
+  "eu_andel_befolkning_prosent": 13.9,
   "programvaregren": "v14.2.2",
   "tcmv": {
     "siste_mote": "2026-10-06",
@@ -399,6 +404,11 @@
       "tekst": "Stortinget: Jørgen H. Kristiansen (KrF) spør samferdselsministeren om Norge vil gi innspill før EU-behandlingen og vurdere nasjonal anerkjennelse, slik Danmark har gjort (dok. nr. 15:116). Etter forretningsordenen skal statsråden svare innen seks hverdager, det vil si innen 16. oktober, eller forklare hvorfor svaret blir forsinket.",
       "fase": "passert",
       "etikett": "Svar innen 16.10"
+    },
+    {
+      "dato": "2026-10-16",
+      "tekst": "Slovakia blir niende EU-land: Samferdselsdepartementet anerkjenner RDW-godkjenningen. Befolkningsandel ca. 13,9 %.",
+      "fase": "passert"
     },
     {
       "dato": "2026-12-15",

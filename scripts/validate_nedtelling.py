@@ -106,6 +106,8 @@ def main():
         if st == "lansert":
             if not (c.get("lansert_dato") or g): F(f"{n}: lansert land uten dato")
             if me != "observert": F(f"{n}: lansert land skal ha metode «observert»")
+        elif st == "godkjent, utrulling snart" and ed is None:
+            pass  # Tesla har ikke oppgitt utrullingsdato; vi viser bare godkjent_dato
         elif ed is None:
             F(f"{n}: mangler estimert_dato (alle land skal ha en dato)")
         if st == "godkjent, utrulling snart" and me != "observert":
