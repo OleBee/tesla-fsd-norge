@@ -1,8 +1,8 @@
 {
-  "sist_sjekket": "2026-10-19",
-  "sist_sjekket_nb": "19. oktober 2026",
-  "sist_oppdatert_iso": "2026-10-19T07:58:55+02:00",
-  "sist_oppdatert_nb": "19. oktober 2026 kl. 07.58",
+  "sist_sjekket": "2026-10-20",
+  "sist_sjekket_nb": "20. oktober 2026",
+  "sist_oppdatert_iso": "2026-10-20T08:10:00+02:00",
+  "sist_oppdatert_nb": "20. oktober 2026 kl. 08.10",
   "svv_sist_oppdatert_nb": "3. juli 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Statens vegvesen åpner fortsatt ikke for vanlig kundekjøring. Tesla får teste med egne, trente sikkerhetsførere — begrenset testing, ikke din bil.",
@@ -60,11 +60,11 @@
     "siste_utfall": "diskusjon uten avstemning",
     "neste_dato": "2026-12-15",
     "neste_sikkerhet": "ukjent dato (desember)",
-    "dager_til": 57,
+    "dager_til": 56,
     "oktober_godkjenning_prosent": 0,
     "etikett": "Sjanse for TCMV-ja i desember – dato ikke kjent",
     "sannsynlig_utfall": "ukjent",
-    "kommentar": "TCMV-møtet 6. oktober er holdt. Det ble ikke stemt, slik Statens vegvesen varslet. Neste mulighet er desember 2026; nøyaktig møtedato er ikke kjent ennå.",
+    "kommentar": "TCMV-møtet 6. oktober er holdt. Det ble ikke stemt, slik Statens vegvesen varslet. Neste mulighet er desember 2026; nøyaktig møtedato er ikke kjent ennå. Referatet fra junimøtet, publisert 16. oktober, gir ingen tidsplan.",
     "neste_iso": "2026-12-15T10:00:00+01:00",
     "neste_dato_nb": "Desember 2026"
   },
@@ -308,6 +308,11 @@
       "dato": "2026-10-19",
       "prosent": 1,
       "merknad": "Ingen materiell endring"
+    },
+    {
+      "dato": "2026-10-20",
+      "prosent": 1,
+      "merknad": "TCMV-referat fra 30. juni publisert 16.10: 40 mill. km, ingen tidsplan"
     }
   ],
   "series_02": {
@@ -317,7 +322,7 @@
     "dato_nb": "Sent i januar 2027"
   },
   "side_layout": "singleside-dashboard-2026-09-27",
-  "materiell_endring": false,
+  "materiell_endring": true,
   "timeline": [
     {
       "dato": "2026-04-10",
@@ -423,6 +428,11 @@
     {
       "dato": "2026-10-16",
       "tekst": "Slovakia blir niende EU-land: Samferdselsdepartementet anerkjenner RDW-godkjenningen. Befolkningsandel ca. 13,9 %.",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-10-16",
+      "tekst": "EU-kommisjonen publiserer referatet fra TCMV-møtet 30. juni. Nederland viste 40 millioner kilometer med FSD Supervised, og farten lå i snitt 4,4 km/t under grensen. Ingen tidsplan for avstemning.",
       "fase": "passert"
     },
     {

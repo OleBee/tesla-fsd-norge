@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-10-16T12:30:00+02:00",
+  "updated_iso": "2026-10-20T08:10:00+02:00",
   "standings": {
     "yes_countries": 9,
     "eu_population_pct": 13.9,
@@ -9,6 +9,33 @@
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "tcmv-referat-118-2026-10-20",
+      "iso": "2026-10-20T08:10:00+02:00",
+      "source": "tcmv",
+      "title": "EU-referat fra junimøtet: 40 millioner kilometer med FSD Supervised – og farten i snitt under grensen",
+      "summary": "EU-kommisjonen har lagt ut referatet fra møtet i TCMV (EUs tekniske komité for motorvogner) 30. juni. Det ble publisert 16. oktober i komitologiregisteret, Kommisjonens offentlige arkiv for komitéarbeid. Referatet viser hva Nederland la fram om FSD Supervised, som i Europa nå heter Tesla Assisted Driving. Fram til møtet hadde RDW, den nederlandske godkjenningsmyndigheten, registrert 40 millioner kilometer kjørt med systemet slått på. Når systemet tilpasser farten til trafikken rundt, ligger det ifølge dataene i snitt 4,4 km/t under fartsgrensen bilen har registrert. Nederland forsvarte også fartsmarginen føreren kan stille inn over grensen. Systemet er trent til å kjøre som de beste sjåførene, og marginen gjør at føreren ikke må overstyre med pedalen så ofte. Flere medlemsland pekte på at slike systemer kan gi tryggere veier og lavere fart. Andre spurte om kjøring i dårlig vær og om den faste fartsmarginen. Kommisjonen konkluderte med at tidsplanen avhenger av om Kommisjonen og medlemslandene blir fornøyd med svarene fra Nederland. Statens vegvesen (SVV) deltok for Norge, uten stemmerett.",
+      "why_it_matters": "Referatet er Kommisjonens egen oppsummering av hva Nederland la fram i junimøtet. Tallene gir støtte til linjen i de ni EU-landene som allerede har sagt ja: Systemet er brukt over svært lange avstander, og når det tilpasser seg trafikken, holder det i snitt farten under grensen. Fartsmarginen er fortsatt det store stridspunktet. På det punktet ble det tyske samferdselsdepartementet BMV i september enig med Tesla om et tak på ti prosent over fartsgrensen, og Tyskland vil støtte den linjen i EU. Norge sendte skriftlige spørsmål før junimøtet, men ingen spørsmål eller kommentarer til møtet 6. oktober, ifølge SVV. Neste mulighet for et EU-ja er desember 2026, og møtedatoen er ikke publisert. I Norge er FSD Supervised ennå ikke godkjent for vanlige eiere.",
+      "url": "https://ec.europa.eu/transparency/comitology-register/screen/documents/118568/1",
+      "sources": [
+        "https://ec.europa.eu/transparency/comitology-register/screen/documents/118568/1",
+        "https://ec.europa.eu/transparency/comitology-register/core/api/integration/ers/549091/118568/1/attachment",
+        "https://www.bmv.de/SharedDocs/DE/Artikel/StV/Digitalisierung-der-Mobilitaet/aktueller-stand-tesla-assistenzsysteme.html",
+        "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/"
+      ],
+      "tags": [
+        "tcmv",
+        "eu",
+        "article-39",
+        "comitology",
+        "netherlands",
+        "rdw",
+        "speed-offset",
+        "germany",
+        "svv",
+        "norway"
+      ]
+    },
     {
       "id": "news-stortinget-15-116-svar-2026-10-16",
       "iso": "2026-10-16T12:30:00+02:00",
