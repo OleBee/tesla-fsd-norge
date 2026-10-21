@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Wed, 21 Oct 2026 07:45:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 07:55:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>EU-referatet: FSD Supervised kjører i snitt 4,4 km/t under fartsgrensen</title>
+      <link>https://tadnorge.no/#tcmv-referat-fart-2026-10-21</link>
+      <guid isPermaLink="false">tcmv-referat-fart-2026-10-21</guid>
+      <pubDate>Wed, 21 Oct 2026 07:55:00 GMT</pubDate>
+      <description>&lt;p&gt;Samferdselsminister Kamzy Gunaratnam fra Ap (Arbeiderpartiet) begrunnet 16. oktober den norske ventingen blant annet med at systemet «faktisk kan bryte fartsgrenser». Referatet fra møtet i TCMV (EUs tekniske komité for motorvogner) 30. juni viser et annet snitt. Ifølge dataene Nederland la fram, ligger FSD Supervised i snitt 4,4 km/t under fartsgrensen bilen har registrert, når systemet tilpasser farten til trafikken rundt. Tallene bygger på 40 millioner kilometer kjørt med systemet slått på fram til møtet. Nederland la også fram sin tolkning av DCAS-reglene, EU-kravene til førerstøttesystemer: Føreren kan selv stille inn en fartsmargin over grensen, og den hjelper systemet å velge fart uten at føreren må overstyre med pedalen så ofte. Landene diskuterte navnet på systemet, overvåkingsdata fra bilene i bruk, programvareoppdateringer over nett og geografisk sperre, altså at systemet bare kan slås på i land som har godtatt det. Noen land spurte om kjøring i dårlig vær og om den faste fartsmarginen. Kommisjonen konkluderte med at tidsplanen avhenger av om Kommisjonen og medlemslandene blir fornøyd med svarene fra Nederland. Referatet er ikke helt konsistent om antall land. Ett sted står det at fire medlemsland hadde godtatt godkjenningen, et annet sted nevnes «the other five MS», de fem andre medlemslandene.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Fart er det ene av ministerens to hovedargumenter for å vente. Et snitt under grensen betyr ikke at bilen aldri kjører for fort, men det viser at systemet i hovedsak senker farten. Tallene er Nederlands egne, slik referatet gjengir dem. Stridspunktet er fortsatt marginen føreren selv kan stille inn over grensen. Ingen dato for neste behandling av saken i TCMV er registrert. I Norge er FSD Supervised ennå ikke godkjent for vanlige eiere.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://ec.europa.eu/transparency/comitology-register/screen/documents/118568/1"&gt;https://ec.europa.eu/transparency/comitology-register/screen/documents/118568/1&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>FSD Supervised er rullet ut i Slovakia: 99 euro i måneden</title>
       <link>https://tadnorge.no/#news-slovakia-lansert-2026-10-21</link>
