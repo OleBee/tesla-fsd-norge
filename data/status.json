@@ -437,9 +437,11 @@
     },
     {
       "dato": "2026-12-15",
-      "tekst": "Neste mulighet for et ja i TCMV til artikkel 39-saken om FSD Supervised. Nøyaktig møtedato er ikke kjent ennå.",
+      "dato_er_anslag": true,
+      "dato_visning": "Desember 2026 (anslag)",
+      "tekst": "Neste mulighet for et ja i TCMV til artikkel 39-saken om FSD Supervised ventes i desember 2026, men møtedatoen er ikke satt.",
       "fase": "neste",
-      "etikett": "Dato ukjent"
+      "etikett": "Møtedato ikke satt"
     },
     {
       "dato": "2027-01-25",

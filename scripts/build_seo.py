@@ -115,7 +115,7 @@ def static_timeline(status: dict, indent: str) -> str:
     for it in status.get("timeline") or []:
         fase = it.get("fase") or "passert"
         cls = ' class="neste"' if fase in ("neste", "next") else (' class="langsiktig"' if fase == "langsiktig" else "")
-        when = nb_date(it["dato"]) if it.get("dato") else "—"
+        when = it.get("dato_visning") or (nb_date(it["dato"]) if it.get("dato") else "—")
         if it.get("etikett"):
             when += " · " + it["etikett"]
         out.append(f'{indent}<li{cls}><div class="when">{esc(when)}</div><div class="what">{esc(it.get("tekst", ""))}</div></li>')
