@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-10-20T08:10:00+02:00",
+  "updated_iso": "2026-10-21T09:45:00+02:00",
   "standings": {
     "yes_countries": 9,
     "eu_population_pct": 13.9,
@@ -9,6 +9,27 @@
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "news-slovakia-lansert-2026-10-21",
+      "iso": "2026-10-21T09:45:00+02:00",
+      "source": "eu",
+      "title": "FSD Supervised er rullet ut i Slovakia: 99 euro i måneden",
+      "summary": "Slovakiske Tesla-eiere har fått FSD Supervised, som i Europa heter Tesla Assisted Driving. Nettstedet startstop.sk meldte 20. oktober at oppdateringen er sendt trådløst ut til bilene, og at abonnementet koster 99 euro i måneden. Samme dag viste avisa Pravda video fra en eier som kjørte en Model 3 med systemet på slovakiske veier. Det slovakiske samferdselsdepartementet anerkjente den nederlandske godkjenningen 16. oktober. Det gikk altså fire dager fra ja til biler på veien. Føreren må fortsatt følge med hele tiden og har ansvaret.",
+      "why_it_matters": "Slovakia er det niende EU-landet med FSD Supervised i bruk, og utrullingen fulgte raskt etter godkjenningen, slik den har gjort i de andre landene. I Norge er systemet ennå ikke godkjent for vanlige eiere. Norge venter på EU, og neste mulighet for et ja i TCMV (EUs tekniske komité for motorvogner) er desember 2026.",
+      "url": "https://www.startstop.sk/spravy/166214/revolucia-na-slovenskych-cestach-tesla-spustila-assisted-driving/",
+      "sources": [
+        "https://www.startstop.sk/spravy/166214/revolucia-na-slovenskych-cestach-tesla-spustila-assisted-driving/",
+        "https://www.pravda.sk/auto/magazin/clanok/2062709-tesla-fsd-pozrite-si-prve-video-ako-tesla-3-sama-soferuje-na-slovensku",
+        "https://www.mindop.sk/media/tlacove-spravy/detail/slovensko-umoznilo-ciastocne-autonomne-riadenie-aut"
+      ],
+      "tags": [
+        "slovakia",
+        "eu",
+        "tad",
+        "rollout",
+        "news"
+      ]
+    },
     {
       "id": "tcmv-referat-118-2026-10-20",
       "iso": "2026-10-20T08:10:00+02:00",

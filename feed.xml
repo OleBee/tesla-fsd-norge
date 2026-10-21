@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Tue, 20 Oct 2026 06:10:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 07:45:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>FSD Supervised er rullet ut i Slovakia: 99 euro i måneden</title>
+      <link>https://tadnorge.no/#news-slovakia-lansert-2026-10-21</link>
+      <guid isPermaLink="false">news-slovakia-lansert-2026-10-21</guid>
+      <pubDate>Wed, 21 Oct 2026 07:45:00 GMT</pubDate>
+      <description>&lt;p&gt;Slovakiske Tesla-eiere har fått FSD Supervised, som i Europa heter Tesla Assisted Driving. Nettstedet startstop.sk meldte 20. oktober at oppdateringen er sendt trådløst ut til bilene, og at abonnementet koster 99 euro i måneden. Samme dag viste avisa Pravda video fra en eier som kjørte en Model 3 med systemet på slovakiske veier. Det slovakiske samferdselsdepartementet anerkjente den nederlandske godkjenningen 16. oktober. Det gikk altså fire dager fra ja til biler på veien. Føreren må fortsatt følge med hele tiden og har ansvaret.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Slovakia er det niende EU-landet med FSD Supervised i bruk, og utrullingen fulgte raskt etter godkjenningen, slik den har gjort i de andre landene. I Norge er systemet ennå ikke godkjent for vanlige eiere. Norge venter på EU, og neste mulighet for et ja i TCMV (EUs tekniske komité for motorvogner) er desember 2026.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.startstop.sk/spravy/166214/revolucia-na-slovenskych-cestach-tesla-spustila-assisted-driving/"&gt;https://www.startstop.sk/spravy/166214/revolucia-na-slovenskych-cestach-tesla-spustila-assisted-driving/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>EU-referat fra junimøtet: 40 millioner kilometer med FSD Supervised – og farten i snitt under grensen</title>
       <link>https://tadnorge.no/#tcmv-referat-118-2026-10-20</link>
