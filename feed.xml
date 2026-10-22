@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Wed, 21 Oct 2026 07:45:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 06:15:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>Musk håper på EU-ja for FSD Supervised innen første kvartal 2027</title>
+      <link>https://tadnorge.no/#news-musk-eu-q1-2027-2026-10-22</link>
+      <guid isPermaLink="false">news-musk-eu-q1-2027-2026-10-22</guid>
+      <pubDate>Thu, 22 Oct 2026 06:15:00 GMT</pubDate>
+      <description>&lt;p&gt;Tesla-sjef Elon Musk tror EU kan godkjenne FSD Supervised for hele unionen i løpet av noen måneder. På Teslas resultatpresentasjon for tredje kvartal 21. oktober sa han at han vil bli overrasket hvis det tar lenger tid enn første kvartal, altså januar til mars 2027. Han la til at tidspunktet er vanskelig å spå og at det ikke er Tesla som styrer det. Musk kalte FSD den viktigste grunnen til at etterspørselen etter Tesla-biler vokser. Ifølge Teslas egen oppsummering er systemet, som i Europa heter Tesla Assisted Driving, nå i bruk i ni EU-land og brukes av over 100 000 kunder. Avgjørelsen ligger hos TCMV (EUs tekniske komité for motorvogner). Datoen for desembermøtet er ikke publisert, og det er ikke varslet noen avstemning.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Musk har bommet på EU-tidsplanen før. I april ventet Tesla et EU-ja i andre kvartal, men TCMV har diskutert saken i juni og oktober uten å stemme. Denne gangen tar han flere forbehold, og et ja i desember vil ligge godt innenfor vinduet han peker på. Ni EU-land har ikke ventet på Brussel og har sagt ja på egen hånd. Norge har valgt å vente: Samferdselsminister Kamzy Gunaratnam svarte Stortinget 16. oktober at Norge avventer EUs beslutning. Til da er FSD Supervised ikke godkjent for vanlige eiere i Norge.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.benzinga.com/news/26/10/62515021/tesla-q3-2026-earnings-call-transcript"&gt;https://www.benzinga.com/news/26/10/62515021/tesla-q3-2026-earnings-call-transcript&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>FSD Supervised er rullet ut i Slovakia: 99 euro i måneden</title>
       <link>https://tadnorge.no/#news-slovakia-lansert-2026-10-21</link>

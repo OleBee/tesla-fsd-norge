@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-10-21T09:45:00+02:00",
+  "updated_iso": "2026-10-22T08:15:00+02:00",
   "standings": {
     "yes_countries": 9,
     "eu_population_pct": 13.9,
@@ -9,6 +9,26 @@
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "news-musk-eu-q1-2027-2026-10-22",
+      "iso": "2026-10-22T08:15:00+02:00",
+      "source": "news",
+      "title": "Musk håper på EU-ja for FSD Supervised innen første kvartal 2027",
+      "summary": "Tesla-sjef Elon Musk tror EU kan godkjenne FSD Supervised for hele unionen i løpet av noen måneder. På Teslas resultatpresentasjon for tredje kvartal 21. oktober sa han at han vil bli overrasket hvis det tar lenger tid enn første kvartal, altså januar til mars 2027. Han la til at tidspunktet er vanskelig å spå og at det ikke er Tesla som styrer det. Musk kalte FSD den viktigste grunnen til at etterspørselen etter Tesla-biler vokser. Ifølge Teslas egen oppsummering er systemet, som i Europa heter Tesla Assisted Driving, nå i bruk i ni EU-land og brukes av over 100 000 kunder. Avgjørelsen ligger hos TCMV (EUs tekniske komité for motorvogner). Datoen for desembermøtet er ikke publisert, og det er ikke varslet noen avstemning.",
+      "why_it_matters": "Musk har bommet på EU-tidsplanen før. I april ventet Tesla et EU-ja i andre kvartal, men TCMV har diskutert saken i juni og oktober uten å stemme. Denne gangen tar han flere forbehold, og et ja i desember vil ligge godt innenfor vinduet han peker på. Ni EU-land har ikke ventet på Brussel og har sagt ja på egen hånd. Norge har valgt å vente: Samferdselsminister Kamzy Gunaratnam svarte Stortinget 16. oktober at Norge avventer EUs beslutning. Til da er FSD Supervised ikke godkjent for vanlige eiere i Norge.",
+      "url": "https://www.benzinga.com/news/26/10/62515021/tesla-q3-2026-earnings-call-transcript",
+      "sources": [
+        "https://www.benzinga.com/news/26/10/62515021/tesla-q3-2026-earnings-call-transcript",
+        "https://notanfsdtracker.com/musk-tesla-fsd-eu-wide-approval-q1",
+        "https://www.cnbc.com/2026/10/21/tesla-tsla-q3-2026-earnings-report.html"
+      ],
+      "tags": [
+        "eu",
+        "tesla",
+        "tcmv",
+        "news"
+      ]
+    },
     {
       "id": "news-slovakia-lansert-2026-10-21",
       "iso": "2026-10-21T09:45:00+02:00",
