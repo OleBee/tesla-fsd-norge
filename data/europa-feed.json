@@ -1,14 +1,35 @@
 {
-  "updated_iso": "2026-10-22T08:15:00+02:00",
+  "updated_iso": "2026-10-26T14:30:00+01:00",
   "standings": {
-    "yes_countries": 9,
-    "eu_population_pct": 13.9,
+    "yes_countries": 10,
+    "eu_population_pct": 14.3,
     "tcmv_october_pct": 0,
     "norway_this_month_pct": 0,
     "next_tcmv": "2026-12",
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "news-latvia-godkjent-2026-10-26",
+      "iso": "2026-10-26T14:30:00+01:00",
+      "source": "eu",
+      "title": "Latvia sier ja: FSD Supervised godkjent i tiende EU-land – Norge venter fortsatt",
+      "summary": "Latvia har godkjent Teslas førerstøttesystem FSD Supervised, som i Europa nå heter Tesla Assisted Driving. CSDD, det latviske vegtrafikkdirektoratet, opplyser 26. oktober at det har anerkjent den foreløpige typegodkjenningen fra RDW, den nederlandske godkjenningsmyndigheten. RDW ga godkjenningen 10. april etter artikkel 39, EUs unntaksregel for ny teknologi. Ifølge CSDD kom vedtaket etter en gjennomgang av dokumentasjonen og samarbeid med RDW og andre medlemsland. CSDD viser også til endringer fra Tesla: lavere grense for hvor mye systemet kan kjøre over fartsgrensen, at en manuell fartsmargin nullstilles etter hver tur, og strengere overvåking av føreren. Tesla Europe skrev på X kl. 11.36 at utrullingen begynner snart, men har ikke oppgitt noen dato. Føreren må fortsatt følge med hele tiden og har ansvaret.",
+      "why_it_matters": "Med Latvia har alle de tre baltiske landene sagt ja, og ti av 27 EU-land har nå godkjent systemet. De har om lag 14,3 % av EU-befolkningen, ifølge vårt anslag ut fra Eurostat-tall. Det er fortsatt langt fra tersklene for et ja i TCMV (EUs tekniske komité for motorvogner): 15 land og 65 % av befolkningen. Neste mulighet for et EU-ja ventes i desember 2026, men møtedatoen er ikke satt. Norge har valgt å vente på EU, og FSD Supervised er ennå ikke godkjent for vanlige eiere her.",
+      "url": "https://www.apollo.lv/8571479/csdd-atzist-niderlande-izsniegto-provizorisko-apstiprinajumu-tesla-izstradatajai-vaditaja-paligsistemai",
+      "sources": [
+        "https://www.apollo.lv/8571479/csdd-atzist-niderlande-izsniegto-provizorisko-apstiprinajumu-tesla-izstradatajai-vaditaja-paligsistemai",
+        "https://x.com/teslaeurope/status/2114667445223149619",
+        "https://www.devdiscourse.com/article/international/3997318-tesla-says-latvia-approved-its-self-driving-system-fsd"
+      ],
+      "tags": [
+        "latvia",
+        "eu",
+        "tad",
+        "approval",
+        "news"
+      ]
+    },
     {
       "id": "news-musk-eu-q1-2027-2026-10-22",
       "iso": "2026-10-22T08:15:00+02:00",

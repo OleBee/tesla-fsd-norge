@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Thu, 22 Oct 2026 06:15:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 13:30:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>Latvia sier ja: FSD Supervised godkjent i tiende EU-land – Norge venter fortsatt</title>
+      <link>https://tadnorge.no/#news-latvia-godkjent-2026-10-26</link>
+      <guid isPermaLink="false">news-latvia-godkjent-2026-10-26</guid>
+      <pubDate>Mon, 26 Oct 2026 13:30:00 GMT</pubDate>
+      <description>&lt;p&gt;Latvia har godkjent Teslas førerstøttesystem FSD Supervised, som i Europa nå heter Tesla Assisted Driving. CSDD, det latviske vegtrafikkdirektoratet, opplyser 26. oktober at det har anerkjent den foreløpige typegodkjenningen fra RDW, den nederlandske godkjenningsmyndigheten. RDW ga godkjenningen 10. april etter artikkel 39, EUs unntaksregel for ny teknologi. Ifølge CSDD kom vedtaket etter en gjennomgang av dokumentasjonen og samarbeid med RDW og andre medlemsland. CSDD viser også til endringer fra Tesla: lavere grense for hvor mye systemet kan kjøre over fartsgrensen, at en manuell fartsmargin nullstilles etter hver tur, og strengere overvåking av føreren. Tesla Europe skrev på X kl. 11.36 at utrullingen begynner snart, men har ikke oppgitt noen dato. Føreren må fortsatt følge med hele tiden og har ansvaret.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Med Latvia har alle de tre baltiske landene sagt ja, og ti av 27 EU-land har nå godkjent systemet. De har om lag 14,3 % av EU-befolkningen, ifølge vårt anslag ut fra Eurostat-tall. Det er fortsatt langt fra tersklene for et ja i TCMV (EUs tekniske komité for motorvogner): 15 land og 65 % av befolkningen. Neste mulighet for et EU-ja ventes i desember 2026, men møtedatoen er ikke satt. Norge har valgt å vente på EU, og FSD Supervised er ennå ikke godkjent for vanlige eiere her.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.apollo.lv/8571479/csdd-atzist-niderlande-izsniegto-provizorisko-apstiprinajumu-tesla-izstradatajai-vaditaja-paligsistemai"&gt;https://www.apollo.lv/8571479/csdd-atzist-niderlande-izsniegto-provizorisko-apstiprinajumu-tesla-izstradatajai-vaditaja-paligsistemai&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Musk håper på EU-ja for FSD Supervised innen første kvartal 2027</title>
       <link>https://tadnorge.no/#news-musk-eu-q1-2027-2026-10-22</link>
