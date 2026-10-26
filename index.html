@@ -202,15 +202,15 @@
           </div>
 
           <div class="stat-card countdown-card" id="kort-tcmv-cd">
-            <div class="cd-date" id="tcmv-dato">Desember 2026</div>
+            <div class="cd-date" id="tcmv-dato">Anslag: ca. 15. desember, dato ikke satt</div>
             <div class="units" id="tcmv-units" aria-live="polite">
               <div class="unit"><span class="n" data-part="days">––</span><span class="u">dager</span></div>
               <div class="unit"><span class="n" data-part="hours">––</span><span class="u">timer</span></div>
               <div class="unit"><span class="n" data-part="mins">––</span><span class="u">min</span></div>
               <div class="unit"><span class="n" data-part="secs">––</span><span class="u">sek</span></div>
             </div>
-            <p class="cd-note" id="tcmv-cd-note">TCMV-møtet 6. oktober er holdt uten avstemning. Neste mulighet er desember; nøyaktig dato er ikke kjent.</p>
-            <p class="cd-done" id="tcmv-done" hidden>Møtet er holdt</p>
+            <p class="cd-note" id="tcmv-cd-note">TCMV-møtet 6. oktober er holdt uten avstemning. Nedtellingen går mot vårt anslag, 15. desember. Møtedatoen er ikke satt.</p>
+            <p class="cd-done" id="tcmv-done" hidden>Den anslåtte datoen er passert</p>
           </div>
 
           <div class="stat-card" id="kort-tcmv" data-prosent="0">
@@ -414,7 +414,7 @@
           dato: status.tcmv.neste_dato,
           tekst: "TCMV-møte: Art. 39 NL fortsettelse. Avstemning ikke planlagt.",
           fase: "neste",
-          etikett: "CIRCABC-agenda"
+          etikett: status.tcmv.neste_dato_er_anslag ? "Anslag, dato ikke satt" : "CIRCABC-agenda"
         });
       }
       if (status.series_02) {
@@ -473,6 +473,13 @@
       }
       if (tm.etikett) setText("tcmv-etikett", tm.etikett);
       if (tm.kommentar) setText("tcmv-cd-note", tm.kommentar);
+      if (tm.neste_dato_er_anslag) {
+        document.getElementById("kort-tcmv-cd").classList.add("anslag");
+        setText("tcmv-done", "Den anslåtte datoen er passert");
+        setText("tcmv-cd-note", (tm.kommentar ? tm.kommentar + " " : "") + "Nedtellingen går mot vårt anslag, 15. desember.");
+      } else {
+        setText("tcmv-done", "Møtet er holdt");
+      }
 
       var landN = (data.eu_land || []).length;
       setText("land-tall", String(landN));
