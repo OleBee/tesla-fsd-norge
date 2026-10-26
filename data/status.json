@@ -51,9 +51,14 @@
       "land": "Slovakia",
       "dato": "2026-10-16",
       "sti": "anerkjennelse"
+    },
+    {
+      "land": "Latvia",
+      "dato": "2026-10-26",
+      "sti": "anerkjennelse"
     }
   ],
-  "eu_andel_befolkning_prosent": 13.9,
+  "eu_andel_befolkning_prosent": 14.3,
   "programvaregren": "v14.2.2",
   "tcmv": {
     "siste_mote": "2026-10-06",
@@ -433,6 +438,11 @@
     {
       "dato": "2026-10-16",
       "tekst": "EU-kommisjonen publiserer referatet fra TCMV-møtet 30. juni. Nederland viste 40 millioner kilometer med FSD Supervised, og farten lå i snitt 4,4 km/t under grensen. Ingen tidsplan for avstemning.",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-10-26",
+      "tekst": "Latvia blir tiende EU-land: Vegtrafikkdirektoratet CSDD anerkjenner RDW-godkjenningen. Befolkningsandel ca. 14,3 % (vårt anslag ut fra Eurostat).",
       "fase": "passert"
     },
     {
