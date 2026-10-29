@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-10-29T09:30:00+01:00",
+  "updated_iso": "2026-10-29T12:55:00+01:00",
   "standings": {
     "yes_countries": 10,
     "eu_population_pct": 14.3,
@@ -9,6 +9,26 @@
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "news-salvini-eu-godkjenning-2026-10-29",
+      "iso": "2026-10-29T09:21:00+01:00",
+      "source": "news",
+      "title": "Italias transportminister vil ha raskt EU-ja til Tesla Assisted Driving",
+      "summary": "Italias visepremier og transportminister Matteo Salvini støtter en rask EU-godkjenning av FSD Supervised, som i Europa heter Tesla Assisted Driving. Det skrev han på X torsdag 29. oktober kl. 09.21 etter en samtale med Tesla-sjef Elon Musk. «Svært positiv og konstruktiv samtale med @elonmusk i dag. Italia ser med stor interesse på mulighetene som teknologi for assistert kjøring gir, med vekt på innovasjon og trafikksikkerhet, og støtter en rask EU-godkjenning av Tesla Assisted Driving», skriver Salvini (vår oversettelse). Salvini leder også partiet Lega, og departementet hans, Ministero delle Infrastrutture e dei Trasporti (MIT), har ansvaret for veitransport i Italia. Det italienske nyhetsbyrået LaPresse og avisen Corriere della Sera har gjengitt innlegget. Systemet er førerstøtte: Føreren må følge med og være klar til å ta over.",
+      "why_it_matters": "Italia er et av de største landene i EU, og støtten kommer fra statsråden som har ansvaret for veitransport. Det er likevel en uttalelse på sosiale medier, ikke en avstemning eller et vedtak, og Italia er ett av 27 land. Italia er heller ikke blant de ti EU-landene som har anerkjent den nederlandske godkjenningen fra RDW, den nederlandske godkjenningsmyndigheten. De ti landene har om lag 14,3 prosent av befolkningen i EU. For hele EU må saken gjennom TCMV, EUs tekniske komité for motorvogner. Neste mulighet er i desember 2026, men møtedatoen er ikke satt. For Norge er dette et godt signal, men ikke mer. Samferdselsministeren svarte Stortinget 16. oktober at Norge avventer EUs beslutning. FSD Supervised er fortsatt ikke godkjent for vanlige eiere i Norge.",
+      "url": "https://x.com/matteosalvinimi/status/2115720560994836862",
+      "sources": [
+        "https://x.com/matteosalvinimi/status/2115720560994836862",
+        "https://uk.lapresse.it/politics-en/2026/10/29/transport-salvini-speaks-with-musk-eu-should-approve-teslas-driver-assistance-system/",
+        "https://www.corriere.it/politica/26_ottobre_29/telefonata-salvini-musk-la-ue-approvi-il-sistema-di-guida-assistita-tesla-che-oggi-non-puo-essere-autonoma-9510af1f-5ba6-4a87-bfbc-6d0dcc7dcxlk.shtml"
+      ],
+      "tags": [
+        "italia",
+        "eu",
+        "tcmv",
+        "news"
+      ]
+    },
     {
       "id": "svv-dialog-med-tesla-2026-10-29",
       "iso": "2026-10-29T09:30:00+01:00",
