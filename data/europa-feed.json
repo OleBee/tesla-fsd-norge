@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-10-27T08:00:00+01:00",
+  "updated_iso": "2026-10-29T09:30:00+01:00",
   "standings": {
     "yes_countries": 10,
     "eu_population_pct": 14.3,
@@ -9,6 +9,25 @@
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "svv-dialog-med-tesla-2026-10-29",
+      "iso": "2026-10-29T09:30:00+01:00",
+      "source": "svv",
+      "title": "Vegvesenet i dialog med Tesla – og «positive til ny kjøretøyteknologi»",
+      "summary": "Statens vegvesen (SVV) har skrevet om informasjonssiden om avanserte førerstøttesystemer. Siden er merket «Sist oppdatert: 29. oktober 2026». SVV kaller nå systemet «Tesla Assistert Kjøring (tidligere Tesla FSD)». Det er det samme systemet som vi omtaler som FSD Supervised, og som i Europa heter Tesla Assisted Driving. Den største endringen er tonen. I oktober skrev SVV at etaten ikke hadde noen prosess med Tesla. Nå står det at SVV «er i dialog med Tesla om oppdateringer og hendelsesrapportering». Etaten skriver også at «norske myndigheter er positive til ny kjøretøyteknologi», og at dagens regelverk ikke hindrer bruk av funksjoner for navigering, fart og styring som ikke innebærer å ta hendene av rattet. Ifølge SVV har Tesla tilpasset systemet etter dialog med myndigheter i flere land: Navnet er endret, markedsføringen av sikkerhetsgevinsten er moderert, og Tesla har gått bort fra unntaket om maksimal sideveis akselerasjon. SVV venter at Tesla også justerer systemet så det følger fartsgrensene bedre. Tesla Norge har fått lov til å bruke tre modifiserte biler til intern testing i Norge. SVV har fortsatt bekymringer: Føreren kan ta hendene fra rattet utenfor motorvei, systemet kan lettere bryte fartsgrensen, føreren kan stole for mye på det, og førerovervåkingen er lite utprøvd. På samme side står det at RDW, den nederlandske godkjenningsmyndigheten, har vurdert virkningen på trafikksikkerheten som marginalt positiv. Kundedemoer er fortsatt ikke tillatt. SVV mener informasjonsmaterialet til Tesla er villedende, og har ennå ikke fått nytt materiale.",
+      "why_it_matters": "Tonen er klart mer positiv enn i oktober, men dette er ingen norsk godkjenning. SVV vurderer fortsatt ikke å innføre systemet i Norge før det oppfyller FN-regelverket R171, selv om flere EU-land har sagt ja nasjonalt. Beslutningen venter på EU. Ifølge SVV er neste møte i TCMV (EUs tekniske komité for motorvogner) i desember 2026, men det er ikke bestemt om det blir avstemning, og teksten det eventuelt skal stemmes over, er ikke avklart. Når EU har avgjort, følger SVV forpliktelsene i EØS-avtalen. Setningen om at Norge kan motsette seg innføringen, er borte fra siden. Til da er FSD Supervised ikke godkjent for vanlige eiere i Norge, mens ti EU-land, blant dem Danmark, har sagt ja.",
+      "url": "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/",
+      "sources": [
+        "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/"
+      ],
+      "tags": [
+        "svv",
+        "norge",
+        "tad",
+        "dialog",
+        "news"
+      ]
+    },
     {
       "id": "news-tesla-sikkerhetsdata-2026-10-27",
       "iso": "2026-10-27T08:00:00+01:00",

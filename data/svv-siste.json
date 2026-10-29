@@ -1,12 +1,12 @@
 {
-  "sjekket_iso": "2026-10-29T08:00:00+01:00",
-  "svv_sist_oppdatert_nb": "3. juli 2026",
+  "sjekket_iso": "2026-10-29T09:30:00+01:00",
+  "svv_sist_oppdatert_nb": "29. oktober 2026",
   "url": "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/",
-  "materiell_endring": false,
+  "materiell_endring": true,
   "status": "oppdatert",
-  "sammendrag": "Ny seksjon «Oppdatering 2. oktober om TCMV-møte»: ingen avstemning i TCMV 6. oktober fordi godkjenningsmyndighetene i majoriteten av medlemslandene har signalisert at de ikke er klare til å stemme. Neste mulighet er desember 2026. Norge har ikke sendt inn spørsmål eller kommentarer. Feltet «Sist oppdatert» viser fortsatt 3. juli 2026.",
-  "betydning_for_eiere": "Fortsatt ikke kundegodkjent. SVV vurderer ingen tidligere norsk innføring så lenge systemet ikke oppfyller FN Reg. 171, og har ingen prosess med Tesla om dette nå. Begrenset testing. Kundedemoer stanset til Tesla endrer budskapet.",
+  "sammendrag": "Siden er skrevet om og merket «Sist oppdatert: 29. oktober 2026». SVV kaller systemet «Tesla Assistert Kjøring (tidligere Tesla FSD)». SVV er «i dialog med Tesla om oppdateringer og hendelsesrapportering» og skriver at «norske myndigheter er positive til ny kjøretøyteknologi». Dagens regelverk hindrer ikke funksjoner som ikke innebærer å ta hendene av rattet. Tesla har endret navn, moderert markedsføringen og gått bort fra unntaket om maksimal sideveis akselerasjon; SVV venter også bedre tilpasning til fartsgrensene. Neste TCMV-møte er i desember 2026, men det er ikke bestemt om det blir avstemning.",
+  "betydning_for_eiere": "Fortsatt ikke kundegodkjent. SVV vurderer ingen tidligere norsk innføring så lenge systemet ikke oppfyller FN Reg. 171, men er nå i dialog med Tesla. Tesla Norge tester med tre modifiserte biler. Kundedemoer er ikke tillatt før Tesla leverer nytt informasjonsmateriale.",
   "norge_kundegodkjent": false,
-  "svv_oppdatering_nb": "2. oktober 2026",
-  "svv_oppdatering_tittel": "Oppdatering 2. oktober om TCMV-møte"
+  "svv_oppdatering_nb": "29. oktober 2026",
+  "svv_oppdatering_tittel": "Siden skrevet om: dialog med Tesla"
 }

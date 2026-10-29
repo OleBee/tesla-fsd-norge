@@ -3,9 +3,9 @@
   "sist_sjekket_nb": "29. oktober 2026",
   "sist_oppdatert_iso": "2026-10-29T08:00:00+01:00",
   "sist_oppdatert_nb": "29. oktober 2026 kl. 08.00",
-  "svv_sist_oppdatert_nb": "3. juli 2026",
+  "svv_sist_oppdatert_nb": "29. oktober 2026",
   "norge_kundegodkjent": false,
-  "norge_status": "Statens vegvesen åpner fortsatt ikke for vanlig kundekjøring. Tesla får teste med egne, trente sikkerhetsførere — begrenset testing, ikke din bil.",
+  "norge_status": "Statens vegvesen åpner fortsatt ikke for vanlig kundekjøring, men er nå i dialog med Tesla om oppdateringer og hendelsesrapportering. Tesla Norge har lov til å teste med tre modifiserte biler – begrenset testing, ikke din bil.",
   "eu_land": [
     {
       "land": "Nederland",
@@ -444,6 +444,11 @@
     {
       "dato": "2026-10-26",
       "tekst": "Latvia blir tiende EU-land: Vegtrafikkdirektoratet CSDD anerkjenner RDW-godkjenningen. Befolkningsandel ca. 14,3 % (vårt anslag ut fra Eurostat).",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-10-29",
+      "tekst": "Statens vegvesen (SVV) skriver om informasjonssiden: SVV er i dialog med Tesla om oppdateringer og hendelsesrapportering, og skriver at norske myndigheter er positive til ny kjøretøyteknologi. FSD Supervised er fortsatt ikke godkjent for vanlige eiere i Norge.",
       "fase": "passert"
     },
     {
