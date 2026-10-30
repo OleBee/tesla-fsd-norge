@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-10-30T11:19:00+01:00",
+  "updated_iso": "2026-10-30T11:53:00+01:00",
   "standings": {
     "yes_countries": 10,
     "eu_population_pct": 14.3,
@@ -9,6 +9,26 @@
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "itavisen-laumb-leserinnlegg-2026-10-30",
+      "iso": "2026-10-30T11:53:00+01:00",
+      "source": "itavisen",
+      "title": "Leserinnlegg: «Norge har ikke enerett på svingete veier»",
+      "summary": "Er norske veier så spesielle at Norge må vente på FSD Supervised, som i Europa heter Tesla Assisted Driving? Nei, skriver Robin Laumb i et leserinnlegg i IT-avisen kl. 11.53. Han mener smale veier, krappe svinger og glatt føre trekkes frem som om resten av Europa ikke kjente til dem. Laumb viser til Slovenia, et alpeland med egne regler for vinterutrustning, som allerede har godkjent systemet, og til Danmark, som har anerkjent den nederlandske godkjenningen. Begge deler stemmer med vår oversikt. Han viser også til at den nederlandske godkjenningsmyndigheten RDW testet systemet i over 3000 timer og mer enn 1000 testkjøringer, også i krevende vær. Laumbs forslag er konkret: Bruk vinteren til målrettede tester av dårlig oppmerking, smale veier, krappe kurver og skiftende friksjon, med krav som er definert på forhånd og resultater som kan etterprøves. Han ber også om en offentlig oversikt over hindringene som gjenstår, og om at samferdselsministeren forklarer det norske handlingsrommet. Ifølge Laumb kan også det å vente ha en kostnad for trafikksikkerheten.",
+      "why_it_matters": "Innlegget flytter debatten over på noe som kan måles. Hvis norske forhold er hindringen, kan de testes, og da vet alle når innvendingen er besvart. SVVs egen informasjonsside begrunner ventingen med FN-regulativ 171, som etaten vil ha oppfylt uten unntak, og med faren for at føreren stoler for mye på systemet. Veiforhold nevnes ikke der. SVV skriver også at etaten ikke har fått oppdatert informasjonsgrunnlag fra Tesla før kundedemonstrasjoner, og Laumb er enig i at Tesla må levere det som kreves. Norge har ikke stemmerett i TCMV, og så langt har ti land anerkjent den nederlandske godkjenningen. FSD Supervised er fortsatt ikke godkjent for vanlige eiere i Norge.",
+      "url": "https://itavisen.no/2026/10/30/tesla-fsd-norge-vegvesenet-norske-forhold-robin-laumb/",
+      "sources": [
+        "https://itavisen.no/2026/10/30/tesla-fsd-norge-vegvesenet-norske-forhold-robin-laumb/",
+        "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/"
+      ],
+      "tags": [
+        "norge",
+        "tad",
+        "svv",
+        "leserinnlegg",
+        "news"
+      ]
+    },
     {
       "id": "itavisen-mundal-klage-2026-10-30",
       "iso": "2026-10-30T11:19:00+01:00",
