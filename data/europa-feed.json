@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-10-30T10:00:00+01:00",
+  "updated_iso": "2026-10-30T11:19:00+01:00",
   "standings": {
     "yes_countries": 10,
     "eu_population_pct": 14.3,
@@ -9,6 +9,27 @@
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "itavisen-mundal-klage-2026-10-30",
+      "iso": "2026-10-30T11:19:00+01:00",
+      "source": "itavisen",
+      "title": "Tesla-eier klaget på Vegvesenets FSD-ansvarlige – Mundal svarer",
+      "summary": "En norsk Tesla-eier har sendt en formell klage til Statens vegvesen (SVV) på sjefingeniør Stein-Helge Mundal, melder IT-avisen kl. 11.19. Bakgrunnen er en e-postutveksling fra august. Eieren mente at FSD Supervised, som i Europa heter Tesla Assisted Driving, kan redde liv, og at den norske ventingen fører til unødvendige dødsfall. Mundal svarte 25. august blant annet: «Kanskje har vi også spart liv ved å utsette …» I samme svar viste han til NRK-dokumentaren «Kollisjonskurs – Elon Musk og Tesla-eksperimentet». Eieren fortalte om klagen på X 29. oktober. Til IT-avisen sier Mundal at uttalelsen må leses i sammenheng med hele e-postutvekslingen. Han mener systemer som venter til de oppfyller de harmoniserte FN-kravene, gir et høyere sikkerhetsnivå, og frykter at unntakene kan bli regelen. Om klagen sier han: «Dersom det kan bidra til å opplyse saken ytterligere, er det fint.» Mundal opplyser at han er fagansvarlig for regelverket for avanserte førerstøttesystemer og automatisert kjøring, og at SVV arbeider i tverrfaglige team. Avgjørelsene tas altså ikke av ham alene.",
+      "why_it_matters": "Saken viser hvor fast den norske linjen står. SVV vil ha FN-regulativ 171 oppfylt uten unntak, mens ti land har anerkjent den nederlandske godkjenningen. Mundal har et poeng om at føreren ikke må stole for mye på systemet. Det gjelder all førerstøtte, og føreren har alltid ansvaret. Eierens spørsmål om hva ventingen koster, fortjener like grundig svar. Teslas egne tall, gjengitt av Sawyer Merritt 27. oktober, viser langt flere kilometer mellom store kollisjoner med systemet på enn snittet i USA. Tallene er Teslas egne og gjelder ifølge Merritt Nord-Amerika. Beslutningen ligger uansett i EU. Ifølge IT-avisen er neste TCMV-møte planlagt i desember, men det er ikke sikkert at det blir avstemning. FSD Supervised er fortsatt ikke godkjent for vanlige eiere i Norge.",
+      "url": "https://itavisen.no/2026/10/30/kanskje-har-vi-ogsa-spart-liv-tesla-eier-klaget-pa-vegvesenets-fsd-ansvarlige-na-svarer-han/",
+      "sources": [
+        "https://itavisen.no/2026/10/30/kanskje-har-vi-ogsa-spart-liv-tesla-eier-klaget-pa-vegvesenets-fsd-ansvarlige-na-svarer-han/",
+        "https://x.com/ShipGeneration/status/2115862079169085894",
+        "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/"
+      ],
+      "tags": [
+        "svv",
+        "norge",
+        "tad",
+        "mundal",
+        "news"
+      ]
+    },
     {
       "id": "news-salvini-eu-godkjenning-2026-10-29",
       "iso": "2026-10-29T09:21:00+01:00",
