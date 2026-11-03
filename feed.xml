@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Fri, 30 Oct 2026 10:19:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 15:45:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>RDW godkjenner endringer i Tesla Assisted Driving – fartsmarginen kuttes til 10 prosent</title>
+      <link>https://tadnorge.no/#rdw-godkjenner-endringer-tad-2026-11-03</link>
+      <guid isPermaLink="false">rdw-godkjenner-endringer-tad-2026-11-03</guid>
+      <pubDate>Tue, 03 Nov 2026 15:45:00 GMT</pubDate>
+      <description>&lt;p&gt;Den nederlandske godkjenningsmyndigheten RDW har vurdert og godkjent flere endringer i FSD Supervised, som i Europa heter Tesla Assisted Driving (TAD). Det skriver RDW i en nyhetsmelding 3. november. Det nye navnet skal stå på skjermen i bilen, i instruksjonsboken og i all annen informasjon til føreren. Ifølge RDW endrer navnebyttet ikke hvordan systemet virker. Det er fortsatt et førerstøttesystem, og føreren har fortsatt ansvaret for kjøringen. Den største endringen gjelder fartsmarginen, altså hvor mange prosent systemet kan avvike fra fartsgrensen når det trengs for sikkerheten og trafikkflyten. Føreren kunne tidligere stille den på inntil 50 prosent. Nå blir taket 10 prosent. Når bilen startes, står marginen på null, og andre fartsrelaterte funksjoner er slått av som standard. Endringene gjelder biler med maskinvareversjon 4.0 (HW4) eller nyere og kommer som en trådløs programvareoppdatering fra Tesla. RDW oppgir ingen dato for når oppdateringen kommer.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Det var Tesla selv som ba RDW vurdere endringene. RDW fant ingen negative eller utilsiktede virkninger og har tatt endringene inn i den eksisterende typegodkjenningen. Den gjelder videre med de samme vilkårene, og RDW har orientert de ni landene som har anerkjent den nederlandske godkjenningen. Antallet land er fortsatt ti. Fartsmarginen har vært et av de omstridte punktene før EU-behandlingen, og nå er den justert. Løpet i Nederland beveger seg, og nå er det opp til EU og Norge å følge etter. Statens vegvesen vil ha FN-regulativ 171 oppfylt uten unntak og har ikke kommentert endringene. RDW kommenterer ikke behandlingen i TCMV, der samtalene er fortrolige. Norge har ikke stemmerett der, og FSD Supervised er fortsatt ikke godkjent for vanlige eiere i Norge.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.rdw.nl/over-rdw/nieuws/2026/rdw-keurt-wijzigingen-aan-tesla-rijhulpsysteem-goed"&gt;https://www.rdw.nl/over-rdw/nieuws/2026/rdw-keurt-wijzigingen-aan-tesla-rijhulpsysteem-goed&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Tesla-eier klaget på Vegvesenets FSD-ansvarlige – Mundal svarer</title>
       <link>https://tadnorge.no/#itavisen-mundal-klage-2026-10-30</link>
