@@ -1,14 +1,35 @@
 {
-  "updated_iso": "2026-11-03T16:45:00+01:00",
+  "updated_iso": "2026-11-11T08:00:00+01:00",
   "standings": {
-    "yes_countries": 10,
-    "eu_population_pct": 14.3,
+    "yes_countries": 11,
+    "eu_population_pct": 15.5,
     "tcmv_october_pct": 0,
     "norway_this_month_pct": 0,
     "next_tcmv": "2026-12",
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "news-finland-godkjent-2026-11-11",
+      "iso": "2026-11-11T08:00:00+01:00",
+      "source": "eu",
+      "title": "Finland sier ja: FSD Supervised godkjent i ellevte EU-land – Norge venter fortsatt",
+      "summary": "Finland har godkjent Teslas førerstøttesystem FSD Supervised, som i Europa nå heter Tesla Assisted Driving. Den finske transportetaten Traficom anerkjente 10. november den foreløpige typegodkjenningen fra RDW, den nederlandske godkjenningsmyndigheten, og meldte det 11. november. Tesla kan dermed straks tilby systemet til kunder i Finland. Traficom begrunner tempoet med endringene Tesla har gjort, og med at finske eiere skal bli kjent med systemet før de vanskeligste vinterforholdene kommer. Navnet er endret, fartsmarginen kan ikke lenger stå på 50 prosent over grensen, og den nullstilles hver gang bilen startes. Ifølge Traficom har førerstøttesystemer stort potensial til å redusere ulykker som skyldes menneskelige feil. Tesla Europe skrev på X kl. 07.18 norsk tid at utrullingen begynner snart, men har ikke oppgitt dato. Føreren har fortsatt ansvaret og må følge med hele tiden.",
+      "why_it_matters": "Finland er det andre nordiske landet som sier ja, etter Danmark. Elleve av 27 EU-land har nå godkjent systemet. De har om lag 15,5 % av EU-befolkningen, ifølge vårt anslag ut fra Eurostat-tall. Tersklene for et ja i TCMV (EUs tekniske komité for motorvogner) er 15 land og 65 % av befolkningen. Traficom venter at EU avgjør saken i løpet av vinteren, og skriver at et ja i TCMV gjelder i hele EU etter om lag tre uker. Norge har valgt å vente på EU. Dermed kan finske og danske eiere bruke systemet, mens norske eiere fortsatt ikke kan slå det på.",
+      "url": "https://traficom.fi/en/news/teslas-driver-assistance-system-now-permitted-finnish-roads",
+      "sources": [
+        "https://traficom.fi/en/news/teslas-driver-assistance-system-now-permitted-finnish-roads",
+        "https://x.com/teslaeurope/status/2120400770952745439",
+        "https://hk.marketscreener.com/news/tesla-driver-assistance-system-now-permitted-on-finnish-roads-ce785edbd88ef120"
+      ],
+      "tags": [
+        "finland",
+        "eu",
+        "tad",
+        "approval",
+        "news"
+      ]
+    },
     {
       "id": "rdw-godkjenner-endringer-tad-2026-11-03",
       "iso": "2026-11-03T16:45:00+01:00",

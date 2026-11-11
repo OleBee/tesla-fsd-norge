@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Tue, 03 Nov 2026 15:45:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 07:00:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>Finland sier ja: FSD Supervised godkjent i ellevte EU-land – Norge venter fortsatt</title>
+      <link>https://tadnorge.no/#news-finland-godkjent-2026-11-11</link>
+      <guid isPermaLink="false">news-finland-godkjent-2026-11-11</guid>
+      <pubDate>Wed, 11 Nov 2026 07:00:00 GMT</pubDate>
+      <description>&lt;p&gt;Finland har godkjent Teslas førerstøttesystem FSD Supervised, som i Europa nå heter Tesla Assisted Driving. Den finske transportetaten Traficom anerkjente 10. november den foreløpige typegodkjenningen fra RDW, den nederlandske godkjenningsmyndigheten, og meldte det 11. november. Tesla kan dermed straks tilby systemet til kunder i Finland. Traficom begrunner tempoet med endringene Tesla har gjort, og med at finske eiere skal bli kjent med systemet før de vanskeligste vinterforholdene kommer. Navnet er endret, fartsmarginen kan ikke lenger stå på 50 prosent over grensen, og den nullstilles hver gang bilen startes. Ifølge Traficom har førerstøttesystemer stort potensial til å redusere ulykker som skyldes menneskelige feil. Tesla Europe skrev på X kl. 07.18 norsk tid at utrullingen begynner snart, men har ikke oppgitt dato. Føreren har fortsatt ansvaret og må følge med hele tiden.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Finland er det andre nordiske landet som sier ja, etter Danmark. Elleve av 27 EU-land har nå godkjent systemet. De har om lag 15,5 % av EU-befolkningen, ifølge vårt anslag ut fra Eurostat-tall. Tersklene for et ja i TCMV (EUs tekniske komité for motorvogner) er 15 land og 65 % av befolkningen. Traficom venter at EU avgjør saken i løpet av vinteren, og skriver at et ja i TCMV gjelder i hele EU etter om lag tre uker. Norge har valgt å vente på EU. Dermed kan finske og danske eiere bruke systemet, mens norske eiere fortsatt ikke kan slå det på.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://traficom.fi/en/news/teslas-driver-assistance-system-now-permitted-finnish-roads"&gt;https://traficom.fi/en/news/teslas-driver-assistance-system-now-permitted-finnish-roads&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>RDW godkjenner endringer i Tesla Assisted Driving – fartsmarginen kuttes til 10 prosent</title>
       <link>https://tadnorge.no/#rdw-godkjenner-endringer-tad-2026-11-03</link>
