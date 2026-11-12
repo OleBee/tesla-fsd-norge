@@ -31,6 +31,27 @@
       ]
     },
     {
+      "id": "danmark-innovationspris-tad-2026-11-10",
+      "iso": "2026-11-10T17:13:00+01:00",
+      "source": "news",
+      "title": "Tesla Assisted Driving vant Innovationsprisen ved Årets Bil i Danmark",
+      "summary": "Tesla Assisted Driving (TAD), tidligere FSD Supervised, har vunnet Innovationsprisen ved Årets Bil i Danmark 2027. Prisen ble delt ut av Danske Motorjournalister 10. november i Classic Car House i Kongens Lyngby. De 24 medlemmene i juryen skriver: «Teslas Assisted Driving er markedets mest imponerende kørselsassistent. Det er intuitivt og fungerer forbløffende godt i praksis. Trods fejltrin og en høj pris giver systemet et fascinerende indblik i fremtidens bilkørsel.» Tittelen som Årets Bil gikk til Volkswagen ID. Polo med 197 poeng. De to andre æresprisene gikk til Renault Twingo for design og Cupra Raval for bilglede. Martin Niebuhr i Tesla skriver på LinkedIn at flere tusen danskere har brukt systemet siden godkjenningen i juni, og at det nå er godkjent i 11 europeiske land. At flere tusen har brukt det, er Teslas egen opplysning. Danmark anerkjente den nederlandske godkjenningen 9. juni, og tallet på 11 land stemmer med vår oversikt: 11 av 27 EU-land, etter at Finland anerkjente godkjenningen 10. november.",
+      "why_it_matters": "Anerkjennelsen kommer fra motorjournalister i et naboland der vanlige eiere allerede kan bruke systemet. Juryen nevner feiltrinn og høy pris, og gir likevel prisen til det den kaller markedets mest imponerende kjøreassistent. Føreren har fortsatt ansvaret. I Norge er Tesla Assisted Driving fortsatt ikke godkjent for vanlige eiere.",
+      "url": "https://www.inputmag.dk/id-polo-er-aarets-bil-2027/",
+      "sources": [
+        "https://www.inputmag.dk/id-polo-er-aarets-bil-2027/",
+        "https://bilmagasinet.dk/bil-nyheder/aarets-bil-2027",
+        "https://www.boosted.dk/bilbranchen/renault-cupra-og-tesla-faar-aerespriser-ved-aarets-bil-2027/",
+        "https://www.linkedin.com/posts/martinniebuhr_tesla-assisted-driving-vinder-innovationsprisen-activity-7526215013448048642-wYLs"
+      ],
+      "tags": [
+        "danmark",
+        "tad",
+        "pris",
+        "news"
+      ]
+    },
+    {
       "id": "rdw-godkjenner-endringer-tad-2026-11-03",
       "iso": "2026-11-03T16:45:00+01:00",
       "source": "rdw",
