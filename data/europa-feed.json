@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-11-11T08:00:00+01:00",
+  "updated_iso": "2026-11-13T08:00:00+01:00",
   "standings": {
     "yes_countries": 11,
     "eu_population_pct": 15.5,
@@ -9,6 +9,27 @@
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "svv-bekrefter-fartsmargin-10-prosent-2026-11-13",
+      "iso": "2026-11-13T08:00:00+01:00",
+      "source": "svv",
+      "title": "Vegvesenet bekrefter: Tesla har kuttet fartsmarginen til 10 prosent",
+      "summary": "Statens vegvesen har lagt inn en ny setning på siden om avanserte førerstøttesystemer. Der står det nå at Tesla har justert Tesla Assistert Kjøring, som FSD Supervised heter i Europa, slik at fartstilpasningen kommer nærmere kravene i regelverket. Føreren kan fortsatt stille inn en margin over fartsgrensen, men taket er nå 10 prosent. Tidligere var det 50 prosent. Vegvesenet flyttet ikke datoen «Sist oppdatert», som fortsatt står på 29. oktober. TAD Norge oppdaget den nye teksten 11. november. Det er den samme endringen som den nederlandske godkjenningsmyndigheten RDW godkjente 3. november.",
+      "why_it_matters": "Fart har vært en av Vegvesenets tyngste innvendinger. Nå skriver etaten selv at Tesla har strammet inn. Samme side sier likevel at Vegvesenet venter bedre tilpasning til fartsgrensene, og at etaten ikke vurderer en norsk innføring før FN-regulativ 171 er oppfylt. Tesla har levert det myndighetene har bedt om: nytt navn, nøkternere markedsføring og lavere fartsmargin. Finland godkjente systemet 10. november som ellevte EU-land. Neste møte i EUs tekniske komité for motorvogner (TCMV) er i desember, men det er ikke bestemt om det blir avstemning. Norge venter fortsatt, og FSD Supervised er ikke godkjent for vanlige eiere her.",
+      "url": "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/",
+      "sources": [
+        "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/",
+        "https://www.rdw.nl/over-rdw/nieuws/2026/rdw-keurt-wijzigingen-aan-tesla-rijhulpsysteem-goed",
+        "https://www.publicnow.com/view/F319C01C7E4D7FB51C85A43C6C40A88541A7F979"
+      ],
+      "tags": [
+        "svv",
+        "norge",
+        "tad",
+        "fartsmargin",
+        "news"
+      ]
+    },
     {
       "id": "news-finland-godkjent-2026-11-11",
       "iso": "2026-11-11T08:00:00+01:00",
