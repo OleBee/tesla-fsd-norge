@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Fri, 13 Nov 2026 07:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 11:45:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>Bjørn Nyland kjørte FSD i Finland: – Kanskje på tide at Norge også godkjenner</title>
+      <link>https://tadnorge.no/#nyland-fsd-finland-model-y-standard-2026-11-15</link>
+      <guid isPermaLink="false">nyland-fsd-finland-model-y-standard-2026-11-15</guid>
+      <pubDate>Sun, 15 Nov 2026 11:45:00 GMT</pubDate>
+      <description>&lt;p&gt;Den norske Tesla-profilen Bjørn Nyland har lagt ut en video på YouTube der en Tesla Model Y Standard kjører med Tesla Assisted Driving (TAD), tidligere FSD Supervised, i Espoo ved Helsingfors. Videoen kom 15. november, fem dager etter at Finland anerkjente den nederlandske godkjenningen. Turen starter ved Aalto-universitetet og går gjennom forstadsgater og boligområder, med regndråper på frontruta. Føreren holder ikke på rattet, men følger med hele tiden, slik systemet krever. Bilen senker farten for en person på en parkeringsplass og bremser ned til 10 km/t over kraftige fartsdumper der grensen er 30. Den slipper fram en buss som blinker ut, og holder igjen for en hund i bånd. «Vi har ikke måttet gripe inn i noe», sier Nyland underveis (oversatt fra engelsk). Han peker også på noen svakheter. Skjermen viste av og til bare én pil der lyskrysset hadde to, og han mener vindusviskerne gikk sjeldnere enn de fleste førere ville valgt. Bilen leste også et skilt med 10 km/t som hørte til en annen vei, men gikk etter kort tid tilbake til 30.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Nyland sier at mange nordmenn har pekt på at veiene og været i Finland ligner på Norge. «Hvis Finland kan godkjenne det, er det kanskje på tide at Norge også gjør det», sier han (oversatt). Han tror Norge blir et av de siste landene. Finland ble 10. november det ellevte EU-landet som anerkjente godkjenningen fra RDW, den nederlandske godkjenningsmyndigheten (se saken vår fra 11. november lenger ned). De elleve landene har om lag 15,5 % av EU-befolkningen. RDW godkjente 3. november at fartsmarginen kuttes til 10 prosent, og Statens vegvesen har bekreftet endringen. Vegvesenet venter likevel på EU og vil ha FN-regulativ 171 oppfylt. Neste møte i TCMV, EUs tekniske komité for motorvogner, er i desember. TAD er førerstøtte, og føreren har ansvaret. I Norge er systemet fortsatt ikke godkjent for vanlige eiere.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.youtube.com/watch?v=VmZMRlKemF0"&gt;https://www.youtube.com/watch?v=VmZMRlKemF0&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Vegvesenet bekrefter: Tesla har kuttet fartsmarginen til 10 prosent</title>
       <link>https://tadnorge.no/#svv-bekrefter-fartsmargin-10-prosent-2026-11-13</link>
