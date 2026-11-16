@@ -1,8 +1,8 @@
 {
   "sist_sjekket": "2026-11-16",
   "sist_sjekket_nb": "16. november 2026",
-  "sist_oppdatert_iso": "2026-11-16T08:00:00+01:00",
-  "sist_oppdatert_nb": "16. november 2026 kl. 08.00",
+  "sist_oppdatert_iso": "2026-11-16T08:09:00+01:00",
+  "sist_oppdatert_nb": "16. november 2026 kl. 08.09",
   "svv_sist_oppdatert_nb": "29. oktober 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Statens vegvesen åpner fortsatt ikke for vanlig kundekjøring, men er nå i dialog med Tesla om oppdateringer og hendelsesrapportering. Tesla Norge har lov til å teste med tre modifiserte biler – begrenset testing, ikke din bil.",
@@ -459,6 +459,11 @@
     {
       "dato": "2026-11-10",
       "tekst": "Finland blir ellevte EU-land: Transportetaten Traficom anerkjenner RDW-godkjenningen. Befolkningsandel ca. 15,5 % (vårt anslag ut fra Eurostat).",
+      "fase": "passert"
+    },
+    {
+      "dato": "2026-11-11",
+      "tekst": "Finland: Eiere i Rovaniemi og Helsingfors legger ut de første videoene og innleggene fra kjøring med Tesla Assisted Driving (TAD), tidligere FSD Supervised. Utrullingen er i gang.",
       "fase": "passert"
     },
     {
