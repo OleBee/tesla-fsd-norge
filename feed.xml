@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Sun, 15 Nov 2026 11:45:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 07:09:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>Finske eiere kjører allerede med Tesla Assisted Driving – utrullingen startet 11. november</title>
+      <link>https://tadnorge.no/#news-finland-lansert-2026-11-16</link>
+      <guid isPermaLink="false">news-finland-lansert-2026-11-16</guid>
+      <pubDate>Mon, 16 Nov 2026 07:09:00 GMT</pubDate>
+      <description>&lt;p&gt;Tesla Assisted Driving (TAD), tidligere FSD Supervised, er rullet ut til kunder i Finland. Utrullingen startet 11. november, samme dag som transportetaten Traficom meldte at den hadde anerkjent den nederlandske godkjenningen. Allerede samme kveld la finske eiere ut videoer der bilen styrer, bremser og gir gass mens føreren følger med. Den første eiervideoen vi har funnet, kom på YouTube kl. 20.25 norsk tid: en Model S-eier som viser sin første tur. Litt over en time senere la en Model Y-eier i Rovaniemi ut en tolv minutter lang video fra snødekte veier ved polarsirkelen på X. Natt til 12. november skrev den finske videoskaperen Jami Pietilä at han lastet ned oppdateringen i veikanten og kjørte rett ut. Ifølge avisa Iltalehti koster TAD 99 euro i måneden for nye kunder og 49 euro for eiere med Enhanced Autopilot. Det er gratis for dem som kjøpte hele FSD-pakken. Systemet krever datamaskinen Hardware 4. Føreren har fortsatt ansvaret og må følge med hele tiden.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Finland er det andre nordiske landet der vanlige eiere bruker systemet, etter Danmark. Det gikk én dag fra Traficoms vedtak til de første bilene på veien. Medianen i landene vi følger, er to dager. Bjørn Nyland har pekt på at veiene og været i Finland ligner på Norge (se saken vår fra 15. november). Nå får finske eiere prøve systemet i snø og mørke før den verste vinteren, slik Traficom ønsket. Mens finske eiere kjører i snøen ved polarsirkelen, må norske eiere vente. Statens vegvesen vil vente på EU og ha FN-regulativ 171 oppfylt. Neste mulighet for et ja i TCMV, EUs tekniske komité for motorvogner, er i desember, men møtedatoen er ikke satt. I Norge er TAD fortsatt ikke godkjent for vanlige eiere.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://x.com/Petteri_Savolai/status/2120615909681176651"&gt;https://x.com/Petteri_Savolai/status/2120615909681176651&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Bjørn Nyland kjørte FSD i Finland: – Kanskje på tide at Norge også godkjenner?</title>
       <link>https://tadnorge.no/#nyland-fsd-finland-model-y-standard-2026-11-15</link>
