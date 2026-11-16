@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-11-16T08:09:00+01:00",
+  "updated_iso": "2026-11-16T09:00:00+01:00",
   "standings": {
     "yes_countries": 11,
     "eu_population_pct": 15.5,
@@ -9,6 +9,32 @@
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "news-latvia-lansert-2026-11-16",
+      "iso": "2026-11-16T09:00:00+01:00",
+      "source": "eu",
+      "title": "Latviske eiere har kjørt med Tesla Assisted Driving siden 28. oktober",
+      "summary": "Tesla Assisted Driving (TAD), tidligere FSD Supervised, er rullet ut til kunder i Latvia, og det skjedde allerede i oktober. Vegtrafikkdirektoratet CSDD anerkjente den nederlandske godkjenningen 26. oktober. Den første dokumentasjonen vi har funnet, er et innslag fra allmennkringkasteren LSM to dager senere. Der sitter Uldis Tēraudkalns, medeier i et uavhengig Tesla-verksted, bak rattet i Riga mens bilen selv svinger, bremser for fotgjengere og parkerer. Ifølge LSM var det da andre dag systemet kunne brukes i Latvia. Dagen etter skrev en latvisk Tesla-eier på X at han hadde fått oppdateringen samme dag og allerede kjørt med den. Fem dager senere skrev han at systemet hadde kjørt ham 350 kilometer. Fredag 13. november la youtuberen Raiders Raitis ut en video på 35 minutter der han tester systemet i en Model X Plaid i trange bakgårder og kryss i Riga. Ifølge CSDD, gjengitt av LSM, har rundt 700 Teslaer i Latvia maskinvaren som trengs. Abonnementet koster 99 euro i måneden, opplyste Tesla til EVwire. Føreren har fortsatt ansvaret og må følge med hele tiden.",
+      "why_it_matters": "Det gikk to dager fra CSDDs vedtak til systemet var i bruk i Latvia. Det er nøyaktig medianen i landene vi følger. Dermed er TAD i bruk hos vanlige eiere i alle de elleve EU-landene som har sagt ja, blant dem alle de tre baltiske landene. Mens latviske eiere har kjørt med systemet i snart tre uker, venter norske eiere fortsatt. Statens vegvesen vil vente på EU, og neste mulighet for et ja i TCMV, EUs tekniske komité for motorvogner, er i desember, men møtedatoen er ikke satt. I Norge er TAD fortsatt ikke godkjent for vanlige eiere.",
+      "url": "https://rus.lsm.lv/statja/novosti/obschestvo/28.10.2026-avtopilot-tesla-teper-i-v-latvii-ispytanie-rizskimi-dorogami.a669589/",
+      "sources": [
+        "https://rus.lsm.lv/statja/novosti/obschestvo/28.10.2026-avtopilot-tesla-teper-i-v-latvii-ispytanie-rizskimi-dorogami.a669589/",
+        "https://x.com/makuccietto/status/2115797049740607701",
+        "https://x.com/makuccietto/status/2117696062865756372",
+        "https://www.youtube.com/watch?v=SA2_LmLDKho",
+        "https://www.youtube.com/watch?v=nMZV91fKntk",
+        "https://www.sam.gov.lv/lv/jaunums/latvija-atzist-niderlande-izsniegto-provizorisko-tipa-apstiprinajumu-tesla-izstradatajai-vaditaja-paligsistemai",
+        "https://www.lsm.lv/raksts/dzive-stils/tehnologijas-un-zinatne/31.10.2026-drizuma-ari-latvija-automasinas-vadisanu-varetu-parvaldit-maksligais-intelekts.a669975/",
+        "https://evwire.com/p/latvia-approves-fsd-supervised-tad-tenth-eu-country"
+      ],
+      "tags": [
+        "latvia",
+        "eu",
+        "tad",
+        "rollout",
+        "news"
+      ]
+    },
     {
       "id": "news-finland-lansert-2026-11-16",
       "iso": "2026-11-16T08:09:00+01:00",

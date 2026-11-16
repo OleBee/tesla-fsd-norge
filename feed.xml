@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Mon, 16 Nov 2026 07:09:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 08:00:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>Latviske eiere har kjørt med Tesla Assisted Driving siden 28. oktober</title>
+      <link>https://tadnorge.no/#news-latvia-lansert-2026-11-16</link>
+      <guid isPermaLink="false">news-latvia-lansert-2026-11-16</guid>
+      <pubDate>Mon, 16 Nov 2026 08:00:00 GMT</pubDate>
+      <description>&lt;p&gt;Tesla Assisted Driving (TAD), tidligere FSD Supervised, er rullet ut til kunder i Latvia, og det skjedde allerede i oktober. Vegtrafikkdirektoratet CSDD anerkjente den nederlandske godkjenningen 26. oktober. Den første dokumentasjonen vi har funnet, er et innslag fra allmennkringkasteren LSM to dager senere. Der sitter Uldis Tēraudkalns, medeier i et uavhengig Tesla-verksted, bak rattet i Riga mens bilen selv svinger, bremser for fotgjengere og parkerer. Ifølge LSM var det da andre dag systemet kunne brukes i Latvia. Dagen etter skrev en latvisk Tesla-eier på X at han hadde fått oppdateringen samme dag og allerede kjørt med den. Fem dager senere skrev han at systemet hadde kjørt ham 350 kilometer. Fredag 13. november la youtuberen Raiders Raitis ut en video på 35 minutter der han tester systemet i en Model X Plaid i trange bakgårder og kryss i Riga. Ifølge CSDD, gjengitt av LSM, har rundt 700 Teslaer i Latvia maskinvaren som trengs. Abonnementet koster 99 euro i måneden, opplyste Tesla til EVwire. Føreren har fortsatt ansvaret og må følge med hele tiden.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Det gikk to dager fra CSDDs vedtak til systemet var i bruk i Latvia. Det er nøyaktig medianen i landene vi følger. Dermed er TAD i bruk hos vanlige eiere i alle de elleve EU-landene som har sagt ja, blant dem alle de tre baltiske landene. Mens latviske eiere har kjørt med systemet i snart tre uker, venter norske eiere fortsatt. Statens vegvesen vil vente på EU, og neste mulighet for et ja i TCMV, EUs tekniske komité for motorvogner, er i desember, men møtedatoen er ikke satt. I Norge er TAD fortsatt ikke godkjent for vanlige eiere.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://rus.lsm.lv/statja/novosti/obschestvo/28.10.2026-avtopilot-tesla-teper-i-v-latvii-ispytanie-rizskimi-dorogami.a669589/"&gt;https://rus.lsm.lv/statja/novosti/obschestvo/28.10.2026-avtopilot-tesla-teper-i-v-latvii-ispytanie-rizskimi-dorogami.a669589/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Finske eiere kjører allerede med Tesla Assisted Driving – utrullingen startet 11. november</title>
       <link>https://tadnorge.no/#news-finland-lansert-2026-11-16</link>
