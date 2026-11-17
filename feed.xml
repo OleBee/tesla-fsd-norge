@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Mon, 16 Nov 2026 08:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 07:00:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>RDW godkjenner ny oppdatering av Tesla Assisted Driving – hendene på rattet over 130 km/t</title>
+      <link>https://tadnorge.no/#rdw-ny-tad-oppdatering-2026-11-16</link>
+      <guid isPermaLink="false">rdw-ny-tad-oppdatering-2026-11-16</guid>
+      <pubDate>Tue, 17 Nov 2026 07:00:00 GMT</pubDate>
+      <description>&lt;p&gt;Den nederlandske godkjenningsmyndigheten RDW har godkjent enda en oppdatering av Tesla Assisted Driving (TAD), som tidligere het FSD Supervised. Det skriver RDW i en nyhetsmelding 16. november, knapt to uker etter forrige runde. Systemet varsler tidligere når føreren ikke følger med, og det kan gi en «full strike», altså en advarsel som teller fullt, hvis føreren er uoppmerksom midt i en manøver. Over 130 km/t må føreren ha hendene på rattet. Også fartsvisningen blir tydeligere. Når systemet bruker den variable fartsfunksjonen Contextual Max Speed, får føreren beskjed, og fartsindikatoren pulserer når systemet unngår å senke farten. Vil føreren ha en høyere toppfart enn systemet foreslår, må det bekreftes med rullehjulet på rattet. Kjører bilen faktisk fortere, blinker fartsgrenseskiltet på skjermen rødt, og gjeldende fartsgrense vises ved siden av farten. I tillegg kommer generelle forbedringer som RDW ikke beskriver nærmere. Oppdateringen gjelder biler med maskinvareversjon 4.0 (HW4) eller nyere og kommer trådløst. Tesla bestemmer selv når.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; RDW testet endringene både på testbane og på vanlig vei og fant ingen negative eller utilsiktede virkninger. Oppdateringen er en utvidelse av den nederlandske typegodkjenningen etter artikkel 39 i EUs rammeforordning 2018/858, unntaksregelen for ny teknologi. Finske Traficom skrev 11. november at Tesla har vært villig til å gjøre endringer som medlemslandene har bedt om. Dette er andre runde på under to uker, og den trekker i riktig retning før TCMV, EUs tekniske komité for motorvogner, skal ta stilling. Neste mulighet for et ja er i desember, men møtedatoen er ikke satt. Elleve EU-land har sagt ja. I Norge er TAD fortsatt ikke godkjent for vanlige eiere, og Statens vegvesen venter på EU.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.rdw.nl/over-rdw/nieuws/2026/tesla-rijhulpsysteem-krijgt-update"&gt;https://www.rdw.nl/over-rdw/nieuws/2026/tesla-rijhulpsysteem-krijgt-update&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Latviske eiere har kjørt med Tesla Assisted Driving siden 28. oktober</title>
       <link>https://tadnorge.no/#news-latvia-lansert-2026-11-16</link>
