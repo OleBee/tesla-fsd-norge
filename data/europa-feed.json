@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-11-17T08:00:00+01:00",
+  "updated_iso": "2026-11-17T22:45:00+01:00",
   "standings": {
     "yes_countries": 11,
     "eu_population_pct": 15.5,
@@ -9,6 +9,30 @@
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "itavisen-svv-finland-2026-11-17",
+      "iso": "2026-11-17T22:45:00+01:00",
+      "source": "itavisen",
+      "title": "Vegvesenet vil ikke gjøre som Finland – tre punkter holder igjen Tesla Assisted Driving",
+      "summary": "Statens vegvesen vil ikke framskynde Tesla Assisted Driving (TAD), tidligere FSD Supervised, selv om Finland sa ja 10. november. Det sier fagansvarlig Stein-Helge Mundal til IT-avisen tirsdag kveld. Han peker på tre punkter som ikke er avklart. Vegvesenet har fortsatt spørsmål om kjøring uten hendene på rattet i tettbygde strøk, der det ferdes mange fotgjengere og syklister. Etaten er også skeptisk til at føreren kan stille inn en fartsmargin på 10 prosent over grensen. I tillegg vil den vite mer om hvordan funksjonen Contextual Speed Adaptation påvirker farten når trafikken rundt kjører fortere enn tillatt. Ifølge IT-avisen viser Mundal også til at en langt større andel av Tesla-bilene i Norge kan bruke systemet enn i Finland, og at et norsk ja derfor kan få mye større følger. Finlands argument om å la eierne bli kjent med systemet før den verste vinteren biter ikke på ham. «Vår oppgave er å sikre at systemet er trygt å bruke på våre veier, uavhengig av årstid», sier han. Tesla får ros for navnebyttet, som ifølge Mundal gjør det tydeligere at dette er førerstøtte og ikke selvkjøring.",
+      "why_it_matters": "Det nye er at Vegvesenet svarer direkte på hvorfor Norge ikke gjør som Finland. Den norske linjen står likevel fast. Etatens egen nettside, sist oppdatert 29. oktober, sier at Norge ikke vurderer noen tidligere innføring så lenge FN-regulativ 171 ikke er oppfylt. Argumentet om mange kompatible biler kan også snus: Flere biler betyr at flere norske eiere går glipp av et system som finske Traficom mener har stort potensial til å redusere ulykker som skyldes menneskelige feil. RDW, den nederlandske godkjenningsmyndigheten, har vurdert virkningen på trafikksikkerheten som marginalt positiv, ifølge Vegvesenets egen side. Tesla har dessuten rettet seg etter flere krav. Fartsmarginen er kuttet fra 50 til 10 prosent, og RDW godkjente 16. november en oppdatering som gjør fartsvalgene tydeligere for føreren. Mundal har et poeng i at føreren må kjenne grensene til systemet. Ansvaret ligger alltid hos føreren. Avgjørelsen ligger uansett i EU. Når TCMV, EUs tekniske komité for motorvogner, har bestemt seg, skal Vegvesenet følge opp etter EØS-avtalen. Neste mulighet for et ja er i desember, men møtedatoen er ikke satt. Elleve EU-land har sagt ja. I Norge er TAD fortsatt ikke godkjent for vanlige eiere.",
+      "url": "https://itavisen.no/2026/11/17/tesla-fsd-norge-vegvesenet-finland-godkjenning/",
+      "sources": [
+        "https://itavisen.no/2026/11/17/tesla-fsd-norge-vegvesenet-finland-godkjenning/",
+        "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/",
+        "https://traficom.fi/en/news/teslas-driver-assistance-system-now-permitted-finnish-roads",
+        "https://www.rdw.nl/over-rdw/nieuws/2026/tesla-rijhulpsysteem-krijgt-update",
+        "https://tadnorge.no/#news-finland-godkjent-2026-11-11"
+      ],
+      "tags": [
+        "svv",
+        "norge",
+        "finland",
+        "tad",
+        "mundal",
+        "news"
+      ]
+    },
     {
       "id": "rdw-ny-tad-oppdatering-2026-11-16",
       "iso": "2026-11-17T08:00:00+01:00",
