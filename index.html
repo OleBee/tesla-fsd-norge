@@ -188,6 +188,7 @@
             <li><div class="when">10. november 2026</div><div class="what">Finland blir ellevte EU-land: Transportetaten Traficom anerkjenner RDW-godkjenningen. Befolkningsandel ca. 15,5 % (vårt anslag ut fra Eurostat).</div></li>
             <li><div class="when">11. november 2026</div><div class="what">Finland: Eiere i Rovaniemi og Helsingfors legger ut de første videoene og innleggene fra kjøring med Tesla Assisted Driving (TAD), tidligere FSD Supervised. Utrullingen er i gang.</div></li>
             <li><div class="when">20. november 2026</div><div class="what">Italia blir tolvte EU-land ifølge Tesla Europe, som skriver på X at utrullingen begynner snart. Italienske myndigheter har ikke bekreftet godkjenningen ennå. Befolkningsandel ca. 28,6 % (vårt anslag ut fra Eurostat).</div></li>
+            <li><div class="when">20. november 2026 · WP.29</div><div class="what">FN-forumet WP.29 har vedtatt Supplement 2 til R171, regelverket for førerstøttesystemer, ifølge GlobalAutoRegs. Endringen presiserer kravene til førerovervåking og til manøvrer systemet starter selv, og åpner for hender av rattet også på motorveilignende vei opp til 130 km/t. Utenfor slike veier gjelder fortsatt krav om hender på rattet, så Tesla trenger fortsatt artikkel 39-unntaket for bykjøring.</div></li>
             <li class="neste"><div class="when">Desember 2026 (anslag) · Møtedato ikke satt</div><div class="what">Neste mulighet for et ja i TCMV til artikkel 39-saken om FSD Supervised ventes i desember 2026, men møtedatoen er ikke satt.</div></li>
             <li class="langsiktig"><div class="when">25. januar 2027 · Series 02</div><div class="what">Den nye versjonen av FN-regelverket R171 (Series 02) ventes å tre i kraft. Det er et langsiktig spor ved siden av artikkel 39.</div></li>
             <!-- SEO:TIDSLINJE:END -->
@@ -208,8 +209,8 @@
 
           <div class="stat-card countdown-card" id="kort-norge-spenn">
             <div class="cd-title">FSD Supervised i Norge – modellert estimat</div>
-            <div class="spenn-range" id="norge-spenn">April 2027 – juli 2028</div>
-            <p class="cd-note" id="norge-spenn-note">Tidligst <span id="norge-spenn-tidligst">16. april 2027</span> hvis Norge følger EU kort tid etter vedtaket. Senest <span id="norge-spenn-senest">27. juli 2028</span> hvis det går like tregt som med Fords BlueCruise, der den norske avklaringen tok <span id="norge-spenn-dager">470</span> dager. Begge datoene er våre anslag, ikke vedtak. <a href="/nedtelling/">Se nedtellingen</a></p>
+            <div class="spenn-range" id="norge-spenn">April 2027 – august 2028</div>
+            <p class="cd-note" id="norge-spenn-note">Tidligst <span id="norge-spenn-tidligst">30. april 2027</span> hvis Norge følger EU kort tid etter vedtaket. Senest <span id="norge-spenn-senest">10. august 2028</span> hvis det går like tregt som med Fords BlueCruise, der den norske avklaringen tok <span id="norge-spenn-dager">470</span> dager. Begge datoene er våre anslag, ikke vedtak. <a href="/nedtelling/">Se nedtellingen</a></p>
           </div>
 
           <div class="stat-card countdown-card" id="kort-tcmv-cd">
@@ -455,7 +456,9 @@
         if (it.etikett) when += " · " + it.etikett;
         li.innerHTML =
           '<div class="when">' + esc(when) + "</div>" +
-          '<div class="what">' + esc(it.tekst || "") + "</div>";
+          '<div class="what">' + esc(it.tekst || "") +
+          (it.kilde ? ' <a class="tl-kilde" href="' + esc(it.kilde) + '" rel="noopener" target="_blank">Kilde</a>' : "") +
+          "</div>";
         list.appendChild(li);
       });
     }

@@ -1,11 +1,16 @@
 {
   "sist_sjekket": "2026-11-20",
   "sist_sjekket_nb": "20. november 2026",
-  "sist_oppdatert_iso": "2026-11-20T11:45:00+01:00",
-  "sist_oppdatert_nb": "20. november 2026 kl. 11.45",
+  "sist_oppdatert_iso": "2026-11-20T18:45:00+01:00",
+  "sist_oppdatert_nb": "20. november 2026 kl. 18.45",
   "svv_sist_oppdatert_nb": "29. oktober 2026",
   "norge_kundegodkjent": false,
-  "norge_status": "Statens vegvesen åpner fortsatt ikke for vanlig kundekjøring, men er nå i dialog med Tesla om oppdateringer og hendelsesrapportering. Tesla Norge har lov til å teste med tre modifiserte biler – begrenset testing, ikke din bil.",
+  "norge_status": "Statens vegvesen åpner fortsatt ikke for vanlig kundekjøring, men er nå i dialog med Tesla om oppdateringer og hendelsesrapportering. Tesla Norge har lov til å teste med tre modifiserte biler – begrenset testing, ikke din bil. Etter at Finland sa ja, sa Vegvesenet til ITavisen 17. november at etaten fortsatt har tre forbehold: hender av rattet i tettbygde strøk, fartsmarginen på 10 prosent og hvordan Contextual Speed Adaptation virker når trafikken rundt kjører fortere enn fartsgrensen. Tyskland godtar den samme 10-prosentgrensen.",
+  "norge_status_kilder": [
+    "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/",
+    "https://itavisen.no/2026/11/17/tesla-fsd-norge-vegvesenet-finland-godkjenning/",
+    "https://www.bmv.de/SharedDocs/DE/Artikel/StV/Digitalisierung-der-Mobilitaet/aktueller-stand-tesla-assistenzsysteme.html"
+  ],
   "eu_land": [
     {
       "land": "Nederland",
@@ -82,7 +87,12 @@
     "kommentar": "TCMV-møtet 6. oktober er holdt. Det ble ikke stemt, slik Statens vegvesen varslet. Neste mulighet er desember 2026; nøyaktig møtedato er ikke kjent ennå. Tesla-sjef Elon Musk sa 21. oktober at han vil bli overrasket hvis et EU-ja tar lenger tid enn første kvartal 2027.",
     "neste_iso": "2026-12-15T10:00:00+01:00",
     "neste_dato_nb": "Anslag: ca. 15. desember, dato ikke satt",
-    "neste_dato_er_anslag": true
+    "neste_dato_er_anslag": true,
+    "anslag_begrunnelse": "Antagelse: 15. desember 2026. Per 20. november er det ikke publisert noen agenda for desember-møtet, og agendaen for oktober-møtet kom 25 dager før møtet. Samme antagelse brukes i nedtellingsmodellen.",
+    "anslag_kilder": [
+      "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/",
+      "https://ec.europa.eu/transparency/comitology-register/screen/documents/118164/1"
+    ]
   },
   "norge_denne_maneden": {
     "prosent": 0,
@@ -480,6 +490,18 @@
       "dato": "2026-11-20",
       "tekst": "Italia blir tolvte EU-land ifølge Tesla Europe, som skriver på X at utrullingen begynner snart. Italienske myndigheter har ikke bekreftet godkjenningen ennå. Befolkningsandel ca. 28,6 % (vårt anslag ut fra Eurostat).",
       "fase": "passert"
+    },
+    {
+      "dato": "2026-11-20",
+      "tekst": "FN-forumet WP.29 har vedtatt Supplement 2 til R171, regelverket for førerstøttesystemer, ifølge GlobalAutoRegs. Endringen presiserer kravene til førerovervåking og til manøvrer systemet starter selv, og åpner for hender av rattet også på motorveilignende vei opp til 130 km/t. Utenfor slike veier gjelder fortsatt krav om hender på rattet, så Tesla trenger fortsatt artikkel 39-unntaket for bykjøring.",
+      "fase": "passert",
+      "etikett": "WP.29",
+      "kilde": "https://globalautoregs.com/documents/43579",
+      "kilder": [
+        "https://globalautoregs.com/documents/43579",
+        "https://unece.org/sites/default/files/2026-10/ECE-TRANS-WP.29-2026-194e.pdf",
+        "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/"
+      ]
     },
     {
       "dato": "2026-12-15",
