@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-11-17T22:45:00+01:00",
+  "updated_iso": "2026-11-20T08:15:00+01:00",
   "standings": {
     "yes_countries": 11,
     "eu_population_pct": 15.5,
@@ -9,6 +9,29 @@
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "news-ungarn-testprogram-2026-11-20",
+      "iso": "2026-11-20T08:15:00+01:00",
+      "source": "eu",
+      "title": "Ungarn venter ikke på EU – regjeringen vil teste Tesla Assisted Driving selv",
+      "summary": "Ungarn skal teste Tesla Assisted Driving (TAD), tidligere FSD Supervised, på egne veier uten å vente på EU. Det kunngjorde Zoltán Tanács, minister for vitenskap og teknologi, i en video på Facebook søndag 15. november. Et offisielt testprogram i regi av myndighetene skal vise om systemet kjører trygt og følger de ungarske trafikkreglene. Beslutningen kom etter et møte med Dávid Vitézy, som leder departementet for samferdsel og investeringer, og fagfolkene hans. Startdatoen er ikke kjent. Testprogrammet er ikke en godkjenning, og ungarske eiere kan ikke bruke systemet ennå. I sommer var linjen i Budapest at Ungarn skulle vente på avstemningen i EU.",
+      "why_it_matters": "Ungarn er nok et land som går fra å vente på EU til å handle selv. Tsjekkia og Kroatia sa også først at de ville vente, og sa ja noen uker eller måneder senere. Nedtellingen vår flytter derfor Ungarn fra mai 2027 til 3. januar 2027. Det er et modellanslag med lav sikkerhet, ikke en dato fra ungarske myndigheter. Elleve EU-land har allerede anerkjent den nederlandske godkjenningen, og RDW, den nederlandske godkjenningsmyndigheten, har vurdert virkningen på trafikksikkerheten som marginalt positiv. Norge står stille. Statens vegvesen vurderer ingen tidligere innføring så lenge systemet ikke oppfyller FN-regulativ 171, og venter på EU. Neste mulighet for et ja i TCMV, EUs tekniske komité for motorvogner, er i desember, men møtedatoen er ikke satt. I Norge er TAD fortsatt ikke godkjent for vanlige eiere.",
+      "url": "https://www.portfolio.hu/uzlet/20261115/tanacs-zoltan-elarulta-mikor-engedelyezhetik-a-tesla-onvezeto-funkciojat-magyarorszagon-876542",
+      "sources": [
+        "https://www.portfolio.hu/uzlet/20261115/tanacs-zoltan-elarulta-mikor-engedelyezhetik-a-tesla-onvezeto-funkciojat-magyarorszagon-876542",
+        "https://hvg.hu/cegauto/20261116_a-magyar-utakon-vizsgazik-a-tesla-onvezeto-rendszere",
+        "https://totalcar.hu/hirek/2026/11/16/tesla-onvezeto-rendszer-magyarorszag-hatosagi-teszt/",
+        "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/",
+        "https://tadnorge.no/nedtelling/"
+      ],
+      "tags": [
+        "ungarn",
+        "eu",
+        "tad",
+        "nedtelling",
+        "news"
+      ]
+    },
     {
       "id": "itavisen-svv-finland-2026-11-17",
       "iso": "2026-11-17T22:45:00+01:00",
