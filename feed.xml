@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Fri, 20 Nov 2026 07:15:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 10:45:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>Tesla: Italia har godkjent Tesla Assisted Driving – første store EU-land som sier ja</title>
+      <link>https://tadnorge.no/#news-italia-godkjent-2026-11-20</link>
+      <guid isPermaLink="false">news-italia-godkjent-2026-11-20</guid>
+      <pubDate>Fri, 20 Nov 2026 10:45:00 GMT</pubDate>
+      <description>&lt;p&gt;Italia har godkjent Tesla Assisted Driving (TAD), tidligere FSD Supervised, ifølge Tesla. «Now approved in Italy» («Nå godkjent i Italia»), skrev Tesla Europe på X fredag 20. november kl. 11.21 norsk tid. Utrullingen begynner snart, står det i innlegget. Innlegget åpner med «Mamma, butta la pasta», bokstavelig «Mamma, sett på pastaen». Italienske myndigheter har ikke bekreftet godkjenningen. Vi har ikke funnet noe vedtak eller noen pressemelding fra det italienske samferdselsdepartementet, Ministero delle Infrastrutture e dei Trasporti (MIT). Store italienske medier hadde heller ikke omtalt saken fredag formiddag. Tesla oppgir verken utrullingsdato, pris eller hvilke biler som får systemet. Søknaden har ligget hos MIT siden juli. Tesla ba da om at den nederlandske godkjenningen også skulle gjelde i Italia. Det skrev det italienske nettstedet Teslers.it 13. juli, etter at en generaldirektør i departementet hadde bekreftet søknaden overfor en Tesla-eier. Italias transportminister Matteo Salvini sa 29. oktober at Italia støtter en rask EU-godkjenning. Føreren har fortsatt ansvaret og må følge med hele tiden.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Italia har nesten 59 millioner innbyggere, om lag 13 % av EU-befolkningen. Landet er det første av de fire folkerikeste EU-landene som sier ja. Tyskland, Frankrike og Spania venter på EU. Det største landet som hadde sagt ja før Italia, var Nederland, med 18 millioner. Regner vi med Italia, har tolv av 27 EU-land godkjent systemet. De har om lag 28,6 % av EU-befolkningen, ifølge vårt anslag ut fra Eurostat-tall. Andelen er nesten doblet på én dag. Et ja i TCMV, EUs tekniske komité for motorvogner, krever 15 land og 65 % av befolkningen, og der veier Italias stemme tungt. Neste mulighet er i desember, men møtedatoen er ikke satt. Norge venter fortsatt. Statens vegvesen vurderer ingen tidligere innføring så lenge systemet ikke oppfyller FN-regulativ 171, og venter på EU. Etaten har et poeng i at systemet må være trygt på norske veier. Men stadig flere myndigheter har vurdert det samme systemet og sagt ja, og nå er et av EUs største land blant dem, ifølge Tesla. I Norge er TAD fortsatt ikke godkjent for vanlige eiere.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://x.com/teslaeurope/status/2123723334542332026"&gt;https://x.com/teslaeurope/status/2123723334542332026&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Ungarn venter ikke på EU – regjeringen vil teste Tesla Assisted Driving selv</title>
       <link>https://tadnorge.no/#news-ungarn-testprogram-2026-11-20</link>
