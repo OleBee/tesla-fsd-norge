@@ -206,6 +206,12 @@
             <div class="stat-bar" aria-hidden="true"><div class="stat-bar-fill" id="norge-fyll"></div></div>
           </div>
 
+          <div class="stat-card countdown-card" id="kort-norge-spenn">
+            <div class="cd-title">FSD Supervised i Norge – modellert estimat</div>
+            <div class="spenn-range" id="norge-spenn">April 2027 – juli 2028</div>
+            <p class="cd-note" id="norge-spenn-note">Tidligst <span id="norge-spenn-tidligst">16. april 2027</span> hvis Norge følger EU kort tid etter vedtaket. Senest <span id="norge-spenn-senest">27. juli 2028</span> hvis det går like tregt som med Fords BlueCruise, der den norske avklaringen tok <span id="norge-spenn-dager">470</span> dager. Begge datoene er våre anslag, ikke vedtak. <a href="/nedtelling/">Se nedtellingen</a></p>
+          </div>
+
           <div class="stat-card countdown-card" id="kort-tcmv-cd">
             <div class="cd-date" id="tcmv-dato">Anslag: ca. 15. desember, dato ikke satt</div>
             <div class="units" id="tcmv-units" aria-live="polite">
@@ -505,6 +511,28 @@
       renderTimeline(data);
     }
 
+    /* Norge som spenn fra data/nedtelling.json (tidligst–senest) */
+    function fmtMonth(ymd) {
+      try {
+        return new Date(ymd + "T12:00:00Z").toLocaleDateString("nb-NO", { month: "long", year: "numeric", timeZone: "Europe/Oslo" });
+      } catch (e) { return ymd; }
+    }
+    function fmtDay(ymd) {
+      try {
+        return new Date(ymd + "T12:00:00Z").toLocaleDateString("nb-NO", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Oslo" });
+      } catch (e) { return ymd; }
+    }
+    function applyNedtelling(nt) {
+      if (!nt || !nt.land) return;
+      var no = nt.land.filter(function (c) { return c.iso === "NO"; })[0];
+      if (!no || !no.estimert_tidligst || !no.estimert_senest) return;
+      var fra = fmtMonth(no.estimert_tidligst);
+      setText("norge-spenn", fra.charAt(0).toUpperCase() + fra.slice(1) + " – " + fmtMonth(no.estimert_senest));
+      setText("norge-spenn-tidligst", fmtDay(no.estimert_tidligst));
+      setText("norge-spenn-senest", fmtDay(no.estimert_senest));
+      if (nt.modell && nt.modell.eos_etterslep_dager != null) setText("norge-spenn-dager", String(nt.modell.eos_etterslep_dager));
+    }
+
     function applySvv(svv) {
       /* Soft enrichment only — main cards come from status.json */
       if (!svv) return;
@@ -527,7 +555,8 @@
     Promise.all([
       fetch("data/status.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }),
       fetch("data/europa-feed.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }),
-      fetch("data/svv-siste.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
+      fetch("data/svv-siste.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }),
+      fetch("data/nedtelling.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
     ]).then(function (triple) {
       applyStatus(triple[0]);
       if (triple[1]) renderFeed(triple[1]);
@@ -536,6 +565,7 @@
         document.getElementById("feed-empty").textContent = "Kunne ikke laste data/europa-feed.json.";
       }
       applySvv(triple[2]);
+      applyNedtelling(triple[3]);
       tick();
       /* Lenker fra RSS peker på #saks-id: rull dit etter at feeden er tegnet på nytt */
       if (location.hash.length > 1) {

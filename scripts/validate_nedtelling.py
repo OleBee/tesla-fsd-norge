@@ -22,7 +22,8 @@ FELT = ["land", "iso", "status", "estimert_dato", "sikkerhet", "begrunnelse", "k
 METODER = {"observert", "modell"}
 MODELLTYPER = {"signal", "eu", "eos", "ukjent", "ikke_eu"}
 MODELL_FELT = ["signal_grunnlag", "tcmv_dato", "tcmv_dato_antatt", "eu_ikrafttredelse_dager", "eu_presedens",
-               "eos_etterslep_dager", "eos_presedens", "ukjent_margin_dager", "ikke_eu_margin_dager"]
+               "eos_etterslep_dager", "eos_presedens", "eos_tidlig", "ukjent_margin_dager", "ikke_eu_margin_dager"]
+SPENN_FELT = ("estimert_tidligst", "estimert_senest")
 FORBUDT = [r"\bhen\b", r"\[\d{1,2}:\d{2}", r"&(amp|lt|gt|quot|#\d+);"]
 
 feil, adv = [], []
@@ -121,6 +122,16 @@ def main():
             if "Modellsteg" not in b: F(f"{n}: begrunnelse må navngi modellsteget («Modellsteg …»)")
             if not isinstance(c.get("fakta"), str) or len(c.get("fakta", "")) < 20: F(f"{n}: mangler fakta (kildebelagt tekst)")
             if c.get("iso") == "NO" and c.get("modell_type") != "eos": F("NO: skal bruke modellsteg 3 (eos)")
+        # EØS-land vises som spenn: tidligst (sortering) og senest (BlueCruise-tempo)
+        if me == "modell" and c.get("modell_type") == "eos":
+            t1 = ymd(c.get("estimert_tidligst"), f"{n} estimert_tidligst")
+            t2 = ymd(c.get("estimert_senest"), f"{n} estimert_senest")
+            if t1 and t2 and t1 > t2: F(f"{n}: estimert_tidligst er senere enn estimert_senest")
+            if t1 and e != c.get("estimert_tidligst"): F(f"{n}: estimert_dato skal være lik estimert_tidligst")
+            if "Modellsteg 3 gir et spenn" not in b: F(f"{n}: begrunnelse må forklare spennet («Modellsteg 3 gir et spenn …»)")
+        else:
+            for k in SPENN_FELT:
+                if k in c: F(f"{n}: «{k}» brukes bare for EØS-land i modellsteg 3")
         if ed and ed < today and st != "lansert":
             A(f"{n}: estimatet {e} er passert – sjekk om utrullingen er bekreftet, og oppdater status/estimat")
         if c.get("iso") == "NO" and st in ("lansert", "godkjent, utrulling snart"):
@@ -167,6 +178,14 @@ def main():
             elif ymd(x.get("signal"), f"signal {x.get('iso')}") and x["signal"] >= c["godkjent_dato"]:
                 F(f"modell.signal_grunnlag: {x['iso']} signal etter vedtak")
             if not str(x.get("kilde", "")).startswith("https://"): F(f"modell.signal_grunnlag: {x.get('iso')} mangler kilde")
+        et = mo["eos_tidlig"]
+        if not isinstance(et, dict) or not et.get("hva") or not et.get("kilder"):
+            F("modell.eos_tidlig må ha «hva» og «kilder»")
+        else:
+            for u in et["kilder"]:
+                if not str(u).startswith("https://"): F(f"modell.eos_tidlig: kilde er ikke https-URL: {u!r}")
+            if et.get("etterslep_antatt") is not True:
+                F("modell.eos_tidlig.etterslep_antatt må være true: vi har ingen kilde for et konkret norsk etterslep")
         tc = ymd(mo["tcmv_dato"], "modell.tcmv_dato")
         es = d.get("eu_spor", {})
         if es.get("dato_for_votum_kjent") and (mo["tcmv_dato_antatt"] or mo["tcmv_dato"] != es.get("neste_tcmv")):
@@ -180,9 +199,12 @@ def main():
                     if mo.get(k2) != v: F(f"modell.{k2} er utdatert (fil {mo.get(k2)!r}, beregnet {v!r}) – kjør scripts/modell_nedtelling.py")
                 for c in land:
                     if c.get("iso") in ut:
-                        e2, s2, b2 = ut[c["iso"]]
+                        e2, s2, b2, sp2 = ut[c["iso"]]
                         if (c.get("estimert_dato"), c.get("modell_steg"), c.get("begrunnelse")) != (e2, s2, b2):
                             F(f"{c['land']}: modellert dato/tekst er utdatert (beregnet {e2}, steg {s2}) – kjør scripts/modell_nedtelling.py")
+                        for k3 in SPENN_FELT:
+                            if c.get(k3) != sp2.get(k3):
+                                F(f"{c['land']}: {k3} er utdatert (fil {c.get(k3)!r}, beregnet {sp2.get(k3)!r}) – kjør scripts/modell_nedtelling.py")
             except Exception as ex:
                 F(f"modellberegning feilet: {ex!r}")
 

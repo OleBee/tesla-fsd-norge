@@ -352,6 +352,14 @@ a:hover { text-decoration: underline; }
   color: var(--muted);
   text-transform: lowercase;
 }
+.spenn-range {
+  font-size: clamp(20px, 2.2vw, 24px);
+  font-weight: 600;
+  letter-spacing: -.02em;
+  color: #fff;
+  margin: 8px 0 2px;
+}
+#kort-norge-spenn .cd-note a { color: var(--mint); }
 .cd-note {
   margin-top: 12px;
   font-size: 12px;

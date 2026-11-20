@@ -13,12 +13,20 @@ Inndata per land (metode = "modell"):
   modell_type  signal | eu | eos | ukjent | ikke_eu
   signal_dato  (bare for signal) dato for første offentlige signal om nasjonal sak
   fakta        kildebelagt faktatekst; modellteksten legges etter
+
+EØS-land (modell_type = "eos") får et spenn i stedet for én dato:
+  estimert_tidligst  EU-scenariet pluss utrullingsmedianen (antagelse: Norge
+                     følger EU kort tid etter vedtaket; vi har ingen kilde for
+                     hvor kort etterslepet blir)
+  estimert_senest    EU-scenariet pluss BlueCruise-etterslepet (eos_presedens)
+  estimert_dato      = estimert_tidligst (sortering og bakoverkompatibilitet)
 """
 import json, math, statistics, sys
 from datetime import date, timedelta
 
 MND = ["januar", "februar", "mars", "april", "mai", "juni", "juli", "august",
        "september", "oktober", "november", "desember"]
+SPENN_FELT = ("estimert_tidligst", "estimert_senest")
 ORD = ["null", "én", "to", "tre", "fire", "fem", "seks", "sju", "åtte", "ni", "ti", "elleve", "tolv"]
 
 
@@ -36,7 +44,10 @@ def D(s):
 
 
 def beregn(d, today):
-    """Returnerer (parametre, {iso: (estimert_dato, modell_steg, begrunnelse)})."""
+    """Returnerer (parametre, {iso: (estimert_dato, modell_steg, begrunnelse, spennfelt)}).
+
+    spennfelt er {"estimert_tidligst": ..., "estimert_senest": ...} for EØS-land, ellers {}.
+    """
     land = {c["iso"]: c for c in d["land"]}
     m = d["modell"]
 
@@ -75,6 +86,7 @@ def beregn(d, today):
     for c in d["land"]:
         if c.get("metode") != "modell":
             continue
+        spenn = {}
         t = c["modell_type"]
         navn = c["land"]
         if t == "signal":
@@ -98,15 +110,18 @@ def beregn(d, today):
         elif t == "eu":
             dato, steg, txt = eu, "2", eu_txt
         elif t == "eos":
-            dato, steg = eu + timedelta(days=eos), "3"
+            tidl, sen = eu + timedelta(days=r), eu + timedelta(days=eos)
+            dato, steg = tidl, "3"
+            spenn = {"estimert_tidligst": tidl.isoformat(), "estimert_senest": sen.isoformat()}
             if c["iso"] == "NO":
-                txt = (f"Modellsteg 3: EU-scenariet ({nb(eu)}) pluss norsk etterslep. Da EU hadde godkjent Fords "
-                       f"BlueCruise, brukte Statens vegvesen og Samferdselsdepartementet {eos} dager på å slå fast at "
-                       f"godkjenningen også gjelder i Norge. Gjentar det seg, får norske eiere FSD Supervised først "
-                       f"{nb(dato)}" + (" – mer enn ett år etter EU-landene." if eos > 365 else "."))
+                txt = (f"Modellsteg 3 gir et spenn: {nb(tidl)} til {nb(sen)}. Tidligst hvis Norge følger EU kort tid "
+                       f"etter vedtaket. Ingen kilde sier hvor kort, så vi legger {antall(r)} på EU-scenariet "
+                       f"({nb(eu)}). Det er median ventetid til utrulling. Senest hvis det går like tregt som med Fords "
+                       f"BlueCruise. Da tok den norske avklaringen {eos} dager.")
             else:
-                txt = (f"Modellsteg 3: EU-scenariet ({nb(eu)}) pluss samme EØS-etterslep som Norge hadde med "
-                       f"BlueCruise, {eos} dager. At {navn} bruker like lang tid, er en antagelse.")
+                txt = (f"Modellsteg 3 gir et spenn: {nb(tidl)} til {nb(sen)}. Tidligst: EU-scenariet ({nb(eu)}) pluss "
+                       f"{antall(r)}. Senest: samme EØS-etterslep som Norge hadde med BlueCruise, {eos} dager. "
+                       f"Begge datoene er antagelser for {navn}.")
         elif t == "ukjent":
             dato, steg = eu + timedelta(days=uk_m), "4"
             txt = (f"Modellsteg 4: Uten en kjent nasjonal sak bruker vi EU-scenariet ({nb(eu)}) og legger på "
@@ -117,7 +132,7 @@ def beregn(d, today):
                    f"Påslaget er en antagelse; vi har ingen observert presedens.")
         else:
             raise ValueError(f"{navn}: ukjent modell_type {t!r}")
-        ut[c["iso"]] = (dato.isoformat(), steg, (c["fakta"].rstrip() + " " + txt).strip())
+        ut[c["iso"]] = (dato.isoformat(), steg, (c["fakta"].rstrip() + " " + txt).strip(), spenn)
 
     param = {
         "utrulling_dager": r,
@@ -127,6 +142,8 @@ def beregn(d, today):
         "signal_maks_dager": maks,
         "eu_vedtak_dato": eu_kraft.isoformat(),
         "eu_scenario_dato": eu.isoformat(),
+        "eos_tidligst_dato": (eu + timedelta(days=r)).isoformat(),
+        "eos_senest_dato": (eu + timedelta(days=eos)).isoformat(),
     }
     return param, ut
 
@@ -160,20 +177,27 @@ def main():
                 print(f"AVVIK modell.{k}: fil={d['modell'].get(k)!r} beregnet={v!r}"); avvik += 1
         for c in d["land"]:
             if c["iso"] in ut:
-                e, s, b = ut[c["iso"]]
+                e, s, b, sp = ut[c["iso"]]
                 if (c.get("estimert_dato"), c.get("modell_steg"), c.get("begrunnelse")) != (e, s, b):
                     print(f"AVVIK {c['land']}: fil={c.get('estimert_dato')}/{c.get('modell_steg')} beregnet={e}/{s} (eller begrunnelse)"); avvik += 1
+                for k in SPENN_FELT:
+                    if c.get(k) != sp.get(k):
+                        print(f"AVVIK {c['land']}: {k} fil={c.get(k)!r} beregnet={sp.get(k)!r}"); avvik += 1
         print(f"{len(ut)} modellerte land · {avvik} avvik")
         return 1 if avvik else 0
     d["modell"].update(param)
     for c in d["land"]:
         if c["iso"] in ut:
-            c["estimert_dato"], c["modell_steg"], c["begrunnelse"] = ut[c["iso"]]
+            c["estimert_dato"], c["modell_steg"], c["begrunnelse"], sp = ut[c["iso"]]
+            for k in SPENN_FELT:
+                if k in sp: c[k] = sp[k]
+                else: c.pop(k, None)
     with open(path, "w", encoding="utf-8") as f:
         dump(d, f)
     for c in sorted(d["land"], key=lambda c: c.get("estimert_dato") or ""):
         if c["iso"] in ut:
-            print(f"{c['iso']}  {c['estimert_dato']}  steg {c['modell_steg']}")
+            spenn = f"  ({c['estimert_tidligst']} – {c['estimert_senest']})" if c.get("estimert_senest") else ""
+            print(f"{c['iso']}  {c['estimert_dato']}  steg {c['modell_steg']}{spenn}")
     return 0
 
 
