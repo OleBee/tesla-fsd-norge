@@ -488,8 +488,13 @@
     },
     {
       "dato": "2026-11-20",
-      "tekst": "Italia blir tolvte EU-land ifølge Tesla Europe, som skriver på X at utrullingen begynner snart. Italienske myndigheter har ikke bekreftet godkjenningen ennå. Befolkningsandel ca. 28,6 % (vårt anslag ut fra Eurostat).",
-      "fase": "passert"
+      "tekst": "Italia blir tolvte EU-land: Visepremier og samferdselsminister Matteo Salvini kunngjorde at samferdselsdepartementet har gitt en foreløpig nasjonal godkjenning. Tesla Europe skriver at utrullingen begynner snart. Befolkningsandel ca. 28,6 % (vårt anslag ut fra Eurostat).",
+      "fase": "passert",
+      "kilde": "https://electrek.co/2026/11/20/tesla-fsd-italy-approval-assisted-driving/",
+      "kilder": [
+        "https://electrek.co/2026/11/20/tesla-fsd-italy-approval-assisted-driving/",
+        "https://x.com/teslaeurope/status/2123723334542332026"
+      ]
     },
     {
       "dato": "2026-11-20",
