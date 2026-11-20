@@ -1,14 +1,40 @@
 {
-  "updated_iso": "2026-11-20T08:15:00+01:00",
+  "updated_iso": "2026-11-20T11:45:00+01:00",
   "standings": {
-    "yes_countries": 11,
-    "eu_population_pct": 15.5,
+    "yes_countries": 12,
+    "eu_population_pct": 28.6,
     "tcmv_october_pct": 0,
     "norway_this_month_pct": 0,
     "next_tcmv": "2026-12",
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "news-italia-godkjent-2026-11-20",
+      "iso": "2026-11-20T11:45:00+01:00",
+      "source": "eu",
+      "title": "Tesla: Italia har godkjent Tesla Assisted Driving – første store EU-land som sier ja",
+      "summary": "Italia har godkjent Tesla Assisted Driving (TAD), tidligere FSD Supervised, ifølge Tesla. «Now approved in Italy» («Nå godkjent i Italia»), skrev Tesla Europe på X fredag 20. november kl. 11.21 norsk tid. Utrullingen begynner snart, står det i innlegget. Tesla åpner med «Mamma, butta la pasta», et kjent italiensk TV-uttrykk for at kampen er avgjort. Italienske myndigheter har ikke bekreftet godkjenningen. Vi har ikke funnet noe vedtak eller noen pressemelding fra det italienske samferdselsdepartementet, Ministero delle Infrastrutture e dei Trasporti (MIT). Store italienske medier hadde heller ikke omtalt saken fredag formiddag. Tesla oppgir verken utrullingsdato, pris eller hvilke biler som får systemet. Søknaden har ligget hos MIT siden juli. Tesla ba da om at den nederlandske godkjenningen også skulle gjelde i Italia. Det skrev det italienske nettstedet Teslers.it 13. juli, etter at en generaldirektør i departementet hadde bekreftet søknaden overfor en Tesla-eier. Italias transportminister Matteo Salvini sa 29. oktober at Italia støtter en rask EU-godkjenning. Føreren har fortsatt ansvaret og må følge med hele tiden.",
+      "why_it_matters": "Italia har nesten 59 millioner innbyggere, om lag 13 % av EU-befolkningen. Landet er det første av de fire folkerikeste EU-landene som sier ja. Tyskland, Frankrike og Spania venter på EU. Det største landet som hadde sagt ja før Italia, var Nederland, med 18 millioner. Regner vi med Italia, har tolv av 27 EU-land godkjent systemet. De har om lag 28,6 % av EU-befolkningen, ifølge vårt anslag ut fra Eurostat-tall. Andelen er nesten doblet på én dag. Et ja i TCMV, EUs tekniske komité for motorvogner, krever 15 land og 65 % av befolkningen, og der veier Italias stemme tungt. Neste mulighet er i desember, men møtedatoen er ikke satt. Norge venter fortsatt. Statens vegvesen vurderer ingen tidligere innføring så lenge systemet ikke oppfyller FN-regulativ 171, og venter på EU. Etaten har et poeng i at systemet må være trygt på norske veier. Men stadig flere myndigheter har vurdert det samme systemet og sagt ja, og nå er et av EUs største land blant dem, ifølge Tesla. I Norge er TAD fortsatt ikke godkjent for vanlige eiere.",
+      "url": "https://x.com/teslaeurope/status/2123723334542332026",
+      "sources": [
+        "https://x.com/teslaeurope/status/2123723334542332026",
+        "https://x.com/FSDTracker/status/2123724512537829484",
+        "https://www.mit.gov.it/comunicazione/news",
+        "https://www.teslers.it/12881/tesla-fsd-omologazione-italia-domanda-ministero",
+        "https://x.com/matteosalvinimi/status/2115720560994836862",
+        "https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table",
+        "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/",
+        "https://tadnorge.no/nedtelling/"
+      ],
+      "tags": [
+        "italia",
+        "eu",
+        "tad",
+        "approval",
+        "news"
+      ]
+    },
     {
       "id": "news-ungarn-testprogram-2026-11-20",
       "iso": "2026-11-20T08:15:00+01:00",
