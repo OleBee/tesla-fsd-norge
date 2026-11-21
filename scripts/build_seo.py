@@ -61,6 +61,12 @@ def esc(s) -> str:
     return re.sub(r"[&<>\"']", lambda m: f"&#{ord(m.group(0))};", "" if s is None else str(s))
 
 
+def summary_paragraphs(text: str) -> str:
+    """Del summary på tom linje i flere <p class="feed-summary">. Ett avsnitt om det ikke er skift."""
+    parts = [para.strip() for para in re.split(r"\n\s*\n", text or "") if para.strip()]
+    return "".join(f'<p class="feed-summary">{esc(para)}</p>' for para in parts)
+
+
 def feed_href(it: dict) -> str:
     """Samme lenkelogikk som renderFeed() i index.html."""
     href = it.get("url") or ""
@@ -117,7 +123,7 @@ def static_feed(items: list[dict], indent: str) -> str:
             f'<div class="feed-title">{title_html}</div>',
         ]
         if it.get("summary"):
-            parts.append(f'<p class="feed-summary">{esc(it["summary"])}</p>')
+            parts.append(summary_paragraphs(it["summary"]))
         parts.append(static_figures(it.get("images")))
         if it.get("why_it_matters"):
             parts.append(f'<p class="feed-why"><strong>Hvorfor det betyr noe:</strong> {esc(it["why_it_matters"])}</p>')
@@ -187,7 +193,10 @@ def build_rss(feed: dict) -> str:
         link = f"{SITE}/#{it['id']}" if it.get("id") else f"{SITE}/#siste-nytt"
         desc = []
         if it.get("summary"):
-            desc.append(f"<p>{x(it['summary'], quote=False)}</p>")
+            for para in re.split(r"\n\s*\n", it["summary"]):
+                para = para.strip()
+                if para:
+                    desc.append(f"<p>{x(para, quote=False)}</p>")
         for im in it.get("images") or []:
             if im and im.get("src"):
                 src_abs = im["src"] if im["src"].startswith("http") else f"{SITE}/{im['src'].lstrip('/')}"
