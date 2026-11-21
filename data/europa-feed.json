@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-11-21T09:30:00+01:00",
+  "updated_iso": "2026-11-21T18:55:00+01:00",
   "standings": {
     "yes_countries": 12,
     "eu_population_pct": 28.6,
@@ -9,6 +9,56 @@
     "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
   },
   "items": [
+    {
+      "id": "mvwg-art40-tesla-2026-11-21",
+      "iso": "2026-11-21T18:55:00+01:00",
+      "source": "circabc",
+      "title": "EU-kommisjonen forbereder neste steg for Tesla Assisted Driving – i tilfelle EU sier ja",
+      "summary": "EU-kommisjonen har forberedt seg på hva som skal skje etter et eventuelt EU-ja til Tesla Assisted Driving (TAD), tidligere FSD Supervised. Det går fram av et lysbilde fra møtet i Kommisjonens ekspertgruppe for motorvogner (MVWG) 1. juli. I en gul boks står det: «Preparation of Art. 40 (in case Art 39 of Tesla enters into force)». På norsk: forberedelse av artikkel 40, i tilfelle Tesla-godkjenningen etter artikkel 39 trer i kraft. Saken er ikke ny i dag. Lysbildet er fra juli, og referatet fra møtet er datert 15. september. Den tyske X-kontoen TADWatcherDE omtalte dokumentene lørdag kveld. Vi har hentet dem selv fra CIRCABC, Kommisjonens dokumentarkiv. «In case» betyr beredskap, ikke et løfte. Presentasjonen er laget av Kommisjonens forskningssenter JRC og generaldirektoratet for indre marked og industri (DG GROW). Den har et forbehold om at synspunktene er foreløpige og ikke Kommisjonens endelige standpunkt. Artikkel 40 i EUs typegodkjenningsforordning, (EU) 2018/858, sier hva som skjer etter et ja. Har Kommisjonen gitt tillatelse etter artikkel 39, som er unntaksregelen for ny teknologi, skal den straks sette i gang arbeidet med å tilpasse regelverket til den nye teknologien. Gjelder unntaket en FN-regulering, skal Kommisjonen foreslå endringer i den. For TAD er det UN R171, FN-reguleringen for førerstøttesystemer (DCAS). Når reglene er endret, faller begrensningene i tillatelsen bort. Unntaket blir altså til vanlige regler. Lysbildet viser også prioriteringene Kommisjonen har samlet inn for fase 3 av DCAS-arbeidet, datert juni 2026. Høy prioritet har systeminitierte manøvrer, der bilen selv tar initiativ til for eksempel et feltskifte, på motorvei og motorveilignende veier med hendene fri. Det samme gjelder systeminitierte manøvrer i by med hendene på rattet. Hendene fri i by har lav eller ingen prioritet. I samme presentasjon trekker Kommisjonen likevel fram hendene fri på bygater som et av punktene den må se på etter artikkel 40. I dag tillater R171 det bare på motorvei. Spørsmålet Kommisjonen stiller, er hvordan det påvirker førerens oppmerksomhet.",
+      "why_it_matters": "Lysbildet viser at Kommisjonen planla for et ja allerede i sommer. Det er ikke et vedtak. Først må EU-landene i TCMV, EUs tekniske komité for motorvogner, stemme over om godkjenningen fra RDW, den nederlandske godkjenningsmyndigheten, skal gjelde i hele EU. Neste mulighet er møtet i desember. Datoen er ikke satt, og det er ikke kjent om det blir avstemning. I referatet forteller Nederland hvordan RDW vurderte systemet: data, studier og testrapporter, kontroll med simuleringsverktøy, på testbane og på offentlig vei. Det endte med en foreløpig godkjenning fordi systemet viste et like høyt sikkerhetsnivå som FN-reguleringen krever. Referatet omtaler et førerstøttesystem på nivå 2 og nevner ikke Tesla ved navn. Det er lysbildet som gjør det. Sveits spurte hvordan systemet følges opp i bruk. Nederland svarte at resultatene deles med landene som godtar godkjenningen. Trafikksikkerhetsorganisasjonen ETSC (European Transport Safety Council) var bekymret for prosessen. ETSC ba MVWGs undergruppe for automatiserte og tilkoblede kjøretøy drøfte framtiden for denne typen førerstøtte. Motsvaret står i samme referat: Godkjenningen bygger på data, simulering og testing på bane og vei, og erfaringene fra bruk deles med landene. I presentasjonen viser JRC også til egne forsøk på testbane. Der var sannsynligheten for kollisjon i kritiske situasjoner vesentlig lavere med førerstøtte enn ved manuell kjøring. Forsøkene gjaldt lignende nivå 2-systemer, ikke TAD spesielt. For Norge er artikkel 40 godt nytt på sikt. Forordning 2018/858 gjelder som norsk forskrift gjennom bilforskriften § 3-1. Statens vegvesen har sagt at etaten vil følge opp etter EØS-avtalen når EU har avgjort saken. Blir systemet en del av de vanlige EU-reglene, er det ikke lenger et unntak Norge må ta stilling til. Det er vår vurdering. Det er likevel et tankekors at Brussel planlegger steg to mens norske eiere fortsatt venter på steg én. Men rekkefølgen følger loven: først unntak, så varige regler. TAD er fortsatt ikke godkjent for vanlige eiere i Norge.",
+      "url": "https://circabc.europa.eu/rest/download/c97f5802-81f1-4ed5-bc15-648c2bfc83e0",
+      "images": [
+        {
+          "src": "assets/nyheter/mvwg-169-lysbilde-dcas-art40.jpg",
+          "width": 1200,
+          "height": 675,
+          "alt": "Lysbilde fra EU-kommisjonen med tittelen «DCAS Development Phases (reminder)». En pil går gjennom tre faser for førerstøttesystemer: fase 1 mars 2024, fase 2 mars 2025 og fase 3 juni 2026. Til venstre står prioriteringene for fase 3 og en gul boks om forberedelse av artikkel 40 i tilfelle Tesla-godkjenningen etter artikkel 39 trer i kraft.",
+          "caption": "Den gule boksen: forberedelse av artikkel 40 i tilfelle Tesla-godkjenningen etter artikkel 39 trer i kraft. SIM betyr systeminitiert manøver, HOR er beskjed om å ta hendene på rattet, og wHOR betyr at systemet holder tilbake den beskjeden, altså tilnærmet hendene fri. Lysbilde: EU-kommisjonen (JRC og DG GROW), MVWG-møtet 1. juli 2026.",
+          "source_url": "https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/8df7095f-e244-4ac9-93d7-f61a6dc809bd?p=1&n=10&sort=title_ASC",
+          "source_label": "Møtedokumentene i CIRCABC"
+        },
+        {
+          "src": "assets/nyheter/mvwg-169-referat-punkt8.jpg",
+          "width": 1061,
+          "height": 1200,
+          "alt": "Utsnitt av EU-kommisjonens referat fra 169. møte i ekspertgruppen for motorvogner, datert 15. september 2026. Punkt 8 handler om Nederlands presentasjon av en artikkel 39-prosedyre. To avsnitt er markert med gult.",
+          "caption": "Referatet fra 169. MVWG-møte, forsiden og punkt 8 på side 6. Kilde: EU-kommisjonen, via CIRCABC. Gul markering og utsnitt: TADWatcherDE.",
+          "source_url": "https://x.com/TADWatcherDE/status/2124191665388662900",
+          "source_label": "TADWatcherDE på X"
+        }
+      ],
+      "sources": [
+        "https://circabc.europa.eu/rest/download/c97f5802-81f1-4ed5-bc15-648c2bfc83e0",
+        "https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/c97f5802-81f1-4ed5-bc15-648c2bfc83e0/details",
+        "https://circabc.europa.eu/rest/download/132f985d-c966-4897-90d5-a3f7fd5ea493",
+        "https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/8df7095f-e244-4ac9-93d7-f61a6dc809bd?p=1&n=10&sort=title_ASC",
+        "https://x.com/TADWatcherDE/status/2124191665388662900",
+        "https://ec.europa.eu/transparency/expert-groups-register/screen/meetings/consult?lang=en&meetingId=73841",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02018R0858-20240701",
+        "https://lovdata.no/dokument/SF/forskrift/2022-06-28-1233",
+        "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/",
+        "https://tadnorge.no/nedtelling/"
+      ],
+      "tags": [
+        "mvwg",
+        "eu",
+        "artikkel-40",
+        "dcas",
+        "r171",
+        "tad",
+        "news"
+      ]
+    },
     {
       "id": "fsd-v15-norge-2026-11-21",
       "iso": "2026-11-21T09:30:00+01:00",

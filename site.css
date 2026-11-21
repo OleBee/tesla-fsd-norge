@@ -153,6 +153,28 @@ a:hover { text-decoration: underline; }
   color: var(--body);
   margin-bottom: 8px;
 }
+.feed-fig {
+  margin: 4px 0 12px;
+}
+.feed-fig img {
+  display: block;
+  width: auto;
+  max-width: min(100%, 640px);
+  max-height: 560px;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--line-soft);
+  background: #fff;
+}
+.feed-fig figcaption {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--muted);
+  margin-top: 6px;
+  max-width: 640px;
+}
+.feed-fig figcaption a { color: var(--blue); }
+.feed-fig figcaption a:hover { text-decoration: underline; }
 .feed-why {
   font-size: 13px;
   line-height: 1.5;
