@@ -81,6 +81,21 @@ def is_internal(href: str) -> bool:
     return href.startswith("#") or re.match(r"^https?://(www\.)?(tad|fsd)norge\.no(/|$)", href) is not None
 
 
+def static_figures(images) -> str:
+    """Samme markup som renderFigures() i index.html."""
+    out = []
+    for im in images or []:
+        if not im or not im.get("src"):
+            continue
+        cap = esc(im["caption"]) if im.get("caption") else ""
+        if im.get("source_url"):
+            cap += (" " if cap else "") + f'<a href="{esc(im["source_url"])}" rel="noopener">{esc(im.get("source_label") or "Kilde")}</a>'
+        size = (f' width="{esc(im["width"])}"' if im.get("width") else "") + (f' height="{esc(im["height"])}"' if im.get("height") else "")
+        out.append(f'<figure class="feed-fig"><a href="{esc(im["src"])}"><img src="{esc(im["src"])}" alt="{esc(im.get("alt") or "")}" '
+                   f'loading="lazy" decoding="async"{size}></a>' + (f"<figcaption>{cap}</figcaption>" if cap else "") + "</figure>")
+    return "".join(out)
+
+
 def static_feed(items: list[dict], indent: str) -> str:
     out = []
     for it in items[:STATIC_FEED_MAX]:
@@ -103,6 +118,7 @@ def static_feed(items: list[dict], indent: str) -> str:
         ]
         if it.get("summary"):
             parts.append(f'<p class="feed-summary">{esc(it["summary"])}</p>')
+        parts.append(static_figures(it.get("images")))
         if it.get("why_it_matters"):
             parts.append(f'<p class="feed-why"><strong>Hvorfor det betyr noe:</strong> {esc(it["why_it_matters"])}</p>')
         parts.append("</li>")
@@ -172,6 +188,12 @@ def build_rss(feed: dict) -> str:
         desc = []
         if it.get("summary"):
             desc.append(f"<p>{x(it['summary'], quote=False)}</p>")
+        for im in it.get("images") or []:
+            if im and im.get("src"):
+                src_abs = im["src"] if im["src"].startswith("http") else f"{SITE}/{im['src'].lstrip('/')}"
+                desc.append(f'<p><img src="{x(src_abs)}" alt="{x(im.get("alt") or "")}"></p>')
+                if im.get("caption"):
+                    desc.append(f"<p><em>{x(im['caption'], quote=False)}</em></p>")
         if it.get("why_it_matters"):
             desc.append(f"<p><strong>Hvorfor det betyr noe:</strong> {x(it['why_it_matters'], quote=False)}</p>")
         src = it.get("url") or ""
