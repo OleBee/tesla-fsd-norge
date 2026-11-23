@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Sat, 21 Nov 2026 19:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 07:30:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>Italienske eiere kjører allerede med Tesla Assisted Driving – utrullingen startet 21. november</title>
+      <link>https://tadnorge.no/#news-italia-lansert-2026-11-23</link>
+      <guid isPermaLink="false">news-italia-lansert-2026-11-23</guid>
+      <pubDate>Mon, 23 Nov 2026 07:30:00 GMT</pubDate>
+      <description>&lt;p&gt;Tesla Assisted Driving (TAD), tidligere FSD Supervised, er rullet ut til kunder i Italia. Utrullingen startet lørdag 21. november, dagen etter at Tesla Europe meldte at systemet var godkjent. Den italienske youtuberen Giulio Autopilot fortalte i en video samme dag at bilen hans hadde lastet ned programvareversjon 2026.39.100 i løpet av natten. I videoen slår han på TAD i en Model 3 Performance og lar bilen kjøre mot Tesla-senteret i Bologna. Bilen stopper for rødt lys, kjører videre på grønt og tar rundkjøringer mens han følger med. Sporingstjenesten TeslaFi hadde registrert de fem første italienske bilene med versjonen kl. 11.00 norsk tid samme dag, skriver nettstedet TeslAnt. Mandag morgen viser TeslaFi 29 italienske biler med versjonen. Samferdselsdepartementet MIT opplyser i sin pressemelding at bilmyndigheten Motorizzazione formelt anerkjente den nederlandske godkjenningen 19. november, dagen før nyheten ble kjent. Abonnementet koster 99 euro i måneden. Føreren har fortsatt ansvaret og må følge med hele tiden.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Det gikk to dager fra Motorizzazione sa ja til de første italienske eierne kjørte med systemet. Det er akkurat medianen i landene vi følger. Dermed er TAD i bruk hos vanlige eiere i alle de tolv EU-landene som har godkjent systemet. Italia er det første av de fire folkerikeste EU-landene der eierne faktisk kjører med det. Landet har rundt 59 millioner innbyggere, over ti ganger så mange som i Norge. Mens italienske eiere allerede kjører med systemet, venter norske eiere fortsatt. Statens vegvesen vil vente på EU og ha FN-regulativ 171 oppfylt. Neste mulighet for et ja i TCMV, EUs tekniske komité for motorvogner, er i desember, men møtedatoen er ikke satt. I Norge er TAD fortsatt ikke godkjent for vanlige eiere.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.youtube.com/watch?v=nZ1ylm4Is7A"&gt;https://www.youtube.com/watch?v=nZ1ylm4Is7A&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Tesla starter utrullingen av FSD v15 – fortsatt uavklart for Europa og Norge</title>
       <link>https://tadnorge.no/#fsd-v15-utrulling-2026-11-21</link>
