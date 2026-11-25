@@ -1,14 +1,37 @@
 {
-  "updated_iso": "2026-11-23T08:30:00+01:00",
+  "updated_iso": "2026-11-25T08:05:00+01:00",
   "standings": {
     "yes_countries": 12,
     "eu_population_pct": 28.6,
     "tcmv_october_pct": 0,
     "norway_this_month_pct": 0,
-    "next_tcmv": "2026-12",
-    "next_tcmv_certainty": "dato ikke kjent (desember 2026)"
+    "next_tcmv": "2026-12-01",
+    "next_tcmv_certainty": "møtedato satt, avstemning ikke bekreftet"
   },
   "items": [
+    {
+      "id": "tcmv-120-moete-1-desember-2026-11-25",
+      "iso": "2026-11-25T08:05:00+01:00",
+      "source": "circabc",
+      "title": "TCMV møtes 1. desember – men ingen vet ennå om Tesla Assisted Driving kommer til avstemning",
+      "summary": "EUs tekniske komité for motorvogner, TCMV, har neste møte tirsdag 1. desember. Det er om seks dager. Datoen står i CIRCABC, Kommisjonens dokumentarkiv. Der ble mappen for det 120. møtet, «120th meeting on 1 December 2026», opprettet 10. november. Mappen er fortsatt tom. Møtet står også i kalendertjenesten EU Agenda. Onsdag morgen er det ikke publisert noen agenda. Derfor vet vi ikke om komiteen skal stemme over Tesla Assisted Driving (TAD), tidligere FSD Supervised. Saken gjelder om den nederlandske godkjenningen etter artikkel 39, EUs unntaksregel for ny teknologi, skal gjelde i hele EU. Statens vegvesen skriver fortsatt at neste møte er i desember, men at det ikke er bestemt om det blir avstemning. Siden er sist oppdatert 29. oktober. Agendaen for oktober-møtet kom 25 dager før møtet. Til nå har vi regnet med et møte rundt 15. desember. Nå teller vi ned mot 1. desember.",
+      "why_it_matters": "Et ja i TCMV krever kvalifisert flertall: minst 15 av 27 EU-land, og de må til sammen ha minst 65 prosent av EU-befolkningen. I dag har 12 land godkjent TAD på egen hånd. De har rundt 28,6 prosent av befolkningen, ifølge vårt anslag ut fra Eurostat. Det er altså langt igjen til flertall, selv om eierne i alle de 12 landene allerede kjører med systemet. Norge har ingen stemme i TCMV. Som EØS-land venter vi på EU: Statens vegvesen vil følge opp etter EØS-avtalen når EU har avgjort saken. Mens eiere i 12 EU-land bruker systemet hver dag, har Norge valgt å vente på et møte der vi ikke stemmer. Nedtellingen på forsiden går nå mot 1. desember. I nedtellingsmodellen flytter de modellerte datoene seg rundt to uker tidligere. At komiteen stemmer og sier ja denne dagen, er fortsatt vår antagelse, ikke et vedtak. TAD er fortsatt ikke godkjent for vanlige eiere i Norge.",
+      "url": "https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/42688f28-3c8a-4141-806d-51c4be10f96c",
+      "sources": [
+        "https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/42688f28-3c8a-4141-806d-51c4be10f96c",
+        "https://euagenda.eu/events/2026/12/01/motor-vehicle-safety-requirements-amendments-in-view-of-their-application-to-fully-automated-vehicles-draft-act",
+        "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/",
+        "https://ec.europa.eu/transparency/comitology-register/screen/documents/118164/1",
+        "https://tadnorge.no/nedtelling/"
+      ],
+      "tags": [
+        "tcmv",
+        "circabc",
+        "eu",
+        "tad",
+        "news"
+      ]
+    },
     {
       "id": "news-italia-lansert-2026-11-23",
       "iso": "2026-11-23T08:30:00+01:00",

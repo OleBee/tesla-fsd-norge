@@ -75,7 +75,7 @@ def beregn(d, today):
     uk_m = m["ukjent_margin_dager"]
     ie_m = m["ikke_eu_margin_dager"]
 
-    tcmv_txt = (f"Vi antar et ja i TCMV {nb(tcmv)}. Datoen er en antagelse; ingen avstemning er satt opp."
+    tcmv_txt = (f"Vi antar et ja i TCMV {nb(tcmv)}. Det er en antagelse; ingen avstemning er satt opp."
                 if m.get("tcmv_dato_antatt", True) else
                 f"TCMV skal stemme {nb(tcmv)}, og vi antar et ja.")
     eu_txt = (f"Modellsteg 2 (EU-scenariet): {tcmv_txt} For Fords BlueCruise gikk det "
