@@ -1,8 +1,8 @@
 {
   "sist_sjekket": "2026-11-25",
   "sist_sjekket_nb": "25. november 2026",
-  "sist_oppdatert_iso": "2026-11-25T08:05:00+01:00",
-  "sist_oppdatert_nb": "25. november 2026 kl. 08.05",
+  "sist_oppdatert_iso": "2026-11-25T11:40:00+01:00",
+  "sist_oppdatert_nb": "25. november 2026 kl. 11.40",
   "svv_sist_oppdatert_nb": "29. oktober 2026",
   "norge_kundegodkjent": false,
   "norge_status": "Statens vegvesen åpner fortsatt ikke for vanlig kundekjøring, men er nå i dialog med Tesla om oppdateringer og hendelsesrapportering. Tesla Norge har lov til å teste med tre modifiserte biler – begrenset testing, ikke din bil. Etter at Finland sa ja, sa Vegvesenet til ITavisen 17. november at etaten fortsatt har tre forbehold: hender av rattet i tettbygde strøk, fartsmarginen på 10 prosent og hvordan Contextual Speed Adaptation virker når trafikken rundt kjører fortere enn fartsgrensen. Tyskland godtar den samme 10-prosentgrensen.",
@@ -78,18 +78,20 @@
   "tcmv": {
     "siste_mote": "2026-10-06",
     "siste_utfall": "diskusjon uten avstemning",
-    "neste_dato": "2026-12-01",
-    "neste_sikkerhet": "møtedato satt (CIRCABC), avstemning ikke bekreftet",
-    "dager_til": 6,
+    "neste_dato": "2026-12-07",
+    "neste_sikkerhet": "utsatt til 7. desember (Reuters, RDW og Flandern), avstemning ikke bekreftet",
+    "dager_til": 12,
     "oktober_godkjenning_prosent": 0,
-    "etikett": "Sjanse for TCMV-ja 1. desember – avstemning ikke bekreftet",
+    "etikett": "Sjanse for TCMV-ja 7. desember – avstemning ikke bekreftet",
     "sannsynlig_utfall": "ukjent",
-    "kommentar": "TCMV-møtet 6. oktober er holdt uten avstemning. Neste møte er 1. desember 2026, ifølge Kommisjonens dokumentarkiv CIRCABC. Agendaen er ikke publisert, og det er ikke bekreftet at komiteen stemmer over Tesla Assisted Driving. Tesla-sjef Elon Musk sa 21. oktober at han vil bli overrasket hvis et EU-ja tar lenger tid enn første kvartal 2027.",
-    "neste_iso": "2026-12-01T10:00:00+01:00",
-    "neste_dato_nb": "1. desember 2026 – avstemning ikke bekreftet",
+    "kommentar": "TCMV-møtet som skulle vært 1. desember, er utsatt til mandag 7. desember 2026. Det meldte Reuters onsdag, med bekreftelse fra en talsperson i den nederlandske typegodkjenningsmyndigheten RDW og fra det flamske samferdselsdepartementet. Agendaen er fortsatt ikke publisert, og det er ikke bekreftet at komiteen stemmer over Tesla Assisted Driving. I CIRCABC heter mappen fortsatt «120th meeting on 1 December 2026», altså møte 1. desember 2026, og den er tom. Tesla-sjef Elon Musk sa 21. oktober at han vil bli overrasket hvis et EU-ja tar lenger tid enn første kvartal 2027.",
+    "neste_iso": "2026-12-07T10:00:00+01:00",
+    "neste_dato_nb": "7. desember 2026 – avstemning ikke bekreftet",
     "neste_dato_er_anslag": false,
-    "anslag_begrunnelse": "Møtedatoen 1. desember 2026 står i CIRCABC, der mappen for det 120. TCMV-møtet ble opprettet 10. november, og i EU Agenda. Klokkeslettet er ikke kjent; nedtellingen bruker kl. 10.00 som teknisk verdi. Per 25. november er ingen agenda publisert. Statens vegvesen skriver at det ikke er bestemt om det blir avstemning. At komiteen stemmer og sier ja denne dagen, er fortsatt vår antagelse. Samme dato brukes i nedtellingsmodellen.",
+    "anslag_begrunnelse": "Møtet er utsatt fra 1. til 7. desember 2026, ifølge Reuters 25. november. En talsperson i RDW bekreftet at møtet er utsatt, og en talsperson i det flamske samferdselsdepartementet oppga den nye datoen. CIRCABC-mappen heter fortsatt «120th meeting on 1 December 2026», altså møte 1. desember 2026, og var tom da vi sjekket kl. 11.29. Klokkeslettet er ikke kjent; nedtellingen bruker kl. 10.00 som teknisk verdi. Ingen agenda er publisert. Statens vegvesen skriver fortsatt, uendret siden 29. oktober, at det ikke er bestemt om det blir avstemning. At komiteen stemmer og sier ja denne dagen, er fortsatt vår antagelse. Samme dato brukes i nedtellingsmodellen.",
     "anslag_kilder": [
+      "https://www.boursorama.com/bourse/actualites/l-ue-reporte-au-7-decembre-la-discussion-sur-l-approbation-de-la-technologie-de-conduite-autonome-de-tesla-55a9c1f5b2e8cfff117511ff14a4dd15",
+      "https://www.borsvarlden.com/finwire/FWM0101DCD",
       "https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/42688f28-3c8a-4141-806d-51c4be10f96c",
       "https://euagenda.eu/events/2026/12/01/motor-vehicle-safety-requirements-amendments-in-view-of-their-application-to-fully-automated-vehicles-draft-act",
       "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/",
@@ -100,7 +102,7 @@
   "norge_denne_maneden": {
     "prosent": 0,
     "etikett": "Uoffisiell sjanse for norske eiere denne måneden",
-    "kommentar": "Uoffisielt skjønnstall – ikke fra Statens vegvesen. Oktober-møtet er holdt uten votum. SVV vurderer ingen tidligere norsk innføring så lenge systemet ikke oppfyller FN Reg. 171. Neste TCMV-møte er 1. desember 2026, men det er ikke bekreftet at komiteen stemmer over saken. Samferdselsministeren svarte KrF 16. oktober at Norge avventer EUs beslutning."
+    "kommentar": "Uoffisielt skjønnstall – ikke fra Statens vegvesen. Oktober-møtet er holdt uten votum. SVV vurderer ingen tidligere norsk innføring så lenge systemet ikke oppfyller FN Reg. 171. Neste TCMV-møte er 7. desember 2026, men det er ikke bekreftet at komiteen stemmer over saken. Samferdselsministeren svarte KrF 16. oktober at Norge avventer EUs beslutning."
   },
   "sjanse_historikk": [
     {
@@ -522,14 +524,15 @@
       ]
     },
     {
-      "dato": "2026-12-01",
-      "tekst": "TCMV, EUs tekniske komité for motorvogner, har sitt 120. møte 1. desember. Agendaen er ikke publisert, og det er ikke bekreftet at komiteen stemmer over artikkel 39-saken om Tesla Assisted Driving, tidligere FSD Supervised.",
+      "dato": "2026-12-07",
+      "tekst": "TCMV, EUs tekniske komité for motorvogner, har sitt 120. møte 7. desember. Møtet var først satt til 1. desember, men ble utsatt ifølge Reuters. Agendaen er ikke publisert, og det er ikke bekreftet at komiteen stemmer over artikkel 39-saken om Tesla Assisted Driving, tidligere FSD Supervised.",
       "fase": "neste",
       "etikett": "Avstemning ikke bekreftet",
-      "kilde": "https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/42688f28-3c8a-4141-806d-51c4be10f96c",
+      "kilde": "https://www.boursorama.com/bourse/actualites/l-ue-reporte-au-7-decembre-la-discussion-sur-l-approbation-de-la-technologie-de-conduite-autonome-de-tesla-55a9c1f5b2e8cfff117511ff14a4dd15",
       "kilder": [
+        "https://www.boursorama.com/bourse/actualites/l-ue-reporte-au-7-decembre-la-discussion-sur-l-approbation-de-la-technologie-de-conduite-autonome-de-tesla-55a9c1f5b2e8cfff117511ff14a4dd15",
+        "https://www.borsvarlden.com/finwire/FWM0101DCD",
         "https://circabc.europa.eu/ui/group/4273d650-b8a9-4093-ac03-18854fbba4b5/library/42688f28-3c8a-4141-806d-51c4be10f96c",
-        "https://euagenda.eu/events/2026/12/01/motor-vehicle-safety-requirements-amendments-in-view-of-their-application-to-fully-automated-vehicles-draft-act",
         "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/"
       ]
     },
