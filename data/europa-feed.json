@@ -1,14 +1,39 @@
 {
-  "updated_iso": "2026-11-25T12:50:00+01:00",
+  "updated_iso": "2026-11-26T17:50:00+01:00",
   "standings": {
     "yes_countries": 12,
     "eu_population_pct": 28.6,
     "tcmv_october_pct": 0,
     "norway_this_month_pct": 0,
     "next_tcmv": "2026-12-15",
-    "next_tcmv_certainty": "utsatt til 15. desember (EU-kommisjonen), avstemning ikke bekreftet"
+    "next_tcmv_certainty": "15. desember kl. 10.00–15.00 (utkast til agenda), mulig avstemning"
   },
   "items": [
+    {
+      "id": "tcmv-120-agenda-mulig-votum-2026-11-26",
+      "iso": "2026-11-26T17:50:00+01:00",
+      "source": "eu",
+      "title": "TCMV kan stemme over Tesla Assisted Driving 15. desember – saken står på agendaen",
+      "summary": "Tesla Assisted Driving (TAD), tidligere FSD Supervised, står på agendaen når EUs tekniske komité for motorvogner, TCMV, møtes tirsdag 15. desember kl. 10.00–15.00. Det viser utkastet til agenda i EU-kommisjonens offentlige register for komitémøter. Punkt 4, kl. 10.40–11.10, er videre behandling av Kommisjonens utkast til en gjennomføringsbeslutning som gir Nederland lov til å gi EU-typegodkjenning for systemet. Agendaen sier «with possible vote», altså med mulig avstemning. Tipset kom fra FSD_DE og Rustavi på X.",
+      "why_it_matters": "Mulig avstemning er ikke et lovet ja. Komiteen kan også bare drøfte saken videre, slik den gjorde 6. oktober. Et ja krever 15 av 27 EU-land med minst 65 prosent av befolkningen. Nederland godkjente systemet 10. april, så det har gått åtte måneder når komiteen møtes. Det er tregt, men et unntak fra EU-regelverket krever bred støtte. Et EU-ja gjelder heller ikke automatisk i Norge. Bilforskriften § 3-1 gjør EUs typegodkjenningsregler til norsk forskrift, men Statens vegvesen må følge opp etter EØS-avtalen og har ikke gitt noen tidslinje. TAD er fortsatt ikke godkjent for vanlige eiere i Norge.",
+      "url": "https://ec.europa.eu/transparency/comitology-register/screen/documents/119538/1",
+      "sources": [
+        "https://ec.europa.eu/transparency/comitology-register/screen/documents/119538/1",
+        "https://ec.europa.eu/transparency/comitology-register/core/api/integration/ers/556176/119538/1/attachment",
+        "https://x.com/FSD_DE/status/2125966627841994756",
+        "https://www.aol.com/articles/eu-postpones-discussion-approve-teslas-084108000.html",
+        "https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/",
+        "https://lovdata.no/dokument/SF/forskrift/2022-06-28-1233"
+      ],
+      "tags": [
+        "tcmv",
+        "agenda",
+        "eu-kommisjonen",
+        "eu",
+        "tad",
+        "norge"
+      ]
+    },
     {
       "id": "tcmv-120-utsatt-15-desember-2026-11-25",
       "iso": "2026-11-25T12:50:00+01:00",
