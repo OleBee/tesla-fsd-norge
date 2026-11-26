@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Wed, 25 Nov 2026 11:50:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 16:50:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>TCMV kan stemme over Tesla Assisted Driving 15. desember – saken står på agendaen</title>
+      <link>https://tadnorge.no/#tcmv-120-agenda-mulig-votum-2026-11-26</link>
+      <guid isPermaLink="false">tcmv-120-agenda-mulig-votum-2026-11-26</guid>
+      <pubDate>Thu, 26 Nov 2026 16:50:00 GMT</pubDate>
+      <description>&lt;p&gt;Tesla Assisted Driving (TAD), tidligere FSD Supervised, står på agendaen når EUs tekniske komité for motorvogner, TCMV, møtes tirsdag 15. desember kl. 10.00–15.00. Det viser utkastet til agenda i EU-kommisjonens offentlige register for komitémøter. Punkt 4, kl. 10.40–11.10, er videre behandling av Kommisjonens utkast til en gjennomføringsbeslutning som gir Nederland lov til å gi EU-typegodkjenning for systemet. Agendaen sier «with possible vote», altså med mulig avstemning. Tipset kom fra FSD_DE og Rustavi på X.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Mulig avstemning er ikke et lovet ja. Komiteen kan også bare drøfte saken videre, slik den gjorde 6. oktober. Et ja krever 15 av 27 EU-land med minst 65 prosent av befolkningen. Nederland godkjente systemet 10. april, så det har gått åtte måneder når komiteen møtes. Det er tregt, men et unntak fra EU-regelverket krever bred støtte. Et EU-ja gjelder heller ikke automatisk i Norge. Bilforskriften § 3-1 gjør EUs typegodkjenningsregler til norsk forskrift, men Statens vegvesen må følge opp etter EØS-avtalen og har ikke gitt noen tidslinje. TAD er fortsatt ikke godkjent for vanlige eiere i Norge.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://ec.europa.eu/transparency/comitology-register/screen/documents/119538/1"&gt;https://ec.europa.eu/transparency/comitology-register/screen/documents/119538/1&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>EU-kommisjonen: TCMV-møtet er utsatt til tirsdag 15. desember – ikke 7. desember</title>
       <link>https://tadnorge.no/#tcmv-120-utsatt-15-desember-2026-11-25</link>
