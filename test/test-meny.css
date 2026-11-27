@@ -1,13 +1,35 @@
 /* Testside /test/: meny øverst bare på mobil (under 768 px).
    Fra 768 px og opp er alt skjult, og siden er lik forsiden. */
+/* Omslaget rundt logo og faner skal ikke påvirke oppsettet på iPad og pc */
+.tm-head { display: contents; }
+
 .tm-note,
 .tm-nav,
 .tm-nedtelling { display: none; }
 
 @media (max-width: 767px) {
+  /* Logo og faner er én fast topp (Ole 27.11 kl. 18.10: «alltid synlige»).
+     Høyden måles i test-meny.js og legges i --tm-head-h. */
+  .tm-head {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    margin: -24px -14px 0;   /* opphever toppmargen og sidemargen i .wrap (site.css, under 720 px) */
+    background: var(--canvas);
+    border-bottom: 1px solid var(--line);   /* samme skillelinje som under .topbar */
+  }
+  .tm-head .topbar {
+    gap: 0;
+    margin: 0;
+    padding: 10px 14px 4px;
+    border-bottom: 0;
+  }
+
+  /* Merknaden ligger under toppen og ruller bort */
   .tm-note {
     display: block;
-    margin: -16px 0 10px;
+    margin: 10px 0 14px;
     font-size: 12px;
     line-height: 1.4;
     color: var(--meta);
@@ -19,13 +41,8 @@
      på delen fanen peker til, og vises bare under valgt fane. */
   .tm-nav {
     display: block;
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    margin: 0 -14px 18px;
-    padding: 4px 0 0;
-    background: var(--canvas);
-    border-bottom: 1px solid var(--line);
+    margin: 0;
+    padding: 0;
   }
   .tm-nav ul {
     list-style: none;
@@ -79,7 +96,7 @@
   }
 
   /* Overskrifter og saker skal ikke havne under den faste menyen */
-  #siste-nytt, #tidslinje, #status, #nedtelling-land, .feed-item, .stat-card { scroll-margin-top: 68px; }
+  #siste-nytt, #tidslinje, #status, #nedtelling-land, .feed-item, .stat-card { scroll-margin-top: calc(var(--tm-head-h, 92px) + 12px); }
 
   /* Nedtelling per land (estimat): kort fra data/nedtelling.json, samme stil som /nedtelling/ */
   .tm-nedtelling { display: block; margin-top: 22px; }
@@ -117,7 +134,8 @@
 
 /* Mellom 721 og 767 px har .wrap 28 px sidemarg (site.css) */
 @media (min-width: 721px) and (max-width: 767px) {
-  .tm-nav { margin-left: -28px; margin-right: -28px; }
+  .tm-head { margin: -36px -28px 0; }   /* .wrap har 36 px topp og 28 px side her */
+  .tm-head .topbar { padding-left: 28px; padding-right: 28px; }
   .tm-nav ul { padding: 0 28px; scroll-padding: 0 28px; }
 }
 

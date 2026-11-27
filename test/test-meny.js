@@ -8,6 +8,16 @@
   var nav = document.getElementById("tm-nav");
   if (!nav) return;
   var links = Array.prototype.slice.call(nav.querySelectorAll("a[data-tm]"));
+  var head = document.getElementById("tm-head") || nav;
+
+  /* Høyden på den faste toppen styrer scroll-margin-top i CSS */
+  function measure() {
+    if (!mq.matches) return;
+    document.documentElement.style.setProperty("--tm-head-h", Math.round(head.getBoundingClientRect().height) + "px");
+  }
+  measure();
+  window.addEventListener("resize", measure);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
 
   /* —— Aktivt valg —— */
   var row = nav.querySelector("ul");
@@ -73,7 +83,7 @@
 
   function onScroll() {
     if (!mq.matches || Date.now() < lock) return;
-    var navH = nav.getBoundingClientRect().height + 16;
+    var navH = head.getBoundingClientRect().height + 16;
     var current = links[0].getAttribute("data-tm");
     var best = -Infinity;
     links.forEach(function (a) {

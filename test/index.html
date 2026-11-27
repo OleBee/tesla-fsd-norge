@@ -36,12 +36,13 @@
 </head>
 <body>
   <div class="wrap" id="top">
+    <!-- Mobil: logo og faner er én fast topp. Fra 768 px er .tm-head display: contents. -->
+    <div class="tm-head" id="tm-head">
     <header class="topbar">
       <a class="brand-mark" href="/">tadnorge</a>
       <h1 class="sr-only">Er Tesla FSD Supervised (Tesla Assisted Driving) godkjent i Norge? Status for norske Tesla-eiere</h1>
     </header>
 
-    <p class="tm-note">Testside for ny meny på mobil. Den vanlige forsiden er uendret.</p>
     <nav class="tm-nav" id="tm-nav" aria-label="Snarveier">
       <ul>
         <li><a href="#siste-nytt" data-tm="siste-nytt" aria-current="true">Siste nytt</a></li>
@@ -50,6 +51,8 @@
         <li><a href="#nedtelling-land" data-tm="nedtelling-land">Nedtelling per land (estimat)</a></li>
       </ul>
     </nav>
+    </div>
+    <p class="tm-note">Testside for ny meny på mobil. Den vanlige forsiden er uendret.</p>
 
     <div class="dash">
       <!-- LEFT: feed -->
