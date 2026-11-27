@@ -44,7 +44,7 @@ Felles kode for begge språk: `/forside.js` (feed, tidslinje, statuskort), `/mob
 5. Modellerte land i nedtellingen: skriv engelsk `fakta` i `data/en/nedtelling.json`; `python3 scripts/modell_nedtelling.py` skriver den engelske begrunnelsen selv.
 6. `python3 scripts/validate_engelsk.py` (må gi «0 feil»), deretter `python3 scripts/build_seo.py` (bygger også `en/index.html` og `en/feed.xml`).
 
-`validate_engelsk.py` feiler på manglende eller utdatert engelsk tekst, ulikt antall avsnitt eller bilder, engelske oppføringer uten norsk motpart, manglende landnavn, `norge_kundegodkjent` som ikke er `false`, og brudd på husreglene (IT-avisen-skrivemåte, video-tidskoder, HTML-entiteter, «»). Workflowen `seo.yml` kjører validatorene på pull requests og ved push til main.
+`validate_engelsk.py` feiler på manglende eller utdatert engelsk tekst, ulikt antall avsnitt eller bilder, engelske oppføringer uten norsk motpart, manglende landnavn, `norge_kundegodkjent` som ikke er `false`, og brudd på husreglene (feil skrivemåte av ITavisen, video-tidskoder, HTML-entiteter, «»). Workflowen `seo.yml` kjører validatorene på pull requests og ved push til main.
 
 ## Automatiseringer (CoS eier)
 

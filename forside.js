@@ -72,7 +72,7 @@
     });
   }
 
-  /* Norsk: «27. november 2026 kl. 13:45» (som før). Engelsk: «27 November 2026, 13:45 CET». */
+  /* Norsk: «27. november 2026 kl. 13:45» (som før). Engelsk: «27 November 2026, 13.45 CET». */
   function fmtDateTime(iso) {
     if (!iso) return "—";
     try {
@@ -88,7 +88,7 @@
         hourCycle: "h23", timeZone: "Europe/Oslo", timeZoneName: "short"
       }).formatToParts(new Date(iso)).forEach(function (x) { p[x.type] = x.value; });
       var tz = /^(CET|CEST)$/.test(p.timeZoneName) ? p.timeZoneName : (p.timeZoneName === "GMT+2" ? "CEST" : "CET");
-      return p.day + " " + p.month + " " + p.year + ", " + p.hour + ":" + p.minute + " " + tz;
+      return p.day + " " + p.month + " " + p.year + ", " + p.hour + "." + p.minute + " " + tz;
     } catch (e) { return iso; }
   }
 

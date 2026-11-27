@@ -183,10 +183,10 @@ def beregn_en(d, en, today):
                 if m.get("tcmv_dato_antatt", True) and m.get("votum_mulig") else
                 f"We assume a yes in TCMV on {en_dato(tcmv)}. That is an assumption; no vote has been scheduled."
                 if m.get("tcmv_dato_antatt", True) else
-                f"TCMV is to vote on {en_dato(tcmv)}, and we assume a yes.")
+                f"TCMV is due to vote on {en_dato(tcmv)}, and we assume a yes.")
     eu_txt = (f"Model step 2 (the EU scenario): {tcmv_txt} For Ford’s BlueCruise, {m['eu_ikrafttredelse_dager']} days "
-              f"passed from a yes in TCMV until the EU approval was in place. With {en_antall(r)} until rollout, "
-              f"that gives {en_dato(eu)}.")
+              f"passed from a yes in TCMV until the EU approval was in place. Adding {en_antall(r)} until rollout "
+              f"gives {en_dato(eu)}.")
     navn = (en or {}).get("navn") or {}
     fakta = {iso: (v or {}).get("fakta") or "" for iso, v in ((en or {}).get("land") or {}).items()}
     ut_en = {}
@@ -201,12 +201,12 @@ def beregn_en(d, en, today):
             s = D(c["signal_dato"])
             if steg == "1":
                 txt = (f"Model step 1: The first public signal of a national case came on {en_dato(s)}. In the countries "
-                       f"that have approved, a median of {med} days passed from such a signal to a decision. With "
-                       f"{en_antall(r)} until rollout, that gives {en_dato(dato)}.")
+                       f"that have approved, a median of {med} days passed from such a signal to a decision. Adding "
+                       f"{en_antall(r)} until rollout gives {en_dato(dato)}.")
             elif steg.startswith("1 ("):
                 txt = (f"Model step 1: The first public signal of a national case came on {en_dato(s)}. The median of "
                        f"{med} days has passed without a decision, so we use the longest wait we have seen, {maks} days. "
-                       f"With {en_antall(r)} until rollout, that gives {en_dato(dato)}.")
+                       f"Adding {en_antall(r)} until rollout gives {en_dato(dato)}.")
             else:
                 txt = (f"Model step 1 → 2: The first public signal came on {en_dato(s)}, but even the longest wait we "
                        f"have seen, {maks} days, has passed. We therefore use the EU scenario: {en_dato(eu)}.")
@@ -216,15 +216,15 @@ def beregn_en(d, en, today):
             tidl, sen = D(sp["estimert_tidligst"]), D(sp["estimert_senest"])
             if iso == "NO":
                 txt = (f"Model step 3 gives a range: {en_dato(tidl)} to {en_dato(sen)}. The earliest date applies if Norway "
-                       f"follows the EU shortly after the decision. No source says how shortly, so we add {en_antall(r)} "
+                       f"follows the EU shortly after the decision. No source says how soon, so we add {en_antall(r)} "
                        f"to the EU scenario ({en_dato(eu)}). That is the median wait until rollout. The latest date applies "
-                       f"if it goes as slowly as with Ford’s BlueCruise, when the Norwegian clarification took {eos} days.")
+                       f"if it goes as slowly as with Ford’s BlueCruise, when Norwegian clearance took {eos} days.")
             else:
                 txt = (f"Model step 3 gives a range: {en_dato(tidl)} to {en_dato(sen)}. Earliest: the EU scenario "
                        f"({en_dato(eu)}) plus {en_antall(r)}. Latest: the same EEA lag Norway had with BlueCruise, {eos} days. "
                        f"Both dates are assumptions for {navn.get(iso) or c['land']}.")
         elif t == "ukjent":
-            txt = (f"Model step 4: Without a known national case, we use the EU scenario ({en_dato(eu)}) and add "
+            txt = (f"Model step 4: With no known national case, we use the EU scenario ({en_dato(eu)}) and add "
                    f"{uk_m} days. The margin is an assumption, not an observation.")
         else:
             txt = (f"Model step 5 (outside the EU and EEA): We use the EU scenario ({en_dato(eu)}) and add {ie_m} days. "

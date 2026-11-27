@@ -208,8 +208,45 @@ def tekstsjekk(hvor: str, tekst: str, feil: list, adv: list) -> None:
         adv.append(f"{hvor}: ser norsk ut? ({', '.join(sorted(set(treff)))})")
 
 
+# Husregel også for norsk synlig tekst: skrivemåten er «ITavisen». Lenker og domener (itavisen.no) teller ikke.
+ITAVISEN_FEIL = re.compile(r"\bIT-avisen\b|\bItavisen\b|\bIT avisen\b|\bITAvisen\b|\bIt-avisen\b")
+NORSKE_SIDER = ("index.html", "nedtelling/index.html", "feed.xml")  # /test/ er et frosset øyeblikksbilde og sjekkes ikke
+URL_RE = re.compile(r"(https?://|www\.)\S+|\b[\w.-]+\.no/\S*")
+
+
+def strenger(obj, sti=""):
+    if isinstance(obj, str):
+        yield sti, obj
+    elif isinstance(obj, dict):
+        for k, v in obj.items():
+            yield from strenger(v, f"{sti}.{k}" if sti else str(k))
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            yield from strenger(v, f"{sti}[{i}]")
+
+
+def synlig_html(html: str) -> str:
+    html = re.sub(r"(?is)<(script|style)\b.*?</\1>", " ", html)
+    html = re.sub(r"(?s)<!--.*?-->", " ", html)
+    return re.sub(r"<[^>]+>", " ", html)  # attributter (href, src) forsvinner med taggene
+
+
+def sjekk_norsk_itavisen(feil: list) -> None:
+    for navn in ("europa-feed.json", "status.json", "nedtelling.json"):
+        for sti, t in strenger(les(DATA / navn)):
+            m = ITAVISEN_FEIL.search(URL_RE.sub(" ", t))
+            if m:
+                feil.append(f"data/{navn} {sti}: norsk tekst har «{m.group(0)}» – skriv «ITavisen»")
+    for side in NORSKE_SIDER:
+        p = ROOT / side
+        if p.exists():
+            for m in ITAVISEN_FEIL.finditer(URL_RE.sub(" ", synlig_html(p.read_text(encoding="utf-8")))):
+                feil.append(f"{side}: synlig tekst har «{m.group(0)}» – skriv «ITavisen»")
+
+
 def sjekk(feil: list, adv: list, mangler: list) -> None:
     """Fyller feil/adv. mangler får (nøkkel, norsk kilde, mal) for --mangler."""
+    sjekk_norsk_itavisen(feil)
     feed, status, nedt = les(DATA / "europa-feed.json"), les(DATA / "status.json"), les(DATA / "nedtelling.json")
     efeed, estatus, enedt = last_en("europa-feed.json"), last_en("status.json"), last_en("nedtelling.json")
 

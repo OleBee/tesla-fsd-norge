@@ -72,10 +72,10 @@ def nb_date(ymd: str) -> str:
 
 
 def en_datetime(iso: str) -> str:
-    """«27 November 2026, 13:45 CET», som fmtDateTime() i /forside.js på /en/."""
+    """«27 November 2026, 13.45 CET», som fmtDateTime() i /forside.js på /en/."""
     d = parse_iso(iso).astimezone(OSLO)
     tz = "CEST" if d.utcoffset().total_seconds() == 7200 else "CET"
-    return f"{d.day} {MONTHS_EN[d.month - 1]} {d.year}, {d:%H:%M} {tz}"
+    return f"{d.day} {MONTHS_EN[d.month - 1]} {d.year}, {d:%H.%M} {tz}"
 
 
 def en_date(ymd: str) -> str:

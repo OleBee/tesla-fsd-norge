@@ -126,7 +126,7 @@
       <h1>When will FSD Supervised arrive in your country?</h1>
       <p class="nt-lede" id="nt-lede">FSD Supervised is approved in <span id="nt-lede-tall">12</span> of 27 EU countries. In Norway, owners are still waiting. Here you can see the status, an estimated date and the sources for each country. Where there is no decision, we calculate the date with an open model and label it “modelled estimate”.</p>
       <span class="nt-flag">All dates in the countdown are estimates, not decisions</span>
-      <p class="nt-meta">Last updated: <span id="nt-sist">25 November 2026, 12:50 CET</span></p>
+      <p class="nt-meta">Last updated: <span id="nt-sist">25 November 2026, 12.50 CET</span></p>
     </section>
 
     <div class="nt-top">
@@ -142,7 +142,7 @@
             <div class="lbl">of the EU population</div>
           </div>
         </div>
-        <p>The EU’s Technical Committee on Motor Vehicles (TCMV) met on 6 October but did not vote on FSD Supervised. The next meeting is on 15 December 2026, and the case is on the agenda with a possible vote. That is not a promised yes. A yes requires 15 of 27 countries and 65 % of the EU population.</p>
+        <p>The EU’s Technical Committee on Motor Vehicles (TCMV) met on 6 October but did not vote on FSD Supervised. The next meeting is on 15 December 2026, and the case is on the agenda with a possible vote. That is not a promised yes. A yes requires 15 of the 27 countries and 65 per cent of the EU population.</p>
       </div>
     </div>
 
@@ -171,7 +171,7 @@
         <li><strong>Step 2 – the EU scenario:</strong> <span id="nt-tcmv">The Tesla case is on the agenda of the EU’s Technical Committee on Motor Vehicles (TCMV) on 15 December 2026, with a possible vote. We assume a yes, but that is an assumption.</span> We then add the time it took from a TCMV yes until the EU approval of Ford’s BlueCruise was in place: <span id="nt-eu-dager">132</span> days (TCMV said yes in the week up to 20 March 2024; Ford announced the EU approval on 30 July 2024). With the wait until rollout, that gives <span id="nt-eu-dato">28 April 2027</span>.</li>
         <li><strong>Step 3 – Norway and the EEA:</strong> Here we show a range, not a single date. Norway is sorted by the earliest date.
           <br><strong>At the earliest <span id="nt-eos-tidligst">30 April 2027</span>:</strong> This assumes that Norway follows the EU shortly after the decision. That is possible. The EU type-approval regulation applies as a Norwegian regulation (<a href="https://lovdata.no/dokument/SF/forskrift/2022-06-28-1233" rel="noopener" target="_blank">vehicle regulations § 3-1</a>), and Statens vegvesen writes that it will “handle and continue the process in line with the obligations of the EEA Agreement” once the EU decision is in place (<a href="https://www.vegvesen.no/fag/trafikk/its-portalen/its-i-statens-vegvesen/metr/forerstottesystemer/" rel="noopener" target="_blank">vegvesen.no</a>, our translation). With the UN regulation for such driver assistance systems, R171, things moved quickly: it entered into force on 22 September 2024 (<a href="https://treaties.un.org/doc/Publication/CN/2024/CN.392.2024-Eng.pdf" rel="noopener" target="_blank">UN</a>), and according to Statens vegvesen such systems have been eligible for type-approval in Norway since September 2024. No source says how short a Norwegian lag will be. We therefore add <span id="nt-eos-tidlig-dager">2</span> days after the EU scenario, the same as the median rollout wait. That is our assumption. Statens vegvesen has said it will review Tesla’s customer information, as it did with Ford, and that it cannot give a timeline (<a href="https://itavisen.no/2026/04/14/tesla-fsd-norge-eu-nederland/" rel="noopener" target="_blank">ITavisen</a>).
-          <br><strong>At the latest <span id="nt-eos-senest">10 August 2028</span>:</strong> This assumes it goes as slowly as with Ford’s BlueCruise. From the EU approval on 30 July 2024, it took <span id="nt-eos-dager">470</span> days until Statens vegvesen and the Ministry of Transport established on 12 November 2025 that it also applies in Norway. Iceland and Liechtenstein get the same range. For them, both dates are assumptions.</li>
+          <br><strong>At the latest <span id="nt-eos-senest">10 August 2028</span>:</strong> This assumes it goes as slowly as with Ford’s BlueCruise. From the EU approval on 30 July 2024, it took <span id="nt-eos-dager">470</span> days until Statens vegvesen and the Ministry of Transport confirmed on 12 November 2025 that it also applies in Norway. Iceland and Liechtenstein get the same range. For them, both dates are assumptions.</li>
         <li><strong>Step 4 – no known case:</strong> The EU scenario plus <span id="nt-ukjent">30</span> days. The margin is an assumption.</li>
         <li><strong>Step 5 – outside the EU and the EEA:</strong> Switzerland and the United Kingdom: the EU scenario plus <span id="nt-ikkeeu">180</span> days. The margin is an assumption; we have no observed precedent.</li>
       </ol>
@@ -228,7 +228,7 @@
         new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit",
           hourCycle: "h23", timeZone: "Europe/Oslo", timeZoneName: "short" }).formatToParts(d).forEach(function (x) { p[x.type] = x.value; });
         var tz = /^(CET|CEST)$/.test(p.timeZoneName) ? p.timeZoneName : (p.timeZoneName === "GMT+2" ? "CEST" : "CET");
-        return p.day + " " + p.month + " " + p.year + ", " + p.hour + ":" + p.minute + " " + tz;
+        return p.day + " " + p.month + " " + p.year + ", " + p.hour + "." + p.minute + " " + tz;
       } catch (e) { return iso; }
     }
 
