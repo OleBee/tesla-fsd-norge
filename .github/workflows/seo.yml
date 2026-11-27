@@ -1,16 +1,28 @@
 name: SEO-filer (RSS, sitemap, statisk feed)
 
 # Bygger feed.xml, sitemap.xml og den statiske feed-/tidslinjeblokken i
-# index.html på nytt når data/*.json endres. Skriptet er deterministisk:
+# index.html (og på engelsk: en/index.html og en/feed.xml) på nytt når
+# data/*.json eller data/en/*.json endres. Skriptet er deterministisk:
 # har den som pushet allerede kjørt scripts/build_seo.py, blir det ingen commit.
+#
+# Jobben «valider» kjører validatorene (engelsk versjon, nedtelling, modell,
+# versjoner). Den feiler hvis en sak, statusblokk, tidslinjeoppføring eller et
+# land mangler engelsk tekst. SEO-byggingen kjører uansett, så nettstedet
+# blir aldri stående med utdatert RSS; /en/ viser da norsk tekst for det som
+# mangler, merket lang="nb", til oversettelsen er på plass.
 on:
   push:
     branches: [main]
     paths:
       - "data/**"
       - "index.html"
-      - "scripts/build_seo.py"
+      - "en/**"
+      - "nedtelling/**"
+      - "*.js"
+      - "*.css"
+      - "scripts/**"
       - ".github/workflows/seo.yml"
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -22,7 +34,26 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  valider:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Engelsk versjon (data/en/*.json)
+        run: python3 scripts/validate_engelsk.py
+      - name: Nedtelling
+        run: |
+          python3 scripts/validate_nedtelling.py
+          python3 scripts/modell_nedtelling.py --check
+      - name: Versjoner (?v=) og SEO-filer
+        run: |
+          python3 scripts/bump_versions.py --check
+          python3 scripts/build_seo.py --check
+
   build:
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -35,19 +66,19 @@ jobs:
         run: python3 scripts/build_seo.py
 
       - name: Valider XML
-        run: python3 -c "import xml.etree.ElementTree as E; [E.parse(f) for f in ('feed.xml','sitemap.xml')]; print('XML ok')"
+        run: python3 -c "import xml.etree.ElementTree as E; [E.parse(f) for f in ('feed.xml','sitemap.xml','en/feed.xml')]; print('XML ok')"
 
       - name: Commit og push ved endring
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if git diff --quiet -- feed.xml sitemap.xml index.html; then
+          if git diff --quiet -- feed.xml sitemap.xml index.html en/index.html en/feed.xml; then
             echo "Ingen endring."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add feed.xml sitemap.xml index.html
+          git add feed.xml sitemap.xml index.html en/index.html en/feed.xml
           git commit -m "SEO: oppdater RSS, sitemap og statisk feed fra data/*.json"
           for i in 1 2 3; do
             git pull --rebase -q origin main && git push origin HEAD:main && break

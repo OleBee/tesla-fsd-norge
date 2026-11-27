@@ -1,0 +1,198 @@
+{
+  "_om": "Engelsk tekst for /en/ fra data/status.json. Bare tekstfelt; tall, datoer og kilder hentes fra den norske filen. Tidslinjen har nøkkel «dato#n». Se scripts/validate_engelsk.py.",
+  "norsk_sha": {
+    "norge_status": "e563139acea3",
+    "tcmv": "07d96130819a",
+    "norge_denne_maneden": "d870a98d0467",
+    "series_02": "264f390d6a7f"
+  },
+  "norge_status": "Statens vegvesen, the Norwegian Public Roads Administration, still does not allow ordinary customer use, but is now in dialogue with Tesla about updates and incident reporting. Tesla Norway is allowed to test with three modified cars – limited testing, not your car. After Finland said yes, the agency told ITavisen on 17 November that it still has three reservations: hands off the wheel in built-up areas, the 10 per cent speed margin, and how Contextual Speed Adaptation works when surrounding traffic drives faster than the speed limit. Germany accepts the same 10 per cent cap.",
+  "tcmv": {
+    "siste_utfall": "discussion without a vote",
+    "neste_sikkerhet": "15 December, 10.00–15.00 (draft agenda from the European Commission), possible vote",
+    "etikett": "Chance of a TCMV yes on 15 December – possible vote, not promised",
+    "sannsynlig_utfall": "unknown",
+    "kommentar": "TCMV meets on Tuesday 15 December 2026 from 10.00 to 15.00 CET. Tesla Assisted Driving is item 4 on the draft agenda, 10.40–11.10, with a possible vote. The item concerns the Commission’s draft implementing decision authorising the Netherlands to grant EU type-approval for the system. A possible vote is not a promised yes: the committee may also settle for discussing the case further. Tesla CEO Elon Musk said on 21 October that he would be surprised if an EU yes takes longer than the first quarter of 2027.",
+    "neste_dato_nb": "15 December 2026 – possible vote",
+    "anslag_begrunnelse": "The date and time appear in the draft agenda for the 120th TCMV meeting, dated Brussels, 24 November 2026 (Ares(2026)10983140). The document is in the European Commission’s public register of committee meetings (the comitology register). The meeting is on 15 December from 10.00 to 15.00, and the Tesla case is item 4 from 10.40 to 11.10, “with possible vote”. The countdown runs to the start of the meeting at 10.00. The meeting was first set for 1 December, according to RDW. The Commission told Reuters on 25 November that it had been postponed to 15 December. The agenda is a draft, and whether the committee actually votes and says yes is still uncertain. The same date is used in the countdown model."
+  },
+  "norge_denne_maneden": {
+    "etikett": "Unofficial chance for Norwegian owners this month",
+    "kommentar": "Unofficial judgement figure – not from Statens vegvesen. The October meeting was held without a vote. SVV is not considering any earlier Norwegian introduction as long as the system does not meet UN Reg. 171. The next TCMV meeting is on 15 December 2026, and the Tesla case is on the agenda with a possible vote. The transport minister told the Christian Democrats (KrF) on 16 October that Norway is awaiting the EU’s decision."
+  },
+  "series_02": {
+    "merknad": "The new version of the UN regulation R171 (Series 02) is expected to enter into force in late January 2027. It is a long-term track alongside Article 39, not a Norwegian customer activation.",
+    "dato_nb": "Late January 2027"
+  },
+  "timeline": [
+    {
+      "nokkel": "2026-04-10#1",
+      "norsk_sha": "def3ab69e4b2",
+      "tekst": "RDW, the Dutch approval authority, grants provisional type-approval under Article 39 (the EU exemption procedure in framework regulation 2018/858) and the UN regulation R171."
+    },
+    {
+      "nokkel": "2026-05-05#1",
+      "norsk_sha": "bcc8136d49e9",
+      "tekst": "RDW presents the case to TCMV (the EU’s Technical Committee on Motor Vehicles). Norway takes part without a vote."
+    },
+    {
+      "nokkel": "2026-05-20#1",
+      "norsk_sha": "c4a8bbb800ac",
+      "tekst": "Lithuania recognises the approval as the first EU country after the Netherlands."
+    },
+    {
+      "nokkel": "2026-05-29#1",
+      "norsk_sha": "38e28b62b59e",
+      "tekst": "Estonia recognises the RDW approval under Article 39."
+    },
+    {
+      "nokkel": "2026-06-09#1",
+      "norsk_sha": "523e60ca471b",
+      "tekst": "Denmark recognises the approval, and customers can drive with it."
+    },
+    {
+      "nokkel": "2026-06-10#1",
+      "norsk_sha": "ad9e33f8cea9",
+      "tekst": "Belgium recognises it. Five countries are running FSD Supervised."
+    },
+    {
+      "nokkel": "2026-06-30#1",
+      "norsk_sha": "05928f94d167",
+      "tekst": "TCMV discusses the Netherlands’ Article 39 case. No vote."
+    },
+    {
+      "nokkel": "2026-07-03#1",
+      "norsk_sha": "d71ac2e1f35d",
+      "tekst": "Statens vegvesen (SVV), the Norwegian Public Roads Administration, updates its information page. FSD Supervised is still not approved for customers in Norway."
+    },
+    {
+      "nokkel": "2026-07-22#1",
+      "norsk_sha": "1b4caad0d918",
+      "tekst": "France says no to a unilateral national approval “as the system stands”."
+    },
+    {
+      "nokkel": "2026-09-07#1",
+      "norsk_sha": "64aaea56cc3f",
+      "tekst": "Slovenia becomes the sixth EU country with national customer approval."
+    },
+    {
+      "nokkel": "2026-09-21#1",
+      "norsk_sha": "fdcd42aec59f",
+      "tekst": "The Czech Republic becomes the seventh EU country. Population share about 11.8%."
+    },
+    {
+      "nokkel": "2026-09-25#1",
+      "norsk_sha": "c4c80f9f4a47",
+      "tekst": "The agenda in the EU document archive CIRCABC shows that the Netherlands’ Article 39 case will only be discussed further on 6 October. No vote."
+    },
+    {
+      "nokkel": "2026-09-29#1",
+      "norsk_sha": "fe1f62da0e07",
+      "tekst": "Croatia becomes the eighth EU country, according to Tesla Europe. Population share about 12.7%."
+    },
+    {
+      "nokkel": "2026-10-01#1",
+      "norsk_sha": "94a0f430f6dc",
+      "tekst": "Croatia: the newspaper Slobodna Dalmacija shows an owner driving with FSD Supervised in Šibenik. The rollout is under way."
+    },
+    {
+      "nokkel": "2026-10-02#1",
+      "norsk_sha": "05633577d946",
+      "tekst": "SVV confirms that TCMV will not vote on 6 October. The next chance is December 2026. Norway submitted no questions or comments."
+    },
+    {
+      "nokkel": "2026-10-06#1",
+      "norsk_sha": "1ac5928e3321",
+      "tekst": "TCMV’s 119th meeting has been held. Discussion of the Netherlands’ Article 39 case continued. No vote, as SVV had announced."
+    },
+    {
+      "nokkel": "2026-10-06#2",
+      "norsk_sha": "cef9f55f586d",
+      "tekst": "The German transport ministry (BMV): Minister Steffen Bilger pushes for a swift EU approval. Tesla offers the name TAD (Tesla Assisted Driving), and the parties agree on a maximum of ten per cent over the speed limit. No German customer approval."
+    },
+    {
+      "nokkel": "2026-10-07#1",
+      "norsk_sha": "8cd7b322fbc8",
+      "tekst": "Slovakia: the transport minister promises to recognise the RDW approval within a few days. The letter has not been confirmed as sent."
+    },
+    {
+      "nokkel": "2026-10-07#2",
+      "norsk_sha": "30c4f6bdd739",
+      "tekst": "Reuters review: RDW stands by its thorough assessment after more than 3,000 test hours. Statens vegvesen dismisses Tesla’s claims about lives saved as marketing."
+    },
+    {
+      "nokkel": "2026-10-09#1",
+      "norsk_sha": "bbc7672b8bca",
+      "tekst": "Storting: Jørgen H. Kristiansen (Christian Democrats, KrF) asks the transport minister whether Norway will give input before the EU consideration and consider national recognition, as Denmark has done (doc. no. 15:116). The minister replied on 16 October: Norway is awaiting the EU’s decision and will abide by the EEA Agreement.",
+      "etikett": "Answered 16 Oct"
+    },
+    {
+      "nokkel": "2026-10-16#1",
+      "norsk_sha": "34740b963d32",
+      "tekst": "Slovakia becomes the ninth EU country: the transport ministry recognises the RDW approval. Population share about 13.9%."
+    },
+    {
+      "nokkel": "2026-10-16#2",
+      "norsk_sha": "2ddc1652a12f",
+      "tekst": "The European Commission publishes the minutes of the TCMV meeting on 30 June. The Netherlands showed 40 million kilometres with FSD Supervised, with speed on average 4.4 km/h below the limit. No timetable for a vote."
+    },
+    {
+      "nokkel": "2026-10-26#1",
+      "norsk_sha": "6306446b0d17",
+      "tekst": "Latvia becomes the tenth EU country: the Road Traffic Safety Directorate CSDD recognises the RDW approval. Population share about 14.3% (our estimate based on Eurostat)."
+    },
+    {
+      "nokkel": "2026-10-28#1",
+      "norsk_sha": "4e06719a2a00",
+      "tekst": "Latvia: the public broadcaster LSM shows Tesla Assisted Driving (TAD), formerly FSD Supervised, in use in Riga. The next day a Latvian owner writes on X that he has received the update. The rollout is under way."
+    },
+    {
+      "nokkel": "2026-10-29#1",
+      "norsk_sha": "7fc07e0e1e0b",
+      "tekst": "Statens vegvesen (SVV) rewrites its information page: SVV is in dialogue with Tesla about updates and incident reporting, and writes that Norwegian authorities are positive about new vehicle technology. FSD Supervised is still not approved for ordinary owners in Norway."
+    },
+    {
+      "nokkel": "2026-11-10#1",
+      "norsk_sha": "1eeeecff95dc",
+      "tekst": "Finland becomes the eleventh EU country: the transport agency Traficom recognises the RDW approval. Population share about 15.5% (our estimate based on Eurostat)."
+    },
+    {
+      "nokkel": "2026-11-11#1",
+      "norsk_sha": "ab5cd925b7c9",
+      "tekst": "Finland: owners in Rovaniemi and Helsinki post the first videos and posts from driving with Tesla Assisted Driving (TAD), formerly FSD Supervised. The rollout is under way."
+    },
+    {
+      "nokkel": "2026-11-20#1",
+      "norsk_sha": "5fd493048d74",
+      "tekst": "Italy becomes the twelfth EU country: Deputy Prime Minister and Transport Minister Matteo Salvini announced that the transport ministry has granted a provisional national approval. Tesla Europe writes that the rollout begins soon. Population share about 28.6% (our estimate based on Eurostat)."
+    },
+    {
+      "nokkel": "2026-11-20#2",
+      "norsk_sha": "4188f9faa441",
+      "tekst": "The UN forum WP.29 has adopted Supplement 2 to R171, the regulation on driver assistance systems, according to GlobalAutoRegs. The amendment clarifies the requirements for driver monitoring and for manoeuvres the system initiates itself, and allows hands-off driving on motorway-like roads up to 130 km/h. Off such roads, hands on the wheel are still required, so Tesla still needs the Article 39 exemption for city driving.",
+      "etikett": "WP.29"
+    },
+    {
+      "nokkel": "2026-11-21#1",
+      "norsk_sha": "2e014b63626f",
+      "tekst": "Italy: the first owners get the software and drive with Tesla Assisted Driving (TAD), formerly FSD Supervised, including in the Bologna area. The rollout is under way."
+    },
+    {
+      "nokkel": "2026-11-26#1",
+      "norsk_sha": "5bfc3365f48a",
+      "tekst": "The draft agenda for the TCMV meeting on 15 December is in the European Commission’s public register of committee meetings. Tesla Assisted Driving is item 4, with a possible vote."
+    },
+    {
+      "nokkel": "2026-12-15#1",
+      "norsk_sha": "95ee74ee4d9c",
+      "tekst": "TCMV, the EU’s Technical Committee on Motor Vehicles, holds its 120th meeting on 15 December from 10.00 to 15.00. The Netherlands’ Article 39 case on Tesla Assisted Driving, formerly FSD Supervised, is item 4 on the draft agenda, with a possible vote. It is not a promised yes.",
+      "etikett": "Possible vote"
+    },
+    {
+      "nokkel": "2027-01-25#1",
+      "norsk_sha": "767c8b37181c",
+      "tekst": "The new version of the UN regulation R171 (Series 02) is expected to enter into force. It is a long-term track alongside Article 39.",
+      "etikett": "Series 02"
+    }
+  ]
+}

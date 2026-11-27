@@ -9,6 +9,11 @@ Bruk (fra repo-roten):
   python3 scripts/modell_nedtelling.py --check [--today YYYY-MM-DD]  # bare sammenlign
 Endre aldri modellerte datoer for hånd: endre inndata og kjør skriptet.
 
+Engelsk versjon (/en/countdown/): skriptet skriver også «begrunnelse» for de
+modellerte landene i data/en/nedtelling.json, ut fra den engelske «fakta»
+(skrives for hånd) og den engelske modellteksten under. --check feiler hvis
+den engelske begrunnelsen er utdatert eller den engelske «fakta» mangler.
+
 Inndata per land (metode = "modell"):
   modell_type  signal | eu | eos | ukjent | ikke_eu
   signal_dato  (bare for signal) dato for første offentlige signal om nasjonal sak
@@ -37,6 +42,21 @@ def nb(d):
 def antall(n, ental="dag", flertall="dager"):
     tall = ORD[n] if 0 <= n <= 12 else str(n)
     return f"{tall} {ental if n == 1 else flertall}"
+
+
+MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August",
+          "September", "October", "November", "December"]
+WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
+EN_PATH = "data/en/nedtelling.json"
+
+
+def en_dato(d):
+    return f"{d.day} {MONTHS[d.month - 1]} {d.year}"
+
+
+def en_antall(n, one="day", many="days"):
+    tall = WORDS[n] if 0 <= n <= 12 else str(n)
+    return f"{tall} {one if n == 1 else many}"
 
 
 def D(s):
@@ -151,6 +171,76 @@ def beregn(d, today):
     return param, ut
 
 
+def beregn_en(d, en, today):
+    """Engelsk begrunnelse for modellerte land: {iso: tekst}. Samme grener og datoer som beregn()."""
+    param, ut = beregn(d, today)
+    m = d["modell"]
+    r, med, maks = param["utrulling_dager"], param["signal_brukt_dager"], param["signal_maks_dager"]
+    eu, tcmv = D(param["eu_scenario_dato"]), D(m["tcmv_dato"])
+    eos, uk_m, ie_m = m["eos_etterslep_dager"], m["ukjent_margin_dager"], m["ikke_eu_margin_dager"]
+    tcmv_txt = ((f"The Tesla case is on the TCMV agenda for {en_dato(tcmv)}, with a possible vote. "
+                 f"We assume a yes, but that is an assumption.")
+                if m.get("tcmv_dato_antatt", True) and m.get("votum_mulig") else
+                f"We assume a yes in TCMV on {en_dato(tcmv)}. That is an assumption; no vote has been scheduled."
+                if m.get("tcmv_dato_antatt", True) else
+                f"TCMV is to vote on {en_dato(tcmv)}, and we assume a yes.")
+    eu_txt = (f"Model step 2 (the EU scenario): {tcmv_txt} For Ford’s BlueCruise, {m['eu_ikrafttredelse_dager']} days "
+              f"passed from a yes in TCMV until the EU approval was in place. With {en_antall(r)} until rollout, "
+              f"that gives {en_dato(eu)}.")
+    navn = (en or {}).get("navn") or {}
+    fakta = {iso: (v or {}).get("fakta") or "" for iso, v in ((en or {}).get("land") or {}).items()}
+    ut_en = {}
+    for c in d["land"]:
+        iso = c["iso"]
+        if iso not in ut:
+            continue
+        dato, steg, _, sp = ut[iso]
+        dato = D(dato)
+        t = c["modell_type"]
+        if t == "signal":
+            s = D(c["signal_dato"])
+            if steg == "1":
+                txt = (f"Model step 1: The first public signal of a national case came on {en_dato(s)}. In the countries "
+                       f"that have approved, a median of {med} days passed from such a signal to a decision. With "
+                       f"{en_antall(r)} until rollout, that gives {en_dato(dato)}.")
+            elif steg.startswith("1 ("):
+                txt = (f"Model step 1: The first public signal of a national case came on {en_dato(s)}. The median of "
+                       f"{med} days has passed without a decision, so we use the longest wait we have seen, {maks} days. "
+                       f"With {en_antall(r)} until rollout, that gives {en_dato(dato)}.")
+            else:
+                txt = (f"Model step 1 → 2: The first public signal came on {en_dato(s)}, but even the longest wait we "
+                       f"have seen, {maks} days, has passed. We therefore use the EU scenario: {en_dato(eu)}.")
+        elif t == "eu":
+            txt = eu_txt
+        elif t == "eos":
+            tidl, sen = D(sp["estimert_tidligst"]), D(sp["estimert_senest"])
+            if iso == "NO":
+                txt = (f"Model step 3 gives a range: {en_dato(tidl)} to {en_dato(sen)}. The earliest date applies if Norway "
+                       f"follows the EU shortly after the decision. No source says how shortly, so we add {en_antall(r)} "
+                       f"to the EU scenario ({en_dato(eu)}). That is the median wait until rollout. The latest date applies "
+                       f"if it goes as slowly as with Ford’s BlueCruise, when the Norwegian clarification took {eos} days.")
+            else:
+                txt = (f"Model step 3 gives a range: {en_dato(tidl)} to {en_dato(sen)}. Earliest: the EU scenario "
+                       f"({en_dato(eu)}) plus {en_antall(r)}. Latest: the same EEA lag Norway had with BlueCruise, {eos} days. "
+                       f"Both dates are assumptions for {navn.get(iso) or c['land']}.")
+        elif t == "ukjent":
+            txt = (f"Model step 4: Without a known national case, we use the EU scenario ({en_dato(eu)}) and add "
+                   f"{uk_m} days. The margin is an assumption, not an observation.")
+        else:
+            txt = (f"Model step 5 (outside the EU and EEA): We use the EU scenario ({en_dato(eu)}) and add {ie_m} days. "
+                   f"The margin is an assumption; we have no observed precedent.")
+        ut_en[iso] = (fakta[iso].rstrip() + " " + txt).strip() if fakta.get(iso) else None
+    return ut_en
+
+
+def les_en():
+    try:
+        with open(EN_PATH, encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return None
+
+
 def dump(d, f):
     """Skriver JSON med ett land per linje (lett å lese i diff, kompakt å pushe)."""
     f.write("{\n")
@@ -186,6 +276,16 @@ def main():
                 for k in SPENN_FELT:
                     if c.get(k) != sp.get(k):
                         print(f"AVVIK {c['land']}: {k} fil={c.get(k)!r} beregnet={sp.get(k)!r}"); avvik += 1
+        en = les_en()
+        if en is None:
+            print(f"AVVIK: {EN_PATH} finnes ikke (engelsk versjon)"); avvik += 1
+        else:
+            for iso, b in beregn_en(d, en, today).items():
+                e = (en.get("land") or {}).get(iso) or {}
+                if b is None:
+                    print(f"AVVIK {iso}: mangler engelsk «fakta» i {EN_PATH}"); avvik += 1
+                elif e.get("begrunnelse") != b:
+                    print(f"AVVIK {iso}: engelsk begrunnelse er utdatert – kjør python3 scripts/modell_nedtelling.py"); avvik += 1
         print(f"{len(ut)} modellerte land · {avvik} avvik")
         return 1 if avvik else 0
     d["modell"].update(param)
@@ -197,6 +297,18 @@ def main():
                 else: c.pop(k, None)
     with open(path, "w", encoding="utf-8") as f:
         dump(d, f)
+    en = les_en()
+    if en is not None:
+        mangler = []
+        for iso, b in beregn_en(d, en, today).items():
+            if b is None:
+                mangler.append(iso)
+                continue
+            en.setdefault("land", {}).setdefault(iso, {})["begrunnelse"] = b
+        with open(EN_PATH, "w", encoding="utf-8") as f:
+            f.write(json.dumps(en, ensure_ascii=False, indent=2) + "\n")
+        if mangler:
+            print("Mangler engelsk «fakta» (data/en/nedtelling.json) for: " + ", ".join(mangler))
     for c in sorted(d["land"], key=lambda c: c.get("estimert_dato") or ""):
         if c["iso"] in ut:
             spenn = f"  ({c['estimert_tidligst']} – {c['estimert_senest']})" if c.get("estimert_senest") else ""

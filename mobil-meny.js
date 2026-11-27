@@ -1,10 +1,12 @@
-/* Mobilmeny på forsiden (/) og testsiden (/test/): fast topp med faner og
-   «Nedtelling per land (estimat)» fra data/nedtelling.json. Kortene bruker samme
+/* Mobilmeny på forsiden (/), den engelske forsiden (/en/) og testsiden (/test/): fast topp med faner og
+   «Nedtelling per land (estimat)» fra data/nedtelling.json (på /en/ flettet med data/en/nedtelling.json).
+   Språket følger <html lang>; fane-id-ene leses fra menyen (data-tm). Kortene bruker samme
    oppsett som /nedtelling/. Fra 768 px og opp er menyen og nedtellingsdelen skjult
    med CSS, og skriptet gjør ingenting med siden. */
 (function () {
   "use strict";
 
+  var EN = (document.documentElement.getAttribute("lang") || "").slice(0, 2) === "en";
   var mq = window.matchMedia("(max-width: 767px)");
   var nav = document.getElementById("tm-nav");
   if (!nav) return;
@@ -89,8 +91,13 @@
      Bare valgt del vises. Adressen bruker de faste id-ene: #siste-nytt, #tidslinje,
      #status og #nedtelling-land (#nedtelling godtas også). Fra 768 px er alt som før:
      ingen del skjules, og adressen styrer ingenting. */
-  var PANELS = ["siste-nytt", "tidslinje", "status", "nedtelling-land"];
-  var ALIAS = { "nedtelling": "nedtelling-land" };
+  /* Engelsk (/en/): #latest-news, #timeline, #status, #countdown-by-country. De norske
+     id-ene godtas som alias på engelsk og omvendt, så lenker fra språkknappen alltid treffer. */
+  var PANELS = links.map(idOf);
+  var HOME = PANELS[0];
+  var ALIAS = EN
+    ? { "siste-nytt": "latest-news", "tidslinje": "timeline", "nedtelling-land": "countdown-by-country", "nedtelling": "countdown-by-country", "countdown": "countdown-by-country" }
+    : { "nedtelling": "nedtelling-land", "latest-news": "siste-nytt", "timeline": "tidslinje", "countdown-by-country": "nedtelling-land", "countdown": "nedtelling-land" };
   var root = document.documentElement;
   var pos = {};      /* rulleposisjon per fane i denne økten */
   var seen = {};     /* faner som er åpnet før i økten */
@@ -106,12 +113,12 @@
   /* Hva adressen peker på: { tab, el } der el er et anker inne i en fane */
   function resolve(hash) {
     var id = decodeURIComponent((hash || "").replace(/^#/, ""));
-    if (!id) return { tab: "siste-nytt", el: null };
+    if (!id) return { tab: HOME, el: null };
     if (ALIAS[id]) return { tab: ALIAS[id], el: null, alias: true };
     if (PANELS.indexOf(id) >= 0) return { tab: id, el: null };
     var el = document.getElementById(id);
     var tab = el && panelOf(el);
-    return tab ? { tab: tab, el: el } : { tab: "siste-nytt", el: null };
+    return tab ? { tab: tab, el: el } : { tab: HOME, el: null };
   }
 
   function headerOffset() { return head.getBoundingClientRect().height + 16; }
@@ -224,16 +231,16 @@
   if (logo) logo.addEventListener("click", function (e) {
     if (!tabsOn || e.button > 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
-    delete pos["siste-nytt"];
-    if (current === "siste-nytt") {
-      if (location.hash !== "#siste-nytt") history.replaceState(history.state, "", "#siste-nytt");
-      smoothTop(topOf("siste-nytt"));
-      focusPanel("siste-nytt");
+    delete pos[HOME];
+    if (current === HOME) {
+      if (location.hash !== "#" + HOME) history.replaceState(history.state, "", "#" + HOME);
+      smoothTop(topOf(HOME));
+      focusPanel(HOME);
       savePos();
       return;
     }
-    if (location.hash !== "#siste-nytt") history.pushState(null, "", "#siste-nytt");
-    show("siste-nytt", "top", { focus: true });
+    if (location.hash !== "#" + HOME) history.pushState(null, "", "#" + HOME);
+    show(HOME, "top", { focus: true });
   });
 
   /* Fanene */
@@ -279,12 +286,41 @@
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(relayout);
 
   /* —— Nedtelling per land (estimat) —— */
+  var L = EN ? {
+    status: { "lansert": "Launched", "godkjent, utrulling snart": "Approved, rollout soon", "venter på anerkjennelse": "Awaiting recognition", "venter på EU-vedtak": "Awaiting EU decision", "ukjent": "Unknown" },
+    sikkerhet: { "lav": "low", "middels": "medium", "høy": "high" },
+    steg: { "1 (lengste ventetid)": "1 (longest wait)" },
+    lansert: "Launched", godkjent: "Approved", ikkeBekreftet: " · rollout date not confirmed",
+    modTag: "modelled estimate", estTag: "estimate", modellsteg: "· model step ", tidligst: "earliest ", senest: " · latest ",
+    tilTidligste: "Countdown to the earliest date", dager: "days", timer: "hrs", min: "min",
+    passert: "The estimate has passed – we are waiting for a confirmed rollout",
+    ingenDato: "Tesla has not given a rollout date", mangler: "Date missing from the data",
+    lede: "Danish owners have been driving with FSD Supervised since June. Norwegian owners are waiting for Brussels. ",
+    ledeSpenn: function (fra, eos, til) { return "If Norway follows the EU quickly, the system could arrive in " + fra + ". If it goes as slowly as with BlueCruise, when Statens vegvesen took " + eos + " days, it will be " + til + "."; },
+    ledeEn: function (eos) { return "Then they wait for Statens vegvesen, which took " + eos + " days on BlueCruise."; },
+    sikkerhetLbl: "Certainty: ", sjekket: "Checked ", kilder: "Sources: ", kilde: "source",
+    feil: "Could not load data/nedtelling.json.", locale: "en-GB", sort: "en"
+  } : {
+    status: { "lansert": "Lansert", "godkjent, utrulling snart": "Godkjent, utrulling snart", "venter på anerkjennelse": "Venter på anerkjennelse", "venter på EU-vedtak": "Venter på EU-vedtak", "ukjent": "Ukjent" },
+    sikkerhet: {},
+    steg: {},
+    lansert: "Lansert", godkjent: "Godkjent", ikkeBekreftet: " · utrullingsdato ikke bekreftet",
+    modTag: "modellert estimat", estTag: "estimat", modellsteg: "· modellsteg ", tidligst: "tidligst ", senest: " · senest ",
+    tilTidligste: "Nedtelling til tidligste dato", dager: "dager", timer: "timer", min: "min",
+    passert: "Estimatet er passert – vi venter på bekreftet utrulling",
+    ingenDato: "Tesla har ikke oppgitt noen dato for utrullingen", mangler: "Dato mangler i datagrunnlaget",
+    lede: "Danske eiere har kjørt med FSD Supervised siden juni. Norske eiere venter på Brussel. ",
+    ledeSpenn: function (fra, eos, til) { return "Følger Norge EU raskt, kan systemet komme i " + fra + ". Går det like tregt som med BlueCruise, der Statens vegvesen brukte " + eos + " dager, blir det " + til + "."; },
+    ledeEn: function (eos) { return "Deretter venter de på Statens vegvesen, som brukte " + eos + " dager på BlueCruise."; },
+    sikkerhetLbl: "Sikkerhet: ", sjekket: "Sjekket ", kilder: "Kilder: ", kilde: "kilde",
+    feil: "Kunne ikke laste data/nedtelling.json.", locale: "nb-NO", sort: "nb"
+  };
   var STATUS = {
-    "lansert": { label: "Lansert", cls: "s-lansert" },
-    "godkjent, utrulling snart": { label: "Godkjent, utrulling snart", cls: "s-godkjent" },
-    "venter på anerkjennelse": { label: "Venter på anerkjennelse", cls: "s-anerkj" },
-    "venter på EU-vedtak": { label: "Venter på EU-vedtak", cls: "s-eu" },
-    "ukjent": { label: "Ukjent", cls: "s-ukjent" }
+    "lansert": { label: L.status["lansert"], cls: "s-lansert" },
+    "godkjent, utrulling snart": { label: L.status["godkjent, utrulling snart"], cls: "s-godkjent" },
+    "venter på anerkjennelse": { label: L.status["venter på anerkjennelse"], cls: "s-anerkj" },
+    "venter på EU-vedtak": { label: L.status["venter på EU-vedtak"], cls: "s-eu" },
+    "ukjent": { label: L.status["ukjent"], cls: "s-ukjent" }
   };
   var EOS = 470;
   var cards = [];
@@ -296,13 +332,13 @@
   function fmtDate(ymd) {
     if (!ymd) return "";
     try {
-      return new Date(ymd + "T12:00:00Z").toLocaleDateString("nb-NO", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Oslo" });
+      return new Date(ymd + "T12:00:00Z").toLocaleDateString(L.locale, { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Oslo" });
     } catch (e) { return ymd; }
   }
   function fmtMonth(ymd) {
     if (!ymd) return "";
     try {
-      return new Date(ymd + "T12:00:00Z").toLocaleDateString("nb-NO", { month: "long", year: "numeric", timeZone: "Europe/Oslo" });
+      return new Date(ymd + "T12:00:00Z").toLocaleDateString(L.locale, { month: "long", year: "numeric", timeZone: "Europe/Oslo" });
     } catch (e) { return ymd; }
   }
   function cap(t) { return t ? t.charAt(0).toUpperCase() + t.slice(1) : t; }
@@ -311,7 +347,7 @@
     return new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2]), 0, 0, 0);
   }
   function host(u) {
-    try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return "kilde"; }
+    try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return L.kilde; }
   }
   function sourcesHtml(list) {
     var out = [];
@@ -331,48 +367,48 @@
 
     if (c.status === "lansert") {
       if (c.lansert_dato) {
-        h += '<div class="nt-big">Lansert ' + esc(fmtDate(c.lansert_dato)) + "</div>";
-        if (c.godkjent_dato) h += '<div class="nt-when">Godkjent ' + esc(fmtDate(c.godkjent_dato)) + "</div>";
+        h += '<div class="nt-big">' + L.lansert + " " + esc(fmtDate(c.lansert_dato)) + "</div>";
+        if (c.godkjent_dato) h += '<div class="nt-when">' + L.godkjent + " " + esc(fmtDate(c.godkjent_dato)) + "</div>";
       } else {
-        h += '<div class="nt-big">Lansert</div>' +
-          '<div class="nt-when">Godkjent ' + esc(fmtDate(c.godkjent_dato)) + " · utrullingsdato ikke bekreftet</div>";
+        h += '<div class="nt-big">' + L.lansert + "</div>" +
+          '<div class="nt-when">' + L.godkjent + " " + esc(fmtDate(c.godkjent_dato)) + L.ikkeBekreftet + "</div>";
       }
     } else if (c.estimert_dato) {
       var tag = c.metode === "modell"
-        ? '<span class="badge mod-tag">modellert estimat</span> '
-        : '<span class="badge est-tag">estimat</span> ';
-      var steg = c.metode === "modell" && c.modell_steg ? '<span class="nt-steg">· modellsteg ' + esc(c.modell_steg) + "</span>" : "";
+        ? '<span class="badge mod-tag">' + L.modTag + "</span> "
+        : '<span class="badge est-tag">' + L.estTag + "</span> ";
+      var steg = c.metode === "modell" && c.modell_steg ? '<span class="nt-steg">' + L.modellsteg + esc(L.steg[c.modell_steg] || c.modell_steg) + "</span>" : "";
       var spenn = !!(c.estimert_tidligst && c.estimert_senest);
       if (spenn) {
         h += '<div class="nt-big nt-spenn">' + esc(cap(fmtMonth(c.estimert_tidligst))) + " – " + esc(fmtMonth(c.estimert_senest)) + "</div>" +
-          '<div class="nt-when">' + tag + "tidligst " + esc(fmtDate(c.estimert_tidligst)) + " · senest " + esc(fmtDate(c.estimert_senest)) + steg + "</div>";
+          '<div class="nt-when">' + tag + L.tidligst + esc(fmtDate(c.estimert_tidligst)) + L.senest + esc(fmtDate(c.estimert_senest)) + steg + "</div>";
       } else {
         h += '<div class="nt-when">' + tag + esc(fmtDate(c.estimert_dato)) + steg + "</div>";
       }
-      h += (spenn ? '<div class="nt-when nt-cd-lbl">Nedtelling til tidligste dato</div>' : "") +
+      h += (spenn ? '<div class="nt-when nt-cd-lbl">' + L.tilTidligste + "</div>" : "") +
         '<div class="units" data-target="' + esc(c.estimert_dato) + '" aria-live="polite">' +
-        '<div class="unit"><span class="n" data-part="days">––</span><span class="u">dager</span></div>' +
-        '<div class="unit"><span class="n" data-part="hours">––</span><span class="u">timer</span></div>' +
-        '<div class="unit"><span class="n" data-part="mins">––</span><span class="u">min</span></div>' +
+        '<div class="unit"><span class="n" data-part="days">––</span><span class="u">' + L.dager + '</span></div>' +
+        '<div class="unit"><span class="n" data-part="hours">––</span><span class="u">' + L.timer + '</span></div>' +
+        '<div class="unit"><span class="n" data-part="mins">––</span><span class="u">' + L.min + '</span></div>' +
         "</div>" +
-        '<p class="cd-done" hidden>Estimatet er passert – vi venter på bekreftet utrulling</p>';
-      if (c.godkjent_dato) h += '<div class="nt-when">Godkjent ' + esc(fmtDate(c.godkjent_dato)) + "</div>";
+        '<p class="cd-done" hidden>' + L.passert + "</p>";
+      if (c.godkjent_dato) h += '<div class="nt-when">' + L.godkjent + " " + esc(fmtDate(c.godkjent_dato)) + "</div>";
     } else if (c.status === "godkjent, utrulling snart" && c.godkjent_dato) {
-      h += '<div class="nt-big">Godkjent ' + esc(fmtDate(c.godkjent_dato)) + "</div>" +
-        '<div class="nt-when">Tesla har ikke oppgitt noen dato for utrullingen</div>';
+      h += '<div class="nt-big">' + L.godkjent + " " + esc(fmtDate(c.godkjent_dato)) + "</div>" +
+        '<div class="nt-when">' + L.ingenDato + "</div>";
     } else {
-      h += '<div class="nt-when">Dato mangler i datagrunnlaget</div>';
+      h += '<div class="nt-when">' + L.mangler + "</div>";
     }
 
     if (isNorge) {
-      h += '<p class="nt-norge-lede">Danske eiere har kjørt med FSD Supervised siden juni. Norske eiere venter på Brussel. ' +
+      h += '<p class="nt-norge-lede">' + L.lede +
         (c.estimert_tidligst && c.estimert_senest
-          ? "Følger Norge EU raskt, kan systemet komme i " + esc(fmtMonth(c.estimert_tidligst)) + ". Går det like tregt som med BlueCruise, der Statens vegvesen brukte " + esc(EOS) + " dager, blir det " + esc(fmtMonth(c.estimert_senest)) + "."
-          : "Deretter venter de på Statens vegvesen, som brukte " + esc(EOS) + " dager på BlueCruise.") + "</p>";
+          ? L.ledeSpenn(esc(fmtMonth(c.estimert_tidligst)), esc(EOS), esc(fmtMonth(c.estimert_senest)))
+          : L.ledeEn(esc(EOS))) + "</p>";
     }
     h += '<p class="nt-why">' + esc(c.begrunnelse) + "</p>";
-    h += '<div class="nt-foot"><span>Sikkerhet: ' + esc(c.sikkerhet) + "</span><span>Sjekket " + esc(fmtDate(c.sist_oppdatert)) + "</span></div>";
-    h += '<div class="nt-foot">Kilder: ' + sourcesHtml(c.kilder) + "</div>";
+    h += '<div class="nt-foot"><span>' + L.sikkerhetLbl + esc(L.sikkerhet[c.sikkerhet] || c.sikkerhet) + "</span><span>" + L.sjekket + esc(fmtDate(c.sist_oppdatert)) + "</span></div>";
+    h += '<div class="nt-foot">' + L.kilder + sourcesHtml(c.kilder) + "</div>";
     return h;
   }
 
@@ -418,7 +454,7 @@
       var da = a.estimert_tidligst || a.estimert_dato || a.godkjent_dato || "9999";
       var db = b.estimert_tidligst || b.estimert_dato || b.godkjent_dato || "9999";
       var d = da.localeCompare(db);
-      return d !== 0 ? d : a.land.localeCompare(b.land, "nb");
+      return d !== 0 ? d : a.land.localeCompare(b.land, L.sort);
     }
     est.sort(byDate);
     mod.sort(byDate);
@@ -440,13 +476,16 @@
     if (loaded || !mq.matches) return;
     loaded = true;
     var empty = document.getElementById("tm-nt-empty");
-    fetch("/data/nedtelling.json", { cache: "no-store" })
-      .then(function (r) { return r.ok ? r.json() : null; })
+    /* På /en/ fletter window.TADSPRAK (/sprak.js) inn engelsk tekst fra data/en/nedtelling.json */
+    var hent = window.TADSPRAK && window.TADSPRAK.hentData
+      ? window.TADSPRAK.hentData("nedtelling.json")
+      : fetch("/data/nedtelling.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; });
+    hent
       .then(function (d) {
         if (d) { render(d); empty.hidden = true; }
-        else empty.textContent = "Kunne ikke laste data/nedtelling.json.";
+        else empty.textContent = L.feil;
       })
-      .catch(function () { empty.textContent = "Kunne ikke laste data/nedtelling.json."; });
+      .catch(function () { empty.textContent = L.feil; });
   }
   load();
   if (mq.addEventListener) mq.addEventListener("change", load);

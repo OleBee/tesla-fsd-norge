@@ -2,7 +2,9 @@
 
 Kjøres én gang i døgnet, etter den vanlige sjekken av `data/status.json`, `data/europa-feed.json` og `data/svv-siste.json`. Siden leser bare `data/nedtelling.json`; også tallene i metodeboksen fylles fra JSON. HTML skal ikke endres i den daglige jobben.
 
-Kort rekkefølge: hent → sjekk kilder → oppdater fakta/inndata → `python3 scripts/modell_nedtelling.py` → `python3 scripts/validate_nedtelling.py` → push.
+Kort rekkefølge: hent → sjekk kilder → oppdater fakta/inndata → engelsk tekst i `data/en/nedtelling.json` → `python3 scripts/modell_nedtelling.py` → `python3 scripts/validate_nedtelling.py` → `python3 scripts/validate_engelsk.py` → push.
+
+Engelsk (`/en/countdown/`): ny eller endret `begrunnelse` (observerte land) eller `fakta` (modellerte land) skal også skrives på engelsk i `data/en/nedtelling.json`, og nye land får et engelsk navn under `navn`. Den engelske begrunnelsen for modellerte land skriver `modell_nedtelling.py` selv. Sett hashen med `python3 scripts/validate_engelsk.py --stamp nedtelling:<ISO>`. Se README, «Engelsk versjon».
 
 ## 1. Hent og les
 1. `git pull` i `/workspace/tesla-fsd-norge`.
@@ -70,6 +72,8 @@ Endres en parameter (ny presedens, nytt signal, ny TCMV-dato), skal ny `begrunne
 ## 7. Valider – push bare ved grønt
 ```
 python3 scripts/validate_nedtelling.py
+python3 scripts/modell_nedtelling.py --check
+python3 scripts/validate_engelsk.py
 ```
 Exit 0 = grønt. Validatoren kjører modellen selv og feiler hvis en modellert dato, et modellsteg eller en begrunnelse i fila avviker fra det skriptet regner ut, hvis et land mangler dato eller `metode`, eller hvis den antatte TCMV-datoen er passert. ADVARSEL om passert estimat for et observert land betyr: sjekk om utrullingen er bekreftet. Er den ikke det, la estimatet stå (siden viser «Estimatet er passert – vi venter på bekreftet utrulling»), eller flytt det én gang med begrunnelse. For modellerte land skjer flyttingen automatisk neste dag modellen kjøres.
 
