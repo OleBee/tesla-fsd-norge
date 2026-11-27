@@ -19,92 +19,167 @@
   window.addEventListener("resize", measure);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
 
-  /* —— Aktivt valg —— */
+  /* —— Faner, glidende strek og myk rulling ——
+     Egen animasjon med requestAnimationFrame i stedet for innebygd «smooth»:
+     den hakker i Safari på iOS og bommer når bilder lastes underveis. */
   var row = nav.querySelector("ul");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  var DUR_MIN = 300, DUR_MAX = 450;
+
+  function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+  function duration(dist) { return reduce.matches ? 0 : Math.min(DUR_MAX, DUR_MIN + Math.abs(dist) / 40); }
+  function idOf(a) { return a.getAttribute("data-tm"); }
+  function linkFor(id) { return links.filter(function (a) { return idOf(a) === id; })[0]; }
+
+  /* Én felles strek som glir mellom fanene (posisjon, bredde og farge) */
+  nav.classList.add("tm-js");
+  var ind = document.createElement("span");
+  ind.className = "tm-ind";
+  ind.setAttribute("aria-hidden", "true");
+  row.appendChild(ind);
+
+  function placeInd(a, instant) {
+    if (!a) return;
+    if (instant) ind.classList.add("tm-ind-fast");
+    ind.style.width = a.offsetWidth + "px";
+    ind.style.transform = "translateX(" + a.offsetLeft + "px)";
+    ind.setAttribute("data-tm", idOf(a));
+    if (instant) { void ind.offsetWidth; ind.classList.remove("tm-ind-fast"); }
+  }
 
   /* Myk kant til høyre bare når det finnes flere faner utenfor skjermen */
   function edge() {
-    var more = row.scrollLeft + row.clientWidth < row.scrollWidth - 2;
-    nav.classList.toggle("tm-mer", more);
+    nav.classList.toggle("tm-mer", row.scrollLeft + row.clientWidth < row.scrollWidth - 2);
   }
   row.addEventListener("scroll", edge, { passive: true });
-  window.addEventListener("resize", edge);
 
-  /* Rull fanerekka slik at valgt fane er synlig */
-  function showTab(a) {
+  /* Fanerekka ruller sidelengs med samme kurve og varighet */
+  var rowAnim = 0;
+  function showTab(a, dur) {
     var pad = parseFloat(getComputedStyle(row).paddingLeft) || 0;
-    var left = a.offsetLeft - row.offsetLeft;
-    var right = left + a.offsetWidth;
-    var target = null;
-    if (left - pad < row.scrollLeft) target = left - pad;
-    else if (right + pad > row.scrollLeft + row.clientWidth) target = right + pad - row.clientWidth;
-    if (target !== null) row.scrollTo({ left: Math.max(0, target), behavior: "smooth" });
-  }
-
-  function setActive(id) {
-    links.forEach(function (a) {
-      if (a.getAttribute("data-tm") === id) {
-        if (a.getAttribute("aria-current") !== "true") { a.setAttribute("aria-current", "true"); showTab(a); }
-      } else a.removeAttribute("aria-current");
+    var left = a.offsetLeft, right = left + a.offsetWidth, to = null;
+    if (left - pad < row.scrollLeft) to = left - pad;
+    else if (right + pad > row.scrollLeft + row.clientWidth) to = right + pad - row.clientWidth;
+    if (to === null) return;
+    to = Math.max(0, Math.min(to, row.scrollWidth - row.clientWidth));
+    cancelAnimationFrame(rowAnim);
+    if (!dur || reduce.matches) { row.scrollLeft = to; return; }
+    var from = row.scrollLeft, t0 = null;
+    row.style.scrollSnapType = "none";
+    rowAnim = requestAnimationFrame(function step(now) {
+      if (t0 === null) t0 = now;
+      var t = Math.min(1, (now - t0) / dur);
+      row.scrollLeft = from + (to - from) * easeOut(t);
+      if (t < 1) rowAnim = requestAnimationFrame(step);
+      else row.style.scrollSnapType = "";
     });
   }
 
-  var lock = 0, userMoved = false;
+  var current = null;
+  function setActive(id, dur) {
+    if (id === current) return;
+    current = id;
+    links.forEach(function (a) {
+      if (idOf(a) === id) a.setAttribute("aria-current", "true");
+      else a.removeAttribute("aria-current");
+    });
+    var a = linkFor(id);
+    placeInd(a, !dur || reduce.matches);
+    showTab(a, dur);
+  }
+
+  /* —— Rulling til en del —— */
+  var anim = null;   /* { id, raf } mens siden ruller; rullesporingen står stille da */
+  function stopAnim() {
+    if (!anim) return;
+    cancelAnimationFrame(anim.raf);
+    anim = null;
+    spy();
+  }
   ["touchstart", "wheel", "keydown"].forEach(function (ev) {
-    window.addEventListener(ev, function () { userMoved = true; }, { passive: true });
+    window.addEventListener(ev, function () { if (anim && anim.started) stopAnim(); }, { passive: true });
   });
 
-  /* Bilder i feeden lastes først når de nærmer seg, og kan skyve målet nedover
-     mens siden ruller. Derfor retter vi opp posisjonen et par ganger etterpå. */
-  function jump(id) {
+  function targetY(sec) {
+    var margin = parseFloat(getComputedStyle(sec).scrollMarginTop) || 0;
+    var y = sec.getBoundingClientRect().top + window.scrollY - margin;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    return Math.max(0, Math.min(y, max));
+  }
+
+  function scrollToSection(id) {
     var sec = document.getElementById(id);
     if (!sec) return;
-    userMoved = false;
-    sec.scrollIntoView({ block: "start" });
-    [700, 1400, 2200].forEach(function (ms) {
-      setTimeout(function () {
-        if (userMoved) return;
-        var want = parseFloat(getComputedStyle(sec).scrollMarginTop) || 0;
-        if (Math.abs(sec.getBoundingClientRect().top - want) > 4) sec.scrollIntoView({ block: "start", behavior: "instant" });
-      }, ms);
-    });
+    if (anim) cancelAnimationFrame(anim.raf);
+    var from = window.scrollY, dur = duration(targetY(sec) - from);
+    var t0 = null, settle = 0;
+    anim = { id: id, raf: 0, started: false };
+    setActive(id, dur);
+    function frame(now) {
+      if (!anim) return;
+      anim.started = true;
+      if (t0 === null) t0 = now;
+      var to = targetY(sec);   /* målet leses på nytt hver ramme, så bilder som lastes ikke gir rykk */
+      var t = dur ? Math.min(1, (now - t0) / dur) : 1;
+      var y;
+      if (t < 1) y = from + (to - from) * easeOut(t);
+      else {
+        /* Etterpå: følg målet mykt et lite øyeblikk hvis det flytter seg */
+        var diff = to - window.scrollY;
+        y = Math.abs(diff) < 1 || reduce.matches ? to : window.scrollY + diff * 0.35;
+        settle += 1;
+      }
+      window.scrollTo({ top: y, left: 0, behavior: "instant" });
+      if (t < 1 || (settle < 36 && Math.abs(targetY(sec) - window.scrollY) >= 1) || settle < 12) anim.raf = requestAnimationFrame(frame);
+      else { anim = null; spy(); }
+    }
+    anim.raf = requestAnimationFrame(frame);
   }
 
   links.forEach(function (a) {
     a.addEventListener("click", function (e) {
-      var id = a.getAttribute("data-tm");
+      var id = idOf(a);
       e.preventDefault();
-      setActive(id);
-      lock = Date.now() + 2400; /* la rullingen bli ferdig før rullesporingen tar over */
       if (location.hash !== "#" + id) history.pushState(null, "", "#" + id);
-      jump(id);
+      scrollToSection(id);
     });
   });
 
-  function onScroll() {
-    if (!mq.matches || Date.now() < lock) return;
-    var navH = head.getBoundingClientRect().height + 16;
-    var current = links[0].getAttribute("data-tm");
-    var best = -Infinity;
-    links.forEach(function (a) {
-      var sec = document.getElementById(a.getAttribute("data-tm"));
-      if (!sec) return;
-      var top = sec.getBoundingClientRect().top - navH;
-      if (top <= 1 && top > best) { best = top; current = a.getAttribute("data-tm"); }
+  /* —— Rullesporing med hysterese ——
+     Valgt del er den siste som har passert en linje rett under toppen.
+     Bytte krever at den nye delen er minst 8 px forbi linjen, så fanene ikke blinker på grensene. */
+  var HYST = 8;
+  function spy() {
+    if (!mq.matches || anim) return;
+    var line = head.getBoundingClientRect().height + 24;
+    var tops = links.map(function (a) {
+      var sec = document.getElementById(idOf(a));
+      return { id: idOf(a), top: sec ? sec.getBoundingClientRect().top : Infinity };
     });
-    /* Nederst på siden: siste del som er synlig */
+    var cand = null;
+    tops.forEach(function (o) { if (o.top <= line && (!cand || o.top > cand.top)) cand = o; });
+    if (!cand) cand = tops.reduce(function (m, o) { return o.top < m.top ? o : m; });
+    /* Nederst på siden: siste del vinner */
     if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
-      var last = document.getElementById("nedtelling-land");
-      if (last && last.getBoundingClientRect().top < window.innerHeight) current = "nedtelling-land";
+      var last = tops.reduce(function (m, o) { return o.top > m.top ? o : m; });
+      if (last.top < window.innerHeight) cand = last;
     }
-    setActive(current);
+    if (!current) { setActive(cand.id, 0); return; }
+    if (cand.id === current) return;
+    var cur = tops.filter(function (o) { return o.id === current; })[0];
+    var goingDown = cand.top > cur.top;
+    if ((goingDown && cand.top <= line - HYST) || (!goingDown && cur.top > line + HYST) || cur.top === Infinity) setActive(cand.id, 250);
   }
   var queued = false;
   window.addEventListener("scroll", function () {
-    if (queued) return;
+    if (queued || anim) return;
     queued = true;
-    window.requestAnimationFrame(function () { queued = false; onScroll(); });
+    requestAnimationFrame(function () { queued = false; spy(); });
   }, { passive: true });
+
+  function relayout() { if (current) placeInd(linkFor(current), true); edge(); }
+  window.addEventListener("resize", relayout);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(relayout);
 
   /* —— Nedtelling per land (estimat) —— */
   var STATUS = {
@@ -280,7 +355,8 @@
   if (mq.addEventListener) mq.addEventListener("change", load);
   else if (mq.addListener) mq.addListener(load);
 
-  if (location.hash === "#nedtelling-land") setTimeout(function () { jump("nedtelling-land"); }, 400);
-  onScroll();
+  if (location.hash === "#nedtelling-land") setTimeout(function () { scrollToSection("nedtelling-land"); }, 400);
+  spy();
+  if (!current) setActive("siste-nytt", 0);
   edge();
 })();
