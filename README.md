@@ -54,7 +54,7 @@ Rutiner og push ligger hos Chief of Staff. Redaksjonsbot: `fsdnorge`. Etter TCMV
 
 - `scripts/build_seo.py` bygger `feed.xml` (RSS), `sitemap.xml` (med `lastmod` og hreflang-alternativer for `/`, `/en/`, `/nedtelling/` og `/en/countdown/`) og den statiske feed- og tidslinjeblokken i `index.html` (mellom `SEO:FEED`- og `SEO:TIDSLINJE`-markørene) fra `data/*.json`, og det samme på engelsk i `en/index.html` og `en/feed.xml`. Kjør `python3 scripts/build_seo.py` før push når JSON er endret. `--check` gir kode 1 hvis noe er utdatert.
 - `.github/workflows/seo.yml` kjører det samme skriptet ved push til main og committer bare hvis noe er endret. Kjør `git pull --rebase` før push hvis du ikke har kjørt skriptet selv.
-- Delingsbilde: `assets/og/tadnorge-og.png` (1200×630), kilde `scripts/og/og-image.html`, render med `bash scripts/og/render.sh`. `og-default.png` beholdes for gamle delinger.
+- Delingsbilde: `assets/og/tadnorge-og-v2.png` (1200×630, uten måleren til høyre), kilde `scripts/og/og-image.html`, render med `bash scripts/og/render.sh`. `tadnorge-og.png` (gammel versjon med måler) og `og-default.png` beholdes for gamle delinger og cacher.
 - Logo for strukturerte data: `assets/brand/tadnorge-logo-512.png`.
 - `robots.txt` stenger `/drafts/` og `/scripts/` for søkemotorer.
 
