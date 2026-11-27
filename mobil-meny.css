@@ -99,10 +99,13 @@
   .tm-nav a:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; border-radius: 4px; }
   .tm-nav a[aria-current="true"] { color: #fff; }
   /* Uten JavaScript: streken står under valgt fane */
-  .tm-nav:not(.tm-js) a[data-tm="siste-nytt"][aria-current="true"] { border-bottom-color: var(--salmon); }   /* .col-feed .col-head */
-  .tm-nav:not(.tm-js) a[data-tm="tidslinje"][aria-current="true"] { border-bottom-color: var(--mint); }       /* .col-timeline .col-head */
+  .tm-nav:not(.tm-js) a[data-tm="siste-nytt"][aria-current="true"],
+  .tm-nav:not(.tm-js) a[data-tm="latest-news"][aria-current="true"] { border-bottom-color: var(--salmon); }   /* .col-feed .col-head */
+  .tm-nav:not(.tm-js) a[data-tm="tidslinje"][aria-current="true"],
+  .tm-nav:not(.tm-js) a[data-tm="timeline"][aria-current="true"] { border-bottom-color: var(--mint); }       /* .col-timeline .col-head */
   .tm-nav:not(.tm-js) a[data-tm="status"][aria-current="true"] { border-bottom-color: var(--lavender); }      /* .col-status .col-head */
-  .tm-nav:not(.tm-js) a[data-tm="nedtelling-land"][aria-current="true"] { border-bottom-color: var(--peach); } /* .nt-h2.est på /nedtelling/ */
+  .tm-nav:not(.tm-js) a[data-tm="nedtelling-land"][aria-current="true"],
+  .tm-nav:not(.tm-js) a[data-tm="countdown-by-country"][aria-current="true"] { border-bottom-color: var(--peach); } /* .nt-h2.est på /nedtelling/ */
 
   /* Med JavaScript: én felles strek som glir til valgt fane og skifter farge */
   .tm-nav ul { position: relative; }
@@ -119,10 +122,10 @@
     will-change: transform, width;
   }
   .tm-ind.tm-ind-fast { transition: none; }
-  .tm-ind[data-tm="siste-nytt"] { background: var(--salmon); }
-  .tm-ind[data-tm="tidslinje"] { background: var(--mint); }
+  .tm-ind[data-tm="siste-nytt"], .tm-ind[data-tm="latest-news"] { background: var(--salmon); }
+  .tm-ind[data-tm="tidslinje"], .tm-ind[data-tm="timeline"] { background: var(--mint); }
   .tm-ind[data-tm="status"] { background: var(--lavender); }
-  .tm-ind[data-tm="nedtelling-land"] { background: var(--peach); }
+  .tm-ind[data-tm="nedtelling-land"], .tm-ind[data-tm="countdown-by-country"] { background: var(--peach); }
 
   /* Valgt fane viser allerede navnet på delen (Ole 27.11 kl. 18.48: «droppe den dupliserte fanetittelen»).
      Overskriftene skjules for øyet på mobil, men er der for skjermlesere. */
@@ -138,7 +141,10 @@
   .tm-tabs #siste-nytt:not(.tm-on),
   .tm-tabs #tidslinje:not(.tm-on),
   .tm-tabs #status:not(.tm-on),
-  .tm-tabs #nedtelling-land:not(.tm-on) { display: none; }
+  .tm-tabs #nedtelling-land:not(.tm-on),
+  .tm-tabs #latest-news:not(.tm-on),
+  .tm-tabs #timeline:not(.tm-on),
+  .tm-tabs #countdown-by-country:not(.tm-on) { display: none; }
   .tm-tabs .tm-on { transition: opacity .2s cubic-bezier(.215, .61, .355, 1), transform .2s cubic-bezier(.215, .61, .355, 1); }
   .tm-tabs .tm-on.tm-enter { opacity: 0; transform: translateY(10px); transition: none; }
   /* Fokus flyttes til selve delen etter bytte, uten synlig ring.
@@ -146,7 +152,8 @@
   .tm-tabs .tm-on[tabindex="-1"]:focus { outline: none; }
 
   /* Overskrifter og saker skal ikke havne under den faste menyen */
-  #siste-nytt, #tidslinje, #status, #nedtelling-land, .feed-item, .stat-card { scroll-margin-top: calc(var(--tm-head-h, 92px) + 16px); }
+  #siste-nytt, #tidslinje, #status, #nedtelling-land,
+  #latest-news, #timeline, #countdown-by-country, .feed-item, .stat-card { scroll-margin-top: calc(var(--tm-head-h, 92px) + 16px); }
 
   /* Nedtelling per land (estimat): kort fra data/nedtelling.json, samme stil som /nedtelling/ */
   .tm-nedtelling { display: block; margin-top: 22px; }

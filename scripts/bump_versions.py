@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Setter versjon (?v=) på CSS- og JS-filene som forsiden og testsiden lenker til.
+"""Setter versjon (?v=) på CSS- og JS-filene som forsidene, nedtellingssidene og testsiden lenker til.
 
 Versjonen er de 8 første tegnene av SHA-256 for filinnholdet. Da får
 nettleseren en ny adresse hver gang en fil endres, selv om GitHub Pages
 sender Cache-Control: max-age=600.
 
-Kjør etter endringer i site.css, mobil-meny.css eller mobil-meny.js:
+Kjør etter endringer i site.css, mobil-meny.css, mobil-meny.js, sprak.js eller forside.js:
     python3 scripts/bump_versions.py
 Med --check endres ingenting, og skriptet avslutter med kode 1 hvis en versjon er utdatert.
 
@@ -20,8 +20,17 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-FILES = ["/site.css", "/mobil-meny.css", "/mobil-meny.js"]
-PAGES = ["index.html", "test/index.html"]
+FILES = ["/site.css", "/mobil-meny.css", "/mobil-meny.js", "/sprak.js", "/forside.js"]
+FORSIDE = ["/site.css", "/mobil-meny.css", "/mobil-meny.js", "/sprak.js", "/forside.js"]
+NEDTELLING = ["/site.css", "/sprak.js"]
+# Side -> filene den skal lenke til (nøyaktig én gang hver)
+PAGES = {
+    "index.html": FORSIDE,
+    "en/index.html": FORSIDE,
+    "test/index.html": ["/site.css", "/mobil-meny.css", "/mobil-meny.js"],
+    "nedtelling/index.html": NEDTELLING,
+    "en/countdown/index.html": NEDTELLING,
+}
 
 
 def version(url: str) -> str:
@@ -33,11 +42,11 @@ def main() -> int:
     stale = []
     for url in FILES:
         print(f"{url}?v={version(url)}")
-    for rel in PAGES:
+    for rel, files in PAGES.items():
         page = ROOT / rel
         text = page.read_text(encoding="utf-8")
         new = text
-        for url in FILES:
+        for url in files:
             pat = re.compile(r'((?:href|src)=")' + re.escape(url) + r'(?:\?v=[^"]*)?(")')
             if len(pat.findall(new)) != 1:
                 raise SystemExit(f"Fant ikke nøyaktig én lenke til {url} i {rel}")

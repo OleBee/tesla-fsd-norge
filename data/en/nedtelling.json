@@ -1,0 +1,187 @@
+{
+  "_om": "Engelsk tekst for /en/countdown/ og fanen Countdown by country. Landnavn per ISO-kode. For modellerte land skrives «fakta» for hånd, mens «begrunnelse» lages av scripts/modell_nedtelling.py. Se scripts/validate_engelsk.py.",
+  "navn": {
+    "NL": "Netherlands",
+    "LT": "Lithuania",
+    "EE": "Estonia",
+    "DK": "Denmark",
+    "BE": "Belgium",
+    "SI": "Slovenia",
+    "CZ": "Czech Republic",
+    "HR": "Croatia",
+    "LV": "Latvia",
+    "FI": "Finland",
+    "GR": "Greece",
+    "IE": "Ireland",
+    "IT": "Italy",
+    "DE": "Germany",
+    "FR": "France",
+    "ES": "Spain",
+    "SE": "Sweden",
+    "PL": "Poland",
+    "PT": "Portugal",
+    "HU": "Hungary",
+    "AT": "Austria",
+    "BG": "Bulgaria",
+    "CY": "Cyprus",
+    "LU": "Luxembourg",
+    "MT": "Malta",
+    "RO": "Romania",
+    "SK": "Slovakia",
+    "NO": "Norway",
+    "IS": "Iceland",
+    "LI": "Liechtenstein",
+    "CH": "Switzerland",
+    "GB": "United Kingdom"
+  },
+  "land": {
+    "NL": {
+      "norsk_sha": "2dbf92134a03",
+      "begrunnelse": "The Dutch type-approval authority RDW granted type-approval on 10 April 2026. Tesla began the rollout to customers the next day."
+    },
+    "LT": {
+      "norsk_sha": "1f2ec974ef7f",
+      "begrunnelse": "The Lithuanian transport ministry recognised the Dutch approval on 20 May. Tesla Europe announced that the rollout started the same day."
+    },
+    "EE": {
+      "norsk_sha": "87b567ab3270",
+      "begrunnelse": "The Estonian Transport Administration (Transpordiamet) recognised the approval on 29 May. Customers are driving with it, but we have not confirmed the exact rollout date."
+    },
+    "DK": {
+      "norsk_sha": "5dc6a81f4ab2",
+      "begrunnelse": "The Danish Road Traffic Authority (Færdselsstyrelsen) approved it on 9 June. Two days later the update was on its way to Danish owners."
+    },
+    "BE": {
+      "norsk_sha": "c17adb9887bf",
+      "begrunnelse": "The Flemish mobility minister signed the approval on 10 June. Tesla announced the rollout the next day."
+    },
+    "SI": {
+      "norsk_sha": "54beb68c580a",
+      "begrunnelse": "The Slovenian Traffic Safety Agency (AVP) recognised the approval on 7 September. According to posts from owners, the first cars were activated around 10 September."
+    },
+    "CZ": {
+      "norsk_sha": "57774641f0bc",
+      "begrunnelse": "The Czech transport ministry recognised the approval on 21 September. The first installation in a customer’s car was logged on 23 September."
+    },
+    "HR": {
+      "norsk_sha": "881a25ee1dea",
+      "begrunnelse": "The Croatian State Office for Metrology (DZM) recognised the Dutch approval on 29 September, according to a letter to Tesla Hrvatska quoted by the news agency HINA. Tesla Europe reported the same. On 1 October the newspaper Slobodna Dalmacija showed an owner driving with FSD Supervised in Šibenik. The exact rollout date is not known, so we use the article date."
+    },
+    "LV": {
+      "norsk_sha": "c7e9ef3ce018",
+      "begrunnelse": "The Road Traffic Safety Directorate CSDD recognised the Dutch approval on 26 October. Two days later the public broadcaster LSM showed the system in use in Riga, and according to LSM it was the second day it could be used in Latvia. The next day a Latvian Tesla owner wrote on X that he had received the update and driven with it. We therefore use 28 October as the launch date."
+    },
+    "FI": {
+      "norsk_sha": "19be4d310001",
+      "begrunnelse": "The Finnish transport agency Traficom recognised the Dutch approval on 10 November and announced it on 11 November. The same evening Finnish owners posted the first videos and posts of themselves driving with the system, including in Rovaniemi and Helsinki. We therefore use 11 November as the launch date."
+    },
+    "GR": {
+      "norsk_sha": "0be6096c51f2",
+      "fakta": "The Greek transport ministry announced in May that it will put forward a bill recognising the approval. No decision date is known.",
+      "begrunnelse": "The Greek transport ministry announced in May that it will put forward a bill recognising the approval. No decision date is known. Model step 1 → 2: The first public signal came on 20 May 2026, but even the longest wait we have seen, 140 days, has passed. We therefore use the EU scenario: 28 April 2027."
+    },
+    "IE": {
+      "norsk_sha": "495d5f578ab1",
+      "fakta": "Tesla said in May that it is working with the Irish authorities on approval. No date has been given.",
+      "begrunnelse": "Tesla said in May that it is working with the Irish authorities on approval. No date has been given. Model step 1 → 2: The first public signal came on 10 May 2026, but even the longest wait we have seen, 140 days, has passed. We therefore use the EU scenario: 28 April 2027."
+    },
+    "IT": {
+      "norsk_sha": "af5ba0fa0889",
+      "begrunnelse": "The vehicle authority Motorizzazione recognised the Dutch approval on 19 November, according to the transport ministry MIT. On Saturday 21 November the Italian YouTuber Giulio Autopilot showed in a video that his car had received the update, and TeslaFi registered the first Italian cars on the software. We therefore use 21 November as the launch date."
+    },
+    "DE": {
+      "norsk_sha": "7619ba5286b1",
+      "fakta": "Transport Minister Steffen Bilger said on 6 October that he will push for the system to be approved across the EU as soon as possible. The basis is an agreement with Tesla from September: the system gets the new name Tesla Assisted Driving and may drive at most 10 per cent above the speed limit. The driver still bears full responsibility.",
+      "begrunnelse": "Transport Minister Steffen Bilger said on 6 October that he will push for the system to be approved across the EU as soon as possible. The basis is an agreement with Tesla from September: the system gets the new name Tesla Assisted Driving and may drive at most 10 per cent above the speed limit. The driver still bears full responsibility. Model step 2 (the EU scenario): The Tesla case is on the TCMV agenda for 15 December 2026, with a possible vote. We assume a yes, but that is an assumption. For Ford’s BlueCruise, 132 days passed from a yes in TCMV until the EU approval was in place. Adding two days until rollout gives 28 April 2027."
+    },
+    "FR": {
+      "norsk_sha": "4fa8a7626eff",
+      "fakta": "France said no to national approval in July and is now testing two cars. The country wants a common EU framework first.",
+      "begrunnelse": "France said no to national approval in July and is now testing two cars. The country wants a common EU framework first. Model step 2 (the EU scenario): The Tesla case is on the TCMV agenda for 15 December 2026, with a possible vote. We assume a yes, but that is an assumption. For Ford’s BlueCruise, 132 days passed from a yes in TCMV until the EU approval was in place. Adding two days until rollout gives 28 April 2027."
+    },
+    "ES": {
+      "norsk_sha": "2f20837a7105",
+      "fakta": "The industry minister says Spain will not approve the system on its own and is waiting for the EU.",
+      "begrunnelse": "The industry minister says Spain will not approve the system on its own and is waiting for the EU. Model step 2 (the EU scenario): The Tesla case is on the TCMV agenda for 15 December 2026, with a possible vote. We assume a yes, but that is an assumption. For Ford’s BlueCruise, 132 days passed from a yes in TCMV until the EU approval was in place. Adding two days until rollout gives 28 April 2027."
+    },
+    "SE": {
+      "norsk_sha": "3aa6a81b0e0b",
+      "fakta": "The Swedish Transport Agency (Transportstyrelsen) lets Tesla run limited tests with trained test drivers on selected routes, but ordinary owners cannot switch the system on yet. If the EU says yes, the system could, according to the agency, be widely available in spring or summer 2027 at the earliest. If the EU says no, the national permits will be withdrawn (information updated 26 October). In June the Swedish Transport Administration (Trafikverket) advised TCMV to vote no if the car could still drive above the speed limit. Since then Tesla has cut the margin from 50 to 10 per cent. The government wants an approval for the whole EU.",
+      "begrunnelse": "The Swedish Transport Agency (Transportstyrelsen) lets Tesla run limited tests with trained test drivers on selected routes, but ordinary owners cannot switch the system on yet. If the EU says yes, the system could, according to the agency, be widely available in spring or summer 2027 at the earliest. If the EU says no, the national permits will be withdrawn (information updated 26 October). In June the Swedish Transport Administration (Trafikverket) advised TCMV to vote no if the car could still drive above the speed limit. Since then Tesla has cut the margin from 50 to 10 per cent. The government wants an approval for the whole EU. Model step 2 (the EU scenario): The Tesla case is on the TCMV agenda for 15 December 2026, with a possible vote. We assume a yes, but that is an assumption. For Ford’s BlueCruise, 132 days passed from a yes in TCMV until the EU approval was in place. Adding two days until rollout gives 28 April 2027."
+    },
+    "PL": {
+      "norsk_sha": "686553f7583f",
+      "fakta": "The Polish infrastructure ministry wrote on 4 August that the system has not been tested on Polish roads. The timing of a national decision depends on the ministry’s own analyses.",
+      "begrunnelse": "The Polish infrastructure ministry wrote on 4 August that the system has not been tested on Polish roads. The timing of a national decision depends on the ministry’s own analyses. Model step 4: With no known national case, we use the EU scenario (28 April 2027) and add 30 days. The margin is an assumption, not an observation."
+    },
+    "PT": {
+      "norsk_sha": "fa76897c046d",
+      "fakta": "Tesla has shared safety data with the Portuguese authorities, but Portugal has not recognised the approval.",
+      "begrunnelse": "Tesla has shared safety data with the Portuguese authorities, but Portugal has not recognised the approval. Model step 4: With no known national case, we use the EU scenario (28 April 2027) and add 30 days. The margin is an assumption, not an observation."
+    },
+    "HU": {
+      "norsk_sha": "1574ba67307a",
+      "fakta": "On 15 November the government announced an official government-run test programme, which will show whether the system drives safely and follows Hungarian traffic rules. No start date has been given, and the system is not approved in Hungary.",
+      "begrunnelse": "On 15 November the government announced an official government-run test programme, which will show whether the system drives safely and follows Hungarian traffic rules. No start date has been given, and the system is not approved in Hungary. Model step 1: The first public signal of a national case came on 15 November 2026. In the countries that have approved, a median of 47 days passed from such a signal to a decision. Adding two days until rollout gives 3 January 2027."
+    },
+    "AT": {
+      "norsk_sha": "8fe1a67bb2f9",
+      "fakta": "We have found no public national case.",
+      "begrunnelse": "We have found no public national case. Model step 4: With no known national case, we use the EU scenario (28 April 2027) and add 30 days. The margin is an assumption, not an observation."
+    },
+    "BG": {
+      "norsk_sha": "8fe1a67bb2f9",
+      "fakta": "We have found no public national case.",
+      "begrunnelse": "We have found no public national case. Model step 4: With no known national case, we use the EU scenario (28 April 2027) and add 30 days. The margin is an assumption, not an observation."
+    },
+    "CY": {
+      "norsk_sha": "8fe1a67bb2f9",
+      "fakta": "We have found no public national case.",
+      "begrunnelse": "We have found no public national case. Model step 4: With no known national case, we use the EU scenario (28 April 2027) and add 30 days. The margin is an assumption, not an observation."
+    },
+    "LU": {
+      "norsk_sha": "8fe1a67bb2f9",
+      "fakta": "We have found no public national case.",
+      "begrunnelse": "We have found no public national case. Model step 4: With no known national case, we use the EU scenario (28 April 2027) and add 30 days. The margin is an assumption, not an observation."
+    },
+    "MT": {
+      "norsk_sha": "8fe1a67bb2f9",
+      "fakta": "We have found no public national case.",
+      "begrunnelse": "We have found no public national case. Model step 4: With no known national case, we use the EU scenario (28 April 2027) and add 30 days. The margin is an assumption, not an observation."
+    },
+    "RO": {
+      "norsk_sha": "8fe1a67bb2f9",
+      "fakta": "We have found no public national case.",
+      "begrunnelse": "We have found no public national case. Model step 4: With no known national case, we use the EU scenario (28 April 2027) and add 30 days. The margin is an assumption, not an observation."
+    },
+    "SK": {
+      "norsk_sha": "fa4f44424127",
+      "begrunnelse": "The Slovak transport ministry recognised the Dutch approval on 16 October. The website startstop.sk reported on 20 October that the update had been sent over the air to Slovak owners, with a subscription costing €99 a month. The same day pravda.sk showed video of an owner driving with the system. The exact rollout date is not known, so we use the article date."
+    },
+    "NO": {
+      "norsk_sha": "e3218160d52b",
+      "fakta": "Statens vegvesen, the Norwegian Public Roads Administration, has not approved FSD Supervised for ordinary owners. The agency will follow up under the EEA Agreement once the EU has decided.",
+      "begrunnelse": "Statens vegvesen, the Norwegian Public Roads Administration, has not approved FSD Supervised for ordinary owners. The agency will follow up under the EEA Agreement once the EU has decided. Model step 3 gives a range: 30 April 2027 to 10 August 2028. The earliest date applies if Norway follows the EU shortly after the decision. No source says how soon, so we add two days to the EU scenario (28 April 2027). That is the median wait until rollout. The latest date applies if it goes as slowly as with Ford’s BlueCruise, when Norwegian clearance took 470 days."
+    },
+    "IS": {
+      "norsk_sha": "71a788d20fd7",
+      "fakta": "We have found no public national case. As a rule, EEA countries must follow EU decisions on exemptions.",
+      "begrunnelse": "We have found no public national case. As a rule, EEA countries must follow EU decisions on exemptions. Model step 3 gives a range: 30 April 2027 to 10 August 2028. Earliest: the EU scenario (28 April 2027) plus two days. Latest: the same EEA lag Norway had with BlueCruise, 470 days. Both dates are assumptions for Iceland."
+    },
+    "LI": {
+      "norsk_sha": "71a788d20fd7",
+      "fakta": "We have found no public national case. As a rule, EEA countries must follow EU decisions on exemptions.",
+      "begrunnelse": "We have found no public national case. As a rule, EEA countries must follow EU decisions on exemptions. Model step 3 gives a range: 30 April 2027 to 10 August 2028. Earliest: the EU scenario (28 April 2027) plus two days. Latest: the same EEA lag Norway had with BlueCruise, 470 days. Both dates are assumptions for Liechtenstein."
+    },
+    "CH": {
+      "norsk_sha": "f74aa74bc66b",
+      "fakta": "The Swiss Federal Roads Office (ASTRA/FEDRO) has received no application from Tesla.",
+      "begrunnelse": "The Swiss Federal Roads Office (ASTRA/FEDRO) has received no application from Tesla. Model step 5 (outside the EU and EEA): We use the EU scenario (28 April 2027) and add 180 days. The margin is an assumption; we have no observed precedent."
+    },
+    "GB": {
+      "norsk_sha": "28bb18306ee7",
+      "fakta": "The United Kingdom must make its own assessment, and we know of no formal application from Tesla.",
+      "begrunnelse": "The United Kingdom must make its own assessment, and we know of no formal application from Tesla. Model step 5 (outside the EU and EEA): We use the EU scenario (28 April 2027) and add 180 days. The margin is an assumption; we have no observed precedent."
+    }
+  }
+}
