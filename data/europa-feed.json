@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-11-26T17:50:00+01:00",
+  "updated_iso": "2026-11-27T13:00:00+01:00",
   "standings": {
     "yes_countries": 12,
     "eu_population_pct": 28.6,
@@ -9,6 +9,30 @@
     "next_tcmv_certainty": "15. desember kl. 10.00–15.00 (utkast til agenda), mulig avstemning"
   },
   "items": [
+    {
+      "id": "itavisen-svv-ingen-eu-innspill-2026-11-27",
+      "iso": "2026-11-27T13:00:00+01:00",
+      "source": "itavisen",
+      "title": "Vegvesenet sender ingen innspill til EU om Tesla Assisted Driving",
+      "summary": "Statens vegvesen har ingen planer om å gi EU innspill om godkjenningen av Tesla Assisted Driving (TAD), tidligere FSD Supervised. Det bekrefter Stein-Helge Mundal i Vegvesenet overfor ITavisen. Han vet heller ikke om etaten deltar på neste møte. Spurt om grunnen svarte han at han anså «det toget for å ha gått». Nå diskuteres ordlyden i dokumentene det skal stemmes over, og Norge har som EØS-land ikke stemmerett. Innflytelsen er «svært begrenset», sier han til ITavisen.",
+      "why_it_matters": "Mundal har et poeng: Avgjørelsen tas i EU. Likevel er passiviteten påfallende. Så sent som 17. november la Vegvesenet fram tre sikkerhetsinnvendinger, blant annet mot kjøring uten hendene på rattet i tettbygde strøk. Nå tar etaten dem ikke med dit saken avgjøres, og det er uklart hvordan de blir ivaretatt, skriver ITavisen. TCMV, EUs tekniske komité for motorvogner, møtes 15. desember med Tesla-saken på agendaen. Det er ikke bekreftet at det blir avstemning. TAD er fortsatt ikke godkjent for vanlige eiere i Norge.",
+      "url": "https://itavisen.no/2026/11/27/tesla-fsd-norge-vegvesenet-eu-ingen-innspill/",
+      "sources": [
+        "https://itavisen.no/2026/11/27/tesla-fsd-norge-vegvesenet-eu-ingen-innspill/",
+        "https://x.com/ITavisen/status/2126269624350363732",
+        "https://tadnorge.no/#itavisen-svv-finland-2026-11-17",
+        "https://ec.europa.eu/transparency/comitology-register/screen/documents/119538/1"
+      ],
+      "tags": [
+        "svv",
+        "norge",
+        "eu",
+        "tcmv",
+        "tad",
+        "mundal",
+        "news"
+      ]
+    },
     {
       "id": "tcmv-120-agenda-mulig-votum-2026-11-26",
       "iso": "2026-11-26T17:50:00+01:00",

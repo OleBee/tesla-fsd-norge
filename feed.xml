@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Thu, 26 Nov 2026 16:50:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 12:00:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>Vegvesenet sender ingen innspill til EU om Tesla Assisted Driving</title>
+      <link>https://tadnorge.no/#itavisen-svv-ingen-eu-innspill-2026-11-27</link>
+      <guid isPermaLink="false">itavisen-svv-ingen-eu-innspill-2026-11-27</guid>
+      <pubDate>Fri, 27 Nov 2026 12:00:00 GMT</pubDate>
+      <description>&lt;p&gt;Statens vegvesen har ingen planer om å gi EU innspill om godkjenningen av Tesla Assisted Driving (TAD), tidligere FSD Supervised. Det bekrefter Stein-Helge Mundal i Vegvesenet overfor ITavisen. Han vet heller ikke om etaten deltar på neste møte. Spurt om grunnen svarte han at han anså «det toget for å ha gått». Nå diskuteres ordlyden i dokumentene det skal stemmes over, og Norge har som EØS-land ikke stemmerett. Innflytelsen er «svært begrenset», sier han til ITavisen.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Mundal har et poeng: Avgjørelsen tas i EU. Likevel er passiviteten påfallende. Så sent som 17. november la Vegvesenet fram tre sikkerhetsinnvendinger, blant annet mot kjøring uten hendene på rattet i tettbygde strøk. Nå tar etaten dem ikke med dit saken avgjøres, og det er uklart hvordan de blir ivaretatt, skriver ITavisen. TCMV, EUs tekniske komité for motorvogner, møtes 15. desember med Tesla-saken på agendaen. Det er ikke bekreftet at det blir avstemning. TAD er fortsatt ikke godkjent for vanlige eiere i Norge.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://itavisen.no/2026/11/27/tesla-fsd-norge-vegvesenet-eu-ingen-innspill/"&gt;https://itavisen.no/2026/11/27/tesla-fsd-norge-vegvesenet-eu-ingen-innspill/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>TCMV kan stemme over Tesla Assisted Driving 15. desember – saken står på agendaen</title>
       <link>https://tadnorge.no/#tcmv-120-agenda-mulig-votum-2026-11-26</link>
