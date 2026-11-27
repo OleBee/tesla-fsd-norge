@@ -1,6 +1,7 @@
-/* Testside /test/: meny øverst på mobil og «Nedtelling per land (estimat)»
-   fra data/nedtelling.json. Kortene bruker samme oppsett som /nedtelling/.
-   Fra 768 px og opp er menyen og nedtellingsdelen skjult med CSS. */
+/* Mobilmeny på forsiden (/) og testsiden (/test/): fast topp med faner og
+   «Nedtelling per land (estimat)» fra data/nedtelling.json. Kortene bruker samme
+   oppsett som /nedtelling/. Fra 768 px og opp er menyen og nedtellingsdelen skjult
+   med CSS, og skriptet gjør ingenting med siden. */
 (function () {
   "use strict";
 
@@ -167,17 +168,22 @@
     var r = resolve(location.hash);
     if (r.alias) history.replaceState(history.state, "", "#" + r.tab);
     show(r.tab, r.el || "top", { instant: true });
-    /* Direktelenke til en sak: feeden tegnes på nytt når dataene kommer, så vi retter opp
-       posisjonen et par ganger hvis leseren ikke har begynt å rulle selv */
-    if (r.el) {
-      var anchorId = r.el.id, touched = false;
+    /* Direktelenke til en sak: feeden og tidslinjen tegnes på nytt når dataene kommer,
+       og eldre saker finnes bare etter det. Vi ser etter ankeret et par ganger, bytter
+       til riktig fane og retter opp posisjonen hvis leseren ikke har begynt å rulle selv. */
+    var anchorId = decodeURIComponent(location.hash.replace(/^#/, ""));
+    if (anchorId && PANELS.indexOf(anchorId) < 0 && !ALIAS[anchorId]) {
+      var touched = false;
       ["touchstart", "wheel", "keydown"].forEach(function (ev) {
         window.addEventListener(ev, function () { touched = true; }, { passive: true, once: true });
       });
-      [400, 1200, 2500].forEach(function (ms) {
+      [400, 1200, 2500, 5000].forEach(function (ms) {
         setTimeout(function () {
           var el = document.getElementById(anchorId);
-          if (touched || !tabsOn || !el || location.hash !== "#" + anchorId) return;
+          if (touched || !tabsOn || !el || decodeURIComponent(location.hash.replace(/^#/, "")) !== anchorId) return;
+          var tab = panelOf(el);
+          if (!tab) return;
+          if (tab !== current) { show(tab, el, { instant: true }); return; }
           var m = parseFloat(getComputedStyle(el).scrollMarginTop) || headerOffset();
           var d = el.getBoundingClientRect().top - m;
           if (Math.abs(d) > 2) jumpTo(window.scrollY + d);
