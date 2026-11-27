@@ -6,7 +6,7 @@ name: SEO-filer (RSS, sitemap, statisk feed)
 # har den som pushet allerede kjørt scripts/build_seo.py, blir det ingen commit.
 #
 # Jobben «valider» kjører validatorene (engelsk versjon, nedtelling, modell,
-# versjoner). Den feiler hvis en sak, statusblokk, tidslinjeoppføring eller et
+# versjoner, delingsbilde). Den feiler hvis en sak, statusblokk, tidslinjeoppføring eller et
 # land mangler engelsk tekst. SEO-byggingen kjører uansett, så nettstedet
 # blir aldri stående med utdatert RSS; /en/ viser da norsk tekst for det som
 # mangler, merket lang="nb", til oversettelsen er på plass.
@@ -51,6 +51,8 @@ jobs:
         run: |
           python3 scripts/bump_versions.py --check
           python3 scripts/build_seo.py --check
+      - name: Delingsbilde (ingen måler, riktig fil på alle sider)
+        run: python3 scripts/validate_delingsbilde.py
 
   build:
     if: github.event_name != 'pull_request'
