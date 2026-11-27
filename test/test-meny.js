@@ -19,15 +19,11 @@
   window.addEventListener("resize", measure);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
 
-  /* —— Faner, glidende strek og myk rulling ——
-     Egen animasjon med requestAnimationFrame i stedet for innebygd «smooth»:
-     den hakker i Safari på iOS og bommer når bilder lastes underveis. */
+  /* —— Faner og glidende strek —— */
   var row = nav.querySelector("ul");
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-  var DUR_MIN = 300, DUR_MAX = 450;
 
   function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
-  function duration(dist) { return reduce.matches ? 0 : Math.min(DUR_MAX, DUR_MIN + Math.abs(dist) / 40); }
   function idOf(a) { return a.getAttribute("data-tm"); }
   function linkFor(id) { return links.filter(function (a) { return idOf(a) === id; })[0]; }
 
@@ -88,94 +84,155 @@
     showTab(a, dur);
   }
 
-  /* —— Rulling til en del —— */
-  var anim = null;   /* { id, raf } mens siden ruller; rullesporingen står stille da */
-  function stopAnim() {
-    if (!anim) return;
-    cancelAnimationFrame(anim.raf);
-    anim = null;
-    spy();
-  }
-  ["touchstart", "wheel", "keydown"].forEach(function (ev) {
-    window.addEventListener(ev, function () { if (anim && anim.started) stopAnim(); }, { passive: true });
-  });
+  /* —— Hver fane er en egen side på mobil (Ole 27.11 kl. 18.30) ——
+     Bare valgt del vises. Adressen bruker de faste id-ene: #siste-nytt, #tidslinje,
+     #status og #nedtelling-land (#nedtelling godtas også). Fra 768 px er alt som før:
+     ingen del skjules, og adressen styrer ingenting. */
+  var PANELS = ["siste-nytt", "tidslinje", "status", "nedtelling-land"];
+  var ALIAS = { "nedtelling": "nedtelling-land" };
+  var HEADS = { "siste-nytt": "feed-head", "tidslinje": "tl-head", "status": "status-head", "nedtelling-land": "tm-nt-head" };
+  var root = document.documentElement;
+  var pos = {};      /* rulleposisjon per fane i denne økten */
+  var seen = {};     /* faner som er åpnet før i økten */
+  try { pos = JSON.parse(sessionStorage.getItem("tm-pos") || "{}") || {}; } catch (e) { pos = {}; }
+  function savePos() { try { sessionStorage.setItem("tm-pos", JSON.stringify(pos)); } catch (e) {} }
 
-  function targetY(sec) {
-    var margin = parseFloat(getComputedStyle(sec).scrollMarginTop) || 0;
-    var y = sec.getBoundingClientRect().top + window.scrollY - margin;
-    var max = document.documentElement.scrollHeight - window.innerHeight;
-    return Math.max(0, Math.min(y, max));
+  function panel(id) { return document.getElementById(id); }
+  function panelOf(el) {
+    for (var i = 0; i < PANELS.length; i++) { var p = panel(PANELS[i]); if (p && p.contains(el)) return PANELS[i]; }
+    return null;
   }
 
-  function scrollToSection(id) {
-    var sec = document.getElementById(id);
-    if (!sec) return;
-    if (anim) cancelAnimationFrame(anim.raf);
-    var from = window.scrollY, dur = duration(targetY(sec) - from);
-    var t0 = null, settle = 0;
-    anim = { id: id, raf: 0, started: false };
-    setActive(id, dur);
-    function frame(now) {
-      if (!anim) return;
-      anim.started = true;
-      if (t0 === null) t0 = now;
-      var to = targetY(sec);   /* målet leses på nytt hver ramme, så bilder som lastes ikke gir rykk */
-      var t = dur ? Math.min(1, (now - t0) / dur) : 1;
-      var y;
-      if (t < 1) y = from + (to - from) * easeOut(t);
-      else {
-        /* Etterpå: følg målet mykt et lite øyeblikk hvis det flytter seg */
-        var diff = to - window.scrollY;
-        y = Math.abs(diff) < 1 || reduce.matches ? to : window.scrollY + diff * 0.35;
-        settle += 1;
-      }
-      window.scrollTo({ top: y, left: 0, behavior: "instant" });
-      if (t < 1 || (settle < 36 && Math.abs(targetY(sec) - window.scrollY) >= 1) || settle < 12) anim.raf = requestAnimationFrame(frame);
-      else { anim = null; spy(); }
+  /* Hva adressen peker på: { tab, el } der el er et anker inne i en fane */
+  function resolve(hash) {
+    var id = decodeURIComponent((hash || "").replace(/^#/, ""));
+    if (!id) return { tab: "siste-nytt", el: null };
+    if (ALIAS[id]) return { tab: ALIAS[id], el: null, alias: true };
+    if (PANELS.indexOf(id) >= 0) return { tab: id, el: null };
+    var el = document.getElementById(id);
+    var tab = el && panelOf(el);
+    return tab ? { tab: tab, el: el } : { tab: "siste-nytt", el: null };
+  }
+
+  function headerOffset() { return head.getBoundingClientRect().height + 16; }
+  function topOf(id) {
+    var p = panel(id);
+    return p ? Math.max(0, p.getBoundingClientRect().top + window.scrollY - headerOffset()) : 0;
+  }
+  function jumpTo(y) { window.scrollTo({ top: y, left: 0, behavior: "instant" }); }
+
+  function fadeIn(p) {
+    if (reduce.matches) return;
+    p.classList.add("tm-enter");
+    void p.offsetWidth;
+    requestAnimationFrame(function () { p.classList.remove("tm-enter"); });
+  }
+
+  function focusHead(id) {
+    var h = document.getElementById(HEADS[id]);
+    if (!h) return;
+    if (!h.hasAttribute("tabindex")) h.setAttribute("tabindex", "-1");
+    try { h.focus({ preventScroll: true }); } catch (e) { h.focus(); }
+  }
+
+  /* Bytt fane. how: "top" | "restore" | element (anker inne i fanen) */
+  function show(id, how, opts) {
+    opts = opts || {};
+    if (current && current !== id) pos[current] = window.scrollY;
+    var same = current === id;
+    PANELS.forEach(function (pid) {
+      var p = panel(pid);
+      if (p) p.classList.toggle("tm-on", pid === id);
+    });
+    setActive(id, opts.instant ? 0 : 350);
+    var y;
+    if (how && how.nodeType === 1) {
+      var m = parseFloat(getComputedStyle(how).scrollMarginTop) || headerOffset();
+      y = how.getBoundingClientRect().top + window.scrollY - m;
+    } else if (how === "restore" && seen[id] && pos[id] != null && !same) y = pos[id];
+    else y = topOf(id);
+    seen[id] = true;
+    jumpTo(Math.max(0, y));
+    if (!same && !opts.instant) fadeIn(panel(id));
+    if (opts.focus) focusHead(id);
+    savePos();
+  }
+
+  var tabsOn = false;
+  function enableTabs() {
+    if (tabsOn || !mq.matches) return;
+    tabsOn = true;
+    root.classList.add("tm-tabs");
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    var r = resolve(location.hash);
+    if (r.alias) history.replaceState(history.state, "", "#" + r.tab);
+    show(r.tab, r.el || "top", { instant: true });
+    /* Direktelenke til en sak: feeden tegnes på nytt når dataene kommer, så vi retter opp
+       posisjonen et par ganger hvis leseren ikke har begynt å rulle selv */
+    if (r.el) {
+      var anchorId = r.el.id, touched = false;
+      ["touchstart", "wheel", "keydown"].forEach(function (ev) {
+        window.addEventListener(ev, function () { touched = true; }, { passive: true, once: true });
+      });
+      [400, 1200, 2500].forEach(function (ms) {
+        setTimeout(function () {
+          var el = document.getElementById(anchorId);
+          if (touched || !tabsOn || !el || location.hash !== "#" + anchorId) return;
+          var m = parseFloat(getComputedStyle(el).scrollMarginTop) || headerOffset();
+          var d = el.getBoundingClientRect().top - m;
+          if (Math.abs(d) > 2) jumpTo(window.scrollY + d);
+        }, ms);
+      });
     }
-    anim.raf = requestAnimationFrame(frame);
   }
+  function disableTabs() {
+    if (!tabsOn) return;
+    tabsOn = false;
+    root.classList.remove("tm-tabs");
+    PANELS.forEach(function (pid) { var p = panel(pid); if (p) p.classList.remove("tm-on", "tm-enter"); });
+    if ("scrollRestoration" in history) history.scrollRestoration = "auto";
+  }
+  function onMq() { if (mq.matches) enableTabs(); else disableTabs(); }
+  if (mq.addEventListener) mq.addEventListener("change", onMq);
+  else if (mq.addListener) mq.addListener(onMq);
 
+  /* Fanene */
   links.forEach(function (a) {
     a.addEventListener("click", function (e) {
-      var id = idOf(a);
+      if (!tabsOn) return;
       e.preventDefault();
+      var id = idOf(a);
+      if (id === current) { show(id, "top", { focus: true }); return; }
       if (location.hash !== "#" + id) history.pushState(null, "", "#" + id);
-      scrollToSection(id);
+      show(id, "restore", { focus: true });
     });
   });
 
-  /* —— Rullesporing med hysterese ——
-     Valgt del er den siste som har passert en linje rett under toppen.
-     Bytte krever at den nye delen er minst 8 px forbi linjen, så fanene ikke blinker på grensene. */
-  var HYST = 8;
-  function spy() {
-    if (!mq.matches || anim) return;
-    var line = head.getBoundingClientRect().height + 24;
-    var tops = links.map(function (a) {
-      var sec = document.getElementById(idOf(a));
-      return { id: idOf(a), top: sec ? sec.getBoundingClientRect().top : Infinity };
-    });
-    var cand = null;
-    tops.forEach(function (o) { if (o.top <= line && (!cand || o.top > cand.top)) cand = o; });
-    if (!cand) cand = tops.reduce(function (m, o) { return o.top < m.top ? o : m; });
-    /* Nederst på siden: siste del vinner */
-    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
-      var last = tops.reduce(function (m, o) { return o.top > m.top ? o : m; });
-      if (last.top < window.innerHeight) cand = last;
-    }
-    if (!current) { setActive(cand.id, 0); return; }
-    if (cand.id === current) return;
-    var cur = tops.filter(function (o) { return o.id === current; })[0];
-    var goingDown = cand.top > cur.top;
-    if ((goingDown && cand.top <= line - HYST) || (!goingDown && cur.top > line + HYST) || cur.top === Infinity) setActive(cand.id, 250);
-  }
-  var queued = false;
-  window.addEventListener("scroll", function () {
-    if (queued || anim) return;
-    queued = true;
-    requestAnimationFrame(function () { queued = false; spy(); });
-  }, { passive: true });
+  /* Andre lenker til #anker på siden: bytt til riktig fane og rull til ankeret.
+     Lenker til andre sider, for eksempel /nedtelling/, går som før. */
+  document.addEventListener("click", function (e) {
+    if (!tabsOn || e.defaultPrevented || e.button > 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest && e.target.closest("a[href]");
+    if (!a || nav.contains(a)) return;
+    var href = a.getAttribute("href");
+    if (!href || href.charAt(0) !== "#" || href.length < 2) return;
+    var r = resolve(href);
+    e.preventDefault();
+    if (location.hash !== href) history.pushState(null, "", href);
+    show(r.tab, r.el || "top", { focus: !r.el });
+  });
+
+  /* Tilbake/fram i nettleseren */
+  window.addEventListener("popstate", function () {
+    if (!tabsOn) return;
+    var r = resolve(location.hash);
+    show(r.tab, r.el || "restore", { focus: true });
+  });
+  window.addEventListener("hashchange", function () {
+    if (!tabsOn) return;
+    var r = resolve(location.hash);
+    if (r.tab !== current || r.el) show(r.tab, r.el || "restore");
+  });
 
   function relayout() { if (current) placeInd(linkFor(current), true); edge(); }
   window.addEventListener("resize", relayout);
@@ -355,8 +412,7 @@
   if (mq.addEventListener) mq.addEventListener("change", load);
   else if (mq.addListener) mq.addListener(load);
 
-  if (location.hash === "#nedtelling-land") setTimeout(function () { scrollToSection("nedtelling-land"); }, 400);
-  spy();
-  if (!current) setActive("siste-nytt", 0);
+  enableTabs();
+  if (!current) setActive(resolve(location.hash).tab, 0);
   edge();
 })();
