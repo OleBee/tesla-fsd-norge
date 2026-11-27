@@ -94,10 +94,31 @@
   .tm-nav a:hover { text-decoration: none; color: #fff; }
   .tm-nav a:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; border-radius: 4px; }
   .tm-nav a[aria-current="true"] { color: #fff; }
-  .tm-nav a[data-tm="siste-nytt"][aria-current="true"] { border-bottom-color: var(--salmon); }   /* .col-feed .col-head */
-  .tm-nav a[data-tm="tidslinje"][aria-current="true"] { border-bottom-color: var(--mint); }       /* .col-timeline .col-head */
-  .tm-nav a[data-tm="status"][aria-current="true"] { border-bottom-color: var(--lavender); }      /* .col-status .col-head */
-  .tm-nav a[data-tm="nedtelling-land"][aria-current="true"] { border-bottom-color: var(--peach); } /* .nt-h2.est på /nedtelling/ */
+  /* Uten JavaScript: streken står under valgt fane */
+  .tm-nav:not(.tm-js) a[data-tm="siste-nytt"][aria-current="true"] { border-bottom-color: var(--salmon); }   /* .col-feed .col-head */
+  .tm-nav:not(.tm-js) a[data-tm="tidslinje"][aria-current="true"] { border-bottom-color: var(--mint); }       /* .col-timeline .col-head */
+  .tm-nav:not(.tm-js) a[data-tm="status"][aria-current="true"] { border-bottom-color: var(--lavender); }      /* .col-status .col-head */
+  .tm-nav:not(.tm-js) a[data-tm="nedtelling-land"][aria-current="true"] { border-bottom-color: var(--peach); } /* .nt-h2.est på /nedtelling/ */
+
+  /* Med JavaScript: én felles strek som glir til valgt fane og skifter farge */
+  .tm-nav ul { position: relative; }
+  .tm-nav a { transition: color .35s cubic-bezier(.215, .61, .355, 1); }
+  .tm-ind {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: var(--salmon);
+    pointer-events: none;
+    transition: transform .35s cubic-bezier(.215, .61, .355, 1), width .35s cubic-bezier(.215, .61, .355, 1), background-color .35s cubic-bezier(.215, .61, .355, 1);
+    will-change: transform, width;
+  }
+  .tm-ind.tm-ind-fast { transition: none; }
+  .tm-ind[data-tm="siste-nytt"] { background: var(--salmon); }
+  .tm-ind[data-tm="tidslinje"] { background: var(--mint); }
+  .tm-ind[data-tm="status"] { background: var(--lavender); }
+  .tm-ind[data-tm="nedtelling-land"] { background: var(--peach); }
 
   /* «Siste nytt» står allerede som valgt fane rett over feeden.
      Overskriften skjules for øyet på mobil, men er der for skjermlesere. */
@@ -155,4 +176,5 @@
 
 @media (max-width: 767px) and (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .tm-ind, .tm-nav a { transition: none; }
 }
