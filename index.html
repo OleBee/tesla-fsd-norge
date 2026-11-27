@@ -32,7 +32,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="/site.css?v=fde86aac">
+  <link rel="stylesheet" href="/mobil-meny.css?v=4165acd2">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -115,10 +116,22 @@
 </head>
 <body>
   <div class="wrap" id="top">
+    <!-- Mobil: logo og faner er én fast topp. Fra 768 px er .tm-head display: contents. -->
+    <div class="tm-head" id="tm-head">
     <header class="topbar">
       <a class="brand-mark" href="/">tadnorge</a>
       <h1 class="sr-only">Er Tesla FSD Supervised (Tesla Assisted Driving) godkjent i Norge? Status for norske Tesla-eiere</h1>
     </header>
+
+    <nav class="tm-nav" id="tm-nav" aria-label="Snarveier">
+      <ul>
+        <li><a href="#siste-nytt" data-tm="siste-nytt" aria-current="true">Siste nytt</a></li>
+        <li><a href="#tidslinje" data-tm="tidslinje">Historikk/tidslinje</a></li>
+        <li><a href="#status" data-tm="status">Status</a></li>
+        <li><a href="#nedtelling-land" data-tm="nedtelling-land">Nedtelling per land (estimat)</a></li>
+      </ul>
+    </nav>
+    </div>
 
     <div class="dash">
       <!-- LEFT: feed -->
@@ -264,6 +277,21 @@
         </div>
       </aside>
     </div>
+
+    <!-- Bare på mobil: nedtelling per land fra data/nedtelling.json -->
+    <section class="tm-nedtelling" id="nedtelling-land" aria-labelledby="tm-nt-head">
+      <h2 class="col-head" id="tm-nt-head">Nedtelling per land (estimat)</h2>
+      <p><span class="tm-flag">Alle datoer i nedtellingen er estimater, ikke vedtak</span></p>
+      <p class="feed-empty" id="tm-nt-empty">Laster …</p>
+      <div class="tm-grid" id="tm-nt-norge"></div>
+      <h3 class="tm-h3">Estimat ut fra kildene</h3>
+      <div class="tm-grid" id="tm-nt-est"></div>
+      <h3 class="tm-h3">Modellert estimat</h3>
+      <div class="tm-grid" id="tm-nt-mod"></div>
+      <h3 class="tm-h3">Allerede lansert</h3>
+      <div class="tm-grid" id="tm-nt-lansert"></div>
+      <p class="tm-more"><a href="/nedtelling/#metode">Slik lager vi estimatene</a></p>
+    </section>
 
     <footer class="site-footer">
       <p><strong>TAD Norge</strong> — uoffisiell statusside for Tesla FSD Supervised i Norge.<br>
@@ -610,6 +638,7 @@
     });
   })();
   </script>
+<script src="/mobil-meny.js?v=dfeafcd4" defer></script>
 <script data-goatcounter="https://fsdnorge.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
