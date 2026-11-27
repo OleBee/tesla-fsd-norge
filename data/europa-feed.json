@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-11-27T13:00:00+01:00",
+  "updated_iso": "2026-11-27T13:45:00+01:00",
   "standings": {
     "yes_countries": 12,
     "eu_population_pct": 28.6,
@@ -9,6 +9,30 @@
     "next_tcmv_certainty": "15. desember kl. 10.00–15.00 (utkast til agenda), mulig avstemning"
   },
   "items": [
+    {
+      "id": "svv-fsd-testreise-einnsyn-2026-11-27",
+      "iso": "2026-11-27T13:45:00+01:00",
+      "source": "svv",
+      "title": "Vegvesenet søkte om å teste Tesla FSD i Brussel – men gir ingen innspill til EU",
+      "summary": "Statens vegvesen søkte om å sende tre ansatte til Brussel 10.–12. november for å teste en Tesla med FSD, som nå heter Tesla Assisted Driving. Det viser en reisesøknad i den offentlige journalen eInnsyn, som ITavisen omtalte først. Søker er Kenneth Sørensen, med Stein-Helge Mundal og Marianne Stølan Rostoft på reiselisten. Testen skulle skje i regi av Euro NCAP, som har montert måleutstyr i bilen. Målet var å lære mer om førerovervåking ved kjøring uten hendene på rattet. Søknaden sier ikke om reisen ble gjennomført.",
+      "why_it_matters": "Det er bra at Vegvesenet vil prøve systemet selv. Ifølge søknaden skal erfaringene deles i en faggruppe for avanserte førerstøttesystemer (ADAS) og internt i etaten. Til EU blir det ingen innspill: Mundal anser «det toget for å ha gått», sa han til ITavisen. Han avkreftet også at reisen gjelder TCMV, EUs tekniske komité for motorvogner. Komiteen møtes 15. desember, men det er ikke bekreftet at det blir avstemning. Motsvaret er at Norge ikke har stemmerett der. Systemet er fortsatt ikke godkjent for vanlige eiere i Norge.",
+      "url": "https://itavisen.no/2026/11/27/tesla-fsd-norge-vegvesenet-eu-ingen-innspill/",
+      "sources": [
+        "https://api.einnsyn.no/journalpost/jp_01m84brn1geh19688rqxhje1c1",
+        "https://itavisen.no/2026/11/27/tesla-fsd-norge-vegvesenet-eu-ingen-innspill/",
+        "https://tadnorge.no/#itavisen-svv-ingen-eu-innspill-2026-11-27",
+        "https://ec.europa.eu/transparency/comitology-register/screen/documents/119538/1"
+      ],
+      "tags": [
+        "svv",
+        "norge",
+        "euro-ncap",
+        "dms",
+        "tad",
+        "einnsyn",
+        "news"
+      ]
+    },
     {
       "id": "itavisen-svv-ingen-eu-innspill-2026-11-27",
       "iso": "2026-11-27T13:00:00+01:00",
