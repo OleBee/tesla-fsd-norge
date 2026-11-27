@@ -196,6 +196,40 @@
   if (mq.addEventListener) mq.addEventListener("change", onMq);
   else if (mq.addListener) mq.addListener(onMq);
 
+  /* Logoen «tadnorge» (lenke til /) går til Siste nytt på mobil (Ole 27.11 kl. 19.01).
+     Uten JavaScript eller fra 768 px er den en vanlig lenke til forsiden. */
+  var logoAnim = 0;
+  function smoothTop(y) {
+    cancelAnimationFrame(logoAnim);
+    var from = window.scrollY;
+    if (reduce.matches || Math.abs(from - y) < 2) { jumpTo(y); return; }
+    var dur = Math.min(450, 300 + Math.abs(from - y) / 40), t0 = null, stop = false;
+    function halt() { stop = true; }
+    ["touchstart", "wheel", "keydown"].forEach(function (ev) { window.addEventListener(ev, halt, { passive: true, once: true }); });
+    logoAnim = requestAnimationFrame(function step(now) {
+      if (stop) return;
+      if (t0 === null) t0 = now;
+      var t = Math.min(1, (now - t0) / dur);
+      jumpTo(from + (y - from) * easeOut(t));
+      if (t < 1) logoAnim = requestAnimationFrame(step);
+    });
+  }
+  var logo = head.querySelector(".brand-mark");
+  if (logo) logo.addEventListener("click", function (e) {
+    if (!tabsOn || e.button > 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    delete pos["siste-nytt"];
+    if (current === "siste-nytt") {
+      if (location.hash !== "#siste-nytt") history.replaceState(history.state, "", "#siste-nytt");
+      smoothTop(topOf("siste-nytt"));
+      focusPanel("siste-nytt");
+      savePos();
+      return;
+    }
+    if (location.hash !== "#siste-nytt") history.pushState(null, "", "#siste-nytt");
+    show("siste-nytt", "top", { focus: true });
+  });
+
   /* Fanene */
   links.forEach(function (a) {
     a.addEventListener("click", function (e) {
