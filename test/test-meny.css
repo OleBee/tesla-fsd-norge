@@ -14,51 +14,72 @@
     text-align: center;
   }
 
+  /* Faner i samme stil som overskriften «Siste nytt» (.col-head i site.css):
+     15 px, halvfet, 2 px strek under. Streken har samme farge som overskriften
+     på delen fanen peker til, og vises bare under valgt fane. */
   .tm-nav {
     display: block;
     position: sticky;
     top: 0;
     z-index: 20;
-    margin: 0 -14px 22px;
-    padding: 8px 14px;
-    background: rgba(7, 11, 20, .94);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    margin: 0 -14px 18px;
+    padding: 4px 0 0;
+    background: var(--canvas);
     border-bottom: 1px solid var(--line);
   }
   .tm-nav ul {
     list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6px;
+    display: flex;
+    gap: 20px;
+    padding: 0 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+    scroll-padding: 0 14px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
   }
+  .tm-nav ul::-webkit-scrollbar { display: none; }
+  /* Myk kant til høyre så man ser at raden fortsetter */
+  .tm-nav.tm-mer ul {
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent);
+  }
+  .tm-nav li { flex: none; scroll-snap-align: start; }
   .tm-nav a {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
     min-height: 44px;
-    padding: 4px 10px;
-    border-radius: 12px;
-    background: var(--panel);
-    box-shadow: var(--panel-inset);
-    color: #c5cddb;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1.2;
-    text-align: center;
+    padding: 0 2px 8px;
     border-bottom: 2px solid transparent;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: var(--muted);
     -webkit-tap-highlight-color: transparent;
   }
   .tm-nav a:hover { text-decoration: none; color: #fff; }
-  .tm-nav a:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; }
-  .tm-nav a[aria-current="true"] { color: #fff; background: var(--panel-2); }
-  .tm-nav a[data-tm="siste-nytt"][aria-current="true"] { border-bottom-color: var(--salmon); }
-  .tm-nav a[data-tm="tidslinje"][aria-current="true"] { border-bottom-color: var(--mint); }
-  .tm-nav a[data-tm="status"][aria-current="true"] { border-bottom-color: var(--lavender); }
-  .tm-nav a[data-tm="nedtelling-land"][aria-current="true"] { border-bottom-color: var(--peach); }
+  .tm-nav a:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; border-radius: 4px; }
+  .tm-nav a[aria-current="true"] { color: #fff; }
+  .tm-nav a[data-tm="siste-nytt"][aria-current="true"] { border-bottom-color: var(--salmon); }   /* .col-feed .col-head */
+  .tm-nav a[data-tm="tidslinje"][aria-current="true"] { border-bottom-color: var(--mint); }       /* .col-timeline .col-head */
+  .tm-nav a[data-tm="status"][aria-current="true"] { border-bottom-color: var(--lavender); }      /* .col-status .col-head */
+  .tm-nav a[data-tm="nedtelling-land"][aria-current="true"] { border-bottom-color: var(--peach); } /* .nt-h2.est på /nedtelling/ */
+
+  /* «Siste nytt» står allerede som valgt fane rett over feeden.
+     Overskriften skjules for øyet på mobil, men er der for skjermlesere. */
+  #feed-head {
+    position: absolute;
+    width: 1px; height: 1px;
+    margin: -1px; padding: 0;
+    overflow: hidden; clip: rect(0 0 0 0);
+    white-space: nowrap; border: 0;
+  }
 
   /* Overskrifter og saker skal ikke havne under den faste menyen */
-  #siste-nytt, #tidslinje, #status, #nedtelling-land, .feed-item, .stat-card { scroll-margin-top: 124px; }
+  #siste-nytt, #tidslinje, #status, #nedtelling-land, .feed-item, .stat-card { scroll-margin-top: 68px; }
 
   /* Nedtelling per land (estimat): kort fra data/nedtelling.json, samme stil som /nedtelling/ */
   .tm-nedtelling { display: block; margin-top: 22px; }
@@ -96,7 +117,8 @@
 
 /* Mellom 721 og 767 px har .wrap 28 px sidemarg (site.css) */
 @media (min-width: 721px) and (max-width: 767px) {
-  .tm-nav { margin-left: -28px; margin-right: -28px; padding-left: 28px; padding-right: 28px; }
+  .tm-nav { margin-left: -28px; margin-right: -28px; }
+  .tm-nav ul { padding: 0 28px; scroll-padding: 0 28px; }
 }
 
 @media (max-width: 767px) and (prefers-reduced-motion: reduce) {
