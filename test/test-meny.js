@@ -10,10 +10,32 @@
   var links = Array.prototype.slice.call(nav.querySelectorAll("a[data-tm]"));
 
   /* —— Aktivt valg —— */
+  var row = nav.querySelector("ul");
+
+  /* Myk kant til høyre bare når det finnes flere faner utenfor skjermen */
+  function edge() {
+    var more = row.scrollLeft + row.clientWidth < row.scrollWidth - 2;
+    nav.classList.toggle("tm-mer", more);
+  }
+  row.addEventListener("scroll", edge, { passive: true });
+  window.addEventListener("resize", edge);
+
+  /* Rull fanerekka slik at valgt fane er synlig */
+  function showTab(a) {
+    var pad = parseFloat(getComputedStyle(row).paddingLeft) || 0;
+    var left = a.offsetLeft - row.offsetLeft;
+    var right = left + a.offsetWidth;
+    var target = null;
+    if (left - pad < row.scrollLeft) target = left - pad;
+    else if (right + pad > row.scrollLeft + row.clientWidth) target = right + pad - row.clientWidth;
+    if (target !== null) row.scrollTo({ left: Math.max(0, target), behavior: "smooth" });
+  }
+
   function setActive(id) {
     links.forEach(function (a) {
-      if (a.getAttribute("data-tm") === id) a.setAttribute("aria-current", "true");
-      else a.removeAttribute("aria-current");
+      if (a.getAttribute("data-tm") === id) {
+        if (a.getAttribute("aria-current") !== "true") { a.setAttribute("aria-current", "true"); showTab(a); }
+      } else a.removeAttribute("aria-current");
     });
   }
 
@@ -250,4 +272,5 @@
 
   if (location.hash === "#nedtelling-land") setTimeout(function () { jump("nedtelling-land"); }, 400);
   onScroll();
+  edge();
 })();
