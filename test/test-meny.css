@@ -120,9 +120,9 @@
   .tm-ind[data-tm="status"] { background: var(--lavender); }
   .tm-ind[data-tm="nedtelling-land"] { background: var(--peach); }
 
-  /* «Siste nytt» står allerede som valgt fane rett over feeden.
-     Overskriften skjules for øyet på mobil, men er der for skjermlesere. */
-  #feed-head {
+  /* Valgt fane viser allerede navnet på delen (Ole 27.11 kl. 18.48: «droppe den dupliserte fanetittelen»).
+     Overskriftene skjules for øyet på mobil, men er der for skjermlesere. */
+  #feed-head, #tl-head, #status-head, #tm-nt-head {
     position: absolute;
     width: 1px; height: 1px;
     margin: -1px; padding: 0;
@@ -137,8 +137,9 @@
   .tm-tabs #nedtelling-land:not(.tm-on) { display: none; }
   .tm-tabs .tm-on { transition: opacity .2s cubic-bezier(.215, .61, .355, 1), transform .2s cubic-bezier(.215, .61, .355, 1); }
   .tm-tabs .tm-on.tm-enter { opacity: 0; transform: translateY(10px); transition: none; }
-  /* Fokus flyttes til overskriften etter bytte; ingen ring ved trykk, bare ved tastatur */
-  .tm-tabs [tabindex="-1"]:focus:not(:focus-visible) { outline: none; }
+  /* Fokus flyttes til selve delen etter bytte, uten synlig ring.
+     Lenker og faner beholder fokusringen ved tastaturbruk (:focus-visible). */
+  .tm-tabs .tm-on[tabindex="-1"]:focus { outline: none; }
 
   /* Overskrifter og saker skal ikke havne under den faste menyen */
   #siste-nytt, #tidslinje, #status, #nedtelling-land, .feed-item, .stat-card { scroll-margin-top: calc(var(--tm-head-h, 92px) + 16px); }

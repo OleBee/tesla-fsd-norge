@@ -90,7 +90,6 @@
      ingen del skjules, og adressen styrer ingenting. */
   var PANELS = ["siste-nytt", "tidslinje", "status", "nedtelling-land"];
   var ALIAS = { "nedtelling": "nedtelling-land" };
-  var HEADS = { "siste-nytt": "feed-head", "tidslinje": "tl-head", "status": "status-head", "nedtelling-land": "tm-nt-head" };
   var root = document.documentElement;
   var pos = {};      /* rulleposisjon per fane i denne økten */
   var seen = {};     /* faner som er åpnet før i økten */
@@ -128,11 +127,12 @@
     requestAnimationFrame(function () { p.classList.remove("tm-enter"); });
   }
 
-  function focusHead(id) {
-    var h = document.getElementById(HEADS[id]);
-    if (!h) return;
-    if (!h.hasAttribute("tabindex")) h.setAttribute("tabindex", "-1");
-    try { h.focus({ preventScroll: true }); } catch (e) { h.focus(); }
+  /* Fokus til delen (ikke overskriften), uten ring og uten at siden hopper */
+  function focusPanel(id) {
+    var p = panel(id);
+    if (!p) return;
+    if (!p.hasAttribute("tabindex")) p.setAttribute("tabindex", "-1");
+    try { p.focus({ preventScroll: true }); } catch (e) { p.focus(); }
   }
 
   /* Bytt fane. how: "top" | "restore" | element (anker inne i fanen) */
@@ -154,7 +154,7 @@
     seen[id] = true;
     jumpTo(Math.max(0, y));
     if (!same && !opts.instant) fadeIn(panel(id));
-    if (opts.focus) focusHead(id);
+    if (opts.focus) focusPanel(id);
     savePos();
   }
 
@@ -189,7 +189,7 @@
     if (!tabsOn) return;
     tabsOn = false;
     root.classList.remove("tm-tabs");
-    PANELS.forEach(function (pid) { var p = panel(pid); if (p) p.classList.remove("tm-on", "tm-enter"); });
+    PANELS.forEach(function (pid) { var p = panel(pid); if (p) { p.classList.remove("tm-on", "tm-enter"); p.removeAttribute("tabindex"); } });
     if ("scrollRestoration" in history) history.scrollRestoration = "auto";
   }
   function onMq() { if (mq.matches) enableTabs(); else disableTabs(); }
