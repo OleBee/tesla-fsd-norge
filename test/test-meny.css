@@ -1,0 +1,104 @@
+/* Testside /test/: meny øverst bare på mobil (under 768 px).
+   Fra 768 px og opp er alt skjult, og siden er lik forsiden. */
+.tm-note,
+.tm-nav,
+.tm-nedtelling { display: none; }
+
+@media (max-width: 767px) {
+  .tm-note {
+    display: block;
+    margin: -16px 0 10px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--meta);
+    text-align: center;
+  }
+
+  .tm-nav {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    margin: 0 -14px 22px;
+    padding: 8px 14px;
+    background: rgba(7, 11, 20, .94);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .tm-nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .tm-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: var(--panel);
+    box-shadow: var(--panel-inset);
+    color: #c5cddb;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tm-nav a:hover { text-decoration: none; color: #fff; }
+  .tm-nav a:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; }
+  .tm-nav a[aria-current="true"] { color: #fff; background: var(--panel-2); }
+  .tm-nav a[data-tm="siste-nytt"][aria-current="true"] { border-bottom-color: var(--salmon); }
+  .tm-nav a[data-tm="tidslinje"][aria-current="true"] { border-bottom-color: var(--mint); }
+  .tm-nav a[data-tm="status"][aria-current="true"] { border-bottom-color: var(--lavender); }
+  .tm-nav a[data-tm="nedtelling-land"][aria-current="true"] { border-bottom-color: var(--peach); }
+
+  /* Overskrifter og saker skal ikke havne under den faste menyen */
+  #siste-nytt, #tidslinje, #status, #nedtelling-land, .feed-item, .stat-card { scroll-margin-top: 124px; }
+
+  /* Nedtelling per land (estimat): kort fra data/nedtelling.json, samme stil som /nedtelling/ */
+  .tm-nedtelling { display: block; margin-top: 22px; }
+  .tm-nedtelling .col-head { border-bottom-color: var(--peach); }
+  .tm-flag { display: inline-block; margin: 0 0 12px; font-size: 12px; font-weight: 500; color: var(--peach); border: 1px solid rgba(223, 159, 112, .35); border-radius: 999px; padding: 4px 12px; }
+  .tm-h3 { font-size: 14px; font-weight: 600; color: #fff; margin: 20px 0 10px; }
+  .tm-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  .tm-more { margin-top: 14px; font-size: 13px; }
+  .tm-more a { display: inline-flex; align-items: center; min-height: 44px; }
+  .nt-card { background: var(--panel); border-radius: var(--r); box-shadow: var(--panel-inset); padding: 16px 16px 14px; border-left: 3px solid var(--lavender); min-width: 0; }
+  .nt-card.s-lansert { border-left-color: var(--mint); }
+  .nt-card.s-godkjent, .nt-card.s-anerkj { border-left-color: var(--peach); }
+  .nt-card.s-eu { border-left-color: var(--lavender); }
+  .nt-card.s-ukjent { border-left-color: #3a4457; }
+  .nt-card.is-norge { border-left-color: var(--salmon); box-shadow: var(--panel-inset), 0 0 0 1px rgba(205, 98, 106, .55); }
+  .nt-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+  .nt-iso { font-size: 11px; font-weight: 600; color: var(--muted); background: var(--panel-2); border-radius: 6px; padding: 2px 7px; letter-spacing: .04em; }
+  .nt-land { font-size: 17px; font-weight: 600; letter-spacing: -.02em; }
+  .nt-when { font-size: 13px; font-weight: 500; color: var(--muted); margin: 6px 0 2px; }
+  .nt-big { font-size: 20px; font-weight: 600; letter-spacing: -.02em; color: #fff; }
+  .nt-card .units { grid-template-columns: repeat(3, 1fr); margin: 10px 0 4px; }
+  .nt-why { margin-top: 10px; font-size: 13px; line-height: 1.5; color: var(--body); }
+  .nt-foot { margin-top: 10px; font-size: 12px; color: var(--meta); display: flex; flex-wrap: wrap; gap: 4px 10px; }
+  .nt-foot a { color: var(--mint); }
+  .nt-norge-lede { margin-top: 10px; font-size: 14px; line-height: 1.5; color: #c5cddb; }
+  .nt-cd-lbl { margin-top: 10px; font-size: 12px; color: var(--meta); }
+  .nt-steg { font-size: 12px; color: var(--meta); margin-left: 4px; }
+  .badge.s-lansert i { background: var(--mint); }
+  .badge.s-godkjent i, .badge.s-anerkj i { background: var(--peach); }
+  .badge.s-eu i { background: var(--lavender); }
+  .badge.s-ukjent i { background: #6b7588; }
+  .badge.est-tag { color: var(--peach); border-color: rgba(223, 159, 112, .35); }
+  .badge.mod-tag { color: var(--lavender); border-color: rgba(167, 139, 250, .4); }
+}
+
+/* Mellom 721 og 767 px har .wrap 28 px sidemarg (site.css) */
+@media (min-width: 721px) and (max-width: 767px) {
+  .tm-nav { margin-left: -28px; margin-right: -28px; padding-left: 28px; padding-right: 28px; }
+}
+
+@media (max-width: 767px) and (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
