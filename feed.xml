@@ -6,12 +6,19 @@
     <atom:link href="https://tadnorge.no/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Uoffisiell statusside som følger godkjenningen av Tesla FSD Supervised (Tesla Assisted Driving) i Norge og EU. Nyheter med kilder fra Statens vegvesen, RDW, TCMV og EU.</description>
     <language>nb-NO</language>
-    <lastBuildDate>Fri, 27 Nov 2026 12:45:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 06:29:00 GMT</lastBuildDate>
     <image>
       <url>https://tadnorge.no/favicon-192.png</url>
       <title>TAD Norge – siste nytt om Tesla FSD i Norge og EU</title>
       <link>https://tadnorge.no/</link>
     </image>
+    <item>
+      <title>RDW: ingen relevante hendelser med Tesla Assisted Driving siden godkjenningen</title>
+      <link>https://tadnorge.no/#bnr-rdw-ingen-relevante-hendelser-2026-11-28</link>
+      <guid isPermaLink="false">bnr-rdw-ingen-relevante-hendelser-2026-11-28</guid>
+      <pubDate>Sat, 28 Nov 2026 06:29:00 GMT</pubDate>
+      <description>&lt;p&gt;Den nederlandske godkjenningsmyndigheten RDW har ikke fått melding om relevante hendelser siden den godkjente Teslas Full Self-Driving (Supervised), som nå heter Tesla Assisted Driving. Det sier RDW til BNR Nieuwsradio lørdag. «Tesla har gjennomført navnebyttet av systemet på eget initiativ», skriver BNR (vår oversettelse).&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Hvorfor det betyr noe:&lt;/strong&gt; Det er et godt tegn. RDW godkjente Tesla Assisted Driving, tidligere FSD Supervised, 10. april. At det siden ikke er meldt om relevante hendelser til den myndigheten som godkjente systemet, styrker saken for eierne som allerede kjører med det i EU. Det svekker også argumentet for at Norge skal vente. TCMV, EUs tekniske komité for motorvogner, møtes 15. desember med saken på agendaen. I Norge er systemet fortsatt ikke godkjent for vanlige eiere.&lt;/p&gt;&lt;p&gt;Kilde: &lt;a href="https://www.bnr.nl/nieuws/mobiliteit/10616312/rdw-geen-relevante-incidenten-met-tesla-s-rijassistent"&gt;https://www.bnr.nl/nieuws/mobiliteit/10616312/rdw-geen-relevante-incidenten-met-tesla-s-rijassistent&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Vegvesenet søkte om å teste Tesla FSD i Brussel – men gir ingen innspill til EU</title>
       <link>https://tadnorge.no/#svv-fsd-testreise-einnsyn-2026-11-27</link>
