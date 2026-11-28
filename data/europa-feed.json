@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-11-27T13:45:00+01:00",
+  "updated_iso": "2026-11-28T07:29:00+01:00",
   "standings": {
     "yes_countries": 12,
     "eu_population_pct": 28.6,
@@ -9,6 +9,26 @@
     "next_tcmv_certainty": "15. desember kl. 10.00–15.00 (utkast til agenda), mulig avstemning"
   },
   "items": [
+    {
+      "id": "bnr-rdw-ingen-relevante-hendelser-2026-11-28",
+      "iso": "2026-11-28T07:29:00+01:00",
+      "source": "rdw",
+      "title": "RDW: ingen relevante hendelser med Tesla Assisted Driving siden godkjenningen",
+      "summary": "Den nederlandske godkjenningsmyndigheten RDW har ikke fått melding om relevante hendelser siden den godkjente Teslas Full Self-Driving (Supervised), som nå heter Tesla Assisted Driving. Det sier RDW til BNR Nieuwsradio lørdag. «Tesla har gjennomført navnebyttet av systemet på eget initiativ», skriver BNR (vår oversettelse).",
+      "why_it_matters": "Det er et godt tegn. RDW godkjente Tesla Assisted Driving, tidligere FSD Supervised, 10. april. At det siden ikke er meldt om relevante hendelser til den myndigheten som godkjente systemet, styrker saken for eierne som allerede kjører med det i EU. Det svekker også argumentet for at Norge skal vente. TCMV, EUs tekniske komité for motorvogner, møtes 15. desember med saken på agendaen. I Norge er systemet fortsatt ikke godkjent for vanlige eiere.",
+      "url": "https://www.bnr.nl/nieuws/mobiliteit/10616312/rdw-geen-relevante-incidenten-met-tesla-s-rijassistent",
+      "sources": [
+        "https://www.bnr.nl/nieuws/mobiliteit/10616312/rdw-geen-relevante-incidenten-met-tesla-s-rijassistent",
+        "https://x.com/BNR/status/2126567693050434029"
+      ],
+      "tags": [
+        "rdw",
+        "bnr",
+        "nederland",
+        "tad",
+        "news"
+      ]
+    },
     {
       "id": "svv-fsd-testreise-einnsyn-2026-11-27",
       "iso": "2026-11-27T13:45:00+01:00",

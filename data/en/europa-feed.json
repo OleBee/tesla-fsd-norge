@@ -1,6 +1,12 @@
 {
   "_om": "Engelsk tekst for /en/. Fakta, datoer, kilder og bilder hentes fra data/europa-feed.json; her ligger bare oversatt tekst per sak (id). Se scripts/validate_engelsk.py.",
   "items": {
+    "bnr-rdw-ingen-relevante-hendelser-2026-11-28": {
+      "title": "RDW: no relevant incidents with Tesla Assisted Driving since approval",
+      "summary": "The Dutch approval authority RDW has received no reports of relevant incidents since it approved Tesla’s Full Self-Driving (Supervised), now called Tesla Assisted Driving. That is what RDW told BNR Nieuwsradio on Saturday. “Tesla implemented the system’s name change on its own initiative,” BNR writes (our translation).",
+      "why_it_matters": "This is an encouraging sign. RDW approved Tesla Assisted Driving, previously FSD Supervised, on 10 April. The fact that no relevant incidents have since been reported to the authority that approved the system strengthens the case for owners already using it in the EU. It also weakens the argument that Norway should keep waiting. TCMV, the EU’s Technical Committee on Motor Vehicles, meets on 15 December with the case on the agenda. In Norway the system is still not approved for ordinary owners.",
+      "norsk_sha": "89d4e29edc50"
+    },
     "svv-fsd-testreise-einnsyn-2026-11-27": {
       "norsk_sha": "7312408e823a",
       "title": "Norway’s roads authority applied to test Tesla FSD in Brussels – but will give the EU no input",
